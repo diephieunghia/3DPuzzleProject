@@ -15,7 +15,7 @@ E:/Unity/3DProject
 -logFile
 Logs/AssetImportWorker7.log
 -srvPort
-61502
+64021
 Successfully changed project path to: E:/Unity/3DProject
 E:/Unity/3DProject
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,11 +49,11 @@ E:/Unity/3DProject
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [15512] Host "[IP] 172.18.109.200 [Port] 0 [Flags] 2 [Guid] 920784216 [EditorId] 920784216 [Version] 1048832 [Id] WindowsEditor(7,NgiaDiep) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [36516] Host "[IP] 172.31.99.246 [Port] 0 [Flags] 2 [Guid] 4196603550 [EditorId] 4196603550 [Version] 1048832 [Id] WindowsEditor(7,NgiaDiep) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [15512] Host "[IP] 172.18.109.200 [Port] 0 [Flags] 2 [Guid] 920784216 [EditorId] 920784216 [Version] 1048832 [Id] WindowsEditor(7,NgiaDiep) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [36516] Host "[IP] 172.31.99.246 [Port] 0 [Flags] 2 [Guid] 4196603550 [EditorId] 4196603550 [Version] 1048832 [Id] WindowsEditor(7,NgiaDiep) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 9.57 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1194.34 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.7f1 (b16b3b16c7a0)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/Resources/UnitySubsystems
@@ -69,46 +69,46 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56268
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56512
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.013087 seconds.
-- Loaded All Assemblies, in  0.545 seconds
+Registered in 0.497418 seconds.
+- Loaded All Assemblies, in 12.346 seconds
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.440 seconds
-Domain Reload Profiling: 983ms
-	BeginReloadAssembly (170ms)
+- Finished resetting the current domain, in  0.432 seconds
+Domain Reload Profiling: 12776ms
+	BeginReloadAssembly (10648ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (2ms)
-	RebuildCommonClasses (49ms)
-	RebuildNativeTypeToScriptingClass (18ms)
-	initialDomainReloadingComplete (94ms)
-	LoadAllAssembliesAndSetupDomain (212ms)
-		LoadAssemblies (166ms)
+	RebuildCommonClasses (423ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (576ms)
+	LoadAllAssembliesAndSetupDomain (680ms)
+		LoadAssemblies (10645ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (209ms)
-			TypeCache.Refresh (207ms)
-				TypeCache.ScanAssembly (187ms)
+		AnalyzeDomain (675ms)
+			TypeCache.Refresh (673ms)
+				TypeCache.ScanAssembly (655ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (441ms)
+	FinalizeReload (432ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (349ms)
+		SetupLoadedEditorAssemblies (348ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (16ms)
-			SetLoadedEditorAssemblies (8ms)
+			InitializePlatformSupportModulesInManaged (14ms)
+			SetLoadedEditorAssemblies (7ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (4ms)
-			ProcessInitializeOnLoadAttributes (231ms)
-			ProcessInitializeOnLoadMethodAttributes (89ms)
+			BeforeProcessingInitializeOnLoad (3ms)
+			ProcessInitializeOnLoadAttributes (228ms)
+			ProcessInitializeOnLoadMethodAttributes (94ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -118,52 +118,52 @@ Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image E:\Unity\3DProject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image E:\Unity\3DProject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  0.902 seconds
-Refreshing native plugins compatible for Editor in 2.83 ms, found 3 plugins.
+- Loaded All Assemblies, in 10.706 seconds
+Refreshing native plugins compatible for Editor in 4.39 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.879 seconds
-Domain Reload Profiling: 1779ms
-	BeginReloadAssembly (240ms)
+- Finished resetting the current domain, in  1.296 seconds
+Domain Reload Profiling: 12000ms
+	BeginReloadAssembly (248ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (9ms)
+		DisableScriptedObjects (10ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (37ms)
-	RebuildCommonClasses (52ms)
-	RebuildNativeTypeToScriptingClass (15ms)
-	initialDomainReloadingComplete (63ms)
-	LoadAllAssembliesAndSetupDomain (529ms)
-		LoadAssemblies (402ms)
+		CreateAndSetChildDomain (39ms)
+	RebuildCommonClasses (56ms)
+	RebuildNativeTypeToScriptingClass (22ms)
+	initialDomainReloadingComplete (64ms)
+	LoadAllAssembliesAndSetupDomain (10315ms)
+		LoadAssemblies (10178ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (267ms)
-			TypeCache.Refresh (239ms)
-				TypeCache.ScanAssembly (221ms)
+		AnalyzeDomain (270ms)
+			TypeCache.Refresh (237ms)
+				TypeCache.ScanAssembly (217ms)
 			ScanForSourceGeneratedMonoScriptInfo (20ms)
-			ResolveRequiredComponents (6ms)
-	FinalizeReload (880ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (1296ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (654ms)
+		SetupLoadedEditorAssemblies (1061ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (12ms)
-			SetLoadedEditorAssemblies (5ms)
+			SetLoadedEditorAssemblies (7ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (99ms)
-			ProcessInitializeOnLoadAttributes (491ms)
-			ProcessInitializeOnLoadMethodAttributes (33ms)
-			AfterProcessingInitializeOnLoad (12ms)
+			BeforeProcessingInitializeOnLoad (117ms)
+			ProcessInitializeOnLoadAttributes (878ms)
+			ProcessInitializeOnLoadMethodAttributes (34ms)
+			AfterProcessingInitializeOnLoad (13ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (12ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
-Refreshing native plugins compatible for Editor in 5.32 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (33ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
+Refreshing native plugins compatible for Editor in 3.58 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3123 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 29 unused Assets / (56.3 KB). Loaded Objects now: 3585.
-Memory consumption went from 123.5 MB to 123.4 MB.
-Total: 4.939900 ms (FindLiveObjects: 0.424700 ms CreateObjectMapping: 0.171700 ms MarkObjects: 4.185600 ms  DeleteObjects: 0.156300 ms)
+Unloading 3136 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 29 unused Assets / (56.7 KB). Loaded Objects now: 3604.
+Memory consumption went from 128.9 MB to 128.9 MB.
+Total: 7.583000 ms (FindLiveObjects: 0.657000 ms CreateObjectMapping: 0.179900 ms MarkObjects: 6.552300 ms  DeleteObjects: 0.192600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -179,270 +179,6 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 1203865.886227 seconds.
-  path: Assets/Tree_Textures/normal_specular.png
-  artifactKey: Guid(d2eece84851113445a2d6d3a6789e29c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tree_Textures/normal_specular.png using Guid(d2eece84851113445a2d6d3a6789e29c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd96d93a750e9d778a5f45cafa7c20325') in 0.110913 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 112.279248 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_Bubbly_Bathroom_1.0_FREE/Tiny_Treats_Bubbly_Bathroom_1.0_FREE/sample.png
-  artifactKey: Guid(9a32dcf0d3e674a4d9d7444654889821) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_Bubbly_Bathroom_1.0_FREE/Tiny_Treats_Bubbly_Bathroom_1.0_FREE/sample.png using Guid(9a32dcf0d3e674a4d9d7444654889821) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57cc1184065abd9b83291e771359f596') in 0.040015 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 23.224629 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_Charming_Kitchen_1.0_FREE/Tiny_Treats_Charming_Kitchen_1.0_FREE/Assets/fbx/wall_papertowel_holder.fbx
-  artifactKey: Guid(7adf8d3de6c1a00488db7e26eee2b82f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_Charming_Kitchen_1.0_FREE/Tiny_Treats_Charming_Kitchen_1.0_FREE/Assets/fbx/wall_papertowel_holder.fbx using Guid(7adf8d3de6c1a00488db7e26eee2b82f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2753879a68d95fecc6ddbfe97df70fe1') in 0.229718 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_Charming_Kitchen_1.0_FREE/Tiny_Treats_Charming_Kitchen_1.0_FREE/Assets/fbx/wall_shelf_kitchen.fbx
-  artifactKey: Guid(19d1b8c64373927478acfb791c994141) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_Charming_Kitchen_1.0_FREE/Tiny_Treats_Charming_Kitchen_1.0_FREE/Assets/fbx/wall_shelf_kitchen.fbx using Guid(19d1b8c64373927478acfb791c994141) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11f149c2bc6f3ec7b7d70cf781d0b559') in 0.043889 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 18.586971 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/cactus_B.fbx
-  artifactKey: Guid(139b58be1e89ad342ab8eed146139f20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/cactus_B.fbx using Guid(139b58be1e89ad342ab8eed146139f20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e00bf79dd7347dcca00bb9e40babe20') in 0.058124 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/monstera_plant_medium.fbx
-  artifactKey: Guid(99b2b81094a492b40bed3e1f2439911a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/monstera_plant_medium.fbx using Guid(99b2b81094a492b40bed3e1f2439911a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42e2f32376f5542e96e1641bc15b70ee') in 0.050813 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/monstera_plant_medium_potted.fbx
-  artifactKey: Guid(3c3e3b39daa4f0a4b9a0cc610fad6d86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/monstera_plant_medium_potted.fbx using Guid(3c3e3b39daa4f0a4b9a0cc610fad6d86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e43da0dc43a672d17200b5e4e71f67a4') in 0.052548 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/monstera_leaf_small_C.fbx
-  artifactKey: Guid(ab835cd31f5e74c47a26dc7efa1a3824) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/monstera_leaf_small_C.fbx using Guid(ab835cd31f5e74c47a26dc7efa1a3824) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8f774d2098c6bd0b88ea8dd865df138') in 0.059158 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 0.000047 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/pot_B_small.fbx
-  artifactKey: Guid(23057de3810b713468f3bc575b260a3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/pot_B_small.fbx using Guid(23057de3810b713468f3bc575b260a3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1918d69b06ed7e83f69822e7d6eab5fc') in 0.060722 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/monstera_leaf_small_B.fbx
-  artifactKey: Guid(dcdd2049c0ec0834f8f0562b57af362d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/monstera_leaf_small_B.fbx using Guid(dcdd2049c0ec0834f8f0562b57af362d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50821b0fbf42b97c399bd4b3ef82fcf1') in 0.063622 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/pot_B_large.fbx
-  artifactKey: Guid(7070492f82f5a614eaa58f9be143c5b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/pot_B_large.fbx using Guid(7070492f82f5a614eaa58f9be143c5b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3f39751962177bfeb1236917691f6f3') in 0.063267 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/cactus_D.fbx
-  artifactKey: Guid(feea61b53a6b79d4da9a0fe8674b1077) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/cactus_D.fbx using Guid(feea61b53a6b79d4da9a0fe8674b1077) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b2073a859a5624beb05849295da4915') in 0.043681 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 0.431028 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/pot_D_medium.fbx
-  artifactKey: Guid(aaaa9e8a4a526a0428adea3652c12420) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/pot_D_medium.fbx using Guid(aaaa9e8a4a526a0428adea3652c12420) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f6f2616a04ac58aeae7ea4f4caed78c') in 0.045976 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 0.000059 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/pothos_plant_large.fbx
-  artifactKey: Guid(56303ec5e9fbfe5439f8e8c7e1b448bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/pothos_plant_large.fbx using Guid(56303ec5e9fbfe5439f8e8c7e1b448bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b35e6d0007f9e3771650a1d7671064ca') in 0.042918 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 0.514963 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/pothos_plant_small_potted.fbx
-  artifactKey: Guid(374d1ed9c353dda41858055740ea914c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/pothos_plant_small_potted.fbx using Guid(374d1ed9c353dda41858055740ea914c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4069e4f7e89901b2b1a76c111f622353') in 0.061037 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/pothos_vine_large_A.fbx
-  artifactKey: Guid(9afd2db8cc156724c9ead30c99a0e3b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/pothos_vine_large_A.fbx using Guid(9afd2db8cc156724c9ead30c99a0e3b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4dd47539ddaab68c91e870b8ca7be41') in 0.048588 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 0.280423 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/pothos_vine_medium_C.fbx
-  artifactKey: Guid(0e1999319f86fcb4098f61e11fb6e993) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/pothos_vine_medium_C.fbx using Guid(0e1999319f86fcb4098f61e11fb6e993) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39390e290b9ac26e8396171f287799a9') in 0.050598 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/pothos_vine_small_A.fbx
-  artifactKey: Guid(84077ecb5cacb5741ab7c1f7a87a6dd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/pothos_vine_small_A.fbx using Guid(84077ecb5cacb5741ab7c1f7a87a6dd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8abeefe7c13e4bd9a5f0054d50e9467b') in 0.045315 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 0.092445 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/sansevieria_leaf_large_A.fbx
-  artifactKey: Guid(b2a95cda5a0aaed42a077473abfa9edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/sansevieria_leaf_large_A.fbx using Guid(b2a95cda5a0aaed42a077473abfa9edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13c368340be6175741278bde7ac12c6d') in 0.045145 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/sansevieria_leaf_large_B.fbx
-  artifactKey: Guid(ccc576c17917b89479e0a2a0e1f36fd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/sansevieria_leaf_large_B.fbx using Guid(ccc576c17917b89479e0a2a0e1f36fd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18e48994749784f5ad758b7c4ea1fd0d') in 0.041935 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 0.003644 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/sansevieria_leaf_small_B.fbx
-  artifactKey: Guid(114bd88eb6110814f976acab8e8f675c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/sansevieria_leaf_small_B.fbx using Guid(114bd88eb6110814f976acab8e8f675c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '267b71e7fa92d594aa970bb13e72449e') in 0.045517 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 0.297645 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/sansevieria_plant_small_potted.fbx
-  artifactKey: Guid(4013ad1f6d789d04dbf3e80ac1d6c9d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/sansevieria_plant_small_potted.fbx using Guid(4013ad1f6d789d04dbf3e80ac1d6c9d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '038e4bdd0177cfbf19953524489281b7') in 0.054959 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/saucer_A_small.fbx
-  artifactKey: Guid(6014591d965586043bccb8a74a9ded15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/saucer_A_small.fbx using Guid(6014591d965586043bccb8a74a9ded15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1585f7a57c18394c493657c69edac5fd') in 0.040918 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 0.241964 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/shovel.fbx
-  artifactKey: Guid(b155d4660c046af4a80946de845d320a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/shovel.fbx using Guid(b155d4660c046af4a80946de845d320a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '377fd31d933bd82a91d0ac9c30c5d576') in 0.052197 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 0.064048 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/tiny_treats_texture_1.png
-  artifactKey: Guid(cb861e8ed22e78048833bfdffa261064) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/tiny_treats_texture_1.png using Guid(cb861e8ed22e78048833bfdffa261064) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24e21904124bc216a200bb88eebdc8b5') in 0.020557 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/watering_can_A.fbx
-  artifactKey: Guid(d693728f29a30da42bf3a0155fb4b8da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/watering_can_A.fbx using Guid(d693728f29a30da42bf3a0155fb4b8da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1269706f7c107a062794e31fac9d4ad0') in 0.042854 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 0.225197 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/yucca_branch_medium_B.fbx
-  artifactKey: Guid(5d5c6e0f14595784c8c7541aa0b48fca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/yucca_branch_medium_B.fbx using Guid(5d5c6e0f14595784c8c7541aa0b48fca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47cde201ceb8769685d5218decd86a88') in 0.059178 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/yucca_branch_small_B.fbx
-  artifactKey: Guid(7991a669c6c76414087d401054898879) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/yucca_branch_small_B.fbx using Guid(7991a669c6c76414087d401054898879) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b66f44d1e30e4af0dacb324d5b77fe4') in 0.042430 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 0.002228 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/yucca_plant_medium.fbx
-  artifactKey: Guid(427b06bc4fbc2ed4183871018b5540d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/yucca_plant_medium.fbx using Guid(427b06bc4fbc2ed4183871018b5540d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b9411bdcf6d020095320ab03d4948f4') in 0.046150 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/yucca_plant_small_potted.fbx
-  artifactKey: Guid(049fc1eedf61eb9418e6c6d5db0ac47f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/yucca_plant_small_potted.fbx using Guid(049fc1eedf61eb9418e6c6d5db0ac47f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c3c2d61d9eb475e328e9165f7911ebb') in 0.037850 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 0.269688 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/zzplant_leaf_medium_A.fbx
-  artifactKey: Guid(aca001125b78c034ab34fd240594d403) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/zzplant_leaf_medium_A.fbx using Guid(aca001125b78c034ab34fd240594d403) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1fc85ce90fac1e8fbf54a48a6736f60') in 0.086554 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/zzplant_plant_medium.fbx
-  artifactKey: Guid(d0ec5034c79150d4281281c94ee13bef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/zzplant_plant_medium.fbx using Guid(d0ec5034c79150d4281281c94ee13bef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd037bcd15d4b76adbf62ec11f132d620') in 0.050645 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/zzplant_plant_large_potted.fbx
-  artifactKey: Guid(613c1eeb323a08d4ca38c383950ba536) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_House_Plants_1.0_FREE/Tiny_Treats_House_Plants_1.0_FREE/Assets/fbx(unity)/zzplant_plant_large_potted.fbx using Guid(613c1eeb323a08d4ca38c383950ba536) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '322be344e1d0f31e5f83853f71028966') in 0.043961 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: The I/O operation has been aborted because of either a thread exit or an application request.
 AssetImportWorker is now disconnected from the server

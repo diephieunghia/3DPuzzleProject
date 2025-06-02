@@ -15,7 +15,7 @@ E:/Unity/3DProject
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-61502
+64021
 Successfully changed project path to: E:/Unity/3DProject
 E:/Unity/3DProject
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,11 +49,11 @@ E:/Unity/3DProject
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [7820] Host "[IP] 172.18.109.200 [Port] 0 [Flags] 2 [Guid] 1530810398 [EditorId] 1530810398 [Version] 1048832 [Id] WindowsEditor(7,NgiaDiep) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [46868] Host "[IP] 172.31.99.246 [Port] 0 [Flags] 2 [Guid] 3187413610 [EditorId] 3187413610 [Version] 1048832 [Id] WindowsEditor(7,NgiaDiep) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [7820] Host "[IP] 172.18.109.200 [Port] 0 [Flags] 2 [Guid] 1530810398 [EditorId] 1530810398 [Version] 1048832 [Id] WindowsEditor(7,NgiaDiep) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [46868] Host "[IP] 172.31.99.246 [Port] 0 [Flags] 2 [Guid] 3187413610 [EditorId] 3187413610 [Version] 1048832 [Id] WindowsEditor(7,NgiaDiep) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 11.05 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 3738.51 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.7f1 (b16b3b16c7a0)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/Resources/UnitySubsystems
@@ -69,46 +69,46 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56200
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56264
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.013679 seconds.
-- Loaded All Assemblies, in  0.618 seconds
+Registered in 0.594905 seconds.
+- Loaded All Assemblies, in 13.907 seconds
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.424 seconds
-Domain Reload Profiling: 1040ms
-	BeginReloadAssembly (189ms)
+- Finished resetting the current domain, in  0.510 seconds
+Domain Reload Profiling: 14415ms
+	BeginReloadAssembly (12323ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (2ms)
-	RebuildCommonClasses (65ms)
-	RebuildNativeTypeToScriptingClass (16ms)
-	initialDomainReloadingComplete (89ms)
-	LoadAllAssembliesAndSetupDomain (257ms)
-		LoadAssemblies (186ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (411ms)
+	RebuildNativeTypeToScriptingClass (24ms)
+	initialDomainReloadingComplete (693ms)
+	LoadAllAssembliesAndSetupDomain (452ms)
+		LoadAssemblies (12321ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (253ms)
-			TypeCache.Refresh (251ms)
-				TypeCache.ScanAssembly (232ms)
+		AnalyzeDomain (449ms)
+			TypeCache.Refresh (446ms)
+				TypeCache.ScanAssembly (421ms)
 			ScanForSourceGeneratedMonoScriptInfo (1ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (424ms)
+	FinalizeReload (511ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (321ms)
+		SetupLoadedEditorAssemblies (394ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (17ms)
 			SetLoadedEditorAssemblies (9ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (3ms)
-			ProcessInitializeOnLoadAttributes (209ms)
-			ProcessInitializeOnLoadMethodAttributes (81ms)
+			ProcessInitializeOnLoadAttributes (273ms)
+			ProcessInitializeOnLoadMethodAttributes (91ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -118,52 +118,52 @@ Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image E:\Unity\3DProject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image E:\Unity\3DProject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  0.969 seconds
-Refreshing native plugins compatible for Editor in 4.69 ms, found 3 plugins.
+- Loaded All Assemblies, in 11.165 seconds
+Refreshing native plugins compatible for Editor in 3.48 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.985 seconds
-Domain Reload Profiling: 1952ms
-	BeginReloadAssembly (242ms)
+- Finished resetting the current domain, in  1.032 seconds
+Domain Reload Profiling: 12195ms
+	BeginReloadAssembly (295ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (9ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (38ms)
-	RebuildCommonClasses (52ms)
-	RebuildNativeTypeToScriptingClass (16ms)
-	initialDomainReloadingComplete (73ms)
-	LoadAllAssembliesAndSetupDomain (584ms)
-		LoadAssemblies (428ms)
+		CreateAndSetChildDomain (40ms)
+	RebuildCommonClasses (61ms)
+	RebuildNativeTypeToScriptingClass (21ms)
+	initialDomainReloadingComplete (81ms)
+	LoadAllAssembliesAndSetupDomain (10704ms)
+		LoadAssemblies (10565ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (292ms)
-			TypeCache.Refresh (261ms)
-				TypeCache.ScanAssembly (239ms)
-			ScanForSourceGeneratedMonoScriptInfo (21ms)
+		AnalyzeDomain (317ms)
+			TypeCache.Refresh (279ms)
+				TypeCache.ScanAssembly (256ms)
+			ScanForSourceGeneratedMonoScriptInfo (28ms)
 			ResolveRequiredComponents (7ms)
-	FinalizeReload (986ms)
+	FinalizeReload (1033ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (717ms)
+		SetupLoadedEditorAssemblies (765ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (14ms)
-			SetLoadedEditorAssemblies (6ms)
+			SetLoadedEditorAssemblies (5ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (104ms)
-			ProcessInitializeOnLoadAttributes (541ms)
-			ProcessInitializeOnLoadMethodAttributes (38ms)
-			AfterProcessingInitializeOnLoad (12ms)
+			BeforeProcessingInitializeOnLoad (98ms)
+			ProcessInitializeOnLoadAttributes (606ms)
+			ProcessInitializeOnLoadMethodAttributes (33ms)
+			AfterProcessingInitializeOnLoad (9ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (14ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 3.37 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (12ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.11 seconds
+Refreshing native plugins compatible for Editor in 4.85 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3123 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 29 unused Assets / (56.3 KB). Loaded Objects now: 3585.
-Memory consumption went from 115.0 MB to 114.9 MB.
-Total: 5.380900 ms (FindLiveObjects: 0.511600 ms CreateObjectMapping: 0.187700 ms MarkObjects: 4.508100 ms  DeleteObjects: 0.171700 ms)
+Unloading 29 unused Assets / (56.6 KB). Loaded Objects now: 3591.
+Memory consumption went from 124.9 MB to 124.9 MB.
+Total: 5.944800 ms (FindLiveObjects: 0.720300 ms CreateObjectMapping: 0.211100 ms MarkObjects: 4.827500 ms  DeleteObjects: 0.183500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -181,140 +181,228 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 1202043.436959 seconds.
-  path: Assets/Package/UI/Font/Kenney Future Narrow.ttf
-  artifactKey: Guid(43b6a7a595324c84ebbca7ad8cfb7b41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/UI/Font/Kenney Future Narrow.ttf using Guid(43b6a7a595324c84ebbca7ad8cfb7b41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0e7892b77958c6523a54f98fdc6d7b3') in 0.214534 seconds
+  Time since last request: 1387980.617459 seconds.
+  path: Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/crate_steak.fbx
+  artifactKey: Guid(30d5d33cb326f2e44a57ce37ae0ca865) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/crate_steak.fbx using Guid(30d5d33cb326f2e44a57ce37ae0ca865) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63c5e67ba7f29e1f8f98ac39b68198ae') in 0.317480 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 4
+Number of asset objects unloaded after import = 9
 ========================================================================
 Received Import Request.
-  Time since last request: 825.510681 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_Pretty_Park_1.0_FREE/Tiny_Treats_Pretty_Park_1.0_FREE/sample.png
-  artifactKey: Guid(75ab97fa64a72e44fa5b3edc64e1eb88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_Pretty_Park_1.0_FREE/Tiny_Treats_Pretty_Park_1.0_FREE/sample.png using Guid(75ab97fa64a72e44fa5b3edc64e1eb88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c90692b4aeb17c57e1d7915c0737e282') in 0.044429 seconds
+  Time since last request: 0.000044 seconds.
+  path: Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/food_vegetableburger.fbx
+  artifactKey: Guid(006e867c42fac914b84844115cc18f36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/food_vegetableburger.fbx using Guid(006e867c42fac914b84844115cc18f36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a459660e2347c025affe2f6e709bdde') in 0.042039 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/crate.fbx
+  artifactKey: Guid(767882218b2e45d49b259a0c362bea6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/crate.fbx using Guid(767882218b2e45d49b259a0c362bea6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0252048ef61abb2de6a189042242d32b') in 0.043955 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/food_ingredient_onion.fbx
+  artifactKey: Guid(12bac1691e9e2854fbec90f0efac883e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/food_ingredient_onion.fbx using Guid(12bac1691e9e2854fbec90f0efac883e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59a09b72fe2fd149a55ce9cbc57319af') in 0.042130 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/food_ingredient_carrot_chopped.fbx
+  artifactKey: Guid(bfd0abff1aad485418cc5452d09cb310) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/food_ingredient_carrot_chopped.fbx using Guid(bfd0abff1aad485418cc5452d09cb310) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f511262ed6a0681c06521619f9ddcbc') in 0.052126 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/crate_tomatoes.fbx
+  artifactKey: Guid(9a26e280dcfd09848b066fa15501070e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/crate_tomatoes.fbx using Guid(9a26e280dcfd09848b066fa15501070e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf2c1fc539b32643b26b44b328f29962') in 0.044011 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/floor_kitchen_small.fbx
+  artifactKey: Guid(5fa2f5c80705cf24caa422eba483d462) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/floor_kitchen_small.fbx using Guid(5fa2f5c80705cf24caa422eba483d462) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd99adce468ce793fe1208594b7f84671') in 0.043934 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/food_ingredient_lettuce.fbx
+  artifactKey: Guid(2761a9d8a49654348a278498dd2b4219) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/food_ingredient_lettuce.fbx using Guid(2761a9d8a49654348a278498dd2b4219) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c936dcf3ababe466105da970af9a70c5') in 0.045898 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/food_ingredient_tomato.fbx
+  artifactKey: Guid(68ef20533e0caf94d802f58435c18610) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/food_ingredient_tomato.fbx using Guid(68ef20533e0caf94d802f58435c18610) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eff0aafd7f0719f6eb6fe47f886657c8') in 0.044522 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/contents.png
+  artifactKey: Guid(c619bea95e3af964e944cfb604decc2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/contents.png using Guid(c619bea95e3af964e944cfb604decc2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '178005c6a2cc270de503e7a092603101') in 0.044450 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 4.865489 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_Pretty_Park_1.0_FREE/Tiny_Treats_Pretty_Park_1.0_FREE/Assets/fbx(unity)/bird.fbx
-  artifactKey: Guid(adbcafd718b5cc047b8e5e6312b25b3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_Pretty_Park_1.0_FREE/Tiny_Treats_Pretty_Park_1.0_FREE/Assets/fbx(unity)/bird.fbx using Guid(adbcafd718b5cc047b8e5e6312b25b3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90050993f9655be701fdad928c9c399b') in 0.499329 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 0.000061 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_Pretty_Park_1.0_FREE/Tiny_Treats_Pretty_Park_1.0_FREE/Assets/fbx(unity)/bush.fbx
-  artifactKey: Guid(2bb5bb33863bb4b439b14b2a01cec87c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_Pretty_Park_1.0_FREE/Tiny_Treats_Pretty_Park_1.0_FREE/Assets/fbx(unity)/bush.fbx using Guid(2bb5bb33863bb4b439b14b2a01cec87c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce9988dcf2bc7b8a777209fcb1dec1a2') in 0.059315 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 0.000046 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_Pretty_Park_1.0_FREE/Tiny_Treats_Pretty_Park_1.0_FREE/Assets/fbx(unity)/bush_large.fbx
-  artifactKey: Guid(9887c4f5e886db248aabc3950fb0005d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_Pretty_Park_1.0_FREE/Tiny_Treats_Pretty_Park_1.0_FREE/Assets/fbx(unity)/bush_large.fbx using Guid(9887c4f5e886db248aabc3950fb0005d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16b66c69cfde41ee8f9e1427c8f23330') in 0.058179 seconds
+  Time since last request: 0.000134 seconds.
+  path: Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/chair_stool.fbx
+  artifactKey: Guid(7c32aebbac7c63146af2a7fbb7833384) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/chair_stool.fbx using Guid(7c32aebbac7c63146af2a7fbb7833384) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02c75f2488678c6f874a0a43e5444c9b') in 0.040646 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 9
 ========================================================================
 Received Import Request.
   Time since last request: 0.000035 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_Pretty_Park_1.0_FREE/Tiny_Treats_Pretty_Park_1.0_FREE/Assets/fbx(unity)/cobble_stones_large.fbx
-  artifactKey: Guid(542318b1d9f177643bb93edabc8b1af6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_Pretty_Park_1.0_FREE/Tiny_Treats_Pretty_Park_1.0_FREE/Assets/fbx(unity)/cobble_stones_large.fbx using Guid(542318b1d9f177643bb93edabc8b1af6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88c3b27d3eef2cf8b80e0ffc67d07338') in 0.048005 seconds
+  path: Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/door_A.fbx
+  artifactKey: Guid(26a2169f41f96544784742658c19966b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/door_A.fbx using Guid(26a2169f41f96544784742658c19966b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4e3d59f2b1580085251d793abf789f8') in 0.038859 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 9
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000038 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_Pretty_Park_1.0_FREE/Tiny_Treats_Pretty_Park_1.0_FREE/Assets/fbx(unity)/fountain.fbx
-  artifactKey: Guid(09588fb2c77902b4198fcf4bb6c96476) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_Pretty_Park_1.0_FREE/Tiny_Treats_Pretty_Park_1.0_FREE/Assets/fbx(unity)/fountain.fbx using Guid(09588fb2c77902b4198fcf4bb6c96476) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8592673cb1842eacf4bad748b904f39f') in 0.086981 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 19
-========================================================================
-Received Import Request.
-  Time since last request: 0.000483 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_Pretty_Park_1.0_FREE/Tiny_Treats_Pretty_Park_1.0_FREE/Assets/fbx(unity)/cobble_stones.fbx
-  artifactKey: Guid(5f65b3d92f8c12e4580be646dee87a6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_Pretty_Park_1.0_FREE/Tiny_Treats_Pretty_Park_1.0_FREE/Assets/fbx(unity)/cobble_stones.fbx using Guid(5f65b3d92f8c12e4580be646dee87a6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4e6b8c5c151805423775bd3a9910c1e') in 0.054705 seconds
+  Time since last request: 0.000030 seconds.
+  path: Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/crate_ham.fbx
+  artifactKey: Guid(4857607dbc73d87439d4e223d2120dad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/crate_ham.fbx using Guid(4857607dbc73d87439d4e223d2120dad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7306796926975f13edb7ef9fbf562a4c') in 0.039085 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 9
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_Pretty_Park_1.0_FREE/Tiny_Treats_Pretty_Park_1.0_FREE/Assets/fbx(unity)/hedge_corner.fbx
-  artifactKey: Guid(cf235ef2622aecd4c9e3c1d16bccc62a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_Pretty_Park_1.0_FREE/Tiny_Treats_Pretty_Park_1.0_FREE/Assets/fbx(unity)/hedge_corner.fbx using Guid(cf235ef2622aecd4c9e3c1d16bccc62a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74abd6b9715d3a772a12adaaac0bfb2a') in 0.041936 seconds
+  Time since last request: 0.000042 seconds.
+  path: Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/food_ingredient_bun.fbx
+  artifactKey: Guid(4f4aaa8a1c65924438b6ef71012612b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/food_ingredient_bun.fbx using Guid(4f4aaa8a1c65924438b6ef71012612b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be9e2236ded29c57f5aed7e5395d2051') in 0.037384 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 9
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000054 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_Pretty_Park_1.0_FREE/Tiny_Treats_Pretty_Park_1.0_FREE/Assets/fbx(unity)/flower_B.fbx
-  artifactKey: Guid(2db7a921efe25b244aa22b6ff3fdfb56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_Pretty_Park_1.0_FREE/Tiny_Treats_Pretty_Park_1.0_FREE/Assets/fbx(unity)/flower_B.fbx using Guid(2db7a921efe25b244aa22b6ff3fdfb56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '353c4ab5016a0790f42f4b319a359546') in 0.044005 seconds
+  Time since last request: 0.000041 seconds.
+  path: Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/cuttingboard.fbx
+  artifactKey: Guid(2d0a64757c1835c479e758387cfac95c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/cuttingboard.fbx using Guid(2d0a64757c1835c479e758387cfac95c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54f6f4dafb7494285f8b77881ce13ac2') in 0.039256 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/bowl_small.fbx
+  artifactKey: Guid(36d993e113e2f244f8ab13e62b0b0a29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/bowl_small.fbx using Guid(36d993e113e2f244f8ab13e62b0b0a29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64e24f3f645faeb527bdd113a45539c7') in 0.038892 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/food_dinner.fbx
+  artifactKey: Guid(464985e7cfab04a498fb4d1838e1eb0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/food_dinner.fbx using Guid(464985e7cfab04a498fb4d1838e1eb0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55cd50d0882d7015bb956baf44ba4198') in 0.039320 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/dishrack.fbx
+  artifactKey: Guid(eb880dcf8ecc88744ae8bd47cecd9865) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/dishrack.fbx using Guid(eb880dcf8ecc88744ae8bd47cecd9865) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd910d95f9d3fe1074e58f4706eb9cb43') in 0.038371 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/food_ingredient_steak.fbx
+  artifactKey: Guid(62c724bdc1d2f30409d68342f460c166) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/food_ingredient_steak.fbx using Guid(62c724bdc1d2f30409d68342f460c166) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f5ee8f9db0987d1f7e066d9ccf5123f') in 0.039205 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/food_ingredient_carrot_chopped.fbx
+  artifactKey: Guid(ea14e0cd01ec769458b3a2d2426e007f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/food_ingredient_carrot_chopped.fbx using Guid(ea14e0cd01ec769458b3a2d2426e007f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce1f7a74dd5d70b65ad05030ac2259a5') in 0.045084 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 9
 ========================================================================
 Received Import Request.
   Time since last request: 0.000039 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_Pretty_Park_1.0_FREE/Tiny_Treats_Pretty_Park_1.0_FREE/Assets/fbx(unity)/flower_A.fbx
-  artifactKey: Guid(4d9602e14f824a948a7d0dae3f9aebf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_Pretty_Park_1.0_FREE/Tiny_Treats_Pretty_Park_1.0_FREE/Assets/fbx(unity)/flower_A.fbx using Guid(4d9602e14f824a948a7d0dae3f9aebf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b38cf1b5d8f8f66ac2d11c1fd2b238fe') in 0.041517 seconds
+  path: Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/bowl.fbx
+  artifactKey: Guid(e5a72776f53b2734982593db253058bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/bowl.fbx using Guid(e5a72776f53b2734982593db253058bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7df12b43328711b43abafdc2a1e958ac') in 0.040315 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 9
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_Pretty_Park_1.0_FREE/Tiny_Treats_Pretty_Park_1.0_FREE/Assets/fbx(unity)/floor_grass_sliced_A.fbx
-  artifactKey: Guid(4fb0cad342123044e8c5557606a8c9d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_Pretty_Park_1.0_FREE/Tiny_Treats_Pretty_Park_1.0_FREE/Assets/fbx(unity)/floor_grass_sliced_A.fbx using Guid(4fb0cad342123044e8c5557606a8c9d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58a082d6dbcceec243782b60088a6051') in 0.044921 seconds
+  Time since last request: 0.000026 seconds.
+  path: Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/food_ingredient_potato.fbx
+  artifactKey: Guid(6033b7bd32c9b5547a3b6ec16837afb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/food_ingredient_potato.fbx using Guid(6033b7bd32c9b5547a3b6ec16837afb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5ee663caa85dedd5d53bed862069ae7') in 0.037957 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 9
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_Pretty_Park_1.0_FREE/Tiny_Treats_Pretty_Park_1.0_FREE/Assets/fbx(unity)/grass_B.fbx
-  artifactKey: Guid(d50145ce37d106e4fb8b493cc051c287) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_Pretty_Park_1.0_FREE/Tiny_Treats_Pretty_Park_1.0_FREE/Assets/fbx(unity)/grass_B.fbx using Guid(d50145ce37d106e4fb8b493cc051c287) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56f943fb2da634376f1062f3d9a260a3') in 0.041185 seconds
+  Time since last request: 0.000031 seconds.
+  path: Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/food_ingredient_vegetableburger_cooked.fbx
+  artifactKey: Guid(3e070c89accac7e4889b0d58e76795be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/food_ingredient_vegetableburger_cooked.fbx using Guid(3e070c89accac7e4889b0d58e76795be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb6d41dd1c3f76acc3f7f4186b59fc91') in 0.041059 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 9
 ========================================================================
 Received Import Request.
-  Time since last request: 0.211306 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_Pretty_Park_1.0_FREE/Tiny_Treats_Pretty_Park_1.0_FREE/Assets/fbx(unity)/street_lantern.fbx
-  artifactKey: Guid(a706987c8348a094e90c370bac46a140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_Pretty_Park_1.0_FREE/Tiny_Treats_Pretty_Park_1.0_FREE/Assets/fbx(unity)/street_lantern.fbx using Guid(a706987c8348a094e90c370bac46a140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7305fbf4545fc623cd0d83927379a35') in 0.041970 seconds
+  Time since last request: 0.000025 seconds.
+  path: Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/food_ingredient_lettuce_slice.fbx
+  artifactKey: Guid(3f417dae84eed7646896b96fd31ab8d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/food_ingredient_lettuce_slice.fbx using Guid(3f417dae84eed7646896b96fd31ab8d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b985dfc62bee2c9efadfdb73fd5a76de') in 0.039729 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 9
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_Pretty_Park_1.0_FREE/Tiny_Treats_Pretty_Park_1.0_FREE/Assets/fbx(unity)/trashcan.fbx
-  artifactKey: Guid(73c874b769e76c042957d3f0448194af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_Pretty_Park_1.0_FREE/Tiny_Treats_Pretty_Park_1.0_FREE/Assets/fbx(unity)/trashcan.fbx using Guid(73c874b769e76c042957d3f0448194af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28a2815afea1041f3c68b7951a3558d3') in 0.042137 seconds
+  Time since last request: 0.000027 seconds.
+  path: Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/chair_B.fbx
+  artifactKey: Guid(c6a9b632e9a10e14e9ffb9c8999418c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/chair_B.fbx using Guid(c6a9b632e9a10e14e9ffb9c8999418c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1dc2f5918e7681817b59f70405c0549') in 0.037075 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/food_ingredient_vegetableburger_uncooked.fbx
+  artifactKey: Guid(4e3ee2fedadeaae44b5b87bc26ac3ca5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/food_ingredient_vegetableburger_uncooked.fbx using Guid(4e3ee2fedadeaae44b5b87bc26ac3ca5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eeda19aaef7db45616a002afd66af7a6') in 0.037294 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/food_ingredient_bun_top.fbx
+  artifactKey: Guid(e8d45ddfdbe886e4a8720f4151615d63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/food_ingredient_bun_top.fbx using Guid(e8d45ddfdbe886e4a8720f4151615d63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '671c66d08242c2631a6e7b326ce30ff9') in 0.038583 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 9
 ========================================================================
 Received Import Request.
   Time since last request: 0.000038 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_Pretty_Park_1.0_FREE/Tiny_Treats_Pretty_Park_1.0_FREE/Assets/fbx(unity)/tiny_treats_grass_texture.png
-  artifactKey: Guid(18877e0de07353c4aaab0f0f56743531) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_Pretty_Park_1.0_FREE/Tiny_Treats_Pretty_Park_1.0_FREE/Assets/fbx(unity)/tiny_treats_grass_texture.png using Guid(18877e0de07353c4aaab0f0f56743531) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cb90842b1c06d75c4e0258c2247d4a5') in 0.034740 seconds
+  path: Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/food_ingredient_potato_chopped.fbx
+  artifactKey: Guid(705a27bec63f7df4e91928ea5975cac5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Package/Asset/KayKit_Restaurant_Bits_1.0_FREE/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/food_ingredient_potato_chopped.fbx using Guid(705a27bec63f7df4e91928ea5975cac5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7231d39a3f1e2376176603c29d2d9b3') in 0.038422 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/Package/Asset/Tiny_Treats_Pretty_Park_1.0_FREE/Tiny_Treats_Pretty_Park_1.0_FREE/Assets/fbx(unity)/tiny_treats_texture_1.png
-  artifactKey: Guid(90979fa787ebe58439cd1dfde5a78711) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Package/Asset/Tiny_Treats_Pretty_Park_1.0_FREE/Tiny_Treats_Pretty_Park_1.0_FREE/Assets/fbx(unity)/tiny_treats_texture_1.png using Guid(90979fa787ebe58439cd1dfde5a78711) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99dda50029ac9ceae20cb4ecf1c30b79') in 0.031000 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 9
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: The I/O operation has been aborted because of either a thread exit or an application request.
 AssetImportWorker is now disconnected from the server
