@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{3FAF6531-BB88-FC26-6A77-D0CD1B96C51B}</ProjectGuid>
+    <ProjectGuid>{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -81,7 +81,6 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Package\Asset\Tiny_Treats_Pretty_Park_1.0_FREE\Tiny_Treats_Pretty_Park_1.0_FREE\License.txt" />
-    <None Include="Assets\Package\Stylized Character_Archer\ToonShader\Shader\CustomLighting\CustomLighting.hlsl" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
