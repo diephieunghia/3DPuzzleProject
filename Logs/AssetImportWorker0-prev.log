@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2022.3/staging' branch; Version is '2022.3.7f1 (b16b3b16c7a0) revision 11627323'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 10  (10.0.19045) 64bit CoreSingleLanguage' Language: 'en' Physical Memory: 49061 MB
+OS: 'Windows 11  (10.0.26100) 64bit CoreSingleLanguage' Language: 'en' Physical Memory: 15612 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
@@ -11,13 +11,13 @@ C:\Program Files\Unity\Hub\Editor\2022.3.7f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-O:/Green Unity/3DPuzzleProject
+E:/Unity/3DProject
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51525
-Successfully changed project path to: O:/Green Unity/3DPuzzleProject
-O:/Green Unity/3DPuzzleProject
+49864
+Successfully changed project path to: E:/Unity/3DProject
+E:/Unity/3DProject
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -49,66 +49,66 @@ O:/Green Unity/3DPuzzleProject
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [23724] Host "[IP] 192.168.1.10 [Port] 0 [Flags] 2 [Guid] 3780326857 [EditorId] 3780326857 [Version] 1048832 [Id] WindowsEditor(7,HIEU-NGHIA-PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [25428] Host "[IP] 172.18.109.241 [Port] 0 [Flags] 2 [Guid] 1261511349 [EditorId] 1261511349 [Version] 1048832 [Id] WindowsEditor(7,NgiaDiep) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [23724] Host "[IP] 192.168.1.10 [Port] 0 [Flags] 2 [Guid] 3780326857 [EditorId] 3780326857 [Version] 1048832 [Id] WindowsEditor(7,HIEU-NGHIA-PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [25428] Host "[IP] 172.18.109.241 [Port] 0 [Flags] 2 [Guid] 1261511349 [EditorId] 1261511349 [Version] 1048832 [Id] WindowsEditor(7,NgiaDiep) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 6.82 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 2821.29 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.7f1 (b16b3b16c7a0)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path O:/Green Unity/3DPuzzleProject/Assets
+[Subsystems] Discovering subsystems at path E:/Unity/3DProject/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1080 Ti (ID=0x1b06)
+    Renderer: NVIDIA GeForce RTX 3050 Laptop GPU (ID=0x25a2)
     Vendor:   NVIDIA
-    VRAM:     11106 MB
-    Driver:   32.0.15.6636
+    VRAM:     3964 MB
+    Driver:   32.0.15.6590
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56532
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56648
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.015867 seconds.
-- Loaded All Assemblies, in  0.449 seconds
+Registered in 0.009241 seconds.
+- Loaded All Assemblies, in  9.768 seconds
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.292 seconds
-Domain Reload Profiling: 737ms
-	BeginReloadAssembly (128ms)
+- Finished resetting the current domain, in  0.350 seconds
+Domain Reload Profiling: 10116ms
+	BeginReloadAssembly (8845ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (42ms)
-	RebuildNativeTypeToScriptingClass (19ms)
-	initialDomainReloadingComplete (81ms)
-	LoadAllAssembliesAndSetupDomain (174ms)
-		LoadAssemblies (125ms)
+	RebuildCommonClasses (326ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (64ms)
+	LoadAllAssembliesAndSetupDomain (519ms)
+		LoadAssemblies (8843ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (171ms)
-			TypeCache.Refresh (169ms)
-				TypeCache.ScanAssembly (154ms)
+		AnalyzeDomain (516ms)
+			TypeCache.Refresh (514ms)
+				TypeCache.ScanAssembly (496ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (292ms)
+	FinalizeReload (350ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (222ms)
+		SetupLoadedEditorAssemblies (272ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (14ms)
-			SetLoadedEditorAssemblies (5ms)
+			InitializePlatformSupportModulesInManaged (16ms)
+			SetLoadedEditorAssemblies (8ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (3ms)
-			ProcessInitializeOnLoadAttributes (147ms)
-			ProcessInitializeOnLoadMethodAttributes (54ms)
+			ProcessInitializeOnLoadAttributes (166ms)
+			ProcessInitializeOnLoadMethodAttributes (79ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -116,57 +116,80 @@ Domain Reload Profiling: 737ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image O:\Green Unity\3DPuzzleProject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image O:\Green Unity\3DPuzzleProject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  0.707 seconds
-Refreshing native plugins compatible for Editor in 2.37 ms, found 3 plugins.
+Symbol file LoadedFromMemory doesn't match image E:\Unity\3DProject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image E:\Unity\3DProject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  9.136 seconds
+Refreshing native plugins compatible for Editor in 3.14 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.637 seconds
-Domain Reload Profiling: 1342ms
-	BeginReloadAssembly (181ms)
+- Finished resetting the current domain, in  0.657 seconds
+Domain Reload Profiling: 9792ms
+	BeginReloadAssembly (187ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (6ms)
+		DisableScriptedObjects (9ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (25ms)
-	RebuildCommonClasses (41ms)
-	RebuildNativeTypeToScriptingClass (15ms)
-	initialDomainReloadingComplete (48ms)
-	LoadAllAssembliesAndSetupDomain (418ms)
-		LoadAssemblies (328ms)
+		CreateAndSetChildDomain (31ms)
+	RebuildCommonClasses (36ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (51ms)
+	LoadAllAssembliesAndSetupDomain (8850ms)
+		LoadAssemblies (8734ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (198ms)
-			TypeCache.Refresh (176ms)
-				TypeCache.ScanAssembly (159ms)
-			ScanForSourceGeneratedMonoScriptInfo (16ms)
-			ResolveRequiredComponents (4ms)
-	FinalizeReload (638ms)
+		AnalyzeDomain (217ms)
+			TypeCache.Refresh (188ms)
+				TypeCache.ScanAssembly (168ms)
+			ScanForSourceGeneratedMonoScriptInfo (20ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (658ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (478ms)
+		SetupLoadedEditorAssemblies (468ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (11ms)
-			SetLoadedEditorAssemblies (4ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (5ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (71ms)
-			ProcessInitializeOnLoadAttributes (350ms)
-			ProcessInitializeOnLoadMethodAttributes (28ms)
-			AfterProcessingInitializeOnLoad (14ms)
+			BeforeProcessingInitializeOnLoad (63ms)
+			ProcessInitializeOnLoadAttributes (364ms)
+			ProcessInitializeOnLoadMethodAttributes (20ms)
+			AfterProcessingInitializeOnLoad (6ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (7ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 2.36 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (9ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 1.88 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3137 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 28 unused Assets / (29.1 KB). Loaded Objects now: 3628.
-Memory consumption went from 143.6 MB to 143.6 MB.
-Total: 3.599100 ms (FindLiveObjects: 0.394100 ms CreateObjectMapping: 0.103800 ms MarkObjects: 3.009500 ms  DeleteObjects: 0.090100 ms)
+Memory consumption went from 143.9 MB to 143.9 MB.
+Total: 3.926700 ms (FindLiveObjects: 0.425100 ms CreateObjectMapping: 0.117700 ms MarkObjects: 3.303000 ms  DeleteObjects: 0.079700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 2.18 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1 unused Assets / (3.1 KB). Loaded Objects now: 3628.
+Memory consumption went from 91.5 MB to 91.5 MB.
+Total: 4.266900 ms (FindLiveObjects: 0.460500 ms CreateObjectMapping: 0.126600 ms MarkObjects: 3.640500 ms  DeleteObjects: 0.038100 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
@@ -180,73 +203,1037 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 1906580.849172 seconds.
-  path: Assets/Prefab/Archer/Animation/Standing Aim Overdraw 1.fbx
-  artifactKey: Guid(99fa7be25acf3e1408b270cdcbcc82fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Archer/Animation/Standing Aim Overdraw 1.fbx using Guid(99fa7be25acf3e1408b270cdcbcc82fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b98693d1ba717ed40ab6378f9301d5c9') in 0.035657 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 137
-========================================================================
-Received Import Request.
-  Time since last request: 149.864440 seconds.
-  path: Assets/Prefab/Archer/Animation/Standing Aim Overdraw (1).fbx
-  artifactKey: Guid(eecc7b4715abc9a4ba455c00bc1d61f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Archer/Animation/Standing Aim Overdraw (1).fbx using Guid(eecc7b4715abc9a4ba455c00bc1d61f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c247d913ea5f3038eaf92a7b1a97fd8') in 0.191905 seconds
+  Time since last request: 472.911565 seconds.
+  path: Assets/Prefab/Archer/Animation/Unarmed Idle 01.fbx
+  artifactKey: Guid(922d2972969221449a9d7cfd7b30e454) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/Unarmed Idle 01.fbx using Guid(922d2972969221449a9d7cfd7b30e454) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbc9dd14358fd698dba27233510d122a') in 0.302780 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 145
 ========================================================================
 Received Import Request.
-  Time since last request: 15.433106 seconds.
+  Time since last request: 11.620798 seconds.
+  path: Assets/Prefab/Archer/Animation/Idle1.fbx
+  artifactKey: Guid(922d2972969221449a9d7cfd7b30e454) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/Idle1.fbx using Guid(922d2972969221449a9d7cfd7b30e454) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2cc01cc75c147ee08583a65ca76896ea') in 0.093613 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 145
+========================================================================
+Received Import Request.
+  Time since last request: 13.211611 seconds.
+  path: Assets/Prefab/Archer/Animation/Idle1.fbx
+  artifactKey: Guid(922d2972969221449a9d7cfd7b30e454) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/Idle1.fbx using Guid(922d2972969221449a9d7cfd7b30e454) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2cdd3eb46bbb7ae2a8ed5d18d1696cd8') in 0.088014 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 147
+========================================================================
+Received Import Request.
+  Time since last request: 46.368162 seconds.
+  path: Assets/Prefab/Archer
+  artifactKey: Guid(fe5d1325b7380034baf59881f948e2bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer using Guid(fe5d1325b7380034baf59881f948e2bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e101c76b8a93275196d64214eb8694df') in 0.000740 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.042782 seconds.
+  path: Assets/Prefab/Archer/Archer.prefab
+  artifactKey: Guid(1004336e9ed494a489fabcaee7b6a672) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Archer.prefab using Guid(1004336e9ed494a489fabcaee7b6a672) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33a3596fa1e6c2e08ba0b1e489d1109f') in 0.078300 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 113
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Prefab/Archer/Weapon_Bow.prefab
+  artifactKey: Guid(17ff8f8b1e84b0a40932bbc3babc2497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Weapon_Bow.prefab using Guid(17ff8f8b1e84b0a40932bbc3babc2497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '471ad65486088733c259d3d3f38fbf82') in 0.022163 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 4.286342 seconds.
+  path: Assets/Prefab/Archer/Models/Archer.FBX
+  artifactKey: Guid(d3be2383560c8bd4cbdb3bd3a02b3dc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Models/Archer.FBX using Guid(d3be2383560c8bd4cbdb3bd3a02b3dc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18aafbfe4d44e01ff65f2b26cb379ae3') in 0.055230 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 96
+========================================================================
+Received Import Request.
+  Time since last request: 36.679495 seconds.
+  path: Assets/Prefab/Archer/Models/Archer.FBX
+  artifactKey: Guid(d3be2383560c8bd4cbdb3bd3a02b3dc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Models/Archer.FBX using Guid(d3be2383560c8bd4cbdb3bd3a02b3dc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71276a49dd7d6ccbd95231d50ab74b03') in 0.061823 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 96
+========================================================================
+Received Import Request.
+  Time since last request: 467.746687 seconds.
+  path: Assets/Prefab/Archer/Animation/Standing Aim Idle 02 Looking.fbx
+  artifactKey: Guid(3215fca063b6e78408f3225acfbd507b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/Standing Aim Idle 02 Looking.fbx using Guid(3215fca063b6e78408f3225acfbd507b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbdbb8f14c7d9adae7fb3198248d660b') in 0.082033 seconds
+Internal: JobTempAlloc has allocations that are more than the maximum lifespan of 4 frames old - this is not allowed and likely a leak
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 145
+========================================================================
+Received Import Request.
+  Time since last request: 15.711590 seconds.
+  path: Assets/Prefab/Archer/Animation/Standing Aim Idle 02 Looking.fbx
+  artifactKey: Guid(3215fca063b6e78408f3225acfbd507b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/Standing Aim Idle 02 Looking.fbx using Guid(3215fca063b6e78408f3225acfbd507b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9775e43971a4042a9011fcf25c75e0c4') in 0.093170 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 147
+========================================================================
+Received Import Request.
+  Time since last request: 10.114021 seconds.
+  path: Assets/Prefab/Archer/Animation/WalkBack.fbx
+  artifactKey: Guid(a296beb731ed25643969cff16359d47a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/WalkBack.fbx using Guid(a296beb731ed25643969cff16359d47a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70edb0b09b500714f845f6f37b2b6942') in 0.099016 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 147
+========================================================================
+Received Import Request.
+  Time since last request: 11.644093 seconds.
+  path: Assets/Prefab/Archer/Animation/WalkRight.fbx
+  artifactKey: Guid(f44969f8bb210cd4ca9bb6f1c4f45803) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/WalkRight.fbx using Guid(f44969f8bb210cd4ca9bb6f1c4f45803) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b300c2bc140de08e63f6bc9da1b9a7d') in 0.095141 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 147
+========================================================================
+Received Import Request.
+  Time since last request: 4.405368 seconds.
+  path: Assets/Prefab/Archer/Animation/WalkLeft.fbx
+  artifactKey: Guid(feed9f3e683e3eb46bff5f5ce8b5a42a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/WalkLeft.fbx using Guid(feed9f3e683e3eb46bff5f5ce8b5a42a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9514b414d8ce7f1fe8b20d7a93b03acf') in 0.109482 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 147
+========================================================================
+Received Import Request.
+  Time since last request: 66.352997 seconds.
+  path: Assets/Prefab/Archer/Animation/Idle2.fbx
+  artifactKey: Guid(3215fca063b6e78408f3225acfbd507b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/Idle2.fbx using Guid(3215fca063b6e78408f3225acfbd507b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b2c0661d5de7a7049f105511944cdfd') in 0.091063 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 147
+========================================================================
+Received Import Request.
+  Time since last request: 6.117019 seconds.
+  path: Assets/Prefab/Archer/Animation/Standing Idle 03 Examine.fbx
+  artifactKey: Guid(2d310a7e49343eb4d9843a4197abb9d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/Standing Idle 03 Examine.fbx using Guid(2d310a7e49343eb4d9843a4197abb9d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3c913b1ed7c4cfa3d6b14168fcbdabd') in 0.078386 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 145
+========================================================================
+Received Import Request.
+  Time since last request: 7.749729 seconds.
+  path: Assets/Prefab/Archer/Animation/Idle3.fbx
+  artifactKey: Guid(2d310a7e49343eb4d9843a4197abb9d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/Idle3.fbx using Guid(2d310a7e49343eb4d9843a4197abb9d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd4c999dcefdd5b98c07654b890a7270') in 0.103225 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 145
+========================================================================
+Received Import Request.
+  Time since last request: 4.038029 seconds.
+  path: Assets/Prefab/Archer/Animation/Idle3.fbx
+  artifactKey: Guid(2d310a7e49343eb4d9843a4197abb9d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/Idle3.fbx using Guid(2d310a7e49343eb4d9843a4197abb9d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a47cb894f080818ccdbc28ed3ab9ec27') in 0.092173 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 147
+========================================================================
+Received Import Request.
+  Time since last request: 1170.015201 seconds.
+  path: Assets/Prefab/Archer/Animation/Idle3.fbx
+  artifactKey: Guid(2d310a7e49343eb4d9843a4197abb9d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/Idle3.fbx using Guid(2d310a7e49343eb4d9843a4197abb9d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e46c599d9793dcec6fe79df6a2b22f88') in 0.089237 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 147
+========================================================================
+Received Import Request.
+  Time since last request: 254.330207 seconds.
+  path: Assets/Prefab/Archer/Animation/WalkRight.fbx
+  artifactKey: Guid(f44969f8bb210cd4ca9bb6f1c4f45803) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/WalkRight.fbx using Guid(f44969f8bb210cd4ca9bb6f1c4f45803) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ab3a74d47b14885a32deb8102777328') in 0.094218 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 147
+========================================================================
+Received Import Request.
+  Time since last request: 3583.725677 seconds.
+  path: Assets/Prefab/Archer/Animation/DrawHoldWalk.fbx
+  artifactKey: Guid(51c41180db60fd144ac370c9bab86aa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/DrawHoldWalk.fbx using Guid(51c41180db60fd144ac370c9bab86aa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f587cd206529a4c9397e6004d26967c4') in 0.128079 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 147
+========================================================================
+Received Import Request.
+  Time since last request: 346.753867 seconds.
+  path: Assets/Prefab/Archer/Animation
+  artifactKey: Guid(ecf051cccf83b03468ca5a5b451bc3c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation using Guid(ecf051cccf83b03468ca5a5b451bc3c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ecbd97376b3c888f9b5f64a7d635940') in 0.002022 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 4.561291 seconds.
+  path: Assets/Prefab/Archer/Animation/Walk
+  artifactKey: Guid(3718c428a3e112a4b9d2498e498301df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/Walk using Guid(3718c428a3e112a4b9d2498e498301df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6527e97bdffed792b28a3166f55fd0e7') in 0.000627 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 8.755040 seconds.
+  path: Assets/Prefab/Archer/Animation/Idle
+  artifactKey: Guid(959196307ec744e49a1a9dc46f43a339) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/Idle using Guid(959196307ec744e49a1a9dc46f43a339) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e22d6e6bc0a405e36e5d1361f275f20') in 0.000769 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 297.111422 seconds.
+  path: Assets/Prefab/Archer/Animation/HoldWalkFor.fbx
+  artifactKey: Guid(51c41180db60fd144ac370c9bab86aa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/HoldWalkFor.fbx using Guid(51c41180db60fd144ac370c9bab86aa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a29f02572800fac0a73a14499af2174') in 0.096964 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 147
+========================================================================
+Received Import Request.
+  Time since last request: 145.528005 seconds.
+  path: Assets/Prefab/Archer/Animation/Standing Aim Walk Right.fbx
+  artifactKey: Guid(e5b4b2948751063458e1d17aed56b36b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/Standing Aim Walk Right.fbx using Guid(e5b4b2948751063458e1d17aed56b36b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2efd24db264c3f26b5b5605dc5d5dfa0') in 0.094383 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 145
+========================================================================
+Received Import Request.
+  Time since last request: 12.100330 seconds.
+  path: Assets/Prefab/Archer/Animation/Standing Aim Walk Right.fbx
+  artifactKey: Guid(e5b4b2948751063458e1d17aed56b36b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/Standing Aim Walk Right.fbx using Guid(e5b4b2948751063458e1d17aed56b36b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28e7ad71acd48c6cb38c581e8a88a190') in 0.103369 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 147
+========================================================================
+Received Import Request.
+  Time since last request: 29.413084 seconds.
+  path: Assets/Prefab/Archer/Animation/HoldWalkRight.fbx
+  artifactKey: Guid(e5b4b2948751063458e1d17aed56b36b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/HoldWalkRight.fbx using Guid(e5b4b2948751063458e1d17aed56b36b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2d47592335695f1ffbf2c0a0777d904') in 0.089657 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 147
+========================================================================
+Received Import Request.
+  Time since last request: 15.460662 seconds.
+  path: Assets/Prefab/Archer/Animation/StandoverDr.fbx
+  artifactKey: Guid(eecc7b4715abc9a4ba455c00bc1d61f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/StandoverDr.fbx using Guid(eecc7b4715abc9a4ba455c00bc1d61f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'add340686bd9e18b37613d19dbada353') in 0.083789 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 147
+========================================================================
+Received Import Request.
+  Time since last request: 5.002683 seconds.
+  path: Assets/Prefab/Archer/Animation/StandOverDr.fbx
+  artifactKey: Guid(eecc7b4715abc9a4ba455c00bc1d61f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/StandOverDr.fbx using Guid(eecc7b4715abc9a4ba455c00bc1d61f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0dc7becb96b78dfa74e319c954585ca') in 0.088042 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 147
+========================================================================
+Received Import Request.
+  Time since last request: 38.113689 seconds.
+  path: Assets/Prefab/Archer/Animation/Standing Aim Walk Left.fbx
+  artifactKey: Guid(8701b5d5cf0da22499f3be52839e1edf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/Standing Aim Walk Left.fbx using Guid(8701b5d5cf0da22499f3be52839e1edf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4b48b67f4b31f7db3707c857a066a11') in 0.093424 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 145
+========================================================================
+Received Import Request.
+  Time since last request: 16.108789 seconds.
+  path: Assets/Prefab/Archer/Animation/Standing Aim Walk Left.fbx
+  artifactKey: Guid(8701b5d5cf0da22499f3be52839e1edf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/Standing Aim Walk Left.fbx using Guid(8701b5d5cf0da22499f3be52839e1edf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e66d5a63db0800c00095ff45bbd2ff2b') in 0.097965 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 147
+========================================================================
+Received Import Request.
+  Time since last request: 13.420229 seconds.
+  path: Assets/Prefab/Archer/Animation/HoldWalkLeft.fbx
+  artifactKey: Guid(8701b5d5cf0da22499f3be52839e1edf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/HoldWalkLeft.fbx using Guid(8701b5d5cf0da22499f3be52839e1edf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12af7da8c64ea81fc9939770fb6bb8b2') in 0.082297 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 147
+========================================================================
+Received Import Request.
+  Time since last request: 38.032464 seconds.
+  path: Assets/Prefab/Archer/Animation/Standing Aim Walk Back.fbx
+  artifactKey: Guid(2397aafba0024e24ea247022c369bd25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/Standing Aim Walk Back.fbx using Guid(2397aafba0024e24ea247022c369bd25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7a64fdf0b01784ac1abb94d56ca843b') in 0.087193 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 145
+========================================================================
+Received Import Request.
+  Time since last request: 6.088438 seconds.
+  path: Assets/Prefab/Archer/Animation/Standing Aim Walk Back.fbx
+  artifactKey: Guid(2397aafba0024e24ea247022c369bd25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/Standing Aim Walk Back.fbx using Guid(2397aafba0024e24ea247022c369bd25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f877f2216cbda3e187d2979c57d9c91a') in 0.086698 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 147
+========================================================================
+Received Import Request.
+  Time since last request: 14.017760 seconds.
+  path: Assets/Prefab/Archer/Animation/HoldWalkBack.fbx
+  artifactKey: Guid(2397aafba0024e24ea247022c369bd25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/HoldWalkBack.fbx using Guid(2397aafba0024e24ea247022c369bd25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '972f7cdb9f489437648b974d693af3ab') in 0.081320 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 147
+========================================================================
+Received Import Request.
+  Time since last request: 2.906723 seconds.
   path: Assets/Prefab/Archer/Animation/Archer.controller
   artifactKey: Guid(d10eb39b931603f41af7fa13a5008637) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Archer/Animation/Archer.controller using Guid(d10eb39b931603f41af7fa13a5008637) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '564feab758848d1eed7738eaf599c8c1') in 0.003353 seconds
+Start importing Assets/Prefab/Archer/Animation/Archer.controller using Guid(d10eb39b931603f41af7fa13a5008637) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67abd4bb5cd6ab20a3cf72acc6d0aa53') in 0.012791 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 4
+Number of asset objects unloaded after import = 43
 ========================================================================
 Received Import Request.
-  Time since last request: 84.836900 seconds.
-  path: Assets/Prefab/Archer/Animation/Standing Aim Overdraw (1).fbx
-  artifactKey: Guid(eecc7b4715abc9a4ba455c00bc1d61f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Archer/Animation/Standing Aim Overdraw (1).fbx using Guid(eecc7b4715abc9a4ba455c00bc1d61f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '740a64e8decda12248c8a8e3cccc4e89') in 0.060911 seconds
+  Time since last request: 106.283849 seconds.
+  path: Assets/Prefab/Archer/Animation/HoldWalk
+  artifactKey: Guid(ec7f5a5068c491d4b9a28aabede8b306) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/HoldWalk using Guid(ec7f5a5068c491d4b9a28aabede8b306) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d088d6859c40552a107481842c560fd') in 0.000749 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 51.548731 seconds.
+  path: Assets/Prefab/Archer/Animation/HoldWalk/HoldWalkFor.fbx
+  artifactKey: Guid(51c41180db60fd144ac370c9bab86aa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/HoldWalk/HoldWalkFor.fbx using Guid(51c41180db60fd144ac370c9bab86aa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '791c0f947c9a696368ddcbf4f3da04ac') in 0.088768 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 147
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image E:\Unity\3DProject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image E:\Unity\3DProject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  3.415 seconds
+Refreshing native plugins compatible for Editor in 2.70 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in 17.839 seconds
+Domain Reload Profiling: 21251ms
+	BeginReloadAssembly (306ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (11ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (107ms)
+	RebuildCommonClasses (50ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (43ms)
+	LoadAllAssembliesAndSetupDomain (2997ms)
+		LoadAssemblies (3122ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (16ms)
+			TypeCache.Refresh (9ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (17840ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (482ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (13ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (77ms)
+			ProcessInitializeOnLoadAttributes (355ms)
+			ProcessInitializeOnLoadMethodAttributes (26ms)
+			AfterProcessingInitializeOnLoad (6ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (9ms)
+Refreshing native plugins compatible for Editor in 3.15 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3116 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (30.5 KB). Loaded Objects now: 3676.
+Memory consumption went from 139.9 MB to 139.9 MB.
+Total: 3.994500 ms (FindLiveObjects: 0.311500 ms CreateObjectMapping: 0.121900 ms MarkObjects: 3.488400 ms  DeleteObjects: 0.071700 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1233.497573 seconds.
+  path: Assets/Prefab/Archer/Animation/Archer.controller
+  artifactKey: Guid(d10eb39b931603f41af7fa13a5008637) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/Archer.controller using Guid(d10eb39b931603f41af7fa13a5008637) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb337314192e8e01a4c7745190e671d2') in 0.051367 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 74
+========================================================================
+Received Import Request.
+  Time since last request: 117.981439 seconds.
+  path: Assets/Prefab/Archer/Animation/Standing Melee Kick.fbx
+  artifactKey: Guid(70d8224b5482a944ab0e633a1d40df8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/Standing Melee Kick.fbx using Guid(70d8224b5482a944ab0e633a1d40df8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbbe3fb3cad3df7fedbb4c1c15008d49') in 0.226723 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 145
+========================================================================
+Received Import Request.
+  Time since last request: 10.707822 seconds.
+  path: Assets/Prefab/Archer/Animation/Standing Melee Kick.fbx
+  artifactKey: Guid(70d8224b5482a944ab0e633a1d40df8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/Standing Melee Kick.fbx using Guid(70d8224b5482a944ab0e633a1d40df8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04a7d7d4a69c5fcd6ab70f96da4494d8') in 0.096864 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 147
 ========================================================================
 Received Import Request.
-  Time since last request: 69.606023 seconds.
-  path: Assets/Prefab/Archer/Animation/Standing Aim Overdraw (1).fbx
-  artifactKey: Guid(eecc7b4715abc9a4ba455c00bc1d61f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Archer/Animation/Standing Aim Overdraw (1).fbx using Guid(eecc7b4715abc9a4ba455c00bc1d61f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eac0c434c35434600297d638c19913bd') in 0.072059 seconds
+  Time since last request: 43.388983 seconds.
+  path: Assets/Prefab/Archer/Archer.prefab
+  artifactKey: Guid(1004336e9ed494a489fabcaee7b6a672) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Archer.prefab using Guid(1004336e9ed494a489fabcaee7b6a672) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43b752a24dc1d65b7f67a65b3af7f35c') in 0.146134 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 185
+========================================================================
+Received Import Request.
+  Time since last request: 73.258196 seconds.
+  path: Assets/Prefab/Archer/Animation/Standing Melee Kick.fbx
+  artifactKey: Guid(70d8224b5482a944ab0e633a1d40df8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/Standing Melee Kick.fbx using Guid(70d8224b5482a944ab0e633a1d40df8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f1c9c3a9c0743ff3566aaeec836e716') in 0.085137 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 147
 ========================================================================
 Received Import Request.
-  Time since last request: 446.009578 seconds.
-  path: Assets/Prefab/Archer/Animation/standing aim recoil.fbx
-  artifactKey: Guid(8783b1500a24f994aac7bb63a211918a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Archer/Animation/standing aim recoil.fbx using Guid(8783b1500a24f994aac7bb63a211918a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '411126d3f6d081af1b36e2229a07b992') in 0.005039 seconds
+  Time since last request: 25.994975 seconds.
+  path: Assets/Prefab/Archer/Animation/Standing Melee Kick.fbx
+  artifactKey: Guid(70d8224b5482a944ab0e633a1d40df8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/Standing Melee Kick.fbx using Guid(70d8224b5482a944ab0e633a1d40df8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eeef021f113d587650c4bb19a26a8b8c') in 0.006468 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 135
 ========================================================================
 Received Import Request.
-  Time since last request: 9.386811 seconds.
-  path: Assets/Prefab/Archer/Animation/standing aim recoil.fbx
-  artifactKey: Guid(8783b1500a24f994aac7bb63a211918a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Archer/Animation/standing aim recoil.fbx using Guid(8783b1500a24f994aac7bb63a211918a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47bc1658248d606dc58d289447d54cfd') in 0.005318 seconds
+  Time since last request: 5.001699 seconds.
+  path: Assets/Prefab/Archer/Animation/Standing Melee Kick.fbx
+  artifactKey: Guid(70d8224b5482a944ab0e633a1d40df8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/Standing Melee Kick.fbx using Guid(70d8224b5482a944ab0e633a1d40df8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50fff6e471a1de7437408d22a1a0148b') in 0.007405 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 137
 ========================================================================
 Received Import Request.
-  Time since last request: 103.362095 seconds.
-  path: Assets/Prefab/Archer/Animation/Standing Draw Arrow.fbx
-  artifactKey: Guid(d085b77cab96ca44981399088f9120b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Archer/Animation/Standing Draw Arrow.fbx using Guid(d085b77cab96ca44981399088f9120b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17ef92b00174658a2a8d4bc903908189') in 0.054966 seconds
+  Time since last request: 52.083045 seconds.
+  path: Assets/Prefab/Archer/Animation/X Bot@Standing Melee Kick.fbx
+  artifactKey: Guid(f5464b05338a6cd469c5138281619331) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/X Bot@Standing Melee Kick.fbx using Guid(f5464b05338a6cd469c5138281619331) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '432b48e100a08c9d7207aee2448afc68') in 0.094515 seconds
+Internal: JobTempAlloc has allocations that are more than the maximum lifespan of 4 frames old - this is not allowed and likely a leak
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 145
 ========================================================================
 Received Import Request.
-  Time since last request: 5.871680 seconds.
-  path: Assets/Prefab/Archer/Animation/Standing Draw Arrow.fbx
-  artifactKey: Guid(d085b77cab96ca44981399088f9120b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Archer/Animation/Standing Draw Arrow.fbx using Guid(d085b77cab96ca44981399088f9120b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37d4bd4a93cb2a632d987d5fef1340d4') in 0.066032 seconds
+  Time since last request: 4.490815 seconds.
+  path: Assets/Prefab/Archer/Animation/X Bot@Standing Melee Kick.fbx
+  artifactKey: Guid(f5464b05338a6cd469c5138281619331) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/X Bot@Standing Melee Kick.fbx using Guid(f5464b05338a6cd469c5138281619331) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1294a791dc7a892de297a65bcd8e9380') in 0.092110 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 147
+========================================================================
+Received Import Request.
+  Time since last request: 208.601414 seconds.
+  path: Assets/Prefab/Archer/Animation/X Bot@Standing Melee Punch.fbx
+  artifactKey: Guid(f01cf084d06dd964f85eeecab1582183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/X Bot@Standing Melee Punch.fbx using Guid(f01cf084d06dd964f85eeecab1582183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd64c769234465a166e57cb844508fd8b') in 0.089405 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 145
+========================================================================
+Received Import Request.
+  Time since last request: 35.347422 seconds.
+  path: Assets/Prefab/Archer/Animation/X Bot@Standing Melee Punch.fbx
+  artifactKey: Guid(f01cf084d06dd964f85eeecab1582183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/X Bot@Standing Melee Punch.fbx using Guid(f01cf084d06dd964f85eeecab1582183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7dafc954cdc3b862750cfa2e89512584') in 0.086518 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 147
+========================================================================
+Received Import Request.
+  Time since last request: 320.002040 seconds.
+  path: Assets/Prefab/Archer/Animation/Archer.controller
+  artifactKey: Guid(d10eb39b931603f41af7fa13a5008637) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/Archer.controller using Guid(d10eb39b931603f41af7fa13a5008637) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28498000c57bd9629ccab28f55a5b2e8') in 0.015922 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 75
+========================================================================
+Received Import Request.
+  Time since last request: 872.162852 seconds.
+  path: Assets/Prefab/Archer/Animation/Archer.controller
+  artifactKey: Guid(d10eb39b931603f41af7fa13a5008637) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/Archer.controller using Guid(d10eb39b931603f41af7fa13a5008637) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0279be200883f7f7d691ce954bdadc13') in 0.018672 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 75
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Internal: deleting an allocation that is older than its permitted lifetime of 4 frames (age = 10)
+Internal: deleting an allocation that is older than its permitted lifetime of 4 frames (age = 10)
+Symbol file LoadedFromMemory doesn't match image E:\Unity\3DProject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image E:\Unity\3DProject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.546 seconds
+Refreshing native plugins compatible for Editor in 2.92 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.962 seconds
+Domain Reload Profiling: 1505ms
+	BeginReloadAssembly (224ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (72ms)
+	RebuildCommonClasses (42ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (36ms)
+	LoadAllAssembliesAndSetupDomain (229ms)
+		LoadAssemblies (321ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (15ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (963ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (473ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (73ms)
+			ProcessInitializeOnLoadAttributes (346ms)
+			ProcessInitializeOnLoadMethodAttributes (26ms)
+			AfterProcessingInitializeOnLoad (14ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (9ms)
+Refreshing native plugins compatible for Editor in 2.19 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3116 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (30.7 KB). Loaded Objects now: 3679.
+Memory consumption went from 140.1 MB to 140.1 MB.
+Total: 4.912400 ms (FindLiveObjects: 0.431100 ms CreateObjectMapping: 0.328500 ms MarkObjects: 4.080100 ms  DeleteObjects: 0.071400 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image E:\Unity\3DProject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image E:\Unity\3DProject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.469 seconds
+Refreshing native plugins compatible for Editor in 2.44 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.954 seconds
+Domain Reload Profiling: 1422ms
+	BeginReloadAssembly (173ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (42ms)
+	RebuildCommonClasses (39ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (33ms)
+	LoadAllAssembliesAndSetupDomain (211ms)
+		LoadAssemblies (292ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (12ms)
+			TypeCache.Refresh (6ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (955ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (474ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (76ms)
+			ProcessInitializeOnLoadAttributes (349ms)
+			ProcessInitializeOnLoadMethodAttributes (27ms)
+			AfterProcessingInitializeOnLoad (10ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (11ms)
+Refreshing native plugins compatible for Editor in 2.52 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3117 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (30.7 KB). Loaded Objects now: 3682.
+Memory consumption went from 140.3 MB to 140.3 MB.
+Total: 3.823400 ms (FindLiveObjects: 0.342000 ms CreateObjectMapping: 0.115600 ms MarkObjects: 3.285900 ms  DeleteObjects: 0.078500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image E:\Unity\3DProject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image E:\Unity\3DProject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.495 seconds
+Refreshing native plugins compatible for Editor in 2.66 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.999 seconds
+Domain Reload Profiling: 1494ms
+	BeginReloadAssembly (177ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (48ms)
+	RebuildCommonClasses (41ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (36ms)
+	LoadAllAssembliesAndSetupDomain (229ms)
+		LoadAssemblies (306ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (14ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (1000ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (486ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (12ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (83ms)
+			ProcessInitializeOnLoadAttributes (349ms)
+			ProcessInitializeOnLoadMethodAttributes (26ms)
+			AfterProcessingInitializeOnLoad (11ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (10ms)
+Refreshing native plugins compatible for Editor in 2.17 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3117 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (30.7 KB). Loaded Objects now: 3685.
+Memory consumption went from 140.3 MB to 140.3 MB.
+Total: 4.396600 ms (FindLiveObjects: 0.313500 ms CreateObjectMapping: 0.220400 ms MarkObjects: 3.768700 ms  DeleteObjects: 0.092400 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image E:\Unity\3DProject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image E:\Unity\3DProject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.505 seconds
+Refreshing native plugins compatible for Editor in 2.46 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.937 seconds
+Domain Reload Profiling: 1441ms
+	BeginReloadAssembly (200ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (7ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (51ms)
+	RebuildCommonClasses (53ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (33ms)
+	LoadAllAssembliesAndSetupDomain (205ms)
+		LoadAssemblies (301ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (15ms)
+			TypeCache.Refresh (6ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (937ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (456ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (7ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (71ms)
+			ProcessInitializeOnLoadAttributes (342ms)
+			ProcessInitializeOnLoadMethodAttributes (25ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (10ms)
+Refreshing native plugins compatible for Editor in 2.47 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3117 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (30.6 KB). Loaded Objects now: 3688.
+Memory consumption went from 140.3 MB to 140.3 MB.
+Total: 3.799700 ms (FindLiveObjects: 0.341800 ms CreateObjectMapping: 0.107900 ms MarkObjects: 3.272900 ms  DeleteObjects: 0.076300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image E:\Unity\3DProject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image E:\Unity\3DProject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.520 seconds
+Refreshing native plugins compatible for Editor in 3.27 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.918 seconds
+Domain Reload Profiling: 1436ms
+	BeginReloadAssembly (203ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (7ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (54ms)
+	RebuildCommonClasses (47ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (35ms)
+	LoadAllAssembliesAndSetupDomain (217ms)
+		LoadAssemblies (308ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (17ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (918ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (443ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (71ms)
+			ProcessInitializeOnLoadAttributes (325ms)
+			ProcessInitializeOnLoadMethodAttributes (26ms)
+			AfterProcessingInitializeOnLoad (9ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (8ms)
+Refreshing native plugins compatible for Editor in 1.87 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3117 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (30.7 KB). Loaded Objects now: 3691.
+Memory consumption went from 140.4 MB to 140.3 MB.
+Total: 4.689300 ms (FindLiveObjects: 0.666900 ms CreateObjectMapping: 0.188000 ms MarkObjects: 3.702100 ms  DeleteObjects: 0.130500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1546.066208 seconds.
+  path: Assets/Prefab/Archer/Animation/Archer.controller
+  artifactKey: Guid(d10eb39b931603f41af7fa13a5008637) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/Archer.controller using Guid(d10eb39b931603f41af7fa13a5008637) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cafa609cfef845d041869ec3aa017b6c') in 0.037365 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 76
+========================================================================
+Received Import Request.
+  Time since last request: 328.439609 seconds.
+  path: Assets/Prefab/Archer/Animation/Archer.controller
+  artifactKey: Guid(d10eb39b931603f41af7fa13a5008637) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/Archer.controller using Guid(d10eb39b931603f41af7fa13a5008637) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9a4cf3acd136a1a4797d89fa3c72e8b') in 0.013631 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 76
+========================================================================
+Received Import Request.
+  Time since last request: 58.670640 seconds.
+  path: Assets/Prefab/Archer/Animation/Archer.controller
+  artifactKey: Guid(d10eb39b931603f41af7fa13a5008637) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/Archer.controller using Guid(d10eb39b931603f41af7fa13a5008637) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cf4a90a114c1a2154357dec2529deb7') in 0.012200 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 64
+========================================================================
+Received Import Request.
+  Time since last request: 14.114257 seconds.
+  path: Assets/Prefab/Archer/Animation/Archer.controller
+  artifactKey: Guid(d10eb39b931603f41af7fa13a5008637) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/Archer.controller using Guid(d10eb39b931603f41af7fa13a5008637) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e318b745e5748b00ce8726017eb96c9c') in 0.011987 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 65
+========================================================================
+Received Import Request.
+  Time since last request: 141.740162 seconds.
+  path: Assets/Prefab/Archer/Animation/Archer.controller
+  artifactKey: Guid(d10eb39b931603f41af7fa13a5008637) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Archer/Animation/Archer.controller using Guid(d10eb39b931603f41af7fa13a5008637) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee3d0c3d68ce0589c705f131b887ceb4') in 0.012352 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 66
+========================================================================
+Received Import Request.
+  Time since last request: 225.537773 seconds.
+  path: Assets/Script
+  artifactKey: Guid(b6f45b85fdd4ea541837405827a8f593) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script using Guid(b6f45b85fdd4ea541837405827a8f593) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca2efe9761ffd752c91ee67e4af5bfe7') in 0.000809 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.908245 seconds.
+  path: Assets/Script/Cloud
+  artifactKey: Guid(622cdb42bdacfe14f8d3776f7e623d3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Cloud using Guid(622cdb42bdacfe14f8d3776f7e623d3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3800412361b086eff5bcbd69dea5f67f') in 0.001020 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.779447 seconds.
+  path: Assets/Script/Cloud/CloudMovement.cs
+  artifactKey: Guid(35ad7f108a011fa4281c97a8cc063efb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Cloud/CloudMovement.cs using Guid(35ad7f108a011fa4281c97a8cc063efb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed1265877235f25e42cef36ca5d6d476') in 0.000677 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 18.260686 seconds.
+  path: Assets/Script/Menu
+  artifactKey: Guid(bc6339c515d9cd340b2d37b18825d48a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Menu using Guid(bc6339c515d9cd340b2d37b18825d48a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd75810cb5fd32568254cda705cba37af') in 0.001061 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image E:\Unity\3DProject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image E:\Unity\3DProject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.608 seconds
+Refreshing native plugins compatible for Editor in 2.39 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.019 seconds
+Domain Reload Profiling: 1625ms
+	BeginReloadAssembly (212ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (9ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (52ms)
+	RebuildCommonClasses (37ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (34ms)
+	LoadAllAssembliesAndSetupDomain (311ms)
+		LoadAssemblies (403ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (24ms)
+			TypeCache.Refresh (10ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (8ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (1019ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (446ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (8ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (70ms)
+			ProcessInitializeOnLoadAttributes (336ms)
+			ProcessInitializeOnLoadMethodAttributes (21ms)
+			AfterProcessingInitializeOnLoad (7ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (8ms)
+Refreshing native plugins compatible for Editor in 2.39 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3116 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (30.7 KB). Loaded Objects now: 3694.
+Memory consumption went from 140.1 MB to 140.1 MB.
+Total: 3.429300 ms (FindLiveObjects: 0.298700 ms CreateObjectMapping: 0.102100 ms MarkObjects: 2.956800 ms  DeleteObjects: 0.070500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
