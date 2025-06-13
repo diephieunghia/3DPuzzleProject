@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{3FAF6531-BB88-FC26-6A77-D0CD1B96C51B}</ProjectGuid>
+    <ProjectGuid>{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -58,10 +58,13 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.7f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\MouseControl.cs" />
     <Compile Include="Assets\Script\BASECLASS\BaseChar.cs" />
     <Compile Include="Assets\Script\Menu\Cloud\CloudMovement.cs" />
+    <Compile Include="Assets\Script\ArcherLevel\ArcherMovement.cs" />
+    <Compile Include="Assets\Script\CameraControl.cs" />
     <Compile Include="Assets\Script\SO\SO_Char.cs" />
+    <Compile Include="Assets\Script\CameraMove.cs" />
+    <Compile Include="Assets\Script\ArcherLevel\ArcherRotate.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
