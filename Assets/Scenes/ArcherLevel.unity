@@ -291,7 +291,7 @@ GameObject:
   - component: {fileID: 234482415}
   - component: {fileID: 234482414}
   - component: {fileID: 234482413}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -444,6 +444,34 @@ PrefabInstance:
     - target: {fileID: 6647369244572926527, guid: 1004336e9ed494a489fabcaee7b6a672, type: 3}
       propertyPath: m_Name
       value: Archer
+      objectReference: {fileID: 0}
+    - target: {fileID: 7398188214664641211, guid: 1004336e9ed494a489fabcaee7b6a672, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.46789673
+      objectReference: {fileID: 0}
+    - target: {fileID: 7398188214664641211, guid: 1004336e9ed494a489fabcaee7b6a672, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.36387986
+      objectReference: {fileID: 0}
+    - target: {fileID: 7398188214664641211, guid: 1004336e9ed494a489fabcaee7b6a672, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.52661604
+      objectReference: {fileID: 0}
+    - target: {fileID: 7398188214664641211, guid: 1004336e9ed494a489fabcaee7b6a672, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.6093765
+      objectReference: {fileID: 0}
+    - target: {fileID: 7398188214664641211, guid: 1004336e9ed494a489fabcaee7b6a672, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 17.536
+      objectReference: {fileID: 0}
+    - target: {fileID: 7398188214664641211, guid: 1004336e9ed494a489fabcaee7b6a672, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -79.086
+      objectReference: {fileID: 0}
+    - target: {fileID: 7398188214664641211, guid: 1004336e9ed494a489fabcaee7b6a672, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90.45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -621,6 +649,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1137560604}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1073202411
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1073202412}
+  m_Layer: 0
+  m_Name: Ground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1073202412
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073202411}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1137560604}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1127682476
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -711,6 +770,7 @@ Transform:
   m_Children:
   - {fileID: 777903002}
   - {fileID: 233990816}
+  - {fileID: 1073202412}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &1137560605
@@ -738,7 +798,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.005
-  m_Center: {x: -0.009590149, y: 0.7489544, z: 0.051754}
+  m_Center: {x: -0.009590149, y: 0.751, z: 0.051754}
 --- !u!114 &1137560606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -753,8 +813,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterController: {fileID: 1137560605}
   speed: 8
-  gravity: 19.62
+  gravity: 9.81
   jumpHeight: 3
+  groundCheck: {fileID: 1073202412}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 64
+  groundDistance: 0.4
 --- !u!1 &1520052734
 GameObject:
   m_ObjectHideFlags: 0

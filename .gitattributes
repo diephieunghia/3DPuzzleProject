@@ -1,2 +1,9 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+avatarmask -> chọn phần nào enable, disable
+
+1 player 1 enemy
+
+player controller
+enemy patrol sử dụng navmesh navigator
