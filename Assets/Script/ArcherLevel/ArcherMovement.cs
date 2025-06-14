@@ -23,16 +23,13 @@ public class ArcherMovement : MonoBehaviour
     bool isGround = true;
     
 
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
         Move();
         Jump();
+        DoubleJump();
+        Shoot();
     }
 
     void Move()
@@ -67,7 +64,13 @@ public class ArcherMovement : MonoBehaviour
         if(!isGround&&doubleJump)
         {
             if(Input.GetButtonDown("Jump"))
-            { }
+            {
+                doubleJump = false;
+                velocity.y = Mathf.Sqrt((jumpHeight+1.2f) * 2.0f * gravity);
+            }
+            //apply gravity
+            velocity.y -= gravity * Time.deltaTime;
+            characterController.Move(velocity.y * Vector3.up * Time.deltaTime);
         }
     }
     void Shoot()
