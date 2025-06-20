@@ -1893,19 +1893,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterController: {fileID: 1137560605}
-  speed: 3
-  Horizontal_x: {x: 0, y: 0, z: 0}
-  Vertical_z: {x: 0, y: 0, z: 0}
-  Velocity: {x: 0, y: 0, z: 0}
-  gravity: 18
-  jumpHeight: 1.5
   groundCheck: {fileID: 1073202412}
   groundMask:
     serializedVersion: 2
     m_Bits: 64
-  groundDistance: 0.4
-  dashSpeed: 15
-  dashDuration: 0.2
 --- !u!114 &1137560607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1993,7 +1984,7 @@ Animator:
   m_GameObject: {fileID: 1137560603}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d10eb39b931603f41af7fa13a5008637, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

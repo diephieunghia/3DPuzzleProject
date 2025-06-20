@@ -18,13 +18,13 @@ public class PlayerInput
         GetInput();
         Jump();
         DoubleJump();
+        Dash();
     }
 
     void GetInput()
     {
         bbInput.horizontal_x= Input.GetAxis("Horizontal");
-        bbInput.vertical_z = Input.GetAxis("Vertical");
-        bbInput.velocity=Vector3.right*bbInput.horizontal_x+Vector3.forward*bbInput.vertical_z;
+        bbInput.vertical_z = Input.GetAxis("Vertical");       
     }
 
     void Jump()
@@ -32,6 +32,7 @@ public class PlayerInput
         if (Input.GetButtonDown("Jump")&&bbInput.isGround)
         {
             bbInput.isGround = false;
+            bbInput.jumpVelocity = Mathf.Sqrt((bbInput.jumpHeight-2.5f) * 2.0f * bbInput.gravity);
         }
     }
     void DoubleJump()
@@ -39,8 +40,15 @@ public class PlayerInput
         if (bbInput.doubleJump && !bbInput.isGround)
         {
             if (Input.GetButtonDown("Jump"))
+            {               
                 bbInput.doubleJump = false;
+                bbInput.jumpVelocity = Mathf.Sqrt((bbInput.jumpHeight + .75f) * 2.0f * bbInput.gravity);
+            }
         }
+    }
+    void Dash()
+    {
+
     }
 
 }

@@ -1,29 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR;
 
-
-public class MovementStateHandler 
+public class AttackStateHandler 
 {
     public IState CurrentState;
     CharacterController controller;
     Transform ownerTransform;
     ArcherBlackBoard movementbb;
 
-    public Idle idle;
-    public Move move;
-    public Jump jump;
-
-    public MovementStateHandler(ArcherBlackBoard bb,Transform transform, CharacterController controller)
+    public AttackStateHandler(ArcherBlackBoard bb, Transform transform, CharacterController controller)
     {
         movementbb = bb;
         ownerTransform = transform;
-        idle = new Idle(ownerTransform, movementbb, this,controller);
-        move = new Move(ownerTransform, movementbb, this,controller);
-        jump=new Jump(ownerTransform, movementbb, this, controller);
         this.controller = controller;
-        CurrentState = idle;
     }
     public void MoveChangeState(IState nextState)
     {
@@ -31,7 +21,7 @@ public class MovementStateHandler
         CurrentState = nextState;
         CurrentState.Enter();
     }
-    public void HandleMovementState()
+    public void HandleAttackState()
     {
         CurrentState.Execute();
     }

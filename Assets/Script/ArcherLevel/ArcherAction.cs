@@ -6,41 +6,44 @@ using UnityEngine;
 public class ArcherAction : MonoBehaviour
 {
     public CharacterController characterController;
-    ArcherBlackBoard bb;
+    public ArcherBlackBoard bb;
+    public PlayerInput input;
+    public AttackStateHandler attackStateHandler;
 
     public Transform groundCheck;
-
+    public LayerMask groundMask;
     private void Awake()
     {
         bb = new ArcherBlackBoard();
         bb.groundCheck = groundCheck;
+        bb.groundMask= groundMask;  
+        attackStateHandler = new AttackStateHandler(bb, transform, characterController);
+        input = new PlayerInput(bb);
     }
 
     // Update is called once per frame
     void Update()
-    {
-        GetInput();
+    {      
         Move();
         Jump();
         DoubleJump();
         ApplyGravity();
-        Shoot();
         Dash();
+        //attackStateHandler.HandleAttackState();      
+        
     }
-
-    void GetInput()
-    {             
-        bb.horizontal_x= Input.GetAxis("Horizontal");
-        bb.vertical_z = Input.GetAxis("Vertical");
+    private void LateUpdate()
+    {
+        input.HandleInput();
     }
     void Move()
-    {
+    {   
         bb.Horizontal = transform.right * bb.horizontal_x;
         bb.Vertical = transform.forward * bb.vertical_z;
         Vector3 move = bb.Horizontal + bb.Vertical;
         move = Vector3.ClampMagnitude(move, 1f);
         bb.velocity = move;
-        characterController.Move(move * bb.speed * Time.deltaTime);
+        characterController.Move(bb.velocity * bb.speed * Time.deltaTime);
     }
     void Jump()
     {
@@ -50,25 +53,9 @@ public class ArcherAction : MonoBehaviour
             bb.jumpVelocity = -2f;
             bb.doubleJump = true;
         }
-    
-        
-        if (Input.GetButtonDown("Jump") &&bb.isGround)
-        {
-            Debug.Log("detect still on ground");
-            bb.jumpVelocity = Mathf.Sqrt(bb.jumpHeight *2.0f*bb.gravity);
-        }
-        
     }
     void DoubleJump()
     {
-        if(!bb.isGround&&bb.doubleJump)
-        {
-            if(Input.GetButtonDown("Jump"))
-            {
-                bb.doubleJump = false;
-                bb.jumpVelocity = Mathf.Sqrt((bb.jumpHeight+.75f) * 2.0f * bb.gravity);
-            }
-        }
     }
     void ApplyGravity()
     {
@@ -101,13 +88,9 @@ public class ArcherAction : MonoBehaviour
 
     void Dash()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            dash = true;
-        }
-        if (!dash)
+        if (!bb.dash)
             return;
-        Vector3 dashVec= transform.right * horizontal_x + transform.forward * vertical_z;
+        Vector3 dashVec= transform.right * bb.horizontal_x + transform.forward * bb.vertical_z;
         dashVec= Vector3.ClampMagnitude(dashVec, 1f);
         if (dashVec == Vector3.zero)
         {
@@ -116,8 +99,7 @@ public class ArcherAction : MonoBehaviour
             
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            froze = true;
-            dash = false;          
+            bb.dash = false;          
             dashVec = Vector3.ClampMagnitude(dashVec, 1f);
             StartCoroutine("HandleDash", dashVec);           
         }
@@ -126,19 +108,10 @@ public class ArcherAction : MonoBehaviour
     IEnumerator HandleDash(Vector3 dashVec)
     {
         float startTime = Time.time;
-        while (Time.time < startTime + dashDuration)
+        while (Time.time < startTime + bb.dashDuration)
         {
-            characterController.Move(dashVec * dashSpeed * Time.deltaTime);
+            characterController.Move(dashVec * bb.dashSpeed * Time.deltaTime);
             yield return null;
-        }
-        if (isGround)
-            froze = false;
-       
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(groundCheck.position, bb.groundDistance);
+        }      
     }
 }
