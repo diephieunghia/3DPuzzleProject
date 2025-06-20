@@ -28,9 +28,9 @@ public class HandleAnim : MonoBehaviour
     }
     void SetMovement()
     {
-        float horizontal = Mathf.Clamp(archerAction.Horizontal_x.x, -1, 1);
-        float vertical = Mathf.Clamp(archerAction.Vertical_z.z, -1, 1);
-        float velocity = Mathf.Clamp(archerAction.Velocity.magnitude, 0, 1);
+        float horizontal = Mathf.Clamp(archerAction.bb.Horizontal.x, -1, 1);
+        float vertical = Mathf.Clamp(archerAction.bb.Vertical.z, -1, 1);
+        float velocity = Mathf.Clamp(archerAction.bb.velocity.magnitude, 0, 1);
         anim.SetFloat("Horizontal", horizontal);
         anim.SetFloat("Vertical", vertical);
         anim.SetFloat("Velocity",velocity);
@@ -38,12 +38,12 @@ public class HandleAnim : MonoBehaviour
     }
     void SetDash()
     {
-        if(archerAction.DashVar)
+        if(archerAction.bb.dash)
             anim.SetTrigger("Dash");
     }
     void SetAttack()
     {
-        if (archerAction.Aiming)
+        if (archerAction.bb.aiming)
             anim.SetBool("Draw", true);
         else
             anim.SetBool("Draw", false);

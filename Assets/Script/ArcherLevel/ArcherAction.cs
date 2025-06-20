@@ -6,14 +6,15 @@ using UnityEngine;
 public class ArcherAction : MonoBehaviour
 {
     public CharacterController characterController;
-    ArcherBlackBoard bb;
+    public ArcherBlackBoard bb;
 
     public Transform groundCheck;
-
+    public LayerMask layerMask;
     private void Awake()
     {
         bb = new ArcherBlackBoard();
         bb.groundCheck = groundCheck;
+        bb.groundMask = layerMask;
     }
 
     // Update is called once per frame
@@ -26,6 +27,7 @@ public class ArcherAction : MonoBehaviour
         ApplyGravity();
         Shoot();
         Dash();
+        Debug.Log(bb.velocity.y);
     }
 
     void GetInput()
@@ -39,23 +41,22 @@ public class ArcherAction : MonoBehaviour
         bb.Vertical = transform.forward * bb.vertical_z;
         Vector3 move = bb.Horizontal + bb.Vertical;
         move = Vector3.ClampMagnitude(move, 1f);
-        bb.velocity = move;
+        bb.velocity = move;     
         characterController.Move(move * bb.speed * Time.deltaTime);
     }
     void Jump()
     {
         bb.isGround = Physics.CheckSphere(bb.groundCheck.position, bb.groundDistance, bb.groundMask);
-        if (bb.isGround && bb.jumpVelocity < 0)
+        if (bb.isGround && bb.velocity.y < 0)
         {
-            bb.jumpVelocity = -2f;
+            bb.speed = bb.tempSpeed;
+            bb.velocity.y = -2f;
             bb.doubleJump = true;
-        }
-    
-        
+        }      
         if (Input.GetButtonDown("Jump") &&bb.isGround)
         {
-            Debug.Log("detect still on ground");
-            bb.jumpVelocity = Mathf.Sqrt(bb.jumpHeight *2.0f*bb.gravity);
+            bb.speed = 2f;
+            bb.velocity.y = Mathf.Sqrt(bb.jumpHeight *2.0f*bb.gravity);
         }
         
     }
@@ -66,14 +67,14 @@ public class ArcherAction : MonoBehaviour
             if(Input.GetButtonDown("Jump"))
             {
                 bb.doubleJump = false;
-                bb.jumpVelocity = Mathf.Sqrt((bb.jumpHeight+.75f) * 2.0f * bb.gravity);
+                bb.velocity.y = Mathf.Sqrt((bb.jumpHeight+.75f) * 2.0f * bb.gravity);
             }
         }
     }
     void ApplyGravity()
     {
-        bb.jumpVelocity -= bb.gravity * Time.deltaTime;
-        characterController.Move(bb.jumpVelocity * Vector3.up * Time.deltaTime);
+        bb.velocity.y -= bb.gravity * Time.deltaTime;
+        characterController.Move(bb.velocity.y * Vector3.up * Time.deltaTime);
     }
     void Shoot()
     {
@@ -103,11 +104,11 @@ public class ArcherAction : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            dash = true;
+            bb.dash = true;
         }
-        if (!dash)
+        if (!bb.dash)
             return;
-        Vector3 dashVec= transform.right * horizontal_x + transform.forward * vertical_z;
+        Vector3 dashVec= transform.right * bb.horizontal_x + transform.forward * bb.vertical_z;
         dashVec= Vector3.ClampMagnitude(dashVec, 1f);
         if (dashVec == Vector3.zero)
         {
@@ -115,9 +116,8 @@ public class ArcherAction : MonoBehaviour
         }
             
         if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            froze = true;
-            dash = false;          
+        {            
+            bb.dash = false;          
             dashVec = Vector3.ClampMagnitude(dashVec, 1f);
             StartCoroutine("HandleDash", dashVec);           
         }
@@ -126,19 +126,16 @@ public class ArcherAction : MonoBehaviour
     IEnumerator HandleDash(Vector3 dashVec)
     {
         float startTime = Time.time;
-        while (Time.time < startTime + dashDuration)
+        while (Time.time < startTime + bb.dashDuration)
         {
-            characterController.Move(dashVec * dashSpeed * Time.deltaTime);
+            characterController.Move(dashVec * bb.dashSpeed * Time.deltaTime);
             yield return null;
-        }
-        if (isGround)
-            froze = false;
-       
+        }      
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(groundCheck.position, bb.groundDistance);
+        Gizmos.DrawWireSphere(groundCheck.position, .4f);
     }
 }
