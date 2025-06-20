@@ -6,43 +6,15 @@ using UnityEngine;
 public class ArcherAction : MonoBehaviour
 {
     public CharacterController characterController;
+    ArcherBlackBoard bb;
 
-    //move
-    [Header("Move")]
-    float horizontal_x;
-    float vertical_z;
-    bool froze = false;
-    public float speed=5f;
-    float tempSpeed = 5f;
-
-    public Vector3 Horizontal_x;
-    public Vector3 Vertical_z;
-    public float Speed { get { return speed; }  }
-    public Vector3 Velocity;
-    //jump
-    [Header("Jump Param")]
-    bool doubleJump = true;
-    public float gravity = 9.81f ;
-    public float jumpHeight = 3f;   
-    Vector3 velocity;
     public Transform groundCheck;
-    public LayerMask groundMask;
-    public float groundDistance = .4f;
-    bool isGround = true;
-   
 
-    //Dash
-    bool dash = true;
-    public float dashSpeed=9f;
-    public float dashDuration = .3f;
-
-    public bool DashVar {  get { return dash; } }
-
-    //Shoot
-    [Header("Shoot")]
-    bool aiming = false;
-
-    public bool Aiming { get {  return aiming; } }
+    private void Awake()
+    {
+        bb = new ArcherBlackBoard();
+        bb.groundCheck = groundCheck;
+    }
 
     // Update is called once per frame
     void Update()
@@ -57,81 +29,71 @@ public class ArcherAction : MonoBehaviour
     }
 
     void GetInput()
-    {
-        if (froze)
-        {
-            horizontal_x = 0;
-            vertical_z = 0;
-            return;
-        }
-        horizontal_x = Input.GetAxis("Horizontal");
-        vertical_z = Input.GetAxis("Vertical");
-
+    {             
+        bb.horizontal_x= Input.GetAxis("Horizontal");
+        bb.vertical_z = Input.GetAxis("Vertical");
     }
     void Move()
     {
-        Horizontal_x = transform.right * horizontal_x;
-        Vertical_z = transform.forward * vertical_z;
-        Vector3 move = Horizontal_x + Vertical_z;
+        bb.Horizontal = transform.right * bb.horizontal_x;
+        bb.Vertical = transform.forward * bb.vertical_z;
+        Vector3 move = bb.Horizontal + bb.Vertical;
         move = Vector3.ClampMagnitude(move, 1f);
-        Velocity = move;
-        characterController.Move(move * speed * Time.deltaTime);
+        bb.velocity = move;
+        characterController.Move(move * bb.speed * Time.deltaTime);
     }
     void Jump()
     {
-        isGround = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-        if (isGround && velocity.y < 0)
+        bb.isGround = Physics.CheckSphere(bb.groundCheck.position, bb.groundDistance, bb.groundMask);
+        if (bb.isGround && bb.jumpVelocity < 0)
         {
-            froze = false;
-            velocity.y = -2f;
-            doubleJump = true;
+            bb.jumpVelocity = -2f;
+            bb.doubleJump = true;
         }
-        else if (!isGround && velocity.y < -0.5f)        
-            froze = true;
     
         
-        if (Input.GetButtonDown("Jump") &&isGround)
+        if (Input.GetButtonDown("Jump") &&bb.isGround)
         {
-            
-            velocity.y = Mathf.Sqrt(jumpHeight *2.0f*gravity);
+            Debug.Log("detect still on ground");
+            bb.jumpVelocity = Mathf.Sqrt(bb.jumpHeight *2.0f*bb.gravity);
         }
         
     }
     void DoubleJump()
     {
-        if(!isGround&&doubleJump)
+        if(!bb.isGround&&bb.doubleJump)
         {
             if(Input.GetButtonDown("Jump"))
             {
-                doubleJump = false;
-                velocity.y = Mathf.Sqrt((jumpHeight+.75f) * 2.0f * gravity);
+                bb.doubleJump = false;
+                bb.jumpVelocity = Mathf.Sqrt((bb.jumpHeight+.75f) * 2.0f * bb.gravity);
             }
         }
     }
     void ApplyGravity()
     {
-        velocity.y -= gravity * Time.deltaTime;
-        characterController.Move(velocity.y * Vector3.up * Time.deltaTime);
+        bb.jumpVelocity -= bb.gravity * Time.deltaTime;
+        characterController.Move(bb.jumpVelocity * Vector3.up * Time.deltaTime);
     }
     void Shoot()
     {
         if(Input.GetButtonDown("Fire1"))
         {
-           aiming = true;
+           bb.aiming = true;
            StartCoroutine("DecreaseSpeedAim");
         }
         else if (Input.GetButtonUp("Fire1"))
         {
-            aiming = false;
+            bb.aiming = false;
             StopCoroutine("DecreaseSpeedAim");
-            speed = tempSpeed;
+            bb.speed = bb.tempSpeed;
         }
     }
     IEnumerator DecreaseSpeedAim()
     {
-        while (speed >= tempSpeed / 5f)
+        while (bb.speed >= bb.tempSpeed / 5f)
         { 
-            speed -= 0.08f; 
+            bb.speed -= 0.08f; 
             yield return new WaitForSeconds(.01f);
         }
         yield return null;
@@ -177,6 +139,6 @@ public class ArcherAction : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(groundCheck.position, groundDistance);
+        Gizmos.DrawWireSphere(groundCheck.position, bb.groundDistance);
     }
 }
