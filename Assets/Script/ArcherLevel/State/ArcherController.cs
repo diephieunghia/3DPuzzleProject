@@ -25,7 +25,7 @@ public class ArcherController : MonoBehaviour
     void Start()
     {
         moveStateHandler=new MovementStateHandler(bb,this.transform,characterController);
-        input = new PlayerInput(bb);
+        input = new PlayerInput(bb,transform);
     }
 
     // Update is called once per frame

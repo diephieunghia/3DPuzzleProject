@@ -18,13 +18,15 @@ public class ArcherBlackBoard
     [Header("Jump Param")]
     public bool doubleJump = true;
     public float gravity = 9.81f;
-    public float jumpHeight = 3f;
+    public float jumpHeight = 2f;
 
     public Transform groundCheck;
     public LayerMask groundMask;
     public float groundDistance = .4f;
     public bool isGround = true;
     public float jumpVelocity=-2f;
+
+    public float fallMultiplier = 1.7f;
 
     //Dash
     public bool dash = true;
@@ -34,6 +36,7 @@ public class ArcherBlackBoard
     //Shoot
     [Header("Shoot")]
     public bool aiming = false;
+    public bool cancelAim = false;
 
 
 }

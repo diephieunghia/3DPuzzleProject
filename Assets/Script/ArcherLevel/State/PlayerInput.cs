@@ -1,15 +1,21 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.ExceptionServices;
 using UnityEngine;
 
-public class PlayerInput 
-{
 
+public class PlayerInput
+{
     public ArcherBlackBoard bbInput;
-    
-    public PlayerInput(ArcherBlackBoard bb)
+    public bool jumpRelease = false;
+    Transform position;
+    public Action dashActive;
+    public Action doubleJumpActive;
+    public PlayerInput(ArcherBlackBoard bb,Transform playerPosition)
     {
         bbInput = bb;
+        position = playerPosition;
     }
 
     //handle called in update method
@@ -29,26 +35,41 @@ public class PlayerInput
 
     void Jump()
     {
-        if (Input.GetButtonDown("Jump")&&bbInput.isGround)
+        if (Input.GetButtonDown("Jump") && bbInput.isGround)
         {
+            bbInput.speed = 2f;
             bbInput.isGround = false;
-            bbInput.jumpVelocity = Mathf.Sqrt((bbInput.jumpHeight-2.5f) * 2.0f * bbInput.gravity);
+            bbInput.jumpVelocity = Mathf.Sqrt(bbInput.jumpHeight * 2.0f * bbInput.gravity);
         }
+        else if (Input.GetButtonUp("Jump"))
+            jumpRelease = true;
     }
     void DoubleJump()
     {
         if (bbInput.doubleJump && !bbInput.isGround)
         {
-            if (Input.GetButtonDown("Jump"))
-            {               
-                bbInput.doubleJump = false;
-                bbInput.jumpVelocity = Mathf.Sqrt((bbInput.jumpHeight + .75f) * 2.0f * bbInput.gravity);
+            if (Input.GetButtonDown("Jump") && jumpRelease)
+            {            
+                bbInput.doubleJump = false;              
+                jumpRelease = true;
+                doubleJumpActive.Invoke();
             }
         }
     }
     void Dash()
     {
-
+        if (Input.GetKeyDown(KeyCode.LeftShift)&&bbInput.dash)
+        {
+            bbInput.dash = false;
+            dashActive.Invoke();
+        }       
+    }
+    void HoldDraw()
+    {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            bbInput.aiming = true;
+        }
     }
 
 }

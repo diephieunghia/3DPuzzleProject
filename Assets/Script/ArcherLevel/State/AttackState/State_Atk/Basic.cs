@@ -4,18 +4,22 @@ using UnityEngine;
 
 public class Basic : IState
 {
+    
     Transform ownerTransform;
-    ArcherBlackBoard movementbb;
-    MovementStateHandler statehandler;
+    ArcherBlackBoard atkbb;   
     CharacterController controller;
 
-    public Basic()
+    public Basic(ArcherBlackBoard bb, Transform transform, CharacterController controller)
     {
-
+        atkbb = bb;
+        ownerTransform = transform;
+        this.controller=controller;
     }
     public void Enter() { }
 
-    public void Execute() { }
+    public void Execute() { 
+
+    }
 
     public void Exit() { }
 }
