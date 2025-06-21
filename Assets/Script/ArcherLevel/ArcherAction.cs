@@ -27,7 +27,7 @@ public class ArcherAction : MonoBehaviour
         ApplyGravity();
         Shoot();
         Dash();
-        Debug.Log(bb.velocity.y);
+        
     }
 
     void GetInput()
@@ -41,24 +41,24 @@ public class ArcherAction : MonoBehaviour
         bb.Vertical = transform.forward * bb.vertical_z;
         Vector3 move = bb.Horizontal + bb.Vertical;
         move = Vector3.ClampMagnitude(move, 1f);
-        bb.velocity = move;     
+        bb.velocity = move;
         characterController.Move(move * bb.speed * Time.deltaTime);
     }
     void Jump()
     {
         bb.isGround = Physics.CheckSphere(bb.groundCheck.position, bb.groundDistance, bb.groundMask);
-        if (bb.isGround && bb.velocity.y < 0)
+        if (bb.isGround && bb.jumpVelocity < 0)
         {
             bb.speed = bb.tempSpeed;
-            bb.velocity.y = -2f;
+            bb.jumpVelocity = -2f;
             bb.doubleJump = true;
         }      
         if (Input.GetButtonDown("Jump") &&bb.isGround)
         {
-            bb.speed = 2f;
-            bb.velocity.y = Mathf.Sqrt(bb.jumpHeight *2.0f*bb.gravity);
-        }
-        
+            bb.speed = 2f;            
+            bb.jumpVelocity = Mathf.Sqrt(bb.jumpHeight *2.0f*bb.gravity);
+
+        }       
     }
     void DoubleJump()
     {
@@ -67,14 +67,16 @@ public class ArcherAction : MonoBehaviour
             if(Input.GetButtonDown("Jump"))
             {
                 bb.doubleJump = false;
-                bb.velocity.y = Mathf.Sqrt((bb.jumpHeight+.75f) * 2.0f * bb.gravity);
+                bb.jumpVelocity = Mathf.Sqrt((bb.jumpHeight+.75f) * 2.0f * bb.gravity);
             }
         }
     }
     void ApplyGravity()
     {
-        bb.velocity.y -= bb.gravity * Time.deltaTime;
-        characterController.Move(bb.velocity.y * Vector3.up * Time.deltaTime);
+        if(bb.jumpVelocity<0.1f)
+            bb.jumpVelocity -= bb.gravity *2.5f* Time.deltaTime;
+        bb.jumpVelocity -= bb.gravity * Time.deltaTime;
+        characterController.Move(bb.jumpVelocity * Vector3.up * Time.deltaTime);
     }
     void Shoot()
     {

@@ -18,7 +18,7 @@ public class ArcherBlackBoard
     [Header("Jump Param")]
     public bool doubleJump = true;
     public float gravity = 9.81f;
-    public float jumpHeight = 3.8f;
+    public float jumpHeight = 2.8f;
 
     public Transform groundCheck;
     public LayerMask groundMask;
