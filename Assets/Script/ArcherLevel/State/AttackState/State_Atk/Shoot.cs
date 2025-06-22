@@ -23,9 +23,10 @@ public class Shoot : IState
     {
         if (atkbb.aiming==ArcherBlackBoard.Aim.Cancel)
             handler.MoveChangeState(handler.idle);
-        if (atkbb.aiming == ArcherBlackBoard.Aim.Hold)
+        else if (atkbb.aiming == ArcherBlackBoard.Aim.Hold)
             return;
         //handle arrow projectile
+        
 
 
         handler.MoveChangeState(handler.idle);

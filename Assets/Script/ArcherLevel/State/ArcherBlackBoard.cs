@@ -43,7 +43,7 @@ public class ArcherBlackBoard
     [Header("Shoot")]
     public Aim aiming=Aim.Cancel;
 
-    public float force=50f;
-
-
+    public float hitDistance = 1f;
+    public float force = 0f;
+    public float maxForce = 50f;
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -7,26 +8,34 @@ public class Arrow : MonoBehaviour
 {
     public Transform bowPosition;
     public Transform aimTarget;
-    public Transform arrowTip;
+    [SerializeField] Rigidbody rb;
 
     //test ray
     Ray ray;
-    void Start()
-    {       
+    Vector3 direction;
 
+    void Start()
+    {
+        rb= GetComponent<Rigidbody>();
+        //StartCoroutine("Detach");
     }
 
     void Update()
     {
-        //follow bow
-        transform.position = bowPosition.position;
-        transform.rotation = bowPosition.rotation;
-        //rotate follow aim target
+        //transform.rotation = Quaternion.Lerp(transform.rotation, bowPosition.rotation, 2f);          
+        direction = transform.position - aimTarget.position;
+        transform.rotation = Quaternion.LookRotation(direction);
+    }
 
+    void ShootArrow()
+    {
 
-        ray = new Ray(arrowTip.position, aimTarget.position - transform.position);
-        Debug.DrawLine(ray.origin, (aimTarget.position - transform.position )* 10f,Color.green);
-
+    }
+    IEnumerator Detach()
+    {
+        yield return new WaitForSeconds(2f);
+        transform.parent = null;
+        rb.AddRelativeForce(-Vector3.forward*8f,ForceMode.Impulse);
 
     }
 }

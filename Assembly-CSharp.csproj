@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{3FAF6531-BB88-FC26-6A77-D0CD1B96C51B}</ProjectGuid>
+    <ProjectGuid>{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -72,6 +72,7 @@
     <Compile Include="Assets\Script\ArcherLevel\State\AttackState\State_Atk\Idle.cs" />
     <Compile Include="Assets\Script\ArcherLevel\State\AttackState\State_Atk\Shoot.cs" />
     <Compile Include="Assets\Script\ArcherLevel\State\ArcherBlackBoard.cs" />
+    <Compile Include="Assets\Script\ArcherLevel\Arrow\AimToTarget.cs" />
     <Compile Include="Assets\Script\ArcherLevel\State\ArcherController.cs" />
     <Compile Include="Assets\Script\ArcherLevel\State\MovementState\States\Idle.cs" />
     <Compile Include="Assets\Script\ArcherLevel\State\MovementState\States\Jump.cs" />
