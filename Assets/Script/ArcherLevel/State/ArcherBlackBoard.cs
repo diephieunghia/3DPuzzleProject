@@ -33,10 +33,17 @@ public class ArcherBlackBoard
     public float dashSpeed = 9f;
     public float dashDuration = .3f;  
 
+    public enum Aim
+    {
+        Hold,
+        Shoot,
+        Cancel
+    }
     //Shoot
     [Header("Shoot")]
-    public bool aiming = false;
-    public bool cancelAim = false;
+    public Aim aiming=Aim.Cancel;
+
+    public float force=50f;
 
 
 }

@@ -10,15 +10,17 @@ public class AttackStateHandler
     Transform ownerTransform;
     ArcherBlackBoard movementbb;
 
-    public Basic basic;
+    public ATKIdle idle;
+    public Shoot shoot;
 
     public AttackStateHandler(ArcherBlackBoard bb, Transform transform, CharacterController controller)
     {
         movementbb = bb;
         ownerTransform = transform;
         this.controller = controller;
-        basic= new Basic(bb,transform, controller);
-        CurrentState = basic;
+        idle= new ATKIdle(bb,transform, controller,this);
+        shoot=new Shoot(bb,transform,controller,this);
+        CurrentState = idle;
     }
     public void MoveChangeState(IState nextState)
     {

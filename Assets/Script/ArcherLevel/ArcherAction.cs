@@ -33,7 +33,7 @@ public class ArcherAction : MonoBehaviour
         Move();
         Jump();
         ApplyGravity();
-        //attackStateHandler.HandleAttackState();            
+        attackStateHandler.HandleAttackState();            
     }
     private void LateUpdate()
     {

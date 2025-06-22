@@ -25,6 +25,7 @@ public class PlayerInput
         Jump();
         DoubleJump();
         Dash();
+        HoldDraw();
     }
 
     void GetInput()
@@ -66,10 +67,15 @@ public class PlayerInput
     }
     void HoldDraw()
     {
-        if (Input.GetButtonDown("Fire1"))
-        {
-            bbInput.aiming = true;
-        }
+        if (Input.GetButtonDown("Fire1"))       
+            bbInput.aiming = ArcherBlackBoard.Aim.Hold;
+        
+        else if(Input.GetButtonUp("Fire1"))        
+            bbInput.aiming = ArcherBlackBoard.Aim.Shoot;
+
+        if (Input.GetButtonDown("Fire2"))
+            bbInput.aiming = ArcherBlackBoard.Aim.Cancel;
+        
     }
 
 }
