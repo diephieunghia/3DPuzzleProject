@@ -29,7 +29,7 @@ public class Move : IState
         movementbb.Horizontal = movementbb.horizontal_x * ownerTransform.transform.right;
         movementbb.Vertical = movementbb.vertical_z * ownerTransform.transform.forward;
         Vector3 move = movementbb.Horizontal + movementbb.Vertical;
-        move = Vector3.ClampMagnitude(move, 1f);
+        move = Vector3.ClampMagnitude(move, 1f);       
         controller.Move(move * movementbb.speed * Time.deltaTime);
     }
 

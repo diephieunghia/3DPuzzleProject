@@ -21,17 +21,28 @@ public class Shoot : IState
 
     public void Execute()
     {
-        if (atkbb.aiming==ArcherBlackBoard.Aim.Cancel)
-            handler.MoveChangeState(handler.idle);
+        if (atkbb.aiming == ArcherBlackBoard.Aim.Cancel)
+        { 
+            handler.MoveChangeState(handler.idle); 
+        }
         else if (atkbb.aiming == ArcherBlackBoard.Aim.Hold)
+        {
+            
+            atkbb.speed = Mathf.Lerp(atkbb.speed, 2, Time.deltaTime * 130f);                   
             return;
-        //handle arrow projectile
+        }
+            
+            Debug.Log("Change to shoot");
+            //handle arrow projectile
+            atkbb.speed = atkbb.tempSpeed;
+
+
+            handler.MoveChangeState(handler.idle);
         
-
-
-        handler.MoveChangeState(handler.idle);
     }
 
     public void Exit() {
     }
+
+
 }

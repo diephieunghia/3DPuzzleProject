@@ -29,15 +29,18 @@ public class ArcherAction : MonoBehaviour
     }
     // Update is called once per frame
     void Update()
-    {      
+    {
         Move();
         Jump();
         ApplyGravity();
-        attackStateHandler.HandleAttackState();            
+        attackStateHandler.HandleAttackState();
+        
     }
     private void LateUpdate()
     {
         input.HandleInput();
+       
+
     }
     void Move()
     {   
@@ -46,6 +49,8 @@ public class ArcherAction : MonoBehaviour
         Vector3 move = bb.Horizontal + bb.Vertical;
         move = Vector3.ClampMagnitude(move, 1f);
         bb.velocity = move;
+        Debug.Log(bb.speed);
+        
         characterController.Move(bb.velocity * bb.speed * Time.deltaTime);
     }
     void Jump()

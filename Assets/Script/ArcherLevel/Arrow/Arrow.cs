@@ -11,8 +11,11 @@ public class Arrow : MonoBehaviour
     [SerializeField] Rigidbody rb;
 
     //test ray
-    Ray ray;
     Vector3 direction;
+
+    //max draw back distance
+    float maxDistance = 5f;
+
 
     void Start()
     {
@@ -22,11 +25,18 @@ public class Arrow : MonoBehaviour
 
     void Update()
     {
-        //transform.rotation = Quaternion.Lerp(transform.rotation, bowPosition.rotation, 2f);          
+        ArrowIdle();
+    }
+
+    void ArrowIdle()
+    {
         direction = transform.position - aimTarget.position;
         transform.rotation = Quaternion.LookRotation(direction);
     }
-
+    void ArrowDrawBack()
+    {
+        
+    }
     void ShootArrow()
     {
 
