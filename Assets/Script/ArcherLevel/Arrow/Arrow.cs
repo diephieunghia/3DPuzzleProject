@@ -12,6 +12,7 @@ public class Arrow : MonoBehaviour
 
     //test ray
     Vector3 direction;
+    Ray ray;
 
     //max draw back distance
     float maxDistance = 5f;
@@ -32,6 +33,9 @@ public class Arrow : MonoBehaviour
     {
         direction = transform.position - aimTarget.position;
         transform.rotation = Quaternion.LookRotation(direction);
+
+        ray = new Ray(transform.position, aimTarget.position - transform.position);
+        Debug.DrawLine(transform.position, aimTarget.transform.position, Color.green);
     }
     void ArrowDrawBack()
     {

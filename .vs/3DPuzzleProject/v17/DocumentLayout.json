@@ -7,19 +7,23 @@
       "RelativeMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\archerlevel\\arrow\\aimtotarget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|O:\\Green Unity\\3DPuzzleProject\\assets\\script\\archerlevel\\state\\attackstate\\state_atk\\shoot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\archerlevel\\state\\attackstate\\state_atk\\shoot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|O:\\Green Unity\\3DPuzzleProject\\assets\\script\\archerlevel\\arrow\\arrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\archerlevel\\arrow\\arrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|o:\\green unity\\3dpuzzleproject\\assets\\script\\archerlevel\\arrow\\arrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\archerlevel\\arrow\\arrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|o:\\green unity\\3dpuzzleproject\\assets\\script\\archerlevel\\archeraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\archerlevel\\archeraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|o:\\green unity\\3dpuzzleproject\\assets\\script\\archerlevel\\state\\attackstate\\state_atk\\shoot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\archerlevel\\state\\attackstate\\state_atk\\shoot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|O:\\Green Unity\\3DPuzzleProject\\assets\\script\\archerlevel\\state\\playerinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\archerlevel\\state\\playerinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|o:\\green unity\\3dpuzzleproject\\assets\\script\\archerlevel\\state\\archerblackboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|O:\\Green Unity\\3DPuzzleProject\\assets\\script\\archerlevel\\state\\archerblackboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\archerlevel\\state\\archerblackboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -41,9 +45,22 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 226,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 224,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ArcherAction.cs",
+              "DocumentMoniker": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\ArcherLevel\\ArcherAction.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\ArcherLevel\\ArcherAction.cs",
+              "ToolTip": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\ArcherLevel\\ArcherAction.cs",
+              "RelativeToolTip": "Assets\\Script\\ArcherLevel\\ArcherAction.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAACAAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T15:27:34.977Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -52,14 +69,14 @@
               "RelativeDocumentMoniker": "Assets\\Script\\ArcherLevel\\Arrow\\AimToTarget.cs",
               "ToolTip": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\ArcherLevel\\Arrow\\AimToTarget.cs",
               "RelativeToolTip": "Assets\\Script\\ArcherLevel\\Arrow\\AimToTarget.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAtAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-22T14:44:47.573Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Basic.cs",
               "DocumentMoniker": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\ArcherLevel\\State\\AttackState\\State_Atk\\Basic.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\ArcherLevel\\State\\AttackState\\State_Atk\\Basic.cs",
@@ -71,7 +88,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "HandleAnim.cs",
               "DocumentMoniker": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\ArcherLevel\\HandleAnim.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\ArcherLevel\\HandleAnim.cs",
@@ -83,7 +100,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "AttackStateHandler.cs",
               "DocumentMoniker": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\ArcherLevel\\State\\AttackState\\AttackStateHandler.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\ArcherLevel\\State\\AttackState\\AttackStateHandler.cs",
@@ -96,12 +113,12 @@
           ]
         },
         {
-          "DockedWidth": 220,
-          "SelectedChildIndex": 2,
+          "DockedWidth": 222,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "PlayerInput.cs",
               "DocumentMoniker": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\ArcherLevel\\State\\PlayerInput.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\ArcherLevel\\State\\PlayerInput.cs",
@@ -109,12 +126,11 @@
               "RelativeToolTip": "Assets\\Script\\ArcherLevel\\State\\PlayerInput.cs",
               "ViewState": "AQIAADMAAAAAAAAAAAAmwEYAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T08:25:52.081Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-20T08:25:52.081Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ArcherBlackBoard.cs",
               "DocumentMoniker": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\ArcherLevel\\State\\ArcherBlackBoard.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\ArcherLevel\\State\\ArcherBlackBoard.cs",
@@ -122,12 +138,11 @@
               "RelativeToolTip": "Assets\\Script\\ArcherLevel\\State\\ArcherBlackBoard.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAC0AAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T07:57:07.466Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-21T07:57:07.466Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Shoot.cs",
               "DocumentMoniker": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\ArcherLevel\\State\\AttackState\\State_Atk\\Shoot.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\ArcherLevel\\State\\AttackState\\State_Atk\\Shoot.cs",
@@ -140,13 +155,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Arrow.cs",
               "DocumentMoniker": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\ArcherLevel\\Arrow\\Arrow.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\ArcherLevel\\Arrow\\Arrow.cs",
               "ToolTip": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\ArcherLevel\\Arrow\\Arrow.cs",
               "RelativeToolTip": "Assets\\Script\\ArcherLevel\\Arrow\\Arrow.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAAAAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-22T14:04:12.805Z",
               "EditorCaption": ""
