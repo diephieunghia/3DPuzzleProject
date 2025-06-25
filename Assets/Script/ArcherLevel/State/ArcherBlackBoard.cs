@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -46,4 +47,8 @@ public class ArcherBlackBoard
     public float hitDistance = 1f;
     public float force = 0f;
     public float maxForce = 50f;
+
+    public delegate void HandleDraw(Aim aimMode);
+    public HandleDraw DrawArrow;
+
 }

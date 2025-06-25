@@ -19,7 +19,7 @@ public class ArcherAction : MonoBehaviour
         bb.groundCheck = groundCheck;
         bb.groundMask= groundMask;  
         attackStateHandler = new AttackStateHandler(bb, transform, characterController);
-        input = new PlayerInput(bb,transform);
+        input = new PlayerInput(bb,transform);            
     }
 
     private void Start()
@@ -49,7 +49,6 @@ public class ArcherAction : MonoBehaviour
         Vector3 move = bb.Horizontal + bb.Vertical;
         move = Vector3.ClampMagnitude(move, 1f);
         bb.velocity = move;
-        Debug.Log(bb.speed);
         
         characterController.Move(bb.velocity * bb.speed * Time.deltaTime);
     }
@@ -75,29 +74,8 @@ public class ArcherAction : MonoBehaviour
         bb.jumpVelocity -= bb.gravity * Time.deltaTime;
         characterController.Move(bb.jumpVelocity * Vector3.up * Time.deltaTime);
     }
-    void Shoot()
-    {
-        //if(Input.GetButtonDown("Fire1"))
-        //{
-        //   bb.aiming = true;
-        //   StartCoroutine("DecreaseSpeedAim");
-        //}
-        //else if (Input.GetButtonUp("Fire1"))
-        //{
-        //    bb.aiming = false;
-        //    StopCoroutine("DecreaseSpeedAim");
-        //    bb.speed = bb.tempSpeed;
-        //}
-    }
-    IEnumerator DecreaseSpeedAim()
-    {
-        while (bb.speed >= bb.tempSpeed / 5f)
-        { 
-            bb.speed -= 0.08f; 
-            yield return new WaitForSeconds(.01f);
-        }
-        yield return null;
-    }
+
+    
 
     void Dash()
     {
@@ -121,4 +99,6 @@ public class ArcherAction : MonoBehaviour
             yield return null;
         }      
     }
+
+    
 }

@@ -9,6 +9,8 @@ public class Shoot : IState
     ArcherBlackBoard atkbb;
     CharacterController controller;
 
+    float elapsedTime = 0;
+    float timeFullCharge = 2f;
     public Shoot(ArcherBlackBoard bb, Transform transform, CharacterController controller,AttackStateHandler atkHandler)
     {
         atkbb = bb;
@@ -16,28 +18,28 @@ public class Shoot : IState
         this.controller = controller;
         this.handler = atkHandler;
     }
-    public void Enter() {       
+    public void Enter() {      
+        
     }
 
     public void Execute()
     {
         if (atkbb.aiming == ArcherBlackBoard.Aim.Cancel)
-        { 
+        {
             handler.MoveChangeState(handler.idle); 
         }
         else if (atkbb.aiming == ArcherBlackBoard.Aim.Hold)
         {
-            
-            atkbb.speed = Mathf.Lerp(atkbb.speed, 2, Time.deltaTime * 130f);                   
+            elapsedTime += Time.deltaTime;
+            float completion = elapsedTime / timeFullCharge;
+
+            atkbb.speed = Mathf.Lerp(atkbb.speed, 2, completion);
+            Debug.Log(atkbb.speed);
             return;
         }
-            
-            Debug.Log("Change to shoot");
-            //handle arrow projectile
-            atkbb.speed = atkbb.tempSpeed;
+        atkbb.speed = atkbb.tempSpeed;
 
-
-            handler.MoveChangeState(handler.idle);
+        handler.MoveChangeState(handler.idle);
         
     }
 

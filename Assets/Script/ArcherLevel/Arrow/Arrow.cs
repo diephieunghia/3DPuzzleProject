@@ -17,6 +17,8 @@ public class Arrow : MonoBehaviour
     //max draw back distance
     float maxDistance = 5f;
 
+    //arrow state
+
 
     void Start()
     {
