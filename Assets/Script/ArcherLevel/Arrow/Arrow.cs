@@ -39,13 +39,10 @@ public class Arrow : MonoBehaviour
         ray = new Ray(transform.position, aimTarget.position - transform.position);
         Debug.DrawLine(transform.position, aimTarget.transform.position, Color.green);
     }
-    void ArrowDrawBack()
-    {
-        
-    }
     void ShootArrow()
     {
-
+        transform.parent = null;
+        //rb.AddForce()
     }
     IEnumerator Detach()
     {
