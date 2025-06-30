@@ -37,8 +37,7 @@ public class PlayerInput
     void Jump()
     {
         if (Input.GetButtonDown("Jump") && bbInput.isGround)
-        {
-            bbInput.speed = 2f;
+        {          
             bbInput.isGround = false;
             bbInput.jumpVelocity = Mathf.Sqrt(bbInput.jumpHeight * 2.0f * bbInput.gravity);
         }

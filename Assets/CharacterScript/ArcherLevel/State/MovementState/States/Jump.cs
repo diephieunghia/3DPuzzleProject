@@ -43,7 +43,6 @@ public class Jump : IState
         }      
         movementbb.jumpVelocity -= movementbb.gravity * Time.deltaTime;
         controller.Move(movementbb.jumpVelocity * Vector3.up * Time.deltaTime);
-        Debug.Log(movementbb.jumpVelocity);
         movementbb.isGround = Physics.CheckSphere(movementbb.groundCheck.position, movementbb.groundDistance, movementbb.groundMask);
     }
 

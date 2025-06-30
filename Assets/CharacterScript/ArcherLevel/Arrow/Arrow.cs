@@ -6,8 +6,6 @@ using UnityEngine.UIElements;
 
 public class Arrow : MonoBehaviour
 {
-    public Transform bowPosition;
-    public Transform aimTarget;
     [SerializeField] Rigidbody rb;
 
     //test ray
@@ -23,26 +21,17 @@ public class Arrow : MonoBehaviour
     void Start()
     {
         rb= GetComponent<Rigidbody>();
-        //StartCoroutine("Detach");
     }
 
     void Update()
     {
-        ArrowIdle();
     }
 
-    void ArrowIdle()
-    {
-        direction = transform.position - aimTarget.position;
-        transform.rotation = Quaternion.LookRotation(direction);
-
-        ray = new Ray(transform.position, aimTarget.position - transform.position);
-        Debug.DrawLine(transform.position, aimTarget.transform.position, Color.green);
-    }
-    void ShootArrow()
+    public void ShootArrow(float force)
     {
         transform.parent = null;
-        //rb.AddForce()
+        rb.useGravity = true ;
+        rb.AddRelativeForce(-Vector3.forward * force, ForceMode.Impulse);
     }
     IEnumerator Detach()
     {

@@ -44,7 +44,10 @@ public class HandleAnim : MonoBehaviour
     void SetAttack()
     {
         if (archerAction.bb.aiming == ArcherBlackBoard.Aim.Hold)
+        { 
             anim.SetBool("Draw", true);
+            anim.SetFloat("DrawSpeed", 2f);
+        }
         else
             anim.SetBool("Draw", false);
     }

@@ -16,7 +16,8 @@ public class ATKIdle : IState
         this.controller = controller;
         handler = atkHandler;
     }
-    public void Enter() {       
+    public void Enter() {
+        atkbb.currentArrow = ArrowPool.ins.GetObject();
     }
 
     public void Execute() {

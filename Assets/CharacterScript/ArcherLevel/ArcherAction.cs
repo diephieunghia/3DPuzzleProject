@@ -74,9 +74,6 @@ public class ArcherAction : MonoBehaviour
         bb.jumpVelocity -= bb.gravity * Time.deltaTime;
         characterController.Move(bb.jumpVelocity * Vector3.up * Time.deltaTime);
     }
-
-    
-
     void Dash()
     {
         if (bb.dash)

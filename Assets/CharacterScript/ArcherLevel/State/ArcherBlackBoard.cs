@@ -9,8 +9,8 @@ public class ArcherBlackBoard
     [Header("Move")]
     public float horizontal_x;
     public float vertical_z;
-    public float speed = 5f;
-    public float tempSpeed = 5f;
+    public float speed = 8f;
+    public float tempSpeed = 8f;
 
     public Vector3 velocity;
     public Vector3 Horizontal;
@@ -45,10 +45,10 @@ public class ArcherBlackBoard
     public Aim aiming=Aim.Cancel;
 
     public float hitDistance = 1f;
-    public float force = 0f;
-    public float maxForce = 50f;
+    public float force = 5f;
+    public float maxForce = 70f;
 
     public delegate void HandleDraw(Aim aimMode);
     public HandleDraw DrawArrow;
-
+    public GameObject currentArrow;
 }

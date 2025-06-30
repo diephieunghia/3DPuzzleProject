@@ -21,6 +21,7 @@ public class AttackStateHandler
         idle= new ATKIdle(bb,transform, controller,this);
         shoot=new Shoot(bb,transform,controller,this);
         CurrentState = idle;
+        CurrentState.Enter();
     }
     public void MoveChangeState(IState nextState)
     {
