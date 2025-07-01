@@ -22,6 +22,7 @@ public class ArrowPool : ObjectPool
         for (int i = 0; i < count; i++)
         {
             GameObject obj = Instantiate(prefab, arrowHolder);    
+
             obj.SetActive(false);
             
             poolObjects.Enqueue(obj);
@@ -39,6 +40,15 @@ public class ArrowPool : ObjectPool
         //if queue is empty, instantiate new object
         else
             return Instantiate(prefab, arrowHolder);
+    }
+    public override void ReturnObject(GameObject obj)
+    {        
+        
+
+        obj.transform.SetParent(arrowHolder.transform, false);
+
+        obj.SetActive(false);
+        poolObjects.Enqueue(obj);
     }
 
 }

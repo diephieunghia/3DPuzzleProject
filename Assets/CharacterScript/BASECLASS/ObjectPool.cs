@@ -34,7 +34,7 @@ public class ObjectPool : MonoBehaviour
             return Instantiate(prefab, transform);
     }
 
-    public void ReturnObject(GameObject obj)
+    public virtual void ReturnObject(GameObject obj)
     {
         obj.SetActive(false);
         poolObjects.Enqueue(obj);

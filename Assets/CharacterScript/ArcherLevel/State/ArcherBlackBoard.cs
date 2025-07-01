@@ -45,9 +45,12 @@ public class ArcherBlackBoard
     public Aim aiming=Aim.Cancel;
 
     public float hitDistance = 1f;
-    public float force = 5f;
+    public float force = .8f;
     public float maxForce = 70f;
+    public float shootRate = 0f;
 
+    public float shootRateMax = .5f;
+    public bool allowShoot = false;
     public delegate void HandleDraw(Aim aimMode);
     public HandleDraw DrawArrow;
     public GameObject currentArrow;

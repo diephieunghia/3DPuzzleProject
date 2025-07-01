@@ -2,15 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(ArcherAction),typeof(Animation))]
 public class HandleAnim : MonoBehaviour
 {
     ArcherAction archerAction;
     [SerializeField] Animator anim;
-    // Start is called before the first frame update
+
+    public static HandleAnim ins;
+    private void Awake()
+    {
+        if (ins != null && ins != this)
+            Destroy(this);
+        else
+            ins = this;
+    }
+
     void Start()
     {
-        archerAction = GetComponent<ArcherAction>();
+        archerAction = GetComponentInParent<ArcherAction>();
     }
 
     // Update is called once per frame
@@ -19,7 +27,6 @@ public class HandleAnim : MonoBehaviour
         SetIdle();
         SetMovement();
         SetDash();
-        SetAttack();
     }
     void SetIdle()
     {
@@ -41,14 +48,21 @@ public class HandleAnim : MonoBehaviour
         if(archerAction.bb.dash)
             anim.SetTrigger("Dash");
     }
-    void SetAttack()
+    public void SetAttackAnim()
     {
-        if (archerAction.bb.aiming == ArcherBlackBoard.Aim.Hold)
-        { 
+        if (archerAction.bb.aiming == ArcherBlackBoard.Aim.Hold )
+        {
             anim.SetBool("Draw", true);
-            anim.SetFloat("DrawSpeed", 2f);
+            anim.SetFloat("DrawSpeed", 3f);
+            Debug.Log("true is running");
         }
-        else
-            anim.SetBool("Draw", false);
+    }
+    public void DisableAttack()
+    {
+        anim.SetBool("Draw", false);
+    }
+    public void SetAllowShoot()
+    {
+        archerAction.bb.allowShoot = true;
     }
 }

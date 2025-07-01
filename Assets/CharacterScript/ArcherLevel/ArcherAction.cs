@@ -18,7 +18,7 @@ public class ArcherAction : MonoBehaviour
         bb = new ArcherBlackBoard();
         bb.groundCheck = groundCheck;
         bb.groundMask= groundMask;  
-        attackStateHandler = new AttackStateHandler(bb, transform, characterController);
+       
         input = new PlayerInput(bb,transform);            
     }
 
@@ -26,6 +26,7 @@ public class ArcherAction : MonoBehaviour
     {
         input.dashActive += Dash;
         input.doubleJumpActive += DoubleJump;
+        attackStateHandler = new AttackStateHandler(bb, transform, characterController);
     }
     // Update is called once per frame
     void Update()
