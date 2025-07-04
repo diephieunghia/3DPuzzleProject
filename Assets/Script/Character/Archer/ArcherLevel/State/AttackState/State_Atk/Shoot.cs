@@ -38,7 +38,7 @@ public class Shoot : IState
             float completion = elapsedTime / timeFullCharge;
 
             atkbb.speed = Mathf.Lerp(atkbb.speed, 2, completion); 
-            atkbb.force=Mathf.Lerp(0,atkbb.maxForce, completion);           
+            atkbb.force=Mathf.Lerp(10,atkbb.maxForce, completion);           
             return;
         }
         else

@@ -18,7 +18,6 @@ public class Arrow : MonoBehaviour
     public Vector3 OriginPosition { get; }
     public Quaternion OriginRotation { get; }
     //max draw back distance
-    float maxDistance = 5f;
     public Transform arrowMass;
 
     private void Awake()
