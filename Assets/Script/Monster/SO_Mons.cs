@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class SO_Mons : ScriptableObject
 {
-    float health;
-    float damage;
-    float speed;
+    public float health;
+    public float damage;
+    public float speed;
 }

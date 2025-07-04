@@ -27,7 +27,6 @@ public class Shoot : IState
     public void Execute()
     {
         atkbb.shootRate += Time.deltaTime;
-        Debug.Log(atkbb.aiming);
         if (atkbb.aiming == ArcherBlackBoard.Aim.Cancel)
         {
             handler.MoveChangeState(handler.idle);
@@ -47,7 +46,6 @@ public class Shoot : IState
         if (atkbb.allowShoot)
         {
             atkbb.currentArrow.GetComponent<Arrow>().ShootArrow(atkbb.force);
-            Debug.Log(atkbb.force);
             handler.MoveChangeState(handler.idle);
             atkbb.allowShoot = false;
         }

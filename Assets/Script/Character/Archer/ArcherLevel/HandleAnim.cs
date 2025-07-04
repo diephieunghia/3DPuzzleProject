@@ -54,7 +54,6 @@ public class HandleAnim : MonoBehaviour
         {
             anim.SetBool("Draw", true);
             anim.SetFloat("DrawSpeed", 3f);
-            Debug.Log("true is running");
         }
     }
     public void DisableAttack()

@@ -1,8 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class BaseMonster : MonoBehaviour
 {
-    protected SO_Mons baseStat;
+    [SerializeField] SO_Mons stat;
+
+
 }
