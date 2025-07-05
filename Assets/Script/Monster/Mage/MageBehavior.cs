@@ -19,7 +19,7 @@ public class MageBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        moveHandler.HandleAttackState();
+        moveHandler.HandleMoveState();
         
     }
 }

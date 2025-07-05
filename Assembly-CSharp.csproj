@@ -59,8 +59,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\BASECLASS\BaseChar.cs" />
-    <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\AttackState\State_Atk\Idle.cs" />
     <Compile Include="Assets\Script\BASECLASS\BaseMonster.cs" />
+    <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\AttackState\State_Atk\Idle.cs" />
     <Compile Include="Assets\Script\Character\Archer\CameraControl.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\Arrow\ArrowPool.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\MovementState\MovementStateHandler.cs" />
@@ -78,6 +78,7 @@
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\ArcherController.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\ArcherBlackBoard.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\MovementState\States\Move.cs" />
+    <Compile Include="Assets\Script\Monster\STATE\Move\KeepDistance.cs" />
     <Compile Include="Assets\Script\Monster\STATE\Move\Chase.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\AttackState\AttackStateHandler.cs" />
     <Compile Include="Assets\Script\Monster\STATE\Move\RandomMove.cs" />

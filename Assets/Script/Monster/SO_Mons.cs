@@ -10,4 +10,6 @@ public class SO_Mons : ScriptableObject
     public float health;
     public float damage;
     public float speed;
+    public bool attack;
+    public bool shield;
 }

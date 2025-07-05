@@ -13,7 +13,6 @@ public class Chase : IState
         agent = _agent;
         currentChar = baseChar;
         currentHandler = handler;
-
     }
     public void Enter() { 
 
@@ -23,8 +22,11 @@ public class Chase : IState
         float deltaDistance = agent.remainingDistance - agent.stoppingDistance;
 
         if (-.7f < deltaDistance && deltaDistance < -.3f)
-            currentHandler.MoveChangeState(currentHandler.randMove);            
-        Debug.Log("stop-remaing: "+(agent.remainingDistance- agent.stoppingDistance));
+        { 
+            currentHandler.MoveChangeState(currentHandler.randMove);
+            Debug.Log("Move to random move state");
+        }            
+        //Debug.Log("stop-remaing: "+(agent.remainingDistance- agent.stoppingDistance));
         agent.SetDestination(currentChar.gameObject.transform.position);
     }
 

@@ -11,12 +11,14 @@ public class MoveHandler
 
     public Chase chase;
     public RandomMove randMove;
+    public KeepDistance keepDistance;
     public MoveHandler(NavMeshAgent _agent,BaseChar character)
     {
         agent = _agent;
         activeChar= character;
         chase = new Chase(_agent, character,this);
         randMove = new RandomMove(_agent, character, this);
+        keepDistance=new KeepDistance(_agent, character, this);
         CurrentState = chase;
     }
 
@@ -26,7 +28,7 @@ public class MoveHandler
         CurrentState = nextState;
         CurrentState.Enter();
     }
-    public void HandleAttackState()
+    public void HandleMoveState()
     {
         CurrentState.Execute();
     }
