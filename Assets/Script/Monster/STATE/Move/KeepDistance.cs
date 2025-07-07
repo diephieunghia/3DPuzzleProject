@@ -43,7 +43,7 @@ public class KeepDistance : IState
         {
             randomPoint = RandomPointInArcBehindMonster();                       
         }
-        Debug.DrawRay(agent.transform.position, randomPoint - agent.transform.position);
+
         agent.stoppingDistance = .5f;
         agent.SetDestination(randomPoint); 
 

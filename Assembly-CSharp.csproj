@@ -67,6 +67,7 @@
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\MovementState\States\Jump.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\MovementState\States\Idle.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\AttackState\State_Atk\Shoot.cs" />
+    <Compile Include="Assets\Script\Monster\Minion\Axe.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\HandleShoot.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\Arrow\ArrowDetection.cs" />
     <Compile Include="Assets\Script\BASECLASS\IState.cs" />
