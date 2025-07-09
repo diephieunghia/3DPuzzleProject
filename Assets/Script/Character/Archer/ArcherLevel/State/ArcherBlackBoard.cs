@@ -36,6 +36,7 @@ public class ArcherBlackBoard
 
     public enum Aim
     {
+        Idle,
         Hold,
         Shoot,
         Cancel

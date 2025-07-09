@@ -46,6 +46,7 @@ public class Shoot : IState
         if (atkbb.allowShoot)
         {
             atkbb.currentArrow.GetComponent<Arrow>().ShootArrow(atkbb.force);
+            atkbb.aiming = ArcherBlackBoard.Aim.Idle;
             handler.MoveChangeState(handler.idle);
             atkbb.allowShoot = false;
         }

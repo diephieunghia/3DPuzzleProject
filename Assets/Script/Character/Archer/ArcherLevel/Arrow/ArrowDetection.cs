@@ -9,18 +9,21 @@ public class ArrowDetection : MonoBehaviour
     BoxCollider arrowTip;
     Rigidbody body;
     public LayerMask ally;
+    private void Awake()
+    {
+        arrowTip = GetComponentInChildren<BoxCollider>();
+        body = GetComponentInChildren<Rigidbody>();
+        arrow = GetComponentInChildren<Arrow>();
+    }
     void Start()
     {
-        arrowTip= GetComponentInChildren<BoxCollider>();
-        body= GetComponentInChildren<Rigidbody>();
-        arrow= GetComponentInChildren<Arrow>();
+        
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == ally)
         {
-            Debug.Log("Ally detected" + other.name);
             return;
         }
         body.velocity = Vector3.zero;
@@ -28,8 +31,7 @@ public class ArrowDetection : MonoBehaviour
 
         transform.position= Vector3.zero;
         transform.rotation = Quaternion.identity;
-
-        Debug.Log(other.name);
+        arrow.BoxCollider = null;
 
         ArrowPool.ins.ReturnObject(gameObject);
     }

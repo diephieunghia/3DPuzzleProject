@@ -7,13 +7,13 @@ public class RandomMove : IState
 {
     NavMeshAgent agent;
     BaseChar currentChar;
-    MoveHandler currentHandler;
+    MageMoveHandler currentHandler;
 
     float radius = 2f;
     float moveInterval = .7f;
 
     float timer;
-    public RandomMove(NavMeshAgent _agent, BaseChar baseChar, MoveHandler handler)
+    public RandomMove(NavMeshAgent _agent, BaseChar baseChar, MageMoveHandler handler)
     {
         agent = _agent;
         currentChar = baseChar;
@@ -32,15 +32,13 @@ public class RandomMove : IState
             agent.updateRotation = true;
             agent.stoppingDistance = 8;
             agent.acceleration = 8;
-            currentHandler.MoveChangeState(currentHandler.chase);
-            Debug.Log("change to chase");
+            currentHandler.MoveChangeState(currentHandler.chase);           
         }
         else if (deltaDistance.magnitude < 7)
         {
             agent.stoppingDistance = Random.Range(8, 10);
             agent.acceleration = 8;
-            currentHandler.MoveChangeState(currentHandler.keepDistance);
-            Debug.Log("change to keepDistance");
+            currentHandler.MoveChangeState(currentHandler.keepDistance);            
         }
         timer -= Time.deltaTime;
         if (timer <= 0)

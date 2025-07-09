@@ -12,25 +12,33 @@ public class Axe : MonoBehaviour
     [SerializeField] GameObject rayStart;
     [SerializeField] GameObject rayEnd;
     Ray detectRay;
+    public float distance = 2f;
+    public LayerMask layerMask;
     // Start is called before the first frame update
     void Start()
-    {
+    {        
     }
 
     // Update is called once per frame
     void Update()
-    {
+    {       
         DrawRay();
+        
     }
 
     void DrawRay()
-    {
-        detectRay.direction = rayStart.transform.position - rayEnd.transform.position;
-        Debug.DrawLine(rayStart.transform.position, detectRay.direction, Color.green);
+    {    
+        detectRay.direction = rayEnd.transform.position-rayStart.transform.position;
+        Debug.DrawRay(rayStart.transform.position, detectRay.direction*distance, Color.red);
+        if(Physics.Raycast(rayStart.transform.position, detectRay.direction, out RaycastHit hit, distance))
+        {
+            if(hit.collider.gameObject.GetComponent<IDamageable>() != null)
+            {
+                
+            }           
+            
+        }
+
     }
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.green;
-        Gizmos.DrawLine(rayStart.transform.position, rayEnd.transform.position);
-    }
+
 }

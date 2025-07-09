@@ -20,12 +20,19 @@ public class Arrow : MonoBehaviour
     //max draw back distance
     public Transform arrowMass;
 
+    BoxCollider boxCollider;
+    public BoxCollider BoxCollider { set
+        {
+            boxCollider.enabled = false;
+        } }
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         rb.centerOfMass = arrowMass.position;
         originPosition = transform.localPosition;
         originRotate = transform.localRotation;
+        boxCollider = GetComponentInChildren<BoxCollider>();
+        boxCollider.enabled = false; // Disable collider initially
     }
     private void LateUpdate()
     {
@@ -38,7 +45,9 @@ public class Arrow : MonoBehaviour
     {
         transform.parent = null;
         rb.useGravity = true ;
+        boxCollider.enabled = true; // Enable collider when shooting
         rb.AddRelativeForce(-Vector3.forward * force, ForceMode.Impulse);
     }
+
     
 }

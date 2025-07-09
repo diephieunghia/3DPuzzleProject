@@ -7,13 +7,13 @@ public class KeepDistance : IState
 {
     NavMeshAgent agent;
     BaseChar currentChar;
-    MoveHandler currentHandler;
+    MageMoveHandler currentHandler;
 
     Vector3 randomPoint;
     float radius = 6f;
     Vector3 deltaDistance;
     float updateTime = 3f;
-    public KeepDistance(NavMeshAgent _agent, BaseChar baseChar, MoveHandler handler)
+    public KeepDistance(NavMeshAgent _agent, BaseChar baseChar, MageMoveHandler handler)
     {
         agent = _agent;
         currentChar = baseChar;
@@ -41,6 +41,7 @@ public class KeepDistance : IState
         }
         else if(deltaDistance.magnitude<=8&&updateTime<=0)
         {
+            agent.transform.LookAt(currentChar.gameObject.transform.position);
             randomPoint = RandomPointInArcBehindMonster();                       
         }
 

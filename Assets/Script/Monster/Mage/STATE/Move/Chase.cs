@@ -7,8 +7,8 @@ public class Chase : IState
 {
     NavMeshAgent agent;
     BaseChar currentChar;
-    MoveHandler currentHandler;
-    public Chase(NavMeshAgent _agent,BaseChar baseChar,MoveHandler handler)
+    MageMoveHandler currentHandler;
+    public Chase(NavMeshAgent _agent,BaseChar baseChar,MageMoveHandler handler)
     {
         agent = _agent;
         currentChar = baseChar;
@@ -23,8 +23,7 @@ public class Chase : IState
 
         if (-.7f < deltaDistance && deltaDistance < -.3f)
         { 
-            currentHandler.MoveChangeState(currentHandler.randMove);
-            Debug.Log("Move to random move state");
+            currentHandler.MoveChangeState(currentHandler.randMove);            
         }            
         //Debug.Log("stop-remaing: "+(agent.remainingDistance- agent.stoppingDistance));
         agent.SetDestination(currentChar.gameObject.transform.position);
