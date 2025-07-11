@@ -15,8 +15,13 @@ public class Projectile : MonoBehaviour
 
     void Update()
     {
+        
+    }
+
+    void SphereCast()
+    {
         hitColliders = Physics.OverlapSphere(transform.position, radius, playerMask);
-        if (hitColliders!=null)
+        if (hitColliders != null)
         {
             foreach (Collider hitCollider in hitColliders)
             {
@@ -27,10 +32,4 @@ public class Projectile : MonoBehaviour
         }
     }
 
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, radius);
-    }
 }

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 80
   damage: 20
-  speed: 6
-  attack: 0
+  speed: 3.5
+  attack: 1
   shield: 0
   attackRate: 3

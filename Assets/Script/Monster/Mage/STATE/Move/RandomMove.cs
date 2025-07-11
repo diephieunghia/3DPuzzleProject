@@ -10,7 +10,7 @@ public class RandomMove : IState
     MageMoveHandler currentHandler;
     BaseMonster thisMonster;
 
-    float radius = 2f;
+    public float radius = 2f;
     float moveInterval = .7f;
 
     float timer;
@@ -29,23 +29,25 @@ public class RandomMove : IState
     public void Execute()
     {
         Vector3 deltaDistance=currentChar.gameObject.transform.position-agent.transform.position;
-        if (deltaDistance.magnitude > 10f)
+        
+        if (deltaDistance.magnitude > 12f)
         {
             agent.updateRotation = true;
-            agent.stoppingDistance = 8;
-            agent.acceleration = 8;
+            agent.stoppingDistance = 11;
+            agent.acceleration = 6;
             thisMonster.MonsterStat.attack = false;
             currentHandler.MoveChangeState(currentHandler.chase);           
         }
         else if (deltaDistance.magnitude < 7)
         {
-            agent.stoppingDistance = Random.Range(8, 10);
+            agent.stoppingDistance = 11;
             agent.acceleration = 8;
             currentHandler.MoveChangeState(currentHandler.keepDistance);            
         }
-        timer -= Time.deltaTime;
+        timer -= Time.deltaTime;      
         if (timer <= 0)
         {
+            
             Vector3 randomPoint = RandomPointInCircle();
             NavMeshHit hit;
 
@@ -60,8 +62,7 @@ public class RandomMove : IState
             timer = moveInterval;
             thisMonster.MonsterStat.attack = true;
         }
-        
-
+       
     }
 
     public void Exit() {

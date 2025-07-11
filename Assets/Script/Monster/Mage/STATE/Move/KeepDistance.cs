@@ -11,7 +11,7 @@ public class KeepDistance : IState
     BaseMonster thisMonster;
 
     Vector3 randomPoint;
-    float radius = 6f;
+    float radius = 4f;
     Vector3 deltaDistance;
     float updateTime = 3f;
     public KeepDistance(NavMeshAgent _agent, BaseChar baseChar, MageMoveHandler handler,BaseMonster monster)
@@ -28,22 +28,23 @@ public class KeepDistance : IState
     public void Execute() {
         updateTime-=Time.deltaTime;
         deltaDistance = currentChar.gameObject.transform.position - agent.transform.position;
-        if (deltaDistance.magnitude > 10f)
+        agent.transform.LookAt(currentChar.gameObject.transform.position);
+        if (deltaDistance.magnitude > 12f)
         {
             agent.updateRotation = true;
-            agent.stoppingDistance = 8f;
+            agent.stoppingDistance = 11;
             thisMonster.MonsterStat.attack = false;
             currentHandler.MoveChangeState(currentHandler.chase);
             
         }
-        else if (8f < deltaDistance.magnitude && deltaDistance.magnitude <= 10f)
+        else if (9f < deltaDistance.magnitude && deltaDistance.magnitude < 12f)
         {
-            agent.stoppingDistance = 8f;
+            agent.stoppingDistance = 11;
             currentHandler.MoveChangeState(currentHandler.randMove);
         }
-        else if(deltaDistance.magnitude<=8&&updateTime<=0)
+        else if(deltaDistance.magnitude<=9&&updateTime<=0)
         {
-            agent.transform.LookAt(currentChar.gameObject.transform.position);
+            
             randomPoint = RandomPointInArcBehindMonster();                       
         }
 
@@ -52,7 +53,9 @@ public class KeepDistance : IState
 
     }
 
-    public void Exit() { }
+    public void Exit() {
+        updateTime = 3f;
+    }
 
     Vector3 RandomPointInArcBehindMonster()
     {

@@ -22,8 +22,9 @@ public class Chase : IState
 
     public void Execute() {
         float deltaDistance = agent.remainingDistance - agent.stoppingDistance;
-
-        if (-.7f < deltaDistance && deltaDistance < -.3f)
+        if (0f < deltaDistance && deltaDistance < .5f)
+            agent.acceleration = 1f;
+        else if (-.7f < deltaDistance && deltaDistance <=-.3f)
         {
             thisMonster.MonsterStat.attack = true;
             currentHandler.MoveChangeState(currentHandler.randMove);            

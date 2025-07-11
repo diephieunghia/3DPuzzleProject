@@ -29,11 +29,11 @@ public class MageAttack : MonoBehaviour
     }
     void AttackType1()
     {
-        Debug.Log("attack 1");
+        //Debug.Log("attack 1");
     }
     void AttackType2()
     {
-        Debug.Log("Attack2");
+        //Debug.Log("Attack2");
     }
     int RandomWithProbability()
     {
