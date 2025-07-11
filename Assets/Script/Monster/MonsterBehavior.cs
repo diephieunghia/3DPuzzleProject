@@ -4,8 +4,11 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.EventSystems;
 
+[RequireComponent(typeof(BaseMonster))]
 public class MonsterBehavior : MonoBehaviour
 {
+    protected BaseMonster monsterstat;
+    public BaseMonster MonsterStat => monsterstat;
     protected NavMeshAgent agent;
     protected BaseChar player;
 
@@ -13,6 +16,7 @@ public class MonsterBehavior : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         player = FindObjectOfType<BaseChar>();       
+        monsterstat = GetComponent<BaseMonster>();
     }
     
 }

@@ -8,17 +8,18 @@ public class KeepDistance : IState
     NavMeshAgent agent;
     BaseChar currentChar;
     MageMoveHandler currentHandler;
+    BaseMonster thisMonster;
 
     Vector3 randomPoint;
     float radius = 6f;
     Vector3 deltaDistance;
     float updateTime = 3f;
-    public KeepDistance(NavMeshAgent _agent, BaseChar baseChar, MageMoveHandler handler)
+    public KeepDistance(NavMeshAgent _agent, BaseChar baseChar, MageMoveHandler handler,BaseMonster monster)
     {
         agent = _agent;
         currentChar = baseChar;
         currentHandler = handler;
-
+        thisMonster = monster;
     }
     public void Enter() {
         randomPoint=RandomPointInArcBehindMonster();
@@ -31,6 +32,7 @@ public class KeepDistance : IState
         {
             agent.updateRotation = true;
             agent.stoppingDistance = 8f;
+            thisMonster.Attack = false;
             currentHandler.MoveChangeState(currentHandler.chase);
             
         }

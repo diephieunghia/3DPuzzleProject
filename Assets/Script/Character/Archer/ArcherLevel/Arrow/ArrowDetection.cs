@@ -33,6 +33,7 @@ public class ArrowDetection : MonoBehaviour
         transform.rotation = Quaternion.identity;
         arrow.BoxCollider = null;
 
+        arrow.trail.enabled = false;
         ArrowPool.ins.ReturnObject(gameObject);
     }
 

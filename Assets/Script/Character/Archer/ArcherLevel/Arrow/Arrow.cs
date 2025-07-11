@@ -25,6 +25,8 @@ public class Arrow : MonoBehaviour
         {
             boxCollider.enabled = false;
         } }
+
+    public TrailRenderer trail;
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -33,6 +35,8 @@ public class Arrow : MonoBehaviour
         originRotate = transform.localRotation;
         boxCollider = GetComponentInChildren<BoxCollider>();
         boxCollider.enabled = false; // Disable collider initially
+        trail=GetComponentInChildren<TrailRenderer>();
+        trail.enabled = false;
     }
     private void LateUpdate()
     {
@@ -45,6 +49,7 @@ public class Arrow : MonoBehaviour
     {
         transform.parent = null;
         rb.useGravity = true ;
+        trail.enabled= true ;
         boxCollider.enabled = true; // Enable collider when shooting
         rb.AddRelativeForce(-Vector3.forward * force, ForceMode.Impulse);
     }

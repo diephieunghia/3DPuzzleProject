@@ -8,16 +8,18 @@ public class RandomMove : IState
     NavMeshAgent agent;
     BaseChar currentChar;
     MageMoveHandler currentHandler;
+    BaseMonster thisMonster;
 
     float radius = 2f;
     float moveInterval = .7f;
 
     float timer;
-    public RandomMove(NavMeshAgent _agent, BaseChar baseChar, MageMoveHandler handler)
+    public RandomMove(NavMeshAgent _agent, BaseChar baseChar, MageMoveHandler handler,BaseMonster monster)
     {
         agent = _agent;
         currentChar = baseChar;
         this.currentHandler = handler;
+        thisMonster = monster;
     }
     public void Enter()
     {
@@ -32,6 +34,7 @@ public class RandomMove : IState
             agent.updateRotation = true;
             agent.stoppingDistance = 8;
             agent.acceleration = 8;
+            thisMonster.Attack = false;
             currentHandler.MoveChangeState(currentHandler.chase);           
         }
         else if (deltaDistance.magnitude < 7)
@@ -55,6 +58,7 @@ public class RandomMove : IState
                 agent.transform.rotation = Quaternion.LookRotation(deltaDistance);
             }
             timer = moveInterval;
+            thisMonster.Attack = true;
         }
         
 

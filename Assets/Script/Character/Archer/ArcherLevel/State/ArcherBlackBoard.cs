@@ -47,7 +47,7 @@ public class ArcherBlackBoard
 
     public float hitDistance = 1f;
     public float force = 20f;
-    public float maxForce = 70f;
+    public float maxForce = 100f;
     public float shootRate = 0f;
 
     public float shootRateMax = .5f;

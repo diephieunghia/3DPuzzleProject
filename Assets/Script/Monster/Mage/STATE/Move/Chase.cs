@@ -8,11 +8,13 @@ public class Chase : IState
     NavMeshAgent agent;
     BaseChar currentChar;
     MageMoveHandler currentHandler;
-    public Chase(NavMeshAgent _agent,BaseChar baseChar,MageMoveHandler handler)
+    BaseMonster thisMonster;
+    public Chase(NavMeshAgent _agent,BaseChar baseChar,MageMoveHandler handler,BaseMonster monster)
     {
         agent = _agent;
         currentChar = baseChar;
         currentHandler = handler;
+        thisMonster = monster;  
     }
     public void Enter() { 
 
@@ -22,7 +24,8 @@ public class Chase : IState
         float deltaDistance = agent.remainingDistance - agent.stoppingDistance;
 
         if (-.7f < deltaDistance && deltaDistance < -.3f)
-        { 
+        {
+            thisMonster.Attack = true;
             currentHandler.MoveChangeState(currentHandler.randMove);            
         }            
         //Debug.Log("stop-remaing: "+(agent.remainingDistance- agent.stoppingDistance));

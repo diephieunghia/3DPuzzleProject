@@ -7,7 +7,7 @@ public class MoveHandler
 {
     public IState CurrentState;
     public NavMeshAgent agent;
-   
+    public BaseMonster monster;
       
     protected BaseChar activeChar;
 

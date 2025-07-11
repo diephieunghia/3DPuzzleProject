@@ -9,13 +9,14 @@ public class MageMoveHandler : MoveHandler
     public RandomMove randMove;
     public KeepDistance keepDistance;
 
-    public MageMoveHandler(NavMeshAgent _agent, BaseChar character)
+    public MageMoveHandler(NavMeshAgent _agent, BaseChar character,BaseMonster monster)
     {
         agent = _agent;
         activeChar = character;
-        chase = new Chase(_agent, character, this);
-        randMove = new RandomMove(_agent, character, this);
-        keepDistance = new KeepDistance(_agent, character, this);
+        this.monster = monster;
+        chase = new Chase(_agent, character, this,monster);
+        randMove = new RandomMove(_agent, character, this,monster);
+        keepDistance = new KeepDistance(_agent, character, this,monster);
         CurrentState = chase;
     }
 }

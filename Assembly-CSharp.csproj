@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}</ProjectGuid>
+    <ProjectGuid>{3FAF6531-BB88-FC26-6A77-D0CD1B96C51B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -81,10 +81,10 @@
     <Compile Include="Assets\Script\Monster\Mage\STATE\Move\RandomMove.cs" />
     <Compile Include="Assets\Script\Monster\Minion\MinionMoveHandler.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\HandleAnim.cs" />
-    <Compile Include="Assets\Script\Monster\HandleAnimMons.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\ArcherController.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\ArcherBlackBoard.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\MovementState\States\Move.cs" />
+    <Compile Include="Assets\Script\Monster\Mage\MageAnim.cs" />
     <Compile Include="Assets\Script\Monster\Minion\STATE\Dodge.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\AttackState\AttackStateHandler.cs" />
     <Compile Include="Assets\Script\Monster\MonsterBehavior.cs" />
@@ -93,6 +93,7 @@
     <Compile Include="Assets\Script\BASECLASS\ObjectPool.cs" />
     <Compile Include="Assets\Script\Monster\MoveHandler.cs" />
     <Compile Include="Assets\Script\BASECLASS\SO_Char.cs" />
+    <Compile Include="Assets\Script\Monster\Mage\MageAttack.cs" />
     <Compile Include="Assets\Script\Monster\Mage\MageMoveHandler.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\ArcherAction.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\PlayerInput.cs" />
@@ -121,10 +122,12 @@
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Package\Asset\Tiny_Treats_Pretty_Park_1.0_FREE\Tiny_Treats_Pretty_Park_1.0_FREE\License.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\Hovl Studio\Procedural fire\Shaders\FireSphere.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\Hovl Studio\Procedural fire\Demo scene\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\Package\Asset\KayKit_Restaurant_Bits_1.0_FREE\KayKit_Restaurant_Bits_1.0_FREE\License.txt" />
   </ItemGroup>
