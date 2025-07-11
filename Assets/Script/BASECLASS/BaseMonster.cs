@@ -7,5 +7,5 @@ public class BaseMonster : MonoBehaviour
 {
     [SerializeField] SO_Mons stat;
 
-    public bool Attack { get { return stat.attack; } set{ stat.attack = value; } }
+    public SO_Mons MonsterStat => stat;  
 }

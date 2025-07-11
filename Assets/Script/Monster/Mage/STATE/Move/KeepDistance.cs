@@ -32,7 +32,7 @@ public class KeepDistance : IState
         {
             agent.updateRotation = true;
             agent.stoppingDistance = 8f;
-            thisMonster.Attack = false;
+            thisMonster.MonsterStat.attack = false;
             currentHandler.MoveChangeState(currentHandler.chase);
             
         }

@@ -44,7 +44,6 @@ public class ArrowPool : ObjectPool
     public override void ReturnObject(GameObject obj)
     {        
         
-
         obj.transform.SetParent(arrowHolder.transform, false);
 
         obj.SetActive(false);

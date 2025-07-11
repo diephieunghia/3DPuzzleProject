@@ -25,7 +25,7 @@ public class Chase : IState
 
         if (-.7f < deltaDistance && deltaDistance < -.3f)
         {
-            thisMonster.Attack = true;
+            thisMonster.MonsterStat.attack = true;
             currentHandler.MoveChangeState(currentHandler.randMove);            
         }            
         //Debug.Log("stop-remaing: "+(agent.remainingDistance- agent.stoppingDistance));

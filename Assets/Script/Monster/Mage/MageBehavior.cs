@@ -12,6 +12,7 @@ public class MageBehavior : MonsterBehavior
     protected override void Start()
     {
         base.Start();
+        agent.speed = monsterstat.MonsterStat.speed;
         mageMoveHandler = new MageMoveHandler(agent,player,monsterstat);
     }
 
