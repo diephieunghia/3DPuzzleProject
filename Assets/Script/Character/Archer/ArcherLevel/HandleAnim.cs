@@ -64,4 +64,12 @@ public class HandleAnim : MonoBehaviour
     {
         archerAction.bb.allowShoot = true;
     }
+    public bool WaitForReloadAnim()
+    {
+        if((anim.GetCurrentAnimatorStateInfo(1).normalizedTime > 0.89f && anim.GetCurrentAnimatorStateInfo(1).IsName("StandDraw")))
+        {
+            return true;
+        }
+        return false;
+    }
 }

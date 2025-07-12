@@ -29,6 +29,7 @@ public class Shoot : IState
         atkbb.shootRate += Time.deltaTime;
         if (atkbb.aiming == ArcherBlackBoard.Aim.Cancel)
         {
+            atkbb.allowShoot = false;
             handler.MoveChangeState(handler.idle);
             atkbb.shootRate = 0f;
         }
@@ -38,7 +39,7 @@ public class Shoot : IState
             float completion = elapsedTime / timeFullCharge;
 
             atkbb.speed = Mathf.Lerp(atkbb.speed, 2, completion); 
-            atkbb.force=Mathf.Lerp(10,atkbb.maxForce, completion);           
+            atkbb.force=Mathf.Lerp(8,atkbb.maxForce, completion);           
             return;
         }
         else
@@ -47,6 +48,7 @@ public class Shoot : IState
         {
             atkbb.currentArrow.GetComponent<Arrow>().ShootArrow(atkbb.force);
             atkbb.aiming = ArcherBlackBoard.Aim.Idle;
+            
             handler.MoveChangeState(handler.idle);
             atkbb.allowShoot = false;
         }
@@ -56,7 +58,7 @@ public class Shoot : IState
     public void Exit() {
         HandleAnim.ins.DisableAttack();
         atkbb.speed = atkbb.tempSpeed;
-        atkbb.force = 0.2f;
+        atkbb.force = 8f;
         atkbb.shootRate = 0f;
         elapsedTime = 0;
         atkbb.currentArrow = null;

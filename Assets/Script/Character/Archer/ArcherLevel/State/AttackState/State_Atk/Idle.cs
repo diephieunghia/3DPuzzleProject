@@ -21,8 +21,9 @@ public class ATKIdle : IState
     }
 
     public void Execute() {
-        if (atkbb.aiming==ArcherBlackBoard.Aim.Hold)
-            handler.MoveChangeState(handler.shoot);
+        if(HandleAnim.ins.WaitForReloadAnim())
+            if (atkbb.aiming==ArcherBlackBoard.Aim.Hold)
+                handler.MoveChangeState(handler.shoot);
     }
 
     public void Exit() { }
