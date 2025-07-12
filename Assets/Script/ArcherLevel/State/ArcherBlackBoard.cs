@@ -36,4 +36,14 @@ public class ArcherBlackBoard
     public bool aiming = false;
 
 
+<<<<<<< Updated upstream:Assets/Script/ArcherLevel/State/ArcherBlackBoard.cs
+=======
+    public float shootRateMax = .5f;
+    public bool allowShoot = false;
+    public delegate void HandleDraw(Aim aimMode);
+    public HandleDraw DrawArrow;
+    public GameObject currentArrow;
+
+    public float clickCoolDown = .2f;
+>>>>>>> Stashed changes:Assets/Script/Character/Archer/ArcherLevel/State/ArcherBlackBoard.cs
 }
