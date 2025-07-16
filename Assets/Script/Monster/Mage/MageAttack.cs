@@ -2,14 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
-[RequireComponent(typeof(MageAnim))]
+[RequireComponent(typeof(MageAnim),typeof(BaseMonster))]
 public class MageAttack : MonoBehaviour
 {
     MageBehavior m_Behavior;
     MageAnim anim;
+    BaseMonster m_Monster;
     float countDown = 3f;
+    [SerializeField] GameObject fireBallHolder;
+
     void Start()
     {
+        m_Monster = GetComponent<BaseMonster>();
         m_Behavior = GetComponent<MageBehavior>();
         anim = GetComponent<MageAnim>();
     }
@@ -30,7 +34,9 @@ public class MageAttack : MonoBehaviour
     }
     void AttackType1()
     {
-        //Debug.Log("attack 1");
+        GameObject fireOrb = MageProjectilePool.ins.GetObject();
+        fireOrb.transform.position=fireBallHolder.transform.position;
+        fireOrb.GetComponent<ProjectileMove>().GetDirection(transform.forward,transform.rotation,m_Monster.MonsterStat.damage);
     }
     void AttackType2()
     {
