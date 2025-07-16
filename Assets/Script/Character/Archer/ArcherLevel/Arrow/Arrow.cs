@@ -17,9 +17,11 @@ public class Arrow : MonoBehaviour
     Quaternion originRotate;
     public Vector3 OriginPosition { get; }
     public Quaternion OriginRotation { get; }
-    //max draw back distance
     public Transform arrowMass;
-
+    //arrow damage
+    float damage;
+    public float Damage => damage;
+    
     BoxCollider boxCollider;
     public BoxCollider BoxCollider { set
         {
@@ -34,7 +36,7 @@ public class Arrow : MonoBehaviour
         originPosition = transform.localPosition;
         originRotate = transform.localRotation;
         boxCollider = GetComponentInChildren<BoxCollider>();
-        boxCollider.enabled = false; // Disable collider initially
+        //boxCollider.enabled = false; // Disable collider initially
         trail=GetComponentInChildren<TrailRenderer>();
         trail.enabled = false;
     }
@@ -45,12 +47,13 @@ public class Arrow : MonoBehaviour
         }
     }
 
-    public void ShootArrow(float force)
+    public void ShootArrow(float force,float damage)
     {
         transform.parent = null;
+        //boxCollider.enabled = true; // Enable collider when shooting
         rb.useGravity = true ;
-        trail.enabled= true ;
-        boxCollider.enabled = true; // Enable collider when shooting
+        trail.enabled= true ;       
+        this.damage = damage;
         rb.AddRelativeForce(-Vector3.forward * force, ForceMode.Impulse);
     }
 

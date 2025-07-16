@@ -55,4 +55,8 @@ public class ArcherBlackBoard
     public delegate void HandleDraw(Aim aimMode);
     public HandleDraw DrawArrow;
     public GameObject currentArrow;
+
+    //damage
+    public float damage = 20f;
+    public float maxDamage = 125f;
 }

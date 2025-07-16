@@ -11,6 +11,7 @@ public class BaseChar : MonoBehaviour,IDamageable
 
     public virtual void TakeDamage(float damage, Vector3 hitPoint, Vector3 hitDirection, GameObject attacker)
     {
+
     }
 
 

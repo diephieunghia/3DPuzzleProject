@@ -54,12 +54,13 @@ public class RandomMove : IState
             if (NavMesh.SamplePosition(randomPoint, out hit, .5f, NavMesh.AllAreas))
             {
                 agent.stoppingDistance = 1;
-                agent.acceleration = 30f;               
+                agent.acceleration = 3f;               
                 agent.SetDestination(hit.position);
                 agent.updateRotation = false;
                 agent.transform.rotation = Quaternion.LookRotation(deltaDistance);
             }
             timer = moveInterval;
+            //set attack to true
             thisMonster.MonsterStat.attack = true;
         }
        

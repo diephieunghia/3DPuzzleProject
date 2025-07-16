@@ -11,8 +11,6 @@ public class Shoot : IState
 
     float elapsedTime = 0;
     float timeFullCharge = 2.5f;
-
-
     public Shoot(ArcherBlackBoard bb, Transform transform, CharacterController controller,AttackStateHandler atkHandler)
     {
         atkbb = bb;
@@ -38,15 +36,16 @@ public class Shoot : IState
             elapsedTime += Time.deltaTime;
             float completion = elapsedTime / timeFullCharge;
 
-            atkbb.speed = Mathf.Lerp(atkbb.speed, 2, completion); 
-            atkbb.force=Mathf.Lerp(8,atkbb.maxForce, completion);           
+            atkbb.speed = Mathf.Lerp(atkbb.speed, 2, completion);            
+            atkbb.force=Mathf.Lerp(8,atkbb.maxForce, completion);
+            atkbb.damage = Mathf.Lerp(20, atkbb.maxDamage, completion);
             return;
         }
         else
         { elapsedTime = 0; }
         if (atkbb.allowShoot)
         {
-            atkbb.currentArrow.GetComponent<Arrow>().ShootArrow(atkbb.force);
+            atkbb.currentArrow.GetComponent<Arrow>().ShootArrow(atkbb.force,atkbb.damage);
             atkbb.aiming = ArcherBlackBoard.Aim.Idle;
             
             handler.MoveChangeState(handler.idle);

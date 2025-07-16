@@ -18,6 +18,7 @@ public class Projectile : MonoBehaviour
         
     }
 
+    //hit using sphere cast
     void SphereCast()
     {
         hitColliders = Physics.OverlapSphere(transform.position, radius, playerMask);

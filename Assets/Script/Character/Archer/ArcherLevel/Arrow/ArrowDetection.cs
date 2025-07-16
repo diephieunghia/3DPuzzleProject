@@ -26,15 +26,31 @@ public class ArrowDetection : MonoBehaviour
         {
             return;
         }
+        if(gameObject.transform.parent != null)
+        {
+            // If the arrow is still parented to the archer, ignore the hit
+            return;
+        }
+        //Debug.Log("Arrow hit: " + other.name);
+        IDamageable damageable = other.GetComponentInParent<IDamageable>();
+        if (damageable != null)
+        {
+            float multiplier = 1f;
+            if (other.CompareTag("Head"))
+                multiplier = 2f;
+            damageable.TakeDamage(arrow.Damage * multiplier, transform.position, transform.forward, gameObject);
+        }
+
         body.velocity = Vector3.zero;
         body.useGravity = false;
 
-        transform.position= Vector3.zero;
+        transform.position = Vector3.zero;
         transform.rotation = Quaternion.identity;
-        arrow.BoxCollider = null;
+        //arrow.BoxCollider = null;
 
         arrow.trail.enabled = false;
         ArrowPool.ins.ReturnObject(gameObject);
     }
+    
 
 }

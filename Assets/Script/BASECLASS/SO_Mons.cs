@@ -13,5 +13,10 @@ public class SO_Mons : ScriptableObject
 
     public bool attack;
     public bool shield;
+    public bool hit;
+    public float baseCoolDown;
+
     public float attackRate;
+
+    public float velocity;
 }

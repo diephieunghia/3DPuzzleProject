@@ -23,6 +23,7 @@ public class KeepDistance : IState
     }
     public void Enter() {
         randomPoint=RandomPointInArcBehindMonster();
+        updateTime = 0f;
     }
 
     public void Execute() {
@@ -45,7 +46,8 @@ public class KeepDistance : IState
         else if(deltaDistance.magnitude<=9&&updateTime<=0)
         {
             
-            randomPoint = RandomPointInArcBehindMonster();                       
+            randomPoint = RandomPointInArcBehindMonster();      
+            updateTime = 3f;
         }
 
         agent.stoppingDistance = .5f;

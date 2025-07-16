@@ -16,14 +16,17 @@ public class Chase : IState
         currentHandler = handler;
         thisMonster = monster;  
     }
-    public void Enter() { 
-
+    public void Enter() {
+        //get velocity
+        thisMonster.MonsterStat.velocity = agent.speed;
+        thisMonster.MonsterStat.attack = false;
     }
 
     public void Execute() {
+       
         float deltaDistance = agent.remainingDistance - agent.stoppingDistance;
         if (0f < deltaDistance && deltaDistance < .5f)
-            agent.acceleration = 1f;
+            agent.acceleration = 2f;
         else if (-.7f < deltaDistance && deltaDistance <=-.3f)
         {
             thisMonster.MonsterStat.attack = true;
