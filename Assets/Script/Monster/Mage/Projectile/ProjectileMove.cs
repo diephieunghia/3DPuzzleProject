@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class ProjectileMove : MonoBehaviour
 {
-    Collider[] hitColliders=null;
-
     Vector3 monsterDirection;
     float speed;
     public float Speed { get { return speed; } set { speed = value; } }

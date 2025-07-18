@@ -27,11 +27,9 @@ public class MinionChase : IState
         agent.SetDestination(currentChar.gameObject.transform.position);
         if (agent.remainingDistance <= 0)
         {
-            Debug.Log("prepare to attack");
         }
         if (currentChar.IsShooting())
         {
-            Debug.Log("Shooting");
         }
     }
 

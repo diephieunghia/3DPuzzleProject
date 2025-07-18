@@ -12,6 +12,7 @@ public class MageAnim : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         monster = GetComponent<BaseMonster>();
+        monster.DeathTrigger += Death;
     }
 
     // Update is called once per frame
@@ -27,5 +28,10 @@ public class MageAnim : MonoBehaviour
     public void Attack()
     {
         anim.SetBool("Attack", monster.MonsterStat.attack);
+    }
+    public void Death()
+    {
+        anim.SetBool("Death",monster.MonsterStat.death);
+        Debug.Log("Trigger Death");
     }
 }

@@ -19374,10 +19374,10 @@ GameObject:
   - component: {fileID: 7803750156277883587}
   - component: {fileID: 7647844417000375754}
   - component: {fileID: 9071337101511831426}
-  - component: {fileID: -5482713501474142082}
+  - component: {fileID: -6431315968012943280}
   m_Layer: 0
   m_Name: Mage Fire
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24222,7 +24222,7 @@ SphereCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
@@ -24258,7 +24258,13 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 128
---- !u!54 &-5482713501474142082
+  monsterMask:
+    serializedVersion: 2
+    m_Bits: 256
+  projectile:
+    serializedVersion: 2
+    m_Bits: 0
+--- !u!54 &-6431315968012943280
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

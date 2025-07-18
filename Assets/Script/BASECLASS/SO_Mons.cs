@@ -11,12 +11,16 @@ public class SO_Mons : ScriptableObject
     public float damage;
     public float speed;
 
-    public bool attack;
-    public bool shield;
-    public bool hit;
+    //anim stat
+    public bool attack=false;
+    public bool shield=false;
+    public bool hitBody = false;
+    public bool hitHead = false;
     public float baseCoolDown;
+    public bool death=false;
+    public float velocity;
 
     public float attackRate;
 
-    public float velocity;
+    
 }

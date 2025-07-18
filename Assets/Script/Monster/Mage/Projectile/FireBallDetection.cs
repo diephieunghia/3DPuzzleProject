@@ -5,6 +5,8 @@ using UnityEngine;
 public class FireBallDetection : MonoBehaviour
 {
     [SerializeField] LayerMask playerMask;
+    [SerializeField] LayerMask monsterMask;
+    [SerializeField] LayerMask projectile;
     ProjectileMove firebalMove;
     ParticleSystem pSystem;
     void Start()
@@ -20,6 +22,10 @@ public class FireBallDetection : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.CompareTag("Projectile")||other.gameObject.layer==monsterMask)
+        {
+            return;
+        }
         if (other.gameObject.layer == playerMask)
         {
             IDamageable damageable = other.GetComponentInParent<IDamageable>();

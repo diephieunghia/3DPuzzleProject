@@ -22,7 +22,7 @@ public class ArrowDetection : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == ally)
+        if (other.gameObject.layer == ally||other.gameObject.CompareTag("Projectile"))
         {
             return;
         }

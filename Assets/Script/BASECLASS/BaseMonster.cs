@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,8 +8,11 @@ public class BaseMonster : MonoBehaviour,IDamageable
     [SerializeField] SO_Mons stat;
     public SO_Mons MonsterStat => stat;
 
+
     float currentHeath;
     float maxHealth;
+
+    public Action DeathTrigger;
     private void Start()
     {
         currentHeath = stat.health;
@@ -21,11 +25,13 @@ public class BaseMonster : MonoBehaviour,IDamageable
         currentHeath = Mathf.Clamp(currentHeath, 0, maxHealth);
         if(currentHeath <= 0)
         {
-            Debug.Log("Monster Dead");
+            stat.death = true;
+            stat.attack = false;
+            stat.velocity = 0;
+            DeathTrigger.Invoke();
         }
         else
-        {
-            Debug.Log("Monster took damage: " + damage + ", Current Health: " + currentHeath);
+        {           
         }
     }
 }

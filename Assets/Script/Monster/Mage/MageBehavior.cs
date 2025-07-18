@@ -19,7 +19,8 @@ public class MageBehavior : MonsterBehavior
     // Update is called once per frame
     void Update()
     {
-        mageMoveHandler.HandleMoveState();       
+        if(!monsterstat.MonsterStat.death)
+            mageMoveHandler.HandleMoveState();       
     }
 
    

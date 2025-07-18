@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2857233235054109220}
   m_Layer: 7
   m_Name: Trail
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 1796064970375315198}
   m_Layer: 7
   m_Name: Tip
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 6890543564140944116}
   m_Layer: 7
   m_Name: ArrowParent
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -283,6 +283,10 @@ PrefabInstance:
     - target: {fileID: 1337024436769953104, guid: 01372e2815129ca4a9eb1bbb79cb15ca, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1337024436769953104, guid: 01372e2815129ca4a9eb1bbb79cb15ca, type: 3}
+      propertyPath: m_TagString
+      value: Projectile
       objectReference: {fileID: 0}
     - target: {fileID: 1857101564821426154, guid: 01372e2815129ca4a9eb1bbb79cb15ca, type: 3}
       propertyPath: m_LocalPosition.x

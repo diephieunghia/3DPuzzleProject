@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Body
   - Head
+  - Projectile
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - Ground
   - Ally
   - Enemy
-  - 
+  - Projectile
   - 
   - 
   - 
