@@ -32,12 +32,14 @@ public class ProjectileMove : MonoBehaviour
         speed = SpeedTest;
 
         child = gameObject.GetComponentsInChildren<Transform>();
-        Debug.Log(child.Length);
-        //foreach(Transform t in child)
-        //{
-        //    t.rotation = rotation;
-        //    t.rotation = Quaternion.Euler(new Vector3(-90, 0, 0));
-        //}
+        
+        for(int i=1;i< child.Length; i++)
+        {
+            Quaternion lookRotation = Quaternion.LookRotation(direction);
+            child[i].rotation = lookRotation* Quaternion.Euler(-90, 0, 0);
+            
+        }   
+        
     }
 
 }
