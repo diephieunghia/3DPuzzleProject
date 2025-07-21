@@ -28,13 +28,13 @@ public class FireBallDetection : MonoBehaviour
         }
         if (other.gameObject.layer == playerMask)
         {
+            IDamageable.Body type=IDamageable.Body.Body;
             IDamageable damageable = other.GetComponentInParent<IDamageable>();
             if (damageable != null)
             {
-                damageable.TakeDamage(1, transform.position, transform.forward, gameObject);
+                damageable.TakeDamage(1, transform.position, transform.forward, gameObject,type);
             }
         }
-        Debug.Log(other.name);
         //stop the fireball and return to pool
         firebalMove.Speed = 0;
         pSystem.Stop();

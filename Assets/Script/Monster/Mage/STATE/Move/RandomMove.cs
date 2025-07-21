@@ -35,7 +35,7 @@ public class RandomMove : IState
             agent.updateRotation = true;
             agent.stoppingDistance = 11;
             agent.acceleration = 6;
-            thisMonster.MonsterStat.attack = false;
+            thisMonster.Attack = false;
             currentHandler.MoveChangeState(currentHandler.chase);           
         }
         else if (deltaDistance.magnitude < 7)
@@ -61,7 +61,7 @@ public class RandomMove : IState
             }
             timer = moveInterval;
             //set attack to true
-            thisMonster.MonsterStat.attack = true;
+            thisMonster.Attack = true;
         }
        
     }

@@ -35,10 +35,15 @@ public class ArrowDetection : MonoBehaviour
         IDamageable damageable = other.GetComponentInParent<IDamageable>();
         if (damageable != null)
         {
+            IDamageable.Body type=IDamageable.Body.Body;
             float multiplier = 1f;
             if (other.CompareTag("Head"))
+            { 
                 multiplier = 2f;
-            damageable.TakeDamage(arrow.Damage * multiplier, transform.position, transform.forward, gameObject);
+                type = IDamageable.Body.Head;
+            }
+
+            damageable.TakeDamage(arrow.Damage * multiplier, transform.position, transform.forward, gameObject,type);
         }
 
         body.velocity = Vector3.zero;

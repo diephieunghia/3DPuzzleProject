@@ -18,8 +18,8 @@ public class Chase : IState
     }
     public void Enter() {
         //get velocity
-        thisMonster.MonsterStat.velocity = agent.speed;
-        thisMonster.MonsterStat.attack = false;
+        thisMonster.MonsterStat.velocity= agent.speed;
+        thisMonster.Attack = false;
     }
 
     public void Execute() {
@@ -29,7 +29,7 @@ public class Chase : IState
             agent.acceleration = 2f;
         else if (-.7f < deltaDistance && deltaDistance <=-.3f)
         {
-            thisMonster.MonsterStat.attack = true;
+            thisMonster.Attack = true;
             currentHandler.MoveChangeState(currentHandler.randMove);            
         }            
         //Debug.Log("stop-remaing: "+(agent.remainingDistance- agent.stoppingDistance));

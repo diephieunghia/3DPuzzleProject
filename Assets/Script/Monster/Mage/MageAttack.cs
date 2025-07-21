@@ -21,7 +21,7 @@ public class MageAttack : MonoBehaviour
     void Update()
     {
         countDown -= Time.deltaTime;
-        if (countDown <= 0 && m_Behavior.MonsterStat.MonsterStat.attack)
+        if (countDown <= 0 && m_Monster.Attack)
         {
 
             int rand = RandomWithProbability();

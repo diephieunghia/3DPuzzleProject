@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[RequireComponent(typeof(BaseMonster))]
-public class MageAnim : MonoBehaviour
+
+public class MinionAnim : MonoBehaviour
 {
     Animator anim;
     BaseMonster monster;
@@ -33,8 +33,7 @@ public class MageAnim : MonoBehaviour
     }
     public void Death()
     {
-        anim.SetBool("Death",true);
-        Debug.Log("Trigger Death");
+        anim.SetBool("Death", true);      
     }
     public void BodyHit()
     {

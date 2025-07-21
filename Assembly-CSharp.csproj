@@ -81,6 +81,7 @@
     <Compile Include="Assets\Script\Monster\Mage\STATE\Move\RandomMove.cs" />
     <Compile Include="Assets\Script\Monster\Minion\MinionMoveHandler.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\HandleAnim.cs" />
+    <Compile Include="Assets\Script\Monster\Minion\MinionAnim.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\ArcherController.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\ArcherBlackBoard.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\MovementState\States\Move.cs" />

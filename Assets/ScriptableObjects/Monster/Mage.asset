@@ -17,9 +17,8 @@ MonoBehaviour:
   speed: 3.5
   attack: 0
   shield: 0
-  hitBody: 0
-  hitHead: 0
   baseCoolDown: 3
-  death: 1
+  death: 0
   velocity: 0
+  Block: 0
   attackRate: 3

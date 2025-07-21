@@ -9,7 +9,7 @@ public class BaseChar : MonoBehaviour,IDamageable
         return false;
     }
 
-    public virtual void TakeDamage(float damage, Vector3 hitPoint, Vector3 hitDirection, GameObject attacker)
+    public virtual void TakeDamage(float damage, Vector3 hitPoint, Vector3 hitDirection, GameObject attacker, IDamageable.Body hitPart)
     {
 
     }

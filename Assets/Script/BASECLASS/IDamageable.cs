@@ -4,5 +4,10 @@ using UnityEngine;
 
 public interface IDamageable
 {
-    void TakeDamage(float damage, Vector3 hitPoint, Vector3 hitDirection, GameObject attacker);
+    public enum Body
+    {
+        Head,
+        Body,
+    }
+    void TakeDamage(float damage, Vector3 hitPoint, Vector3 hitDirection, GameObject attacker,Body hitPart);
 }
