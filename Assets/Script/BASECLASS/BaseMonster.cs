@@ -17,12 +17,16 @@ public class BaseMonster : MonoBehaviour,IDamageable
     public bool Death => death;
     float coolDown;
     public float CoolDown { get { return coolDown; } set { coolDown = value; } }
+    public LayerMask arrow;
 
     //Minion
     public bool axeEnable=false;
     public Action DeathTrigger;
     public Action HeadHit;
     public Action BodyHit;
+    public Transform center;
+    public Vector3 size;
+
     private void Start()
     {
         currentHeath = stat.health;
@@ -49,5 +53,9 @@ public class BaseMonster : MonoBehaviour,IDamageable
                 HeadHit.Invoke();
                     
         }
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireCube(center.position, size);
     }
 }

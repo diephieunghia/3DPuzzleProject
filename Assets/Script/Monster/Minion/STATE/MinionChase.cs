@@ -10,6 +10,10 @@ public class MinionChase : IState
     MinionMoveHandler currentHandler;
     BaseMonster monsterStat;
 
+    float enableBoxCastTime = 10f;
+    float boxCoolDown = 2f;
+
+    Collider[] overlapVision;
     public MinionChase(NavMeshAgent _agent,BaseChar character, MinionMoveHandler handler,BaseMonster stat)
     {
         agent = _agent;
@@ -26,6 +30,7 @@ public class MinionChase : IState
     public void Execute()
     {
         monsterStat.CoolDown -= Time.deltaTime;
+        boxCoolDown-= Time.deltaTime;
         agent.SetDestination(currentChar.gameObject.transform.position);
         agent.transform.LookAt(currentChar.gameObject.transform.position);
         if (agent.remainingDistance <= 3f&&monsterStat.CoolDown<=0)
@@ -38,10 +43,26 @@ public class MinionChase : IState
         {
             monsterStat.Attack = false;            
         }
-        if (currentChar.IsShooting())
-        {
-
+        if (boxCoolDown <= 0) {
+            Debug.Log("Overlap Box is running");
+            enableBoxCastTime-=Time.deltaTime;
+            overlapVision = Physics.OverlapBox(monsterStat.center.position, monsterStat.size / 2, monsterStat.transform.rotation, monsterStat.arrow);
+            foreach(Collider overlap in overlapVision)
+            {
+                if (overlap.CompareTag("Projectile"))
+                { 
+                    Debug.Log(overlap.name);
+                    currentHandler.MoveChangeState(currentHandler.dodge);
+                }
+            }
+            if(enableBoxCastTime<0)
+            {
+                boxCoolDown = 2f;
+                enableBoxCastTime = 1f;
+            }
         }
+        
+
     }
 
     public void Exit()

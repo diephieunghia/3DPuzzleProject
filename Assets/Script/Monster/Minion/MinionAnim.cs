@@ -7,6 +7,7 @@ public class MinionAnim : MonoBehaviour
     Animator anim;
     BaseMonster monster;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,4 +54,5 @@ public class MinionAnim : MonoBehaviour
     {
         monster.axeEnable = false;
     }
+
 }

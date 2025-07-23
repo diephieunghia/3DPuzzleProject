@@ -10,7 +10,7 @@ public class Dodge : IState
     MinionMoveHandler currentHandler;
     BaseMonster monsterStat;
 
-    float radius = 2f;
+    float radius = 5f;
     Vector3 randomPoint;
 
     public Dodge(NavMeshAgent _agent, BaseChar character, MinionMoveHandler handler, BaseMonster stat)
@@ -25,16 +25,36 @@ public class Dodge : IState
     {
         monsterStat.Attack = false;
         randomPoint = RandomPointInArcLeftRightMonster();
+        agent.speed = 50;
+        agent.stoppingDistance = 0;
+        agent.SetDestination(randomPoint);
     }
 
     public void Execute()
     {
+        Vector3 deltaDistance=currentChar.transform.position-monsterStat.transform.position;
+        NavMeshHit hit;
+
+        if (NavMesh.SamplePosition(randomPoint, out hit, 1f, NavMesh.AllAreas))
+        {
+            agent.stoppingDistance = 0;
+            agent.acceleration = 30f;
+            agent.SetDestination(hit.position);
+            agent.updateRotation = false;
+            agent.transform.rotation = Quaternion.LookRotation(deltaDistance);
+        }
+        if (agent.remainingDistance<=1f)
+        {
+           
+            currentHandler.MoveChangeState(currentHandler.minionChase);
+        }
 
     }
 
     public void Exit()
     {
-
+        agent.speed = monsterStat.MonsterStat.speed;
+        agent.stoppingDistance = 4.8f;
     }
     
     Vector3 RandomPointInArcLeftRightMonster()

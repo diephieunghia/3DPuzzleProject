@@ -11,10 +11,6 @@ public class ArcherBase : BaseChar
     {
         bb = GetComponent<ArcherAction>().bb;
     }
-    public override bool IsShooting()
-    {
-        return bb.aiming == ArcherBlackBoard.Aim.Shoot;
-    }
 
     public override void TakeDamage(float damage, Vector3 hitPoint, Vector3 hitDirection, GameObject attacker, IDamageable.Body hitPart)
     {
