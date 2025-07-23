@@ -30,6 +30,7 @@ public class MinionAnim : MonoBehaviour
     public void Attack()
     {
         anim.SetBool("Attack", monster.Attack);
+        anim.SetInteger("AttackType", monster.attackType);
     }
     public void Death()
     {
@@ -42,5 +43,14 @@ public class MinionAnim : MonoBehaviour
     public void HeadHit()
     {
         anim.SetTrigger("HeadHit");
+    }
+    public void DisableAttack()
+    {
+        monster.Attack = false;
+        monster.axeEnable = true;
+    }
+    public void DisableAxe()
+    {
+        monster.axeEnable = false;
     }
 }

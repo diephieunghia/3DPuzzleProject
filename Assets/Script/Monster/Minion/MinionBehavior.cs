@@ -10,7 +10,7 @@ public class MinionBehavior : MonsterBehavior
     protected override void Start()
     {
         base.Start();
-        moveHandler = new MinionMoveHandler(agent,player);
+        moveHandler = new MinionMoveHandler(agent,player,monsterstat);
     }
 
     // Update is called once per frame

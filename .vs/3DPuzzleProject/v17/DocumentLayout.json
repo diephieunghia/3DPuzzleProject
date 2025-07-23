@@ -3,28 +3,40 @@
   "WorkspaceRootPath": "O:\\Green Unity\\3DPuzzleProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|o:\\green unity\\3dpuzzleproject\\assets\\script\\monster\\mage\\projectile\\projectilemove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\mage\\projectile\\projectilemove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|o:\\green unity\\3dpuzzleproject\\assets\\script\\monster\\minion\\minionanim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\minion\\minionanim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|o:\\green unity\\3dpuzzleproject\\assets\\script\\monster\\minion\\axe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\minion\\axe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|o:\\green unity\\3dpuzzleproject\\assets\\script\\baseclass\\basemonster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\baseclass\\basemonster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|o:\\green unity\\3dpuzzleproject\\assets\\script\\monster\\minion\\state\\dodge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\minion\\state\\dodge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|o:\\green unity\\3dpuzzleproject\\assets\\script\\monster\\minion\\state\\minionchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\minion\\state\\minionchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|o:\\green unity\\3dpuzzleproject\\assets\\script\\monster\\minion\\minionmovehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\minion\\minionmovehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|o:\\green unity\\3dpuzzleproject\\assets\\script\\monster\\mage\\state\\move\\keepdistance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\mage\\state\\move\\keepdistance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|o:\\green unity\\3dpuzzleproject\\assets\\script\\monster\\mage\\state\\move\\randommove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\mage\\state\\move\\randommove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|o:\\green unity\\3dpuzzleproject\\assets\\script\\monster\\mage\\mageattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\mage\\mageattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|o:\\green unity\\3dpuzzleproject\\assets\\script\\monster\\mage\\projectile\\fireballdetection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\mage\\projectile\\fireballdetection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|O:\\Green Unity\\3DPuzzleProject\\assets\\script\\monster\\mage\\projectile\\mageprojectilepool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\mage\\projectile\\mageprojectilepool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|O:\\Green Unity\\3DPuzzleProject\\assets\\script\\monster\\mage\\state\\move\\randommove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\mage\\state\\move\\randommove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|O:\\Green Unity\\3DPuzzleProject\\assets\\script\\monster\\mage\\state\\move\\keepdistance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\mage\\state\\move\\keepdistance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|O:\\Green Unity\\3DPuzzleProject\\assets\\script\\monster\\mage\\mageanim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -41,83 +53,96 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 291,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 292,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProjectileMove.cs",
-              "DocumentMoniker": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\Monster\\Mage\\Projectile\\ProjectileMove.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Monster\\Mage\\Projectile\\ProjectileMove.cs",
-              "ToolTip": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\Monster\\Mage\\Projectile\\ProjectileMove.cs",
-              "RelativeToolTip": "Assets\\Script\\Monster\\Mage\\Projectile\\ProjectileMove.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAA7wCUAAAA+AAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Axe.cs",
+              "DocumentMoniker": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\Monster\\Minion\\Axe.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Monster\\Minion\\Axe.cs",
+              "ToolTip": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\Monster\\Minion\\Axe.cs",
+              "RelativeToolTip": "Assets\\Script\\Monster\\Minion\\Axe.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAcwB8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-18T08:38:27.973Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FireBallDetection.cs",
-              "DocumentMoniker": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\Monster\\Mage\\Projectile\\FireBallDetection.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Monster\\Mage\\Projectile\\FireBallDetection.cs",
-              "ToolTip": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\Monster\\Mage\\Projectile\\FireBallDetection.cs",
-              "RelativeToolTip": "Assets\\Script\\Monster\\Mage\\Projectile\\FireBallDetection.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-18T07:06:12.703Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MageProjectilePool.cs",
-              "DocumentMoniker": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\Monster\\Mage\\Projectile\\MageProjectilePool.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Monster\\Mage\\Projectile\\MageProjectilePool.cs",
-              "ToolTip": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\Monster\\Mage\\Projectile\\MageProjectilePool.cs",
-              "RelativeToolTip": "Assets\\Script\\Monster\\Mage\\Projectile\\MageProjectilePool.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T08:28:14.208Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RandomMove.cs",
-              "DocumentMoniker": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\Monster\\Mage\\STATE\\Move\\RandomMove.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Monster\\Mage\\STATE\\Move\\RandomMove.cs",
-              "ToolTip": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\Monster\\Mage\\STATE\\Move\\RandomMove.cs",
-              "RelativeToolTip": "Assets\\Script\\Monster\\Mage\\STATE\\Move\\RandomMove.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAgwD4AAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T08:08:07.065Z",
+              "WhenOpened": "2025-07-22T09:44:52.903Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "KeepDistance.cs",
-              "DocumentMoniker": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\Monster\\Mage\\STATE\\Move\\KeepDistance.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Monster\\Mage\\STATE\\Move\\KeepDistance.cs",
-              "ToolTip": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\Monster\\Mage\\STATE\\Move\\KeepDistance.cs",
-              "RelativeToolTip": "Assets\\Script\\Monster\\Mage\\STATE\\Move\\KeepDistance.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAcwBgAAAA0AAAAAAAAAA==",
+              "Title": "MinionMoveHandler.cs",
+              "DocumentMoniker": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\Monster\\Minion\\MinionMoveHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Monster\\Minion\\MinionMoveHandler.cs",
+              "ToolTip": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\Monster\\Minion\\MinionMoveHandler.cs",
+              "RelativeToolTip": "Assets\\Script\\Monster\\Minion\\MinionMoveHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T08:07:54.825Z",
+              "WhenOpened": "2025-07-22T09:40:53.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MinionChase.cs",
+              "DocumentMoniker": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\Monster\\Minion\\STATE\\MinionChase.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Monster\\Minion\\STATE\\MinionChase.cs",
+              "ToolTip": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\Monster\\Minion\\STATE\\MinionChase.cs",
+              "RelativeToolTip": "Assets\\Script\\Monster\\Minion\\STATE\\MinionChase.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAzwBsAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T06:43:23.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MinionAnim.cs",
+              "DocumentMoniker": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\Monster\\Minion\\MinionAnim.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Monster\\Minion\\MinionAnim.cs",
+              "ToolTip": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\Monster\\Minion\\MinionAnim.cs",
+              "RelativeToolTip": "Assets\\Script\\Monster\\Minion\\MinionAnim.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAADwvzUAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T06:01:18.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Dodge.cs",
+              "DocumentMoniker": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\Monster\\Minion\\STATE\\Dodge.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Monster\\Minion\\STATE\\Dodge.cs",
+              "ToolTip": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\Monster\\Minion\\STATE\\Dodge.cs",
+              "RelativeToolTip": "Assets\\Script\\Monster\\Minion\\STATE\\Dodge.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAcwA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T09:14:49.599Z",
               "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedWidth": 261,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 260,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
+              "Title": "BaseMonster.cs",
+              "DocumentMoniker": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\BASECLASS\\BaseMonster.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\BASECLASS\\BaseMonster.cs",
+              "ToolTip": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\BASECLASS\\BaseMonster.cs",
+              "RelativeToolTip": "Assets\\Script\\BASECLASS\\BaseMonster.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T09:48:00.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "SO_Mons.cs",
               "DocumentMoniker": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\BASECLASS\\SO_Mons.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\BASECLASS\\SO_Mons.cs",
@@ -130,20 +155,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "MageAttack.cs",
               "DocumentMoniker": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\Monster\\Mage\\MageAttack.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Monster\\Mage\\MageAttack.cs",
               "ToolTip": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\Monster\\Mage\\MageAttack.cs",
               "RelativeToolTip": "Assets\\Script\\Monster\\Mage\\MageAttack.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAqwCYAAABIAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAYwCYAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-14T13:50:03.872Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "MageAnim.cs",
               "DocumentMoniker": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\Monster\\Mage\\MageAnim.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Monster\\Mage\\MageAnim.cs",
@@ -152,6 +177,32 @@
               "ViewState": "AgIAAAgAAAAAAAAAAAAcwBwAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-14T12:34:54.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "KeepDistance.cs",
+              "DocumentMoniker": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\Monster\\Mage\\STATE\\Move\\KeepDistance.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Monster\\Mage\\STATE\\Move\\KeepDistance.cs",
+              "ToolTip": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\Monster\\Mage\\STATE\\Move\\KeepDistance.cs",
+              "RelativeToolTip": "Assets\\Script\\Monster\\Mage\\STATE\\Move\\KeepDistance.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAADwvzMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T09:24:39.61Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RandomMove.cs",
+              "DocumentMoniker": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\Monster\\Mage\\STATE\\Move\\RandomMove.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Monster\\Mage\\STATE\\Move\\RandomMove.cs",
+              "ToolTip": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\Monster\\Mage\\STATE\\Move\\RandomMove.cs",
+              "RelativeToolTip": "Assets\\Script\\Monster\\Mage\\STATE\\Move\\RandomMove.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAswD0AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T09:21:15.216Z",
               "EditorCaption": ""
             }
           ]

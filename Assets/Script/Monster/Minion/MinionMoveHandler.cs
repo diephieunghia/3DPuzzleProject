@@ -7,11 +7,14 @@ public class MinionMoveHandler : MoveHandler
 {
     public MinionChase minionChase;
 
-    public MinionMoveHandler(NavMeshAgent _agent,  BaseChar charController)
+    public MinionMoveHandler(NavMeshAgent _agent,  BaseChar charController,BaseMonster stat)
     {
         agent = _agent;
         activeChar = charController;
-        minionChase = new MinionChase(agent,activeChar, this);
+        minionChase = new MinionChase(agent,activeChar, this,stat);
         CurrentState = minionChase;
+        monster = stat;
+        //set agent speed
+        agent.speed = monster.MonsterStat.speed;
     }
 }

@@ -9,14 +9,17 @@ public class BaseMonster : MonoBehaviour,IDamageable
     [SerializeField] SO_Mons stat;
     public SO_Mons MonsterStat => stat;
 
-
     float currentHeath;
     float maxHealth;
     public bool Attack;
+    public int attackType = 1;
     bool death = false;
     public bool Death => death;
+    float coolDown;
+    public float CoolDown { get { return coolDown; } set { coolDown = value; } }
 
-
+    //Minion
+    public bool axeEnable=false;
     public Action DeathTrigger;
     public Action HeadHit;
     public Action BodyHit;
@@ -24,6 +27,7 @@ public class BaseMonster : MonoBehaviour,IDamageable
     {
         currentHeath = stat.health;
         maxHealth = stat.health;
+        coolDown = stat.baseCoolDown;
     }
 
     public void TakeDamage(float damage, Vector3 hitPoint, Vector3 hitDirection, GameObject attacker,IDamageable.Body hitPart)

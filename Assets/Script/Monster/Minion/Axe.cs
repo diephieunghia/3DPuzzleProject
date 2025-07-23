@@ -14,16 +14,22 @@ public class Axe : MonoBehaviour
     Ray detectRay;
     public float distance = 2f;
     public LayerMask layerMask;
+
+    BaseMonster baseMonster;
     // Start is called before the first frame update
     void Start()
-    {        
+    {
+        baseMonster=GetComponentInParent<BaseMonster>();
     }
 
     // Update is called once per frame
     void Update()
     {       
-        DrawRay();
-        
+        if(baseMonster.axeEnable)
+        {
+            DrawRay();
+        }
+              
     }
 
     void DrawRay()
@@ -34,7 +40,7 @@ public class Axe : MonoBehaviour
         {
             if(hit.collider.gameObject.GetComponent<IDamageable>() != null)
             {
-                
+                Debug.Log("Hit " + hit.collider.gameObject.name);
             }           
             
         }
