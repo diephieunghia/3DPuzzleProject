@@ -38,7 +38,8 @@ public class BaseMonster : MonoBehaviour,IDamageable
     {
         currentHeath -= damage;
         currentHeath = Mathf.Clamp(currentHeath, 0, maxHealth);
-        if(currentHeath <= 0)
+        UIManager.ins.ChangeIconDamage();
+        if (currentHeath <= 0)
         {
             Attack = false;
             death = true;
@@ -47,6 +48,7 @@ public class BaseMonster : MonoBehaviour,IDamageable
         }
         else
         {
+            
             if (hitPart == IDamageable.Body.Body)
                 BodyHit.Invoke();
             else

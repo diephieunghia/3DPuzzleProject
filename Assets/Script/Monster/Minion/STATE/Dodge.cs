@@ -10,7 +10,7 @@ public class Dodge : IState
     MinionMoveHandler currentHandler;
     BaseMonster monsterStat;
 
-    float radius = 5f;
+    float radius = 3f;
     Vector3 randomPoint;
 
     public Dodge(NavMeshAgent _agent, BaseChar character, MinionMoveHandler handler, BaseMonster stat)
@@ -23,28 +23,35 @@ public class Dodge : IState
     }
     public void Enter()
     {
+        if (monsterStat.Death) agent.isStopped = true;
         monsterStat.Attack = false;
         randomPoint = RandomPointInArcLeftRightMonster();
-        agent.speed = 50;
-        agent.stoppingDistance = 0;
-        agent.SetDestination(randomPoint);
-    }
 
-    public void Execute()
-    {
-        Vector3 deltaDistance=currentChar.transform.position-monsterStat.transform.position;
+        Vector3 deltaDistance = currentChar.transform.position - monsterStat.transform.position;
+
         NavMeshHit hit;
-
-        if (NavMesh.SamplePosition(randomPoint, out hit, 1f, NavMesh.AllAreas))
+        if (NavMesh.SamplePosition(randomPoint, out hit, .5f, NavMesh.AllAreas))
         {
-            agent.stoppingDistance = 0;
+            agent.stoppingDistance = 2;
+            agent.speed = 50;
             agent.acceleration = 30f;
             agent.SetDestination(hit.position);
             agent.updateRotation = false;
             agent.transform.rotation = Quaternion.LookRotation(deltaDistance);
         }
-        if (agent.remainingDistance<=1f)
-        {          
+        else
+        {
+            currentHandler.MoveChangeState(currentHandler.minionChase);
+        }
+        
+    }
+
+    public void Execute()
+    {
+             
+        if (agent.remainingDistance<=2f)
+        {
+            Debug.Log("Move to chase");
             currentHandler.MoveChangeState(currentHandler.minionChase);
         }
 
@@ -53,7 +60,8 @@ public class Dodge : IState
     public void Exit()
     {
         agent.speed = monsterStat.MonsterStat.speed;
-        agent.stoppingDistance = 4.8f;
+        agent.acceleration = 10f;
+        agent.stoppingDistance = 3f;
     }
     
     Vector3 RandomPointInArcLeftRightMonster()

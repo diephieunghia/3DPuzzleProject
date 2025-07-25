@@ -17,6 +17,8 @@ public class Chase : IState
         thisMonster = monster;  
     }
     public void Enter() {
+        if(thisMonster.Death)
+            agent.isStopped = true;
         //get velocity
         thisMonster.MonsterStat.velocity= agent.speed;
         thisMonster.Attack = false;

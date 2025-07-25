@@ -22,7 +22,9 @@ public class KeepDistance : IState
         thisMonster = monster;
     }
     public void Enter() {
-        randomPoint=RandomPointInArcBehindMonster();
+        if (thisMonster.Death)
+            agent.isStopped = true;
+        randomPoint =RandomPointInArcBehindMonster();
         updateTime = 0f;
     }
 

@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}</ProjectGuid>
+    <ProjectGuid>{3FAF6531-BB88-FC26-6A77-D0CD1B96C51B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -89,6 +89,7 @@
     <Compile Include="Assets\Script\Monster\Minion\STATE\Dodge.cs" />
     <Compile Include="Assets\Script\Monster\Mage\Projectile\MageProjectilePool.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\AttackState\AttackStateHandler.cs" />
+    <Compile Include="Assets\Script\UI\UIManager.cs" />
     <Compile Include="Assets\Script\Monster\Mage\Projectile\ProjectileMove.cs" />
     <Compile Include="Assets\Script\Monster\MonsterBehavior.cs" />
     <Compile Include="Assets\Script\Monster\Mage\Projectile\FireBallDetection.cs" />

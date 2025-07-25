@@ -18,7 +18,6 @@ public class MinionBehavior : MonsterBehavior
     {
         if (!monsterstat.Death)
         {
-            Debug.Log("Minion is death");
             moveHandler.HandleMoveState();
         }
             

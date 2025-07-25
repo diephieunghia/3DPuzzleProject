@@ -23,6 +23,8 @@ public class RandomMove : IState
     }
     public void Enter()
     {
+        if (thisMonster.Death)
+            agent.isStopped = true;
         timer = moveInterval;
     }
 
