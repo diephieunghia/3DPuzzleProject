@@ -62,6 +62,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8991977539190296290}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4484340659176974336
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7063502936250693230}
+  m_Layer: 8
+  m_Name: Vision
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7063502936250693230
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4484340659176974336}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.77, z: 2.61}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7963404347093032295}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6634075439644590414
 GameObject:
   m_ObjectHideFlags: 0
@@ -1178,6 +1209,9 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: df697da2c051490498964025fe9d2c73, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7063502936250693230}
     - targetCorrespondingSourceObject: {fileID: -5332268007662105775, guid: df697da2c051490498964025fe9d2c73, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3853156470998022211}
@@ -1291,7 +1325,12 @@ MonoBehaviour:
   stat: {fileID: 11400000, guid: 52b524bea7c18e643bcaf79f8030268e, type: 2}
   Attack: 0
   attackType: 1
+  arrow:
+    serializedVersion: 2
+    m_Bits: 128
   axeEnable: 0
+  center: {fileID: 7063502936250693230}
+  size: {x: 3.03, y: 2.99, z: 3.83}
 --- !u!114 &7638230562584238587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1316,6 +1355,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f593ae89093357a4a92edb6cb0ca9249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &7963404347093032295 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: df697da2c051490498964025fe9d2c73, type: 3}
+  m_PrefabInstance: {fileID: 7568593236012661388}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8991977539190296290 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7655872403321392018, guid: df697da2c051490498964025fe9d2c73, type: 3}

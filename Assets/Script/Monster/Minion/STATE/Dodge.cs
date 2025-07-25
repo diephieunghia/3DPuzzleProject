@@ -44,8 +44,7 @@ public class Dodge : IState
             agent.transform.rotation = Quaternion.LookRotation(deltaDistance);
         }
         if (agent.remainingDistance<=1f)
-        {
-           
+        {          
             currentHandler.MoveChangeState(currentHandler.minionChase);
         }
 

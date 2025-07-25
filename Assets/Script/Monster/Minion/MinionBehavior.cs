@@ -16,8 +16,12 @@ public class MinionBehavior : MonsterBehavior
     // Update is called once per frame
     void Update()
     {
-        if (!monsterstat.Death)        
+        if (!monsterstat.Death)
+        {
+            Debug.Log("Minion is death");
             moveHandler.HandleMoveState();
+        }
+            
 
     }
 }

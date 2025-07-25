@@ -1315,37 +1315,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -5459922382353263709, guid: be0f05b7914eaa74baaccdef287d3779, type: 3}
   m_PrefabInstance: {fileID: 1306884495}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &693411368
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 693411369}
-  m_Layer: 8
-  m_Name: Vision
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &693411369
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 693411368}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.77, z: 2.61}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1388836691}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &848499191 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: be0f05b7914eaa74baaccdef287d3779, type: 3}
@@ -3442,46 +3411,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 433113231}
     m_Modifications:
-    - target: {fileID: 2211125943156962697, guid: 1bcc33685a54f5c4cb284895c50c671c, type: 3}
-      propertyPath: center
-      value: 
-      objectReference: {fileID: 693411369}
-    - target: {fileID: 2211125943156962697, guid: 1bcc33685a54f5c4cb284895c50c671c, type: 3}
-      propertyPath: size.x
-      value: 3.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211125943156962697, guid: 1bcc33685a54f5c4cb284895c50c671c, type: 3}
-      propertyPath: size.y
-      value: 2.99
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211125943156962697, guid: 1bcc33685a54f5c4cb284895c50c671c, type: 3}
-      propertyPath: size.z
-      value: 3.83
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211125943156962697, guid: 1bcc33685a54f5c4cb284895c50c671c, type: 3}
-      propertyPath: axeEnable
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211125943156962697, guid: 1bcc33685a54f5c4cb284895c50c671c, type: 3}
-      propertyPath: arrow.m_Bits
-      value: 128
-      objectReference: {fileID: 0}
-    - target: {fileID: 2804927945806977906, guid: 1bcc33685a54f5c4cb284895c50c671c, type: 3}
-      propertyPath: center
-      value: 
-      objectReference: {fileID: 693411369}
-    - target: {fileID: 2804927945806977906, guid: 1bcc33685a54f5c4cb284895c50c671c, type: 3}
-      propertyPath: size.x
-      value: 4.72
-      objectReference: {fileID: 0}
-    - target: {fileID: 2804927945806977906, guid: 1bcc33685a54f5c4cb284895c50c671c, type: 3}
-      propertyPath: size.y
-      value: 2.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2804927945806977906, guid: 1bcc33685a54f5c4cb284895c50c671c, type: 3}
-      propertyPath: size.z
-      value: 3.5
-      objectReference: {fileID: 0}
     - target: {fileID: 7334220446834378717, guid: 1bcc33685a54f5c4cb284895c50c671c, type: 3}
       propertyPath: m_Name
       value: Skeleton_Minion
@@ -3528,10 +3457,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 7963404347093032295, guid: 1bcc33685a54f5c4cb284895c50c671c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 693411369}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bcc33685a54f5c4cb284895c50c671c, type: 3}
 --- !u!1001 &8707239609349691651
