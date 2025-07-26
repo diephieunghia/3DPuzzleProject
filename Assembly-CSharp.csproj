@@ -68,6 +68,7 @@
     <Compile Include="Assets\Script\Monster\Mage\STATE\Move\Chase.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\MovementState\MovementStateHandler.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\MovementState\States\Jump.cs" />
+    <Compile Include="Assets\Script\UI\SkillManager.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\MovementState\States\Idle.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\ArcherBase.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\AttackState\State_Atk\Shoot.cs" />
@@ -84,6 +85,7 @@
     <Compile Include="Assets\Script\Monster\Minion\MinionAnim.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\ArcherController.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\ArcherBlackBoard.cs" />
+    <Compile Include="Assets\Script\Character\Archer\ArcherLevel\SkillHandler\SkillHandler.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\MovementState\States\Move.cs" />
     <Compile Include="Assets\Script\Monster\Mage\MageAnim.cs" />
     <Compile Include="Assets\Script\Monster\Minion\STATE\Dodge.cs" />
@@ -115,6 +117,8 @@
     <None Include="Assets\Package\Asset\Tiny_Treats_Bubbly_Bathroom_1.0_FREE\Tiny_Treats_Bubbly_Bathroom_1.0_FREE\License.txt" />
     <None Include="Assets\Package\Asset\KayKit_City_Builder_Bits_1.0_FREE\KayKit_City_Builder_Bits_1.0_FREE\License.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\Shader\Libs\ShadowCasterPass.hlsl" />
+    <None Include="Assets\Shader\MobileCrystal.shader" />
     <None Include="Assets\Package\Asset\Tiny_Treats_Charming_Kitchen_1.0_FREE\Tiny_Treats_Charming_Kitchen_1.0_FREE\License.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
@@ -123,10 +127,12 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\Shader\Libs\Input.hlsl" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Package\Asset\Tiny_Treats_Pretty_Park_1.0_FREE\Tiny_Treats_Pretty_Park_1.0_FREE\License.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\Shader\Libs\ForwardPass.hlsl" />
     <None Include="Assets\Hovl Studio\Procedural fire\Shaders\FireSphere.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />

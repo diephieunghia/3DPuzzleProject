@@ -15,8 +15,11 @@ public class ArcherController : MonoBehaviour
     MovementStateHandler moveStateHandler;
     [SerializeField] Transform groundCheck;
     [SerializeField] LayerMask groundMask;
+
+    SkillHandler skillHandler;
     private void Awake()
     {
+        skillHandler = GetComponent<SkillHandler>();
         characterController = GetComponent<CharacterController>();
         bb.groundCheck = groundCheck;
         bb.groundMask = groundMask;
@@ -25,7 +28,7 @@ public class ArcherController : MonoBehaviour
     void Start()
     {
         moveStateHandler=new MovementStateHandler(bb,this.transform,characterController);
-        input = new PlayerInput(bb,transform);
+        input = new PlayerInput(bb,transform,skillHandler);
     }
 
     // Update is called once per frame

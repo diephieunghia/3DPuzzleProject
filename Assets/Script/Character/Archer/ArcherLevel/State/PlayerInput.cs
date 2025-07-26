@@ -12,10 +12,12 @@ public class PlayerInput
     Transform position;
     public Action dashActive;
     public Action doubleJumpActive;
-    public PlayerInput(ArcherBlackBoard bb,Transform playerPosition)
+    public SkillHandler inputSkill;
+    public PlayerInput(ArcherBlackBoard bb,Transform playerPosition,SkillHandler skillHandler)
     {
         bbInput = bb;
         position = playerPosition;
+        inputSkill= skillHandler;
     }
 
     //handle called in update method
@@ -37,7 +39,10 @@ public class PlayerInput
     void Jump()
     {
         if (Input.GetButtonDown("Jump") && bbInput.isGround)
-        {          
+        {
+            //test coolDown action
+            inputSkill.skillDelegate.Invoke(bbInput.testCoolDown, bbInput.skillIndex[1]);
+
             bbInput.isGround = false;
             bbInput.jumpVelocity = Mathf.Sqrt(bbInput.jumpHeight * 2.0f * bbInput.gravity);
         }
@@ -53,15 +58,17 @@ public class PlayerInput
                 bbInput.doubleJump = false;              
                 jumpRelease = true;
                 doubleJumpActive.Invoke();
+                
             }
         }
     }
     void Dash()
     {
         if (Input.GetKeyDown(KeyCode.LeftShift)&&bbInput.dash)
-        {
+        {          
             bbInput.dash = false;
             dashActive.Invoke();
+            inputSkill.skillDelegate.Invoke(bbInput.dashCoolDown, bbInput.skillIndex[0]);
         }       
     }
     void HoldDraw()
@@ -75,6 +82,14 @@ public class PlayerInput
         if (Input.GetButtonDown("Fire2"))
             bbInput.aiming = ArcherBlackBoard.Aim.Cancel;
         
+    }
+
+    void SkillE()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+
+        }
     }
 
 }

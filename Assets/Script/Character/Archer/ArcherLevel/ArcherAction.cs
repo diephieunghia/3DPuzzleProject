@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.Windows;
-
+[RequireComponent(typeof(SkillHandler))]
 public class ArcherAction : MonoBehaviour
 {
     public CharacterController characterController;
     public ArcherBlackBoard bb;
     public PlayerInput input;
     public AttackStateHandler attackStateHandler;
+    SkillHandler skillHandler;
 
     public Transform groundCheck;
     public LayerMask groundMask;
@@ -18,8 +19,8 @@ public class ArcherAction : MonoBehaviour
         bb = new ArcherBlackBoard();
         bb.groundCheck = groundCheck;
         bb.groundMask= groundMask;  
-       
-        input = new PlayerInput(bb,transform);            
+        skillHandler=GetComponent<SkillHandler>();
+        input = new PlayerInput(bb,transform,skillHandler);            
     }
 
     private void Start()

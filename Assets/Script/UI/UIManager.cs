@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
-
+[RequireComponent(typeof(SkillManager))]
 public class UIManager : MonoBehaviour
 {
+    public SkillManager skillManager;
     public static UIManager ins { get; private set; }
-
+    [Header("CrossHair")]
     //change to cross when hit
     public Sprite normal;
     public Sprite hitIcon;
@@ -18,6 +20,11 @@ public class UIManager : MonoBehaviour
             Destroy(this);
         else
             ins = this;
+                
+    }
+    private void Start()
+    {
+       
     }
 
     //change to cross when hit

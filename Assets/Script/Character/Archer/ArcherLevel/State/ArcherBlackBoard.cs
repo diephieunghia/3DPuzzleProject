@@ -29,11 +29,14 @@ public class ArcherBlackBoard
 
     public float fallMultiplier = 1.7f;
 
+    public int[] skillIndex = { 0, 1, 2, 3, 4};
     //Dash
     public bool dash = true;
     public float dashSpeed = 9f;
-    public float dashDuration = .3f;  
+    public float dashDuration = .3f;
+    public float dashCoolDown = 2f;
 
+    public float testCoolDown = 5f;
     public enum Aim
     {
         Idle,
