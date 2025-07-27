@@ -12,6 +12,7 @@ public class AttackStateHandler
 
     public ATKIdle idle;
     public Shoot shoot;
+    public ESkill eSkill;
 
     public AttackStateHandler(ArcherBlackBoard bb, Transform transform, CharacterController controller)
     {
@@ -20,6 +21,7 @@ public class AttackStateHandler
         this.controller = controller;
         idle= new ATKIdle(bb,transform, controller,this);
         shoot=new Shoot(bb,transform,controller,this);
+        eSkill=new ESkill(bb,transform,controller,this);
         CurrentState = idle;
         CurrentState.Enter();
     }

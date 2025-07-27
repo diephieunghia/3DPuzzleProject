@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class SkillManager : MonoBehaviour
 {
+    //UI skill manager, Parent: UI manager
+
     public Image[] images;
 
     public Action<float, int> coolDownAction;

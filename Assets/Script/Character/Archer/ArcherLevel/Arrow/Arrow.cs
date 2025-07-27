@@ -29,6 +29,10 @@ public class Arrow : MonoBehaviour
         } }
 
     public TrailRenderer trail;
+
+    //attribute
+    bool fire=false;
+    bool ice=false;
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -56,6 +60,10 @@ public class Arrow : MonoBehaviour
         this.damage = damage;
         rb.AddRelativeForce(-Vector3.forward * force, ForceMode.Impulse);
     }
-
+    public void SetFire()
+    {
+        fire = true;
+    }
+    public void SetIce() { ice = true; }
     
 }

@@ -26,17 +26,8 @@ public class ArcherBlackBoard
     public float groundDistance = .4f;
     public bool isGround = true;
     public float jumpVelocity=-2f;
+    public float fallMultiplier = 1.7f;  
 
-    public float fallMultiplier = 1.7f;
-
-    public int[] skillIndex = { 0, 1, 2, 3, 4};
-    //Dash
-    public bool dash = true;
-    public float dashSpeed = 9f;
-    public float dashDuration = .3f;
-    public float dashCoolDown = 2f;
-
-    public float testCoolDown = 5f;
     public enum Aim
     {
         Idle,
@@ -62,4 +53,19 @@ public class ArcherBlackBoard
     //damage
     public float damage = 20f;
     public float maxDamage = 125f;
+
+    //Dash
+    public bool dash = true;
+    public float dashSpeed = 9f;
+    public float dashDuration = .3f;
+    public float dashCoolDown = 2f;
+
+    //Skill Index
+    public int[] skillIndex = { 0, 1, 2, 3, 4 };
+    public bool skill = false;
+    //E
+    public bool eSkill = false;
+    public float eDuration = 3f;
+    public float eCoolDown = 8f;
+    public float animSpeed = 12f;
 }

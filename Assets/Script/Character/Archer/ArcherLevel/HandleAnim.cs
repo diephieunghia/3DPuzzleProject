@@ -55,7 +55,25 @@ public class HandleAnim : MonoBehaviour
             anim.SetBool("Draw", true);
             anim.SetFloat("DrawSpeed", 3f);
         }
+            
     }
+    //Eskill
+    public void EShoot()
+    {
+        if (archerAction.bb.aiming == ArcherBlackBoard.Aim.Shoot)
+        {
+            anim.SetBool("Draw", true);
+            anim.SetFloat("DrawSpeed", 3f);
+        }
+    }
+    public void EAnim(bool value)
+    {
+        if(value)
+            anim.SetFloat("OverDraw", archerAction.bb.animSpeed);
+        else
+            anim.SetFloat("OverDraw", 1f);
+    }
+    
     public void DisableAttack()
     {
         anim.SetBool("Draw", false);
@@ -72,4 +90,13 @@ public class HandleAnim : MonoBehaviour
         }
         return false;
     }
+    public bool AnimOverDrawEnd()
+    {
+        if ((anim.GetCurrentAnimatorStateInfo(1).normalizedTime > 0.89f && anim.GetCurrentAnimatorStateInfo(1).IsName("AimOverDraw")))
+        {
+            return true;
+        }
+        return false;
+    }
+    
 }

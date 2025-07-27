@@ -55,7 +55,6 @@ public class MinionChase : IState
                 {
                     if (overlap.GetComponentInParent<Rigidbody>().velocity.sqrMagnitude>1)
                     {
-                        Debug.Log("Move to dodge");
                         currentHandler.MoveChangeState(currentHandler.dodge);
                     }
                    
@@ -67,8 +66,6 @@ public class MinionChase : IState
                 enableBoxCastTime = 10f;
             }
         }
-        
-
     }
 
     public void Exit()

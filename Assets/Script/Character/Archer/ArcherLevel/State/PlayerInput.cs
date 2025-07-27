@@ -28,6 +28,7 @@ public class PlayerInput
         DoubleJump();
         Dash();
         HoldDraw();
+        SkillE();
     }
 
     void GetInput()
@@ -40,9 +41,6 @@ public class PlayerInput
     {
         if (Input.GetButtonDown("Jump") && bbInput.isGround)
         {
-            //test coolDown action
-            inputSkill.skillDelegate.Invoke(bbInput.testCoolDown, bbInput.skillIndex[1]);
-
             bbInput.isGround = false;
             bbInput.jumpVelocity = Mathf.Sqrt(bbInput.jumpHeight * 2.0f * bbInput.gravity);
         }
@@ -79,15 +77,18 @@ public class PlayerInput
         else if(Input.GetButtonUp("Fire1"))        
             bbInput.aiming = ArcherBlackBoard.Aim.Shoot;
 
-        if (Input.GetButtonDown("Fire2"))
-            bbInput.aiming = ArcherBlackBoard.Aim.Cancel;
+        if(!bbInput.eSkill)
+            if (Input.GetButtonDown("Fire2"))
+                bbInput.aiming = ArcherBlackBoard.Aim.Cancel;
         
     }
-
+    //skill E increase fire rate
     void SkillE()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E)&&!bbInput.skill&&!bbInput.eSkill)
         {
+            bbInput.eSkill = true;
+            bbInput.skill = true;
 
         }
     }

@@ -51,7 +51,6 @@ public class Dodge : IState
              
         if (agent.remainingDistance<=2f)
         {
-            Debug.Log("Move to chase");
             currentHandler.MoveChangeState(currentHandler.minionChase);
         }
 
