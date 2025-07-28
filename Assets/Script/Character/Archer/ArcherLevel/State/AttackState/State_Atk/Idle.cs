@@ -17,7 +17,13 @@ public class ATKIdle : IState
         handler = atkHandler;
     }
     public void Enter() {
-        atkbb.currentArrow = ArrowPool.ins.GetObject();
+        float z = 0;
+        for (int i = 0; i < atkbb.arrowCount; i++) {
+            atkbb.currentArrow[i] = ArrowPool.ins.GetObject();
+            if (i == 1) z = -15;
+            else if (i == 2) z = 15;
+            atkbb.currentArrow[i].transform.localRotation = Quaternion.Euler(0, z, 0);
+        }       
     }
 
     public void Execute() {

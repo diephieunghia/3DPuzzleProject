@@ -2,9 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class ArcherBlackBoard 
 {
+
+    //level experience
+    public float EXP;
     //move
     [Header("Move")]
     public float horizontal_x;
@@ -48,7 +52,8 @@ public class ArcherBlackBoard
     public bool allowShoot = false;
     public delegate void HandleDraw(Aim aimMode);
     public HandleDraw DrawArrow;
-    public GameObject currentArrow;
+    public GameObject[] currentArrow= { null, null, null };
+    public int arrowCount = 3;
 
     //damage
     public float damage = 20f;

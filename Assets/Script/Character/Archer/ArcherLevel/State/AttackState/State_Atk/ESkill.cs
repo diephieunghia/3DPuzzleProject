@@ -44,17 +44,27 @@ public class ESkill : IState
         //disable attack 
         if (HandleAnim.ins.AnimOverDrawEnd())
         {
-            if(atkbb.allowShoot) 
-                atkbb.currentArrow.GetComponent<Arrow>().ShootArrow(atkbb.maxForce, atkbb.maxDamage);
-            Debug.Log("Disable attack anim");
+            if(atkbb.allowShoot)
+                for (int i = 0; i < 1; i++)
+                {
+                    atkbb.currentArrow[i].GetComponent<Arrow>().ShootArrow(atkbb.maxForce, atkbb.maxDamage*.8f);
+                }
             HandleAnim.ins.DisableAttack();
             atkbb.aiming = ArcherBlackBoard.Aim.Idle;
-            atkbb.currentArrow = ArrowPool.ins.GetObject();
-            atkbb.allowShoot=false;
+            atkbb.allowShoot = false;
+            for (int i = 0; i <1; i++)
+            {
+                atkbb.currentArrow[i] = ArrowPool.ins.GetObject();
+            }
+           
         }
     }
 
     public void Exit() {
-        HandleAnim.ins.EAnim(false);        
+        HandleAnim.ins.EAnim(false);
+        for (int i = 0; i < 1; i++)
+        {
+            atkbb.currentArrow[i] = null;
+        }
     }
 }

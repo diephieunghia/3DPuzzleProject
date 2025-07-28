@@ -45,11 +45,14 @@ public class Shoot : IState
         { elapsedTime = 0; }
         if (atkbb.allowShoot)
         {
-            atkbb.currentArrow.GetComponent<Arrow>().ShootArrow(atkbb.force,atkbb.damage);
+            for (int i = 0; i < atkbb.arrowCount; i++)
+            {
+                atkbb.currentArrow[i].GetComponent<Arrow>().ShootArrow(atkbb.force, atkbb.damage);
+            }
             atkbb.aiming = ArcherBlackBoard.Aim.Idle;
-            
             handler.MoveChangeState(handler.idle);
             atkbb.allowShoot = false;
+           
         }
                
     }
@@ -60,7 +63,8 @@ public class Shoot : IState
         atkbb.force = 8f;
         atkbb.shootRate = 0f;
         elapsedTime = 0;
-        atkbb.currentArrow = null;
+        for (int i = 0; i < atkbb.arrowCount; i++)               
+            atkbb.currentArrow[i] = null;       
     }
 
 
