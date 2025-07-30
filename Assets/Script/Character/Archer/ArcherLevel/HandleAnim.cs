@@ -52,28 +52,11 @@ public class HandleAnim : MonoBehaviour
     {
         if (archerAction.bb.aiming == ArcherBlackBoard.Aim.Hold )
         {
-            anim.SetBool("Draw", true);
-            anim.SetFloat("DrawSpeed", 3f);
+            anim.SetBool("Draw", true);           
         }
             
-    }
-    //Eskill
-    public void EShoot()
-    {
-        if (archerAction.bb.aiming == ArcherBlackBoard.Aim.Shoot)
-        {
-            anim.SetBool("Draw", true);
-            anim.SetFloat("DrawSpeed", 3f);
-        }
-    }
-    public void EAnim(bool value)
-    {
-        if(value)
-            anim.SetFloat("OverDraw", archerAction.bb.animSpeed);
-        else
-            anim.SetFloat("OverDraw", 1f);
-    }
-    
+    } 
+
     public void DisableAttack()
     {
         anim.SetBool("Draw", false);
@@ -90,13 +73,34 @@ public class HandleAnim : MonoBehaviour
         }
         return false;
     }
+    //Eskill
+    public void EShoot()
+    {
+            anim.SetBool("ESkill", true);                    
+    }
+    public void EAnim()
+    {
+            anim.SetFloat("OverDraw", archerAction.bb.animSpeed);       
+    }
     public bool AnimOverDrawEnd()
     {
-        if ((anim.GetCurrentAnimatorStateInfo(1).normalizedTime > 0.89f && anim.GetCurrentAnimatorStateInfo(1).IsName("AimOverDraw")))
+        if ((anim.GetCurrentAnimatorStateInfo(1).normalizedTime > 0.89f && anim.GetCurrentAnimatorStateInfo(1).IsName("ESkill")))
+        {
+            return true;
+        }
+        return false;       
+    }
+    public void DisableESkill()
+    {
+        anim.SetBool("ESkill", false);
+    }
+    public bool ReloadESkill(float time)
+    {
+        if ((anim.GetCurrentAnimatorStateInfo(1).normalizedTime > time && anim.GetCurrentAnimatorStateInfo(1).IsName("StandDraw")))
         {
             return true;
         }
         return false;
     }
-    
+
 }

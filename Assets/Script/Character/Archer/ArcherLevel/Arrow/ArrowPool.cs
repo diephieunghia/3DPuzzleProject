@@ -35,6 +35,8 @@ public class ArrowPool : ObjectPool
         {
             GameObject obj = poolObjects.Dequeue();
             obj.SetActive(true);
+            obj.transform.localRotation= Quaternion.identity;
+            obj.transform.localScale = Vector3.one;
             return obj;
         }
         //if queue is empty, instantiate new object
@@ -45,9 +47,10 @@ public class ArrowPool : ObjectPool
     {        
         
         obj.transform.SetParent(arrowHolder.transform, false);
-
+        obj.transform.localRotation = Quaternion.identity;
+        obj.transform.localScale = Vector3.one;
         obj.SetActive(false);
         poolObjects.Enqueue(obj);
-    }
+    }    
 
 }
