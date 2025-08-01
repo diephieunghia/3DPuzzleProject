@@ -7,6 +7,7 @@ using UnityEngine.UIElements;
 public class ArcherBlackBoard 
 {
     //level experience
+    public int level = 1;
     public float maxEXP=100f;
     //move
     [Header("Move")]
@@ -52,7 +53,7 @@ public class ArcherBlackBoard
     public delegate void HandleDraw(Aim aimMode);
     public HandleDraw DrawArrow;
     public GameObject[] currentArrow= { null, null, null };
-    public int arrowCount = 3;
+    public int arrowCount = 1;
 
     //damage
     public float damage = 20f;

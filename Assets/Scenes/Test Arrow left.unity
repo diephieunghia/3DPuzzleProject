@@ -715,7 +715,7 @@ GameObject:
   - component: {fileID: 297840934}
   - component: {fileID: 297840935}
   m_Layer: 0
-  m_Name: LevelStatSkill
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -745,7 +745,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 297840933}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d22c19cf1dc5e84e81e9fbbb7dc394f, type: 3}
+  m_Script: {fileID: 11500000, guid: b7cd2ad310f0305458853437233ab5f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &298401674
@@ -1664,7 +1664,7 @@ GameObject:
   - component: {fileID: 693156344}
   - component: {fileID: 693156343}
   m_Layer: 5
-  m_Name: HealthNumber
+  m_Name: Level Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4189,7 +4189,7 @@ GameObject:
   - component: {fileID: 1709904945}
   - component: {fileID: 1709904944}
   m_Layer: 5
-  m_Name: HealthBar
+  m_Name: LevelBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4879,6 +4879,14 @@ PrefabInstance:
       propertyPath: images.Array.data[4]
       value: 
       objectReference: {fileID: 1414377133}
+    - target: {fileID: 7370748274211731484, guid: a03c45f3cafe2c14384180a6d177acb1, type: 3}
+      propertyPath: levelUI
+      value: 
+      objectReference: {fileID: 1709904944}
+    - target: {fileID: 7370748274211731484, guid: a03c45f3cafe2c14384180a6d177acb1, type: 3}
+      propertyPath: levelText
+      value: 
+      objectReference: {fileID: 693156343}
     - target: {fileID: 7370748274211731484, guid: a03c45f3cafe2c14384180a6d177acb1, type: 3}
       propertyPath: skillManager
       value: 

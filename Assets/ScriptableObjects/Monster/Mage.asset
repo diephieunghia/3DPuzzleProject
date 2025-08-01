@@ -15,10 +15,7 @@ MonoBehaviour:
   health: 120
   damage: 20
   speed: 3.5
-  attack: 0
-  shield: 0
   baseCoolDown: 3
-  death: 0
-  velocity: 0
-  Block: 0
   attackRate: 3
+  velocity: 0
+  expDrop: 50
