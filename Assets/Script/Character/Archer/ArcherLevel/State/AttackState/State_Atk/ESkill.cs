@@ -21,67 +21,62 @@ public class ESkill : IState
     }
     public void Enter()
     {
-        attack = true;
         tempDuration = atkbb.eDuration;
-        Debug.Log("Enter E skill");
         HandleAnim.ins.EAnim();
     }
 
     public void Execute()
     {
-
         tempDuration -= Time.deltaTime;
-        if (tempDuration < 0) {
+        if (tempDuration < 0&&(HandleAnim.ins.ReloadESkill(0.3f)||HandleAnim.ins.AnimOverDrawEnd(.4f))) {
             atkbb.skill = false;
             atkbb.eSkill = false;
-            //check if animation is finished
-            if (HandleAnim.ins.AnimOverDrawEnd())
-                handler.MoveChangeState(handler.idle);
+
+            handler.MoveChangeState(handler.idle);
         }
         
-        if (atkbb.aiming==ArcherBlackBoard.Aim.Shoot&&attack)
+        if (atkbb.aiming==ArcherBlackBoard.Aim.Shoot&& HandleAnim.ins.ReloadESkill(.3f))
         {         
-            HandleAnim.ins.EShoot();                        
+            HandleAnim.ins.EShoot();
         }
-        //disable attack 
-        if (HandleAnim.ins.AnimOverDrawEnd()&&attack)
+        if(atkbb.allowShoot)
         {
-            for (int i = 0; i < atkbb.arrowCount; i++)                         
-               atkbb.currentArrow[i].GetComponent<Arrow>().ShootArrow(atkbb.maxForce, atkbb.maxDamage * .8f);                           
-            HandleAnim.ins.DisableESkill();
-            atkbb.aiming = ArcherBlackBoard.Aim.Idle;
+            for (int i = 0; i < atkbb.arrowCount; i++)
+            {
+                atkbb.currentArrow[i].GetComponent<Arrow>().ShootArrow(atkbb.maxForce, atkbb.maxDamage * .8f);
+            }
+            atkbb.allowShoot = false;
             reloadOnce = true;
-            attack= false;
+            atkbb.aiming = ArcherBlackBoard.Aim.Idle;
+            HandleAnim.ins.DisableEShoot();
         }
-        if (HandleAnim.ins.WaitForReloadAnim() && reloadOnce)
+        if (HandleAnim.ins.ReloadESkill(.3f)&&reloadOnce)
         {
             float z = 0;
             for (int i = 0; i < atkbb.arrowCount; i++)
-            {
-                if (atkbb.currentArrow[i] == null)
-                    atkbb.currentArrow[i] = ArrowPool.ins.GetObject();
+            {              
+                atkbb.currentArrow[i] = ArrowPool.ins.GetObject();
                 if (i == 1) z = -15;
                 else if (i == 2) z = 15;
                 atkbb.currentArrow[i].transform.localRotation = Quaternion.Euler(0, z, 0);
             }
             reloadOnce = false;
-            attack = true;
         }
     }
 
     public void Exit() {  
+        atkbb.allowShoot=false;
         attack = false;
-        reloadOnce = false;       
-        HandleAnim.ins.DisableESkill();
-        Debug.Log("Change to Idle");
+        reloadOnce = false;
+        HandleAnim.ins.DisableEShoot();
         for (int i = 0; i < atkbb.arrowCount; i++)
         {
             if (atkbb.currentArrow[i] != null)
             {
-                Debug.Log("return arrow");
                 ArrowPool.ins.ReturnObject(atkbb.currentArrow[i]);               
             }
             atkbb.currentArrow[i] = null;
         }
+        
     }
 }

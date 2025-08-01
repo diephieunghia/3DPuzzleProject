@@ -18,3 +18,4 @@ MonoBehaviour:
   baseCoolDown: 4
   attackRate: 0
   velocity: 0
+  expDrop: 100

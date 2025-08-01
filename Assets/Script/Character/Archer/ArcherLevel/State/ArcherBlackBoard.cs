@@ -6,9 +6,8 @@ using UnityEngine.UIElements;
 
 public class ArcherBlackBoard 
 {
-
     //level experience
-    public float EXP;
+    public float maxEXP=100f;
     //move
     [Header("Move")]
     public float horizontal_x;
@@ -73,4 +72,6 @@ public class ArcherBlackBoard
     public float eDuration = 3f;
     public float eCoolDown = 8f;
     public float animSpeed = 12f;
+
+
 }

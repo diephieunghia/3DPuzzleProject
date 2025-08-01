@@ -17,6 +17,7 @@ public class ATKIdle : IState
         handler = atkHandler;
     }
     public void Enter() {
+        
         float z = 0;
         for (int i = 0; i < atkbb.arrowCount; i++) {
             atkbb.currentArrow[i] = ArrowPool.ins.GetObject();
@@ -27,6 +28,10 @@ public class ATKIdle : IState
     }
 
     public void Execute() {
+        if(HandleAnim.ins.ReloadESkill(.8f))
+        {
+            HandleAnim.ins.DisableEShoot();    
+        }
         if (atkbb.eSkill)
         {
             // change to E skill state

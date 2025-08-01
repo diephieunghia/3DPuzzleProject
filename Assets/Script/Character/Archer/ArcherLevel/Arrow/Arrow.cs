@@ -4,13 +4,12 @@ using System.Xml.Serialization;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
-
+[RequireComponent(typeof(ArrowDetection))]
 public class Arrow : MonoBehaviour
 {
     [SerializeField] Rigidbody rb;
-    //test ray
-    Vector3 direction;
-    Ray ray;
+
+    ArrowDetection arrowDetection;
 
     //origin position
     Vector3 originPosition;
@@ -33,6 +32,7 @@ public class Arrow : MonoBehaviour
     //attribute
     bool fire=false;
     bool ice=false;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -43,6 +43,11 @@ public class Arrow : MonoBehaviour
         //boxCollider.enabled = false; // Disable collider initially
         trail=GetComponentInChildren<TrailRenderer>();
         trail.enabled = false;
+        arrowDetection = GetComponent<ArrowDetection>();
+    }
+    private void Start()
+    {
+        
     }
     private void LateUpdate()
     {
@@ -59,6 +64,7 @@ public class Arrow : MonoBehaviour
         trail.enabled= true ;       
         this.damage = damage;
         rb.AddRelativeForce(-Vector3.forward * force, ForceMode.Impulse);
+        arrowDetection.coroutineStart?.Invoke();
     }
     public void SetFire()
     {
@@ -66,4 +72,5 @@ public class Arrow : MonoBehaviour
     }
     public void SetIce() { ice = true; }
     
+
 }

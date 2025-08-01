@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(ArcherAction))]
 public class SkillHandler : MonoBehaviour
 {
+    //Description: Skill handler calculate skill cooldown and enable skills, use UI manager to show on screen
     ArcherBlackBoard skillStat;
 
     public Action<float,int> skillDelegate;

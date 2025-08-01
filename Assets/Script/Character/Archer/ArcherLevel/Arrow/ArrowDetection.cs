@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,12 @@ public class ArrowDetection : MonoBehaviour
     BoxCollider arrowTip;
     Rigidbody body;
     public LayerMask ally;
+
+    //return to pool after set of time
+    float returnTime = 10f;
+    bool coroutineFinished = false;
+
+    public Action coroutineStart;
     private void Awake()
     {
         arrowTip = GetComponentInChildren<BoxCollider>();
@@ -17,7 +24,8 @@ public class ArrowDetection : MonoBehaviour
     }
     void Start()
     {
-        
+        if(this.isActiveAndEnabled)
+            coroutineStart+= TriggerCoroutine;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -45,7 +53,8 @@ public class ArrowDetection : MonoBehaviour
 
             damageable.TakeDamage(arrow.Damage * multiplier, transform.position, transform.forward, gameObject,type);
         }
-
+        if(!coroutineFinished)
+            StopCoroutine(ReturnToPool());
         body.velocity = Vector3.zero;
         body.useGravity = false;
 
@@ -56,6 +65,23 @@ public class ArrowDetection : MonoBehaviour
         arrow.trail.enabled = false;
         ArrowPool.ins.ReturnObject(gameObject);
     }
-    
+    IEnumerator ReturnToPool()
+    {
+        yield return new WaitForSeconds(returnTime);
+        body.velocity = Vector3.zero;
+        body.useGravity = false;
 
+        transform.position = Vector3.zero;
+        transform.rotation = Quaternion.identity;
+        //arrow.BoxCollider = null;
+
+        arrow.trail.enabled = false;
+        ArrowPool.ins.ReturnObject(gameObject);
+
+        coroutineFinished = true;
+    }
+    void TriggerCoroutine()
+    {
+        StartCoroutine(ReturnToPool());
+    }
 }

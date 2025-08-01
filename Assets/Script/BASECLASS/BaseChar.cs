@@ -4,21 +4,24 @@ using UnityEngine;
 [RequireComponent(typeof(ArcherAction))]
 public class BaseChar : MonoBehaviour,IDamageable
 {
-    ArcherAction archer;
-
-    void Awake()
+    protected virtual void Awake()
     {
-        archer = GetComponent<ArcherAction>();
+        LevelStatSkill.ins.LevelAccumulate += IncreaseLevel;
     }
-
     //take damage
     public virtual void TakeDamage(float damage, Vector3 hitPoint, Vector3 hitDirection, GameObject attacker, IDamageable.Body hitPart)
     {
 
     }
-
+    //STAT MANAGEMENT HERE
 
     //increase stat
+
+    //level
+    protected virtual void IncreaseLevel(float value) {
+        Debug.Log($"BaseChar level increased by {value}");
+    }
+
 
 
 }

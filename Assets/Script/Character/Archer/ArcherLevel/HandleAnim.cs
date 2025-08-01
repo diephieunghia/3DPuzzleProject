@@ -82,15 +82,15 @@ public class HandleAnim : MonoBehaviour
     {
             anim.SetFloat("OverDraw", archerAction.bb.animSpeed);       
     }
-    public bool AnimOverDrawEnd()
+    public bool AnimOverDrawEnd(float time)
     {
-        if ((anim.GetCurrentAnimatorStateInfo(1).normalizedTime > 0.89f && anim.GetCurrentAnimatorStateInfo(1).IsName("ESkill")))
+        if ((anim.GetCurrentAnimatorStateInfo(1).normalizedTime > time && anim.GetCurrentAnimatorStateInfo(1).IsName("ESkill")))
         {
             return true;
         }
         return false;       
     }
-    public void DisableESkill()
+    public void DisableEShoot()
     {
         anim.SetBool("ESkill", false);
     }

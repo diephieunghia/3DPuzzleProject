@@ -44,7 +44,9 @@ public class BaseMonster : MonoBehaviour,IDamageable
             Attack = false;
             death = true;
             stat.velocity = 0;
+            LevelStatSkill.ins.LevelAccumulate?.Invoke(stat.expDrop);
             DeathTrigger.Invoke();
+            
         }
         else
         {

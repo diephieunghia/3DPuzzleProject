@@ -24,7 +24,6 @@ public class UIManager : MonoBehaviour
     }
     private void Start()
     {
-       
     }
 
     //change to cross when hit
@@ -40,5 +39,8 @@ public class UIManager : MonoBehaviour
         crossHair.GetComponent<Image>().sprite = normal;
     }
 
+    void LevelChange(float value)
+    {
 
+    }
 }

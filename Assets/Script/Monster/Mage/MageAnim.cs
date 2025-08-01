@@ -34,7 +34,6 @@ public class MageAnim : MonoBehaviour
     public void Death()
     {
         anim.SetBool("Death",true);
-        Debug.Log("Trigger Death");
     }
     public void BodyHit()
     {

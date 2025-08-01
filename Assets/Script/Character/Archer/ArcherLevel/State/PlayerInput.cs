@@ -89,7 +89,8 @@ public class PlayerInput
         {
             bbInput.eSkill = true;
             bbInput.skill = true;
-
+            //change to cooldown, duration for test
+            inputSkill.skillDelegate.Invoke(bbInput.eDuration, bbInput.skillIndex[1]);
         }
     }
 

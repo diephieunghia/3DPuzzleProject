@@ -42,10 +42,15 @@ public class ArrowPool : ObjectPool
         //if queue is empty, instantiate new object
         else
             return Instantiate(prefab, arrowHolder);
+
     }
     public override void ReturnObject(GameObject obj)
     {        
-        
+        if(poolObjects.Count>45)
+        {
+            Destroy(obj);
+            return;
+        }
         obj.transform.SetParent(arrowHolder.transform, false);
         obj.transform.localRotation = Quaternion.identity;
         obj.transform.localScale = Vector3.one;
