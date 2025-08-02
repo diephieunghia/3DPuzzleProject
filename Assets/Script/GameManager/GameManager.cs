@@ -17,4 +17,13 @@ public class GameManager : MonoBehaviour
         else
             ins = this;
     }
+    public void StatLevelUp(ArcherBlackBoard stat)
+    {
+
+    }
+
+    //timeCounter += Time.deltaTime;
+    //    minutes = Mathf.FloorToInt(timeCounter / 60f);
+    //    seconds = Mathf.FloorToInt(timeCounter - minutes* 60);
+    //    timeCount.text = string.Format("{0:00}:{1:00}", minutes, seconds);
 }

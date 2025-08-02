@@ -8,16 +8,16 @@ public class ArcherBase : BaseChar
     ArcherBlackBoard bb;
     ArcherAction archer;
 
-    //level handle
-    float currentEXP=0;
+    float currentEXP = 0;
     protected override void Awake()
     {
         base.Awake();
         archer = GetComponent<ArcherAction>();
-        GameManager.ins.LevelChange += IncreaseLevel;
+        
     }
     private void Start()
     {
+        GameManager.ins.LevelChange += IncreaseLevel;
         bb = GetComponent<ArcherAction>().bb;
         
     }
@@ -35,8 +35,10 @@ public class ArcherBase : BaseChar
         while (currentEXP >= bb.maxEXP) { 
             currentEXP -= bb.maxEXP;
             bb.level += 1;
-            //max exp will increase here
-            UIManager.ins.LevelChange(bb.maxEXP, bb.maxEXP, bb.level);
+            UIManager.ins.LevelChange(bb.maxEXP, bb.maxEXP, bb.level);           
+            //max exp will increase here         
+            bb.maxEXP += 10f;
+            //send message to increase stat
         }
         UIManager.ins.LevelChange(currentEXP, bb.maxEXP, bb.level);
     }

@@ -64,6 +64,7 @@ public class ArcherBlackBoard
     public float dashSpeed = 9f;
     public float dashDuration = .3f;
     public float dashCoolDown = 2f;
+    public int dashCount = 1;
 
     //Skill Index
     public int[] skillIndex = { 0, 1, 2, 3, 4 };

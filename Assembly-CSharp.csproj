@@ -69,6 +69,7 @@
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\MovementState\MovementStateHandler.cs" />
     <Compile Include="Assets\Script\UI\SkillManager.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\MovementState\States\Jump.cs" />
+    <Compile Include="Assets\Script\GameManager\SpawnMonster.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\MovementState\States\Idle.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\ArcherBase.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\AttackState\State_Atk\Shoot.cs" />
@@ -101,6 +102,7 @@
     <Compile Include="Assets\Script\BASECLASS\ObjectPool.cs" />
     <Compile Include="Assets\Script\Monster\MoveHandler.cs" />
     <Compile Include="Assets\Script\BASECLASS\SO_Char.cs" />
+    <Compile Include="Assets\Script\BASECLASS\SO_Level.cs" />
     <Compile Include="Assets\Script\Monster\Mage\MageAttack.cs" />
     <Compile Include="Assets\Script\Monster\Mage\MageMoveHandler.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\ArcherAction.cs" />

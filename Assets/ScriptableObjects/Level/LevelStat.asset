@@ -9,13 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cd8f2e636d446745b376599ec43e076, type: 3}
-  m_Name: Mage
+  m_Script: {fileID: 11500000, guid: 0a42a9402a47bfc468747388ab607aa2, type: 3}
+  m_Name: LevelStat
   m_EditorClassIdentifier: 
-  health: 120
-  damage: 20
-  speed: 3.5
-  baseCoolDown: 3
-  attackRate: 3
-  velocity: 0
-  expDrop: 75
