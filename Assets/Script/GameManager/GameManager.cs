@@ -6,9 +6,16 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager ins { get; private set; }
-
+    public SO_Level statScale;
     //level
     public Action<float> LevelChange;
+
+    //CountDown
+    public Action CountDownComplete;
+
+    //Move to store
+    public Transform storePosition;
+    ArcherAction character;
 
     private void Awake()
     {
@@ -16,14 +23,30 @@ public class GameManager : MonoBehaviour
             Destroy(this);
         else
             ins = this;
+        CountDownComplete += MoveToStore;
+    }
+    private void Start()
+    {
+        character=GameObject.FindAnyObjectByType<ArcherAction>();
     }
     public void StatLevelUp(ArcherBlackBoard stat)
     {
 
     }
 
-    //timeCounter += Time.deltaTime;
-    //    minutes = Mathf.FloorToInt(timeCounter / 60f);
-    //    seconds = Mathf.FloorToInt(timeCounter - minutes* 60);
-    //    timeCount.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    //Move to store
+    private void MoveToStore()
+    {
+        StartCoroutine(WaitAndMove());
+    }
+    IEnumerator WaitAndMove()
+    {
+        yield return new WaitForSeconds(0.75f);
+        //Move to store method
+        character.characterController.enabled = false;
+        character.transform.position = storePosition.transform.position;
+        character.characterController.enabled = true;
+        Debug.Log("Move to store");
+    }
+
 }

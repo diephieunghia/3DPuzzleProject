@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
+using System;
 [RequireComponent(typeof(SkillManager))]
 public class UIManager : MonoBehaviour
 {
@@ -23,6 +24,12 @@ public class UIManager : MonoBehaviour
     public float rate = 10f;
     float lastValue = 0;
     int runCount = 0;
+
+    //CountDown
+    [Header("CountDown")]
+    public TextMeshProUGUI waveText;
+    public TextMeshProUGUI timeCountDown;
+
     private void Awake()
     {
         if (ins != null && ins != this)
@@ -95,4 +102,6 @@ public class UIManager : MonoBehaviour
         
         
     }
+
+
 }
