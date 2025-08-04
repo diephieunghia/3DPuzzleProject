@@ -94,6 +94,7 @@ public class PlayerInput
     }
 
 
-    //Cheat
+    // E open Store
+
 
 }
