@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.Windows;
@@ -14,6 +15,9 @@ public class ArcherAction : MonoBehaviour
 
     public Transform groundCheck;
     public LayerMask groundMask;
+
+    
+
     private void Awake()
     {
         bb = new ArcherBlackBoard();
@@ -28,6 +32,7 @@ public class ArcherAction : MonoBehaviour
         input.dashActive += Dash;
         input.doubleJumpActive += DoubleJump;
         attackStateHandler = new AttackStateHandler(bb, transform, characterController);
+        GameManager.ins.CountDownComplete += ChangeSceneState;
     }
     // Update is called once per frame
     void Update()
@@ -99,5 +104,17 @@ public class ArcherAction : MonoBehaviour
         }      
     }
 
-    
+    void ChangeSceneState()
+    {
+        bb.storeAction = !bb.storeAction;
+        if (attackStateHandler.CurrentState == attackStateHandler.shoot)       
+            bb.aiming = ArcherBlackBoard.Aim.Cancel;       
+        else if (attackStateHandler.CurrentState == attackStateHandler.eSkill)
+        {
+            bb.skill = false;
+            bb.eSkill = false;
+            bb.aiming = ArcherBlackBoard.Aim.Idle;
+            HandleAnim.ins.DisableEShoot();
+        }
+    }
 }

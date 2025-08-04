@@ -46,7 +46,6 @@ public class GameManager : MonoBehaviour
         character.characterController.enabled = false;
         character.transform.position = storePosition.transform.position;
         character.characterController.enabled = true;
-        Debug.Log("Move to store");
     }
 
 }

@@ -35,8 +35,7 @@ public class ATKIdle : IState
         if (atkbb.eSkill)
         {
             // change to E skill state
-            handler.MoveChangeState(handler.eSkill);
-            
+            handler.MoveChangeState(handler.eSkill);           
         }
         if(HandleAnim.ins.WaitForReloadAnim())
             if (atkbb.aiming==ArcherBlackBoard.Aim.Hold)

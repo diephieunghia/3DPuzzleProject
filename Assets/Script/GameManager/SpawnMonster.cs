@@ -36,7 +36,7 @@ public class SpawnMonster : MonoBehaviour
             countDownComplete = true;
             minutes = 0;
             seconds = 0;
-            //Invoke Despawn Monster
+            //Invoke Despawn Monster, Inovke transport, Invoke change Character State
             GameManager.ins.CountDownComplete?.Invoke();
             return;
         }

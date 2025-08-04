@@ -75,5 +75,5 @@ public class ArcherBlackBoard
     public float eCoolDown = 8f;
     public float animSpeed = 12f;
 
-
+    public bool storeAction = false;
 }

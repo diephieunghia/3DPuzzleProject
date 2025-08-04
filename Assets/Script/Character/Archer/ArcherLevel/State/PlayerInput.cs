@@ -27,8 +27,16 @@ public class PlayerInput
         Jump();
         DoubleJump();
         Dash();
-        HoldDraw();
-        SkillE();
+        //attack state
+        if (!bbInput.storeAction)
+        {
+            HoldDraw();
+            SkillE();
+        }
+        else
+        {
+            ActionAtStore();
+        }
     }
 
     void GetInput()
@@ -95,6 +103,11 @@ public class PlayerInput
 
 
     // E open Store
+    void ActionAtStore()
+    {
 
+        if (Input.GetKeyDown(KeyCode.E))
+            Debug.Log("Store ACtion button E pressed");
+    }
 
 }

@@ -62,7 +62,6 @@ public class UIManager : MonoBehaviour
         else
         {
             Debug.Log("Value: " + value + " maxEXP:" + maxEXP);
-            Debug.Log(runCount);
             StartCoroutine(LevelUp(value, maxEXP, level));
         }
         //levelUI.fillAmount = value;

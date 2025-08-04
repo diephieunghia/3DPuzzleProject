@@ -16,7 +16,7 @@ MonoBehaviour:
   maxLevel: 10
   monsterPowerScale: 1.2
   levelTime:
-  - 2
+  - 3
   - 10
   - 10
   - 10

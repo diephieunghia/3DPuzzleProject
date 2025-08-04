@@ -64,7 +64,8 @@ public class Arrow : MonoBehaviour
         trail.enabled= true ;       
         this.damage = damage;
         rb.AddRelativeForce(-Vector3.forward * force, ForceMode.Impulse);
-        arrowDetection.coroutineStart?.Invoke();
+        if(arrowDetection.isActiveAndEnabled) 
+            arrowDetection.coroutineStart?.Invoke();
     }
     public void SetFire()
     {

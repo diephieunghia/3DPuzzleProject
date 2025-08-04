@@ -24,7 +24,6 @@ public class ArrowDetection : MonoBehaviour
     }
     void Start()
     {
-        if(this.isActiveAndEnabled)
             coroutineStart+= TriggerCoroutine;
     }
 
