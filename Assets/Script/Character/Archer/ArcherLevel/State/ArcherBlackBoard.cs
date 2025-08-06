@@ -75,5 +75,11 @@ public class ArcherBlackBoard
     public float eCoolDown = 8f;
     public float animSpeed = 12f;
 
+    //Q
+    public bool qSkill = false;
+    public float qDuration = 3f;
+    public float qCoolDown = 8f;
+    public float qanimSpeed = 12f;
+
     public bool storeAction = false;
 }

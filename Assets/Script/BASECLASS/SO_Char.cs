@@ -74,4 +74,10 @@ public class SO_Char : ScriptableObject
     public float eDuration = 3f;
     public float eCoolDown = 8f;
     public float animSpeed = 12f;
+
+    //q
+    public bool qSkill = false;
+    public float qDuration = 1f;
+    public float qCoolDown = 1f;
+    public float qanimSpeed = 1f;
 }

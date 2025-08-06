@@ -11,7 +11,7 @@ public class ESkill : IState
 
     float tempDuration;
     bool reloadOnce;
-    bool attack=true;
+    bool attack = false;
     public ESkill(ArcherBlackBoard bb, Transform transform, CharacterController controller, AttackStateHandler atkHandler)
     {
         atkbb = bb;

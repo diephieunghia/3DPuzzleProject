@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6516bec3aaa4d74428aa212f5cbe73a9, type: 3}
+  m_Name: LightningOrb
+  m_EditorClassIdentifier: 
+  text: Spawn lightning sphere randomly every 2 seconds
+  icon: {fileID: 21300000, guid: 1da390cd176f9334d813e41feb484b11, type: 3}
+  quantity: 1
+  type: 2
+  rarity: 0
+  textColor: {r: 1, g: 1, b: 1, a: 1}
+  speed: 1
+  tempSpeed: 1
+  arrowCount: 1
+  eDuration: 1
+  eCoolDown: 1
+  animSpeed: 1
+  qDuration: 1
+  qCoolDown: 1
+  qanimSpeed: 1
+  terrain:
+  - {fileID: 15600000, guid: 9b91f2c7871e6af4d99dc4c86af66e4c, type: 2}
+  - {fileID: 15600000, guid: dff117c6f495a2446af3c31178c870d6, type: 2}
+  - {fileID: 15600000, guid: 0f99ede374910ef468a8811e64c9f9cf, type: 2}
+  - {fileID: 15600000, guid: b004de2d6eb707044bf8a95b8965ff87, type: 2}
+  summon: {fileID: 7131401307255788800, guid: 4d9a3b35b3bc07649b697df7fb497b6d, type: 3}
+  isVisible: 1

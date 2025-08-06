@@ -1,19 +1,111 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+public enum Rarity
+{
+    Common,
+    Rare,
+    Epic,
+    Legend
+}
+public enum ItemType
+{
+    Stat,
+    Skill,
+    Passive
+}
 [CreateAssetMenu(fileName = "SO", menuName = "ScriptableObjects/Items")]
 
-public class SO_Item : MonoBehaviour
+public class SO_Item : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [Header("Description")]
+    //Description
+    public string text;
+    public Sprite icon;
+    //quantity for spawn this
+    public int quantity;
+    //type of buff
+    [Header("Item Type Rarity")]
+    public ItemType type;
+    public Rarity rarity;
+    public Color textColor = Color.white;
 
-    // Update is called once per frame
-    void Update()
+    [Header("Stat")]
+    //damage
+    public float damage = 1f;
+    public float maxDamage = 1f;
+    public int arrowCount = 3;
+
+    public float speed = 1f;
+    public float tempSpeed = 1f;
+    //e
+    public float eDuration = 1f;
+    public float eCoolDown = 1f;
+    public float animSpeed = 1f;
+
+    //q
+    public float qDuration = 1f;
+    public float qCoolDown = 1f;
+    public float qanimSpeed = 1f;
+
+    [Header("Object Spawn")]
+    //Object to Spawn
+    public Terrain[] terrain;
+    public GameObject summon;
+    public bool isVisible = false;
+
+    TerrainData[] tData;
+    Vector3[] terrainPos;
+    public void SpawnObject(bool visible)
     {
-        
+        if (visible)
+        {
+            for (int i = 0; i < terrain.Length; i++)
+            {
+                tData[i] = terrain[i].terrainData;
+                terrainPos[i] = terrain[i].transform.position;
+            }
+
+            //random x and z inside terrain size
+            int k = Random.Range(0, terrain.Length);
+
+            float x = Random.Range(0f, tData[k].size.x);
+            float z = Random.Range(0f, tData[k].size.z);
+
+            float y = tData[k].GetHeight(Mathf.RoundToInt(x), Mathf
+                .RoundToInt(z));
+            //Convert local coords to world coords
+            Vector3 spawnPos = new Vector3(
+                x + terrainPos[k].x,
+                y + terrainPos[k].y,
+                z + terrainPos[k].z);
+            Instantiate(summon, spawnPos, Quaternion.identity);
+        }
+        else//just spawn for script to work
+        {
+            Instantiate(summon, Vector3.zero, Quaternion.identity);
+        }
     }
+#if UNITY_EDITOR
+    private void OnValidate()
+    {
+        switch (rarity)
+        {
+            case Rarity.Common:
+                textColor = Color.white;
+                break;        
+            case Rarity.Rare:
+                textColor = Color.blue;
+                break;
+            case Rarity.Epic:
+                textColor = new Color(0.64f, 0.21f, 0.93f); // purple
+                break;
+            case Rarity.Legend:
+                textColor = new Color(1f, 0.5f, 0f); // orange
+                break;
+        }
+    }
+#endif
+
 }
