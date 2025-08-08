@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2561028838005153292}
   - component: {fileID: 7668541596739560884}
-  - component: {fileID: 3268345696869884097}
   - component: {fileID: 1921444582063990943}
+  - component: {fileID: 5530841798756682557}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -48,18 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statScale: {fileID: 11400000, guid: 20cd3d62f9dd43c4bae53f4a9240de30, type: 2}
   storePosition: {fileID: 0}
---- !u!114 &3268345696869884097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5376331846566847208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77056668966b715448ed0bebe6716de7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  playerPressBuy: 0
+  playerExitStore: 0
 --- !u!114 &1921444582063990943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,6 +66,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  rarityColor:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   itemNames:
   - {fileID: 0}
   - {fileID: 0}
@@ -84,6 +78,25 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  itemHolder:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  items: []
+--- !u!114 &5530841798756682557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5376331846566847208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ef30414461fe674180d91782f67ce03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eIcon: {fileID: 0}
+  rIcon: {fileID: 0}
 --- !u!1 &6811764468944786794
 GameObject:
   m_ObjectHideFlags: 0

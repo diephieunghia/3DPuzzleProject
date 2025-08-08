@@ -7,8 +7,10 @@ using UnityEngine.UI;
 public class AssignCard : MonoBehaviour
 {
     public Image[] sprites;
+    public Image[] rarityColor;
     public TextMeshProUGUI[] itemNames;
     public TextMeshProUGUI[] descriptions;
+    public GameObject[] itemHolder;
 
     //test using public
     public SO_Item[] items;
@@ -25,9 +27,16 @@ public class AssignCard : MonoBehaviour
     }
     
     void AssignCardUI()
-    {       
-        //still not assgin
-        items = Resources.LoadAll<SO_Item>("Assets/ScriptableObjects/Items");
-        Debug.Log("Assigned: " + items.Length);
+    {
+        items = Resources.LoadAll<SO_Item>("Items");
+        for (int i = 0; i < items.Length; i++)
+        {
+            sprites[i].sprite = items[i].icon;
+            itemNames[i].text = items[i].name;
+            descriptions[i].text = items[i].text;
+            itemHolder[i].GetComponent<StoreUI>()?.AssignItem(items[i]);
+        }
+            
+
     }
 }

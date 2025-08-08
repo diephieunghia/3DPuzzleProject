@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.ExceptionServices;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -27,6 +28,7 @@ public class PlayerInput
         Jump();
         DoubleJump();
         Dash();
+        TabAction();
         //attack state
         if (!bbInput.storeAction)
         {
@@ -36,6 +38,7 @@ public class PlayerInput
         else
         {
             ActionAtStore();
+            ExitStore();
         }
     }
 
@@ -101,13 +104,31 @@ public class PlayerInput
         }
     }
 
-
     // E open Store
     void ActionAtStore()
     {
-
         if (Input.GetKeyDown(KeyCode.E))
+        {
+            GameManager.ins.playerPressBuy = true;
             Debug.Log("Store ACtion button E pressed");
+        }
+        else
+            GameManager.ins.playerPressBuy = false;
     }
-
+    void TabAction()
+    {
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            UIManager.ins.TabShow(bbInput, true);
+        }
+        else if(Input.GetKeyUp(KeyCode.Tab)) 
+            UIManager.ins.TabShow(bbInput, false);
+    }
+    void ExitStore()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+            GameManager.ins.playerExitStore = true;
+        else GameManager.ins.playerExitStore = false;
+    }
+       
 }

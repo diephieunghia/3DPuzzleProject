@@ -30,6 +30,11 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI waveText;
     public TextMeshProUGUI timeCountDown;
 
+    //Tab Table
+    public GameObject tabTable;
+    public TextMeshProUGUI character;
+    public TextMeshProUGUI level;
+
     private void Awake()
     {
         if (ins != null && ins != this)
@@ -61,7 +66,6 @@ public class UIManager : MonoBehaviour
             runCount+=1;
         else
         {
-            Debug.Log("Value: " + value + " maxEXP:" + maxEXP);
             StartCoroutine(LevelUp(value, maxEXP, level));
         }
         //levelUI.fillAmount = value;
@@ -102,5 +106,20 @@ public class UIManager : MonoBehaviour
         
     }
 
+    public void TabShow(ArcherBlackBoard bb,bool active)
+    {
+        if (active)
+        {
+            tabTable.SetActive(true);
+            character.text = string.Format("Max EXP:{0}\r\n" +
+                "Speed:{1}\r\n" +
+                "Arrow Count:{2}\r\n" +
+                "Max Damage:{3}", bb.maxEXP, bb.speed, bb.arrowCount, bb.maxDamage);
+            //get statscale from game manager
+            level.text = string.Format("Level Scale:{0}", GameManager.ins.MonsterScale);
+        }
+        else
+            tabTable.SetActive(false);
+    }
 
 }

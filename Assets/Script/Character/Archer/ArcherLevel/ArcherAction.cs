@@ -33,6 +33,7 @@ public class ArcherAction : MonoBehaviour
         input.doubleJumpActive += DoubleJump;
         attackStateHandler = new AttackStateHandler(bb, transform, characterController);
         GameManager.ins.CountDownComplete += ChangeSceneState;
+        GameManager.ins.MoveToArea += ExitShop;
     }
     // Update is called once per frame
     void Update()
@@ -103,7 +104,7 @@ public class ArcherAction : MonoBehaviour
             yield return null;
         }      
     }
-
+    //enter exit shop
     void ChangeSceneState()
     {
         bb.storeAction = !bb.storeAction;
@@ -117,4 +118,11 @@ public class ArcherAction : MonoBehaviour
             HandleAnim.ins.DisableEShoot();
         }
     }
+    void ExitShop()
+    {
+        bb.storeAction = !bb.storeAction;
+        Debug.Log(bb.storeAction);
+    }
+
+
 }

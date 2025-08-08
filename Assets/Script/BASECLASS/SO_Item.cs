@@ -12,6 +12,7 @@ public enum Rarity
 public enum ItemType
 {
     Stat,
+    Special,
     Skill,
     Passive
 }
@@ -80,12 +81,17 @@ public class SO_Item : ScriptableObject
                 x + terrainPos[k].x,
                 y + terrainPos[k].y,
                 z + terrainPos[k].z);
+            Debug.Log("Spawn " + summon.name + " at " + spawnPos);
             Instantiate(summon, spawnPos, Quaternion.identity);
         }
         else//just spawn for script to work
         {
             Instantiate(summon, Vector3.zero, Quaternion.identity);
         }
+    }
+    public void ReduceCount()
+    {
+        quantity -= 1;
     }
 #if UNITY_EDITOR
     private void OnValidate()
