@@ -20,8 +20,10 @@ public class StoreUI : MonoBehaviour
 
     private void Update()
     {
-        if(playerInRange&&GameManager.ins.playerPressBuy)
+        
+        if (playerInRange&&GameManager.ins.playerPressBuy)
         {
+            int rand = item.RandomInt();
             Debug.Log("Buy Item: "+item.name);
             if (item.type == ItemType.Stat)
                 archer.StatUP(item);
@@ -32,7 +34,10 @@ public class StoreUI : MonoBehaviour
                 Debug.Log("Passive Item");
             }
             else
-                item.SpawnObject(item.isVisible);
+            {              
+                item.SpawnObject(true, rand);
+            }
+                
             item.ReduceCount();
             GameManager.ins.playerPressBuy = false;
             //Disable Card
