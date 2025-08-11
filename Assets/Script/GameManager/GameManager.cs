@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     //CountDown
     public Action CountDownComplete;
     public Action MoveToArea;
+    public Action<ArcherBlackBoard> GetCharStat;
     //Move to store
     public Transform storePosition;
     ArcherAction character;

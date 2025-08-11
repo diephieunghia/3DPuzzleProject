@@ -6,6 +6,7 @@ using static IDamageable;
 public class ArcherBase : BaseChar
 {
     ArcherBlackBoard bb;
+    public ArcherBlackBoard BB => bb;
     ArcherAction archer;
 
     float currentEXP = 0;
@@ -70,5 +71,14 @@ public class ArcherBase : BaseChar
                 bb.currentArrow[i].transform.localRotation= Quaternion.Euler(0, z, 0);
             }
         }
+    }
+
+    public void getCharStat()
+    {
+        GameManager.ins.GetCharStat?.Invoke(bb);
+    }
+    public void ItemGetStatOnceAtSpawn(SO_Item item)
+    {
+        
     }
 }

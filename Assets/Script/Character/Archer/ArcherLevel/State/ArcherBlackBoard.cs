@@ -82,4 +82,9 @@ public class ArcherBlackBoard
     public float qanimSpeed = 12f;
 
     public bool storeAction = false;
+
+    //Passvie 
+    public float passiveCD = 1f;
+    public float passiveDmg = 1f;
+    public float passiveArea = 1f;
 }

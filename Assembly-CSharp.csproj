@@ -106,6 +106,7 @@
     <Compile Include="Assets\Script\GameManager\StoreEnter.cs" />
     <Compile Include="Assets\Script\BASECLASS\ObjectPool.cs" />
     <Compile Include="Assets\Script\Monster\MoveHandler.cs" />
+    <Compile Include="Assets\Script\Items\Meteor.cs" />
     <Compile Include="Assets\Script\BASECLASS\SO_Char.cs" />
     <Compile Include="Assets\Script\BASECLASS\SO_Level.cs" />
     <Compile Include="Assets\Script\Monster\Mage\MageAttack.cs" />
@@ -113,6 +114,7 @@
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\ArcherAction.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\PlayerInput.cs" />
     <Compile Include="Assets\Script\GameManager\GameManager.cs" />
+    <Compile Include="Assets\Script\Items\ItemGetData.cs" />
     <Compile Include="Assets\Script\Monster\Minion\MinionBehavior.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\Arrow\Arrow.cs" />
   </ItemGroup>

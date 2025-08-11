@@ -56,10 +56,16 @@ public class SO_Item : ScriptableObject
     public GameObject summon;
     public bool isVisible = false;
 
+    //Spawnable Item multiplier
+    public float passiveCD = 1f;
+    public float passiveDMG = 1f;
+    public float passiveArea = 1f;
+
     TerrainData[] tData;
     Vector3[] terrainPos;
-    public void SpawnObject(bool visible,int random)
+    public void SpawnObject(bool visible,int random,ArcherBlackBoard bb)
     {
+        Debug.Log("Random: " + random);
         if (visible)
         {
             tData=new TerrainData[terrain.Length];
@@ -69,7 +75,6 @@ public class SO_Item : ScriptableObject
                 tData[i] = terrain[i].terrainData;
                 terrainPos[i] = terrain[i].transform.position;
             }
-
             //random x and z inside terrain size
             int k = Random.Range(0, terrain.Length);
             float x = Random.Range(0f, tData[random].size.x);
@@ -77,11 +82,10 @@ public class SO_Item : ScriptableObject
 
             float y = tData[random].GetHeight(Mathf.RoundToInt(x), Mathf
                .RoundToInt(z));
-            Debug.Log("Height: " + y);
             //Convert local coords to world coords
             Vector3 spawnPos = new Vector3(
                 x + terrainPos[random].x,
-                y + terrainPos[random].y,
+                y + terrainPos[random].y ,
                 z + terrainPos[random].z);
             Debug.Log("Spawn " + summon.name + " at " + spawnPos);
             Instantiate(summon, spawnPos, Quaternion.identity);
@@ -89,6 +93,7 @@ public class SO_Item : ScriptableObject
         else//just spawn for script to work
         {
             Instantiate(summon, Vector3.zero, Quaternion.identity);
+            summon.GetComponent<ItemGetData>()?.GetCharStatAtStart(bb);
         }
     }
     public void ReduceCount()
@@ -99,6 +104,8 @@ public class SO_Item : ScriptableObject
     {
         return Random.Range(0, terrain.Length);
     }
+
+
 #if UNITY_EDITOR
     private void OnValidate()
     {

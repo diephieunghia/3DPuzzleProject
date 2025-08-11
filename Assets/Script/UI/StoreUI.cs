@@ -34,14 +34,14 @@ public class StoreUI : MonoBehaviour
                 Debug.Log("Passive Item");
             }
             else
-            {              
-                item.SpawnObject(true, rand);
+            {
+                item.SpawnObject(true, rand,archer.BB);               
             }
                 
             item.ReduceCount();
             GameManager.ins.playerPressBuy = false;
             //Disable Card
-            DisableCard();
+            //DisableCard();
         }
     }
     private void OnTriggerEnter(Collider other)
