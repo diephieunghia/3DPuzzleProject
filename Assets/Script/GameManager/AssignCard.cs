@@ -29,12 +29,13 @@ public class AssignCard : MonoBehaviour
     void AssignCardUI()
     {
         items = Resources.LoadAll<SO_Item>("Items");
-        for (int i = 0; i < items.Length; i++)
+        int max=Mathf.Min(3,items.Length);
+        for (int i = 0; i < max; i++)
         {
             sprites[i].sprite = items[i].icon;
             itemNames[i].text = items[i].name;
             descriptions[i].text = items[i].text;
-            itemHolder[i].GetComponent<StoreUI>()?.AssignItem(items[i]);
+            itemHolder[i].GetComponent<CardChooseAndIncreaseStat>()?.AssignItem(items[i]);
         }
             
 

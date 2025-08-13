@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     
     public int CurrentLevel=>statScale.currentLevel;
     public int MaxLevel => statScale.maxLevel;
+    public int[] MaxEnemy => statScale.maxEnemyPerLevel;
     public float MonsterScale => statScale.monsterPowerScale;
     public float[] LevelTime=>statScale.levelTime;
 
@@ -24,10 +25,11 @@ public class GameManager : MonoBehaviour
     ArcherAction character;
     public bool playerPressBuy = false;
     public bool playerExitStore = false;
-
     //last character position
     Vector3 lastPosition;
 
+    //wait time
+    public float WaitTime = .5f;
     private void Awake()
     {
         if (ins != null && ins != this)
@@ -67,7 +69,8 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator MoveBack()
     {
-        yield return new WaitForSeconds(0.75f);
+        //play vfx
+        yield return new WaitForSeconds(WaitTime/2);
         //Move to store method
         character.characterController.enabled = false;
         character.transform.position = lastPosition;
@@ -77,5 +80,7 @@ public class GameManager : MonoBehaviour
     {
         if (statScale.currentLevel <= statScale.maxLevel)
             statScale.currentLevel += 1;
+        SpawnMonster.ins.MaxEnemy = statScale.maxEnemyPerLevel[statScale.currentLevel-1];
+        Debug.Log("Current Level: "+statScale.currentLevel+" max Enemy: "+statScale.maxEnemyPerLevel);
     }
 }

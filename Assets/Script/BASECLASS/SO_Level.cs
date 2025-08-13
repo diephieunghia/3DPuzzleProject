@@ -9,4 +9,6 @@ public class SO_Level : ScriptableObject
 
     public float monsterPowerScale = 1.2f;
     public float[] levelTime;
+
+    public int[] maxEnemyPerLevel;
 }

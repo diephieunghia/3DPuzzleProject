@@ -70,6 +70,7 @@
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\MovementState\MovementStateHandler.cs" />
     <Compile Include="Assets\Script\UI\SkillManager.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\MovementState\States\Jump.cs" />
+    <Compile Include="Assets\Script\GameManager\SpawnMonster.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\MovementState\States\Idle.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\ArcherBase.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\AttackState\State_Atk\Shoot.cs" />
@@ -81,8 +82,6 @@
     <Compile Include="Assets\Script\Character\Archer\CameraMove.cs" />
     <Compile Include="Assets\Script\Monster\Mage\MageBehavior.cs" />
     <Compile Include="Assets\Script\Monster\Mage\STATE\Move\RandomMove.cs" />
-    <Compile Include="Assets\Script\Monster\Minion\MinionMoveHandler.cs" />
-    <Compile Include="Assets\Script\UI\StoreUI.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\AttackState\State_Atk\ESkill.cs" />
     <Compile Include="Assets\Script\BASECLASS\SO_Item.cs" />
     <Compile Include="Assets\Script\GameManager\ExitShop.cs" />
@@ -93,12 +92,16 @@
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\SkillHandler\SkillHandler.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\MovementState\States\Move.cs" />
     <Compile Include="Assets\Script\Monster\Mage\MageAnim.cs" />
+    <Compile Include="Assets\Script\Monster\Minion\WithoutShield\WithoutShieldBehavior.cs" />
     <Compile Include="Assets\Script\Monster\Minion\STATE\Dodge.cs" />
+    <Compile Include="Assets\Script\Monster\Minion\STATE\ChaseWithoutShield.cs" />
+    <Compile Include="Assets\Script\Monster\Minion\Minion\MinionBehavior.cs" />
     <Compile Include="Assets\Script\Monster\Mage\Projectile\MageProjectilePool.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\AttackState\AttackStateHandler.cs" />
     <Compile Include="Assets\Script\UI\UICountDown.cs" />
     <Compile Include="Assets\Script\UI\UIManager.cs" />
     <Compile Include="Assets\Script\Monster\Mage\Projectile\ProjectileMove.cs" />
+    <Compile Include="Assets\Script\Monster\Minion\WithoutShield\WithoutShieldMoveHandler.cs" />
     <Compile Include="Assets\Script\Monster\MonsterBehavior.cs" />
     <Compile Include="Assets\Script\Monster\Mage\Projectile\FireBallDetection.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\Arrow\AimToTarget.cs" />
@@ -115,8 +118,9 @@
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\PlayerInput.cs" />
     <Compile Include="Assets\Script\GameManager\GameManager.cs" />
     <Compile Include="Assets\Script\Items\ItemGetData.cs" />
-    <Compile Include="Assets\Script\Monster\Minion\MinionBehavior.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\Arrow\Arrow.cs" />
+    <Compile Include="Assets\Script\Monster\Minion\Minion\MinionMoveHandler.cs" />
+    <Compile Include="Assets\Script\GameManager\CardChooseAndIncreaseStat.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
