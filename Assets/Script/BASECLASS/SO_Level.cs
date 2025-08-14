@@ -11,4 +11,7 @@ public class SO_Level : ScriptableObject
     public float[] levelTime;
 
     public int[] maxEnemyPerLevel;
+
+    public float[] spawnRate;
+    public int[] spawnQuantity;
 }

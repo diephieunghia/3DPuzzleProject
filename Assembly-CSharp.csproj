@@ -68,9 +68,9 @@
     <Compile Include="Assets\Script\GameManager\AssignCard.cs" />
     <Compile Include="Assets\Script\Monster\Mage\STATE\Move\Chase.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\MovementState\MovementStateHandler.cs" />
+    <Compile Include="Assets\Script\GameManager\SpawnMonster.cs" />
     <Compile Include="Assets\Script\UI\SkillManager.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\MovementState\States\Jump.cs" />
-    <Compile Include="Assets\Script\GameManager\SpawnMonster.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\MovementState\States\Idle.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\ArcherBase.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\AttackState\State_Atk\Shoot.cs" />
@@ -94,6 +94,7 @@
     <Compile Include="Assets\Script\Monster\Mage\MageAnim.cs" />
     <Compile Include="Assets\Script\Monster\Minion\WithoutShield\WithoutShieldBehavior.cs" />
     <Compile Include="Assets\Script\Monster\Minion\STATE\Dodge.cs" />
+    <Compile Include="Assets\Script\BASECLASS\MonsterPool.cs" />
     <Compile Include="Assets\Script\Monster\Minion\STATE\ChaseWithoutShield.cs" />
     <Compile Include="Assets\Script\Monster\Minion\Minion\MinionBehavior.cs" />
     <Compile Include="Assets\Script\Monster\Mage\Projectile\MageProjectilePool.cs" />

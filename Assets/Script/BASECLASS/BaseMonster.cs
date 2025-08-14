@@ -46,9 +46,11 @@ public class BaseMonster : MonoBehaviour,IDamageable
             death = true;
             stat.velocity = 0;
             GameManager.ins.LevelChange?.Invoke(stat.expDrop);
+            //trigger Death animation
             DeathTrigger.Invoke();
             //Substract from despawn event
             //GameManager.ins.CountDownComplete -= Despawn;
+            GameManager.ins.monsterOnFieldCount--;
         }
         else
         {

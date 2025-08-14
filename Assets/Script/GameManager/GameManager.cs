@@ -13,7 +13,10 @@ public class GameManager : MonoBehaviour
     public int[] MaxEnemy => statScale.maxEnemyPerLevel;
     public float MonsterScale => statScale.monsterPowerScale;
     public float[] LevelTime=>statScale.levelTime;
+    public float[] SpawnRate => statScale.spawnRate;
+    public int[] SpawnQuantity=>statScale.spawnQuantity;
 
+    public int monsterOnFieldCount=0;
     //level
     public Action<float> LevelChange;
     //CountDown
@@ -81,6 +84,9 @@ public class GameManager : MonoBehaviour
         if (statScale.currentLevel <= statScale.maxLevel)
             statScale.currentLevel += 1;
         SpawnMonster.ins.MaxEnemy = statScale.maxEnemyPerLevel[statScale.currentLevel-1];
+        SpawnMonster.ins.CurrentLevel=statScale.currentLevel;
+        SpawnMonster.ins.SpawnRate = statScale.spawnRate[statScale.currentLevel-1];
+        SpawnMonster.ins.MonsterQuanity = statScale.spawnQuantity[statScale.currentLevel-1];
         Debug.Log("Current Level: "+statScale.currentLevel+" max Enemy: "+statScale.maxEnemyPerLevel);
     }
 }
