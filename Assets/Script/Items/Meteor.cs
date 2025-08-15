@@ -66,7 +66,6 @@ public class Meteor : ItemGetData
                         damageable.TakeDamage(initialDamage, transform.position, transform.forward, gameObject, IDamageable.Body.Body);
                     }
                 }
-                Debug.Log("Reach Destination"); 
                 //disable ball
                 meteor.SetActive(false);
                 //set skill to true to continue playing

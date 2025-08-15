@@ -64,6 +64,7 @@ public class BaseMonster : MonoBehaviour,IDamageable
     }
     private void OnDrawGizmos()
     {
+        
         Gizmos.DrawWireCube(center.position, size);
     }
 }

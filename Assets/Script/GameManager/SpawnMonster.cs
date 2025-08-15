@@ -33,6 +33,8 @@ public class SpawnMonster : MonoBehaviour
         else
             ins = this;
     }
+
+    //get new spawn rate and spawn quantity after start a new wave
     void Start()
     {
         StartCoroutine(WaitToSpawn());
@@ -41,6 +43,8 @@ public class SpawnMonster : MonoBehaviour
         spawn = true;
         GameManager.ins.CountDownComplete += StopSpawnAndDespawnMonster;
         GameManager.ins.MoveToArea += LevelStart;
+        monsterQuanity=GameManager.ins.SpawnQuantity[0];
+        maxEnemy = GameManager.ins.MaxEnemy[0];
     }
 
     void Update()
@@ -49,9 +53,10 @@ public class SpawnMonster : MonoBehaviour
         {
             tempSpawnRate -= Time.deltaTime;
             if (tempSpawnRate <= 0)
-            {
-                tempSpawnRate = spawnRate;
+            {               
+               
                 SpawnMonsterMethod();
+                tempSpawnRate = spawnRate;
             }
         }
         
@@ -89,9 +94,11 @@ public class SpawnMonster : MonoBehaviour
         int spawnRarity = GetSpawnRarity();
         for (int i = 0; i < monsterQuanity; i++)
         {
+            Debug.Log("monster onfield count: " + GameManager.ins.monsterOnFieldCount+" max enemy "+maxEnemy);
             //check if exceed max enemy per level
             if (GameManager.ins.monsterOnFieldCount <= maxEnemy)
             {
+                Debug.Log("Spawn monster with rarity: " + spawnRarity);
                 //get monster from object pool               
                 GameObject monster = monstersPool[spawnRarity].GetObject();
                 //assign spawn location
