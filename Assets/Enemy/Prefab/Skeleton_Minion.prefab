@@ -1331,6 +1331,7 @@ MonoBehaviour:
   axeEnable: 0
   center: {fileID: 7063502936250693230}
   size: {x: 3.03, y: 2.99, z: 3.83}
+  coins: 18
 --- !u!114 &7638230562584238587
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1027,7 +1027,13 @@ MonoBehaviour:
   stat: {fileID: 11400000, guid: 6d10282e33c613a43a681f826d9ba9f7, type: 2}
   Attack: 0
   attackType: 1
+  arrow:
+    serializedVersion: 2
+    m_Bits: 0
   axeEnable: 0
+  center: {fileID: 0}
+  size: {x: 0, y: 0, z: 0}
+  coins: 20
 --- !u!114 &3617575798036603183
 MonoBehaviour:
   m_ObjectHideFlags: 0

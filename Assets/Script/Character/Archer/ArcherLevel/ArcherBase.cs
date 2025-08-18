@@ -30,18 +30,22 @@ public class ArcherBase : BaseChar
         Debug.Log($"Archer took {damage} damage from {attacker.name} at {hitPoint}");
     }
     //Level Up
-    protected override void IncreaseLevel(float value)  
+    protected override void IncreaseLevel(float value,float coins)
     {
         currentEXP += value;
         while (currentEXP >= bb.maxEXP) { 
             currentEXP -= bb.maxEXP;
             bb.level += 1;
+            //increase coins earn multiplier
+            bb.coinsMultiplier += 0.1f;
             UIManager.ins.LevelChange(bb.maxEXP, bb.maxEXP, bb.level);           
             //max exp will increase here         
             bb.maxEXP += 10f;
             //send message to increase stat
         }
         UIManager.ins.LevelChange(currentEXP, bb.maxEXP, bb.level);
+        //get coins earned
+        bb.coinsHeld+=coins* bb.coinsMultiplier;
     }
     //StatUp
     public void StatUP(SO_Item item)

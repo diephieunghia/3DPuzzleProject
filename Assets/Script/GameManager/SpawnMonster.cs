@@ -93,8 +93,7 @@ public class SpawnMonster : MonoBehaviour
         //get monster type and then spawn a batch of them
         int spawnRarity = GetSpawnRarity();
         for (int i = 0; i < monsterQuanity; i++)
-        {
-            Debug.Log("monster onfield count: " + GameManager.ins.monsterOnFieldCount+" max enemy "+maxEnemy);
+        {          
             //check if exceed max enemy per level
             if (GameManager.ins.monsterOnFieldCount <= maxEnemy)
             {

@@ -27,12 +27,14 @@ public class BaseMonster : MonoBehaviour,IDamageable
     public Transform center;
     public Vector3 size;
 
+    //coins
+    public float coins = 10f;
     private void Start()
     {
         currentHeath = stat.health;
         maxHealth = stat.health;
         coolDown = stat.baseCoolDown;
-        //GameManager.ins.CountDownComplete += Despawn;
+        GameManager.ins.CountDownComplete += Despawn;
     }
 
     public void TakeDamage(float damage, Vector3 hitPoint, Vector3 hitDirection, GameObject attacker,IDamageable.Body hitPart)
@@ -45,7 +47,8 @@ public class BaseMonster : MonoBehaviour,IDamageable
             Attack = false;
             death = true;
             stat.velocity = 0;
-            GameManager.ins.LevelChange?.Invoke(stat.expDrop);
+            //send coins
+            GameManager.ins.LevelChange?.Invoke(stat.expDrop,coins);
             //trigger Death animation
             DeathTrigger.Invoke();
             //Substract from despawn event
@@ -66,5 +69,10 @@ public class BaseMonster : MonoBehaviour,IDamageable
     {
         
         Gizmos.DrawWireCube(center.position, size);
+    }
+    void Despawn()
+    {
+        ObjectPool monsterPool=gameObject.GetComponentInParent<MonsterPool>();
+        monsterPool.ReturnObject(gameObject);
     }
 }

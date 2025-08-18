@@ -36,6 +36,9 @@ public class Meteor : ItemGetData
     // Update is called once per frame
     void Update()
     {
+        //random position
+
+
         tempCD-=Time.deltaTime;
         //play skill
         if (tempCD <= 0)
@@ -68,13 +71,13 @@ public class Meteor : ItemGetData
                 }
                 //disable ball
                 meteor.SetActive(false);
-                //set skill to true to continue playing
-                skillIsPlaying = true;
                 //set circle sprite to zero and circleElapsed
                 circle.transform.localScale = Vector3.zero;
                 circleElapsed = 0;
+                skillIsPlaying = true;
                 //set ball elapsed time to 0
                 elapsedTime = 0f;
+                //RESET COOLDOWN
                 tempCD = initialCD;
 
             }

@@ -87,4 +87,8 @@ public class ArcherBlackBoard
     public float passiveCD = 1f;
     public float passiveDmg = 1f;
     public float passiveArea = 1f;
+
+    //coins multiplier
+    public float coinsHeld = 0f;
+    public float coinsMultiplier = 1f;
 }

@@ -35,6 +35,10 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI character;
     public TextMeshProUGUI level;
 
+    //Coins show
+    public TextMeshProUGUI coinsAmountTotal;
+    public TextMeshProUGUI coinsEarned;
+
     private void Awake()
     {
         if (ins != null && ins != this)
@@ -67,13 +71,9 @@ public class UIManager : MonoBehaviour
         else
         {
             StartCoroutine(LevelUp(value, maxEXP, level));
-        }
-        //levelUI.fillAmount = value;
-        //levelText.text = string.Format("Level: {0}", level);
-            
-        
-        
+        }                          
     }
+
     IEnumerator LevelUp(float value,float maxEP, int level)
     {     
         while (runCount >=0 )
@@ -120,6 +120,11 @@ public class UIManager : MonoBehaviour
         }
         else
             tabTable.SetActive(false);
+    }
+    //change coins text UI
+    public void CoinsChange()
+    {
+
     }
 
 }

@@ -18,8 +18,8 @@ public class BaseChar : MonoBehaviour,IDamageable
     //increase stat
 
     //level
-    protected virtual void IncreaseLevel(float value) {
-        Debug.Log($"BaseChar level increased by {value}");
+    protected virtual void IncreaseLevel(float value,float coins) {
+
     }
 
 

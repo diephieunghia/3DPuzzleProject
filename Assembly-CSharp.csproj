@@ -101,6 +101,7 @@
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\AttackState\AttackStateHandler.cs" />
     <Compile Include="Assets\Script\UI\UICountDown.cs" />
     <Compile Include="Assets\Script\UI\UIManager.cs" />
+    <Compile Include="Assets\Script\GameManager\GameSettings.cs" />
     <Compile Include="Assets\Script\Monster\Mage\Projectile\ProjectileMove.cs" />
     <Compile Include="Assets\Script\Monster\Minion\WithoutShield\WithoutShieldMoveHandler.cs" />
     <Compile Include="Assets\Script\Monster\MonsterBehavior.cs" />

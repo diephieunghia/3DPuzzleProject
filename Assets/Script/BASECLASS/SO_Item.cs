@@ -24,6 +24,8 @@ public class SO_Item : ScriptableObject
     //Description
     public string text;
     public Sprite icon;
+    //Cost
+    public float cost;
     //quantity for spawn this
     public int quantity;
     //type of buff
