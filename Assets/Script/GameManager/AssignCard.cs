@@ -11,7 +11,7 @@ public class AssignCard : MonoBehaviour
     public TextMeshProUGUI[] itemNames;
     public TextMeshProUGUI[] descriptions;
     public GameObject[] itemHolder;
-
+    public TextMeshProUGUI[] value;
     //test using public
     public SO_Item[] items;
     // Start is called before the first frame update
@@ -36,6 +36,7 @@ public class AssignCard : MonoBehaviour
             itemNames[i].text = items[i].name;
             descriptions[i].text = items[i].text;
             itemHolder[i].GetComponent<CardChooseAndIncreaseStat>()?.AssignItem(items[i]);
+            value[i].text=items[i].cost.ToString();
         }
             
 

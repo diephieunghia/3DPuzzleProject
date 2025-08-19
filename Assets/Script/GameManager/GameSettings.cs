@@ -32,6 +32,7 @@ public class GameSettings: MonoBehaviour
         {
             isGamePaused = !isGamePaused;
             Time.timeScale = isGamePaused ? 0f : 1f;
+            pauseMenu.SetActive(isGamePaused);
         }
     }
 

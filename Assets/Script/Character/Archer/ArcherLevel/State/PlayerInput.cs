@@ -110,7 +110,6 @@ public class PlayerInput
         if (Input.GetKeyDown(KeyCode.E))
         {
             GameManager.ins.playerPressBuy = true;
-            Debug.Log("Store ACtion button E pressed");
         }
         else
             GameManager.ins.playerPressBuy = false;

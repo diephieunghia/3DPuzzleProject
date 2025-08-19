@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a42a9402a47bfc468747388ab607aa2, type: 3}
   m_Name: LevelStat
   m_EditorClassIdentifier: 
-  currentLevel: 1
+  currentLevel: 4
   maxLevel: 10
   monsterPowerScale: 1.2
   levelTime:
-  - 10
+  - 15
   - 5
   - 10
   - 10

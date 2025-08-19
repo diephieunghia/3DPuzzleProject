@@ -122,9 +122,18 @@ public class UIManager : MonoBehaviour
             tabTable.SetActive(false);
     }
     //change coins text UI
-    public void CoinsChange()
+    public void CoinsChange(float current,float total)
     {
-
+        coinsEarned.enabled = true;
+        coinsEarned.text = string.Format("+{0}", current);
+        StartCoroutine(CountCoinTotal(current,total));
+    }
+    IEnumerator CountCoinTotal(float current,float total)
+    {
+        yield return new WaitForSeconds(0.75f);
+        coinsEarned.enabled = false;
+        coinsAmountTotal.text = string.Format("Coins: {0}", total);
+        yield return null;
     }
 
 }

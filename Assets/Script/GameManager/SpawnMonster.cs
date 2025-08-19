@@ -82,7 +82,6 @@ public class SpawnMonster : MonoBehaviour
         Vector3 randomLocation=new Vector3(x,halfSize.y,z)+spawnPos[rand].transform.position;
         if (NavMesh.SamplePosition(randomLocation, out NavMeshHit hit, maxNavMeshDistance, NavMesh.AllAreas))
         {
-            Debug.Log("Found location");
             return hit.position;
         }
         return randomLocation;

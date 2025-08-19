@@ -46,6 +46,8 @@ public class ArcherBase : BaseChar
         UIManager.ins.LevelChange(currentEXP, bb.maxEXP, bb.level);
         //get coins earned
         bb.coinsHeld+=coins* bb.coinsMultiplier;
+        //update coins UI
+        UIManager.ins.CoinsChange(coins*bb.coinsMultiplier,bb.coinsHeld);
     }
     //StatUp
     public void StatUP(SO_Item item)
