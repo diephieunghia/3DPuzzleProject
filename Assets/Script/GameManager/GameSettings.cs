@@ -15,6 +15,9 @@ public class GameSettings: MonoBehaviour
     //Pause Menu
     public GameObject pauseMenu;
 
+    //test sky box
+    public Material skybox;
+    public Material skyBox2;
     private void Awake()
     {
         if (ins != null && ins != this)
@@ -25,6 +28,7 @@ public class GameSettings: MonoBehaviour
     void Update()
     {
         SetGamePause();
+        TestSkyBox();
     }
     void SetGamePause()
     {
@@ -33,6 +37,13 @@ public class GameSettings: MonoBehaviour
             isGamePaused = !isGamePaused;
             Time.timeScale = isGamePaused ? 0f : 1f;
             pauseMenu.SetActive(isGamePaused);
+        }
+    }
+    void TestSkyBox()
+    {
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            RenderSettings.skybox = skybox;
         }
     }
 

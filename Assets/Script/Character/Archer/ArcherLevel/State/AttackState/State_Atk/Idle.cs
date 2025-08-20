@@ -32,7 +32,7 @@ public class ATKIdle : IState
         {
             HandleAnim.ins.DisableEShoot();    
         }
-        if (atkbb.eSkill)
+        if (atkbb.eSkill&&atkbb.skill)
         {
             // change to E skill state
             handler.MoveChangeState(handler.eSkill);           

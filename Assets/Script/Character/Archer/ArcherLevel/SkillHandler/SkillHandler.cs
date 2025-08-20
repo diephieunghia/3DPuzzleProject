@@ -37,6 +37,11 @@ public class SkillHandler : MonoBehaviour
     {
         if (index == 0)
             skillStat.dash = true;
+        if(index==1)
+        {
+            skillStat.eSkill = false;
+            
+        }
 
     }
 }

@@ -29,8 +29,9 @@ public class ESkill : IState
     {
         tempDuration -= Time.deltaTime;
         if (tempDuration < 0&&(HandleAnim.ins.ReloadESkill(0.3f)||HandleAnim.ins.AnimOverDrawEnd(.4f))) {
+
             atkbb.skill = false;
-            atkbb.eSkill = false;
+            //atkbb.eSkill = false;
             handler.MoveChangeState(handler.idle);
         }
         
@@ -67,6 +68,7 @@ public class ESkill : IState
         atkbb.allowShoot=false;
         attack = false;
         reloadOnce = false;
+        
         HandleAnim.ins.DisableEShoot();
         for (int i = 0; i < atkbb.arrowCount; i++)
         {

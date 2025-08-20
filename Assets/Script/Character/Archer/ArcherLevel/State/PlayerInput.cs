@@ -102,6 +102,7 @@ public class PlayerInput
             bbInput.skill = true;
             inputSkill.skillDelegate.Invoke(bbInput.eCoolDown, bbInput.skillIndex[1]);
         }
+
     }
 
     // E open Store
