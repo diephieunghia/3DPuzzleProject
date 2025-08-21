@@ -36,7 +36,7 @@ public class ObjectPool : MonoBehaviour
 
     public virtual void ReturnObject(GameObject obj)
     {
-        if (poolObjects.Count >= 30)
+        if (poolObjects.Count >= 20)
         {
             Destroy(obj);
             return;

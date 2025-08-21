@@ -1034,6 +1034,8 @@ MonoBehaviour:
   center: {fileID: 0}
   size: {x: 0, y: 0, z: 0}
   coins: 20
+  head: {fileID: 658718264730973361}
+  body: {fileID: 147336980289943216}
 --- !u!114 &3617575798036603183
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -120,7 +120,7 @@ public class ArcherAction : MonoBehaviour
     }
     void ExitShop()
     {
-        bb.storeAction = !bb.storeAction;
+        bb.storeAction = false;
         Debug.Log(bb.storeAction);
     }
 

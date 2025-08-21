@@ -12,29 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a42a9402a47bfc468747388ab607aa2, type: 3}
   m_Name: LevelStat
   m_EditorClassIdentifier: 
-  currentLevel: 1
+  currentLevel: 5
   maxLevel: 10
   monsterPowerScale: 1.2
   levelTime:
-  - 20
-  - 5
-  - 10
-  - 10
-  - 10
-  - 30
-  - 30
-  - 10
-  - 10
-  - 10
-  maxEnemyPerLevel: 1e00000023000000250000002d00000032000000340000003f0000004f0000005700000063000000
+  - 6
+  - 6
+  - 6
+  - 6
+  - 6
+  - 6
+  - 6
+  - 6
+  - 60
+  - 60
+  maxEnemyPerLevel: 1e00000023000000250000001e0000001e0000001e0000001e000000140000001400000014000000
   spawnRate:
   - 3
   - 2
-  - 1
-  - 0.8
-  - 0.65
-  - 0.64
-  - 0.6
+  - 1.5
+  - 1.5
+  - 1.5
+  - 1.5
+  - 1.5
   - 2
   - 2.5
   - 3

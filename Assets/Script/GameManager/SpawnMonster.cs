@@ -25,6 +25,7 @@ public class SpawnMonster : MonoBehaviour
 
     //spawn Location
     [SerializeField] GameObject[] spawnPos;
+    int spawnRarity;
     float maxNavMeshDistance = 4f;
     private void Awake()
     {
@@ -43,8 +44,8 @@ public class SpawnMonster : MonoBehaviour
         spawn = true;
         GameManager.ins.CountDownComplete += StopSpawnAndDespawnMonster;
         GameManager.ins.MoveToArea += LevelStart;
-        monsterQuanity=GameManager.ins.SpawnQuantity[0];
-        maxEnemy = GameManager.ins.MaxEnemy[0];
+        monsterQuanity=GameManager.ins.SpawnQuantity[GameManager.ins.CurrentLevel-1];
+        maxEnemy = GameManager.ins.MaxEnemy[GameManager.ins.CurrentLevel-1];
     }
 
     void Update()
@@ -53,9 +54,10 @@ public class SpawnMonster : MonoBehaviour
         {
             tempSpawnRate -= Time.deltaTime;
             if (tempSpawnRate <= 0)
-            {               
-               
-                SpawnMonsterMethod();
+            {
+                spawnRarity = GetSpawnRarity();
+                Debug.Log("Spawn Monster");
+                SpawnMonsterMethod(spawnRarity);
                 tempSpawnRate = spawnRate;
             }
         }
@@ -63,12 +65,18 @@ public class SpawnMonster : MonoBehaviour
     }
     void LevelStart()
     {
-        StartCoroutine(WaitToSpawn());
+        spawn = true;
+
+        spawnRate = GameManager.ins.SpawnRate[GameManager.ins.CurrentLevel - 1];
+        tempSpawnRate = 0;
+        //StartCoroutine(WaitToSpawn());
     }
     IEnumerator WaitToSpawn()
     {
         yield return new WaitForSeconds(GameManager.ins.WaitTime);
         spawn = true;
+        
+        spawnRate = GameManager.ins.SpawnRate[GameManager.ins.CurrentLevel - 1];
         tempSpawnRate = 0;
     }
     Vector3 GetRandomSpawnPoint()
@@ -87,18 +95,17 @@ public class SpawnMonster : MonoBehaviour
         return randomLocation;
 
     }
-    void SpawnMonsterMethod()
+    void SpawnMonsterMethod(int rarity)
     {
         //get monster type and then spawn a batch of them
-        int spawnRarity = GetSpawnRarity();
         for (int i = 0; i < monsterQuanity; i++)
         {          
             //check if exceed max enemy per level
             if (GameManager.ins.monsterOnFieldCount <= maxEnemy)
             {
-                Debug.Log("Spawn monster with rarity: " + spawnRarity);
+                Debug.Log("Spawn monster with rarity: " + rarity);
                 //get monster from object pool               
-                GameObject monster = monstersPool[spawnRarity].GetObject();
+                GameObject monster = monstersPool[rarity].GetObject();
                 //assign spawn location
                 monster.transform.position=GetRandomSpawnPoint();
                 //increase count to game manager
@@ -116,21 +123,21 @@ public class SpawnMonster : MonoBehaviour
             return 0;
         else if (3 <= currentLevel && currentLevel <= 5)
         {
-            float r = Random.Range(0, 1);
+            float r = Random.Range(0f, 1f);
             if (r < 0.4f)
                 return 0;
             else return 1;
         }
         else if(3<=currentLevel&& currentLevel<=7)
         {
-            float r = Random.Range(0, 1);
+            float r = Random.Range(0f, 1f);
             if (r <= 0.1) return 0;
             else if (0.1 < r && r <= 0.7) return 1;
             else return 2;
         }
         else
         {
-            float r = Random.Range(0, 1);
+            float r = Random.Range(0f, 1f);
             if (r <= 0.1) return 0;
             else if (0.1 < r && r <= 0.55) return 1;
             else return 2;

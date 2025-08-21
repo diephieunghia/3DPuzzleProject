@@ -1188,7 +1188,7 @@ NavMeshAgent:
   m_Acceleration: 10
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 4.8
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -1208,7 +1208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c23b644d785b767439b13a3ca5afac24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stat: {fileID: 11400000, guid: 52b524bea7c18e643bcaf79f8030268e, type: 2}
+  stat: {fileID: 11400000, guid: 7ae03dcfb8dc2894cbd595b1ce7d4e9f, type: 2}
   Attack: 0
   attackType: 1
   arrow:
@@ -1217,6 +1217,9 @@ MonoBehaviour:
   axeEnable: 0
   center: {fileID: 8870216366760003195}
   size: {x: 3.03, y: 2.99, z: 8.85}
+  coins: 10
+  head: {fileID: 7851678330401076143}
+  body: {fileID: 3100126208573240047}
 --- !u!114 &4205327185849077786
 MonoBehaviour:
   m_ObjectHideFlags: 0

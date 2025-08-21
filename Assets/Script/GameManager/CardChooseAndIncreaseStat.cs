@@ -24,7 +24,6 @@ public class CardChooseAndIncreaseStat : MonoBehaviour
         if (playerInRange&&GameManager.ins.playerPressBuy)
         {
             int rand = item.RandomInt();
-            Debug.Log("Buy Item: "+item.name);
             if (item.type == ItemType.Stat)
                 archer.StatUP(item);
             else if (item.type == ItemType.Special)

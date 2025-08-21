@@ -2,9 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[RequireComponent(typeof(ChangeDate))]
 public class GameManager : MonoBehaviour
 {
+    ChangeDate changeDate;
+
     public static GameManager ins { get; private set; }
     [SerializeField] SO_Level statScale;
     
@@ -40,6 +42,9 @@ public class GameManager : MonoBehaviour
             Destroy(this);
         else
             ins = this;
+        changeDate = GetComponent<ChangeDate>();
+        changeDate.ChangeSkyBox(0);
+
         CountDownComplete += MoveToStore;
         CountDownComplete += IncreaseCurrentLevel;
         MoveToArea += MoveBackToArea;
@@ -47,6 +52,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         character=GameObject.FindAnyObjectByType<ArcherAction>();
+        Application.targetFrameRate = 60;
     }
     public void StatLevelUp(ArcherBlackBoard stat)
     {
@@ -66,6 +72,12 @@ public class GameManager : MonoBehaviour
         lastPosition=character.transform.position;
         character.transform.position = storePosition.transform.position;
         character.characterController.enabled = true;
+        yield return new WaitForSeconds(0.5f);
+        //change date
+        if(CurrentLevel%2==0)
+        {
+            changeDate.ChangeSkyBox(CurrentLevel/2);
+        }
     }
     public void MoveBackToArea()
     {

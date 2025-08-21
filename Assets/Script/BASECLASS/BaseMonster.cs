@@ -29,6 +29,10 @@ public class BaseMonster : MonoBehaviour,IDamageable
 
     //coins
     public float coins = 10f;
+
+    //Collider to disable
+    public Collider head;
+    public Collider body;
     private void Start()
     {
         currentHeath = stat.health;
@@ -51,8 +55,9 @@ public class BaseMonster : MonoBehaviour,IDamageable
             GameManager.ins.LevelChange?.Invoke(stat.expDrop,coins);
             //trigger Death animation
             DeathTrigger.Invoke();
-            //Substract from despawn event
-            //GameManager.ins.CountDownComplete -= Despawn;
+            //disable collider
+            head.enabled = false;
+            body.enabled = false;
             GameManager.ins.monsterOnFieldCount--;
         }
         else
@@ -73,6 +78,13 @@ public class BaseMonster : MonoBehaviour,IDamageable
     void Despawn()
     {
         ObjectPool monsterPool=gameObject.GetComponentInParent<MonsterPool>();
+        if (monsterPool.poolObjects.Count>=20)
+        {
+            GameManager.ins.CountDownComplete -= Despawn;
+        }
+        head.enabled = true;
+        body.enabled = true;
+
         monsterPool.ReturnObject(gameObject);
     }
 }
