@@ -65,11 +65,9 @@ public class SpawnMonster : MonoBehaviour
     }
     void LevelStart()
     {
-        spawn = true;
-
-        spawnRate = GameManager.ins.SpawnRate[GameManager.ins.CurrentLevel - 1];
-        tempSpawnRate = 0;
-        //StartCoroutine(WaitToSpawn());
+        //reset monster onfield count
+        GameManager.ins.monsterOnFieldCount = 0;
+        StartCoroutine(WaitToSpawn());
     }
     IEnumerator WaitToSpawn()
     {
