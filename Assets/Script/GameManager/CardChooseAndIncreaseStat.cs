@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -26,15 +27,16 @@ public class CardChooseAndIncreaseStat : MonoBehaviour
             int rand = item.RandomInt();
             if (item.type == ItemType.Stat)
                 archer.StatUP(item);
+            //special to upgrade arrow, fireice
             else if (item.type == ItemType.Special)
                 archer.Special(item);
             else if (item.type == ItemType.Passive)
             {
-                Debug.Log("Passive Item");
+                item.SpawnObject(true, rand, archer.BB);
             }
-            else
+            else if (item.type==ItemType.Skill)
             {
-                item.SpawnObject(true, rand,archer.BB);               
+                archer.Skill(item);
             }
                 
             item.ReduceCount();

@@ -101,7 +101,6 @@ public class SpawnMonster : MonoBehaviour
             //check if exceed max enemy per level
             if (GameManager.ins.monsterOnFieldCount <= maxEnemy)
             {
-                Debug.Log("Spawn monster with rarity: " + rarity);
                 //get monster from object pool               
                 GameObject monster = monstersPool[rarity].GetObject();
                 //assign spawn location

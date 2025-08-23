@@ -31,7 +31,11 @@ public class Arrow : MonoBehaviour
 
     //attribute
     bool fire=false;
+    public bool Fire => fire;
     bool ice=false;
+    public bool Ice => ice;
+    [SerializeField] GameObject fireVFX;
+    [SerializeField] GameObject iceVFX;
 
     private void Awake()
     {
@@ -67,11 +71,13 @@ public class Arrow : MonoBehaviour
         if(arrowDetection.isActiveAndEnabled) 
             arrowDetection.coroutineStart?.Invoke();
     }
-    public void SetFire()
+    public void FlipFireIce(bool flipflop)
     {
-        fire = true;
+        fire = flipflop;
+        fireVFX.SetActive(flipflop);
+        ice = !flipflop; ;
+        iceVFX.SetActive(!flipflop);
     }
-    public void SetIce() { ice = true; }
     
 
 }

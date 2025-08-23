@@ -14,14 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: Increase arrow count by 3
   icon: {fileID: 21300000, guid: cf9232b6e69cf864e9a4451b314eae7c, type: 3}
-  cost: 10
-  quantity: -1
-  type: 1
+  cost: 30
+  quantity: 1
+  type: 2
   rarity: 0
   textColor: {r: 1, g: 1, b: 1, a: 1}
+  upgradeType: ArrowCount
   damage: 1
   maxDamage: 1
   arrowCount: 3
+  fireIce: 0
   speed: 1
   tempSpeed: 1
   eDuration: 1

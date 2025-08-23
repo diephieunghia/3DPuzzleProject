@@ -35,6 +35,7 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI character;
     public TextMeshProUGUI level;
 
+    [Header("Coins")]
     //Coins show
     public TextMeshProUGUI coinsAmountTotal;
     public TextMeshProUGUI coinsEarned;
@@ -124,15 +125,17 @@ public class UIManager : MonoBehaviour
     //change coins text UI
     public void CoinsChange(float current,float total)
     {
+        int currencyRound=Mathf.RoundToInt(current);
         coinsEarned.enabled = true;
-        coinsEarned.text = string.Format("+{0}", current);
-        StartCoroutine(CountCoinTotal(current,total));
+        coinsEarned.text = string.Format("+{0}", currencyRound);
+        StartCoroutine(CountCoinTotal(currencyRound,total));
     }
-    IEnumerator CountCoinTotal(float current,float total)
+    IEnumerator CountCoinTotal(int current,float total)
     {
+        int totalInt=Mathf.RoundToInt(total);
         yield return new WaitForSeconds(0.75f);
         coinsEarned.enabled = false;
-        coinsAmountTotal.text = string.Format("Coins: {0}", total);
+        coinsAmountTotal.text = string.Format("Coins: {0}",totalInt);
         yield return null;
     }
 

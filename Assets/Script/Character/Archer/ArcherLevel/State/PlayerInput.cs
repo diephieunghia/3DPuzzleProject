@@ -14,11 +14,13 @@ public class PlayerInput
     public Action dashActive;
     public Action doubleJumpActive;
     public SkillHandler inputSkill;
-    public PlayerInput(ArcherBlackBoard bb,Transform playerPosition,SkillHandler skillHandler)
+    public ArcherAction action;
+    public PlayerInput(ArcherBlackBoard bb,Transform playerPosition,SkillHandler skillHandler,ArcherAction archerAction)
     {
         bbInput = bb;
         position = playerPosition;
         inputSkill= skillHandler;
+        action = archerAction;
     }
 
     //handle called in update method
@@ -29,11 +31,13 @@ public class PlayerInput
         DoubleJump();
         Dash();
         TabAction();
+        SkillQ();
         //attack state
         if (!bbInput.storeAction)
         {
             HoldDraw();
             SkillE();
+            
         }
         else
         {
@@ -104,7 +108,17 @@ public class PlayerInput
         }
 
     }
-
+    void SkillQ()
+    {
+        if (Input.GetKeyDown(KeyCode.Q)&&!bbInput.qSkill&&bbInput.qSkillUnlocked)
+        {
+            bbInput.qSkill = true;
+            //find arrow placeholder and active fire and ice vfx
+            action.arrowFireIce?.Invoke();
+            inputSkill.skillDelegate.Invoke(bbInput.qCoolDown, bbInput.skillIndex[2]);
+            ArrowPool.ins.fireIce = (ArrowPool.ins.fireIce==1) ? 0 : 1;
+        }
+    }
     // E open Store
     void ActionAtStore()
     {

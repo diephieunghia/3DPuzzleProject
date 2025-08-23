@@ -24,8 +24,12 @@ public class MonsterPool : ObjectPool
         if (poolObjects.Count > 0)
         {
             GameObject obj = poolObjects.Dequeue();
-            obj.SetActive(true);
-            return obj;
+            if (obj != null)
+            {
+                obj.SetActive(true);
+                return obj;
+            }
+            else return null;
         }
         //if queue is empty, instantiate new object
         else

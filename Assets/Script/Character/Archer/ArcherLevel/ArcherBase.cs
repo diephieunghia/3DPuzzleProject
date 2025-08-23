@@ -60,22 +60,42 @@ public class ArcherBase : BaseChar
     }
     public void Special(SO_Item item)
     {
-        if(bb.arrowCount<item.arrowCount)
+        
+    }
+    public void Skill(SO_Item item)
+    {
+        int fireIcetemp=-1;
+        if (item.upgradeType == "ArrowCount")
         {
-            bb.arrowCount=item.arrowCount;
+            bb.arrowCount = item.arrowCount;
             float z = 0;
             //disable
             for (int i = 0; i < bb.arrowCount; i++)
             {
                 if (bb.currentArrow[i] != null)
                 {
+                    Arrow arrow = bb.currentArrow[i].GetComponent<Arrow>();
+                    if (arrow.Fire) fireIcetemp = 1;
+                    else if (arrow.Ice) fireIcetemp = 0;                    
                     ArrowPool.ins.ReturnObject(bb.currentArrow[i]);
                 }
                 if (i == 1) z = -15;
                 else if (i == 2) z = 15;
                 bb.currentArrow[i] = ArrowPool.ins.GetObject();
-                bb.currentArrow[i].transform.localRotation= Quaternion.Euler(0, z, 0);
+                bb.currentArrow[i].transform.localRotation = Quaternion.Euler(0, z, 0);
+                if (fireIcetemp != -1)
+                    if (fireIcetemp == 1)
+                        bb.currentArrow[i].GetComponent<Arrow>().FlipFireIce(true);
+                    else
+                        bb.currentArrow[i].GetComponent<Arrow>().FlipFireIce(false);
             }
+        }
+        else if (item.upgradeType == "FireIce")
+        {
+            bb.qSkill = false ;
+            bb.qSkillUnlocked = true;
+            //set fire to future spawn arrow
+            ArrowPool.ins.fireIce = 1;
         }
     }
 

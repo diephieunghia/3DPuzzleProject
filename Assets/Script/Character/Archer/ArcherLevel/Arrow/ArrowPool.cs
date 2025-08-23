@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngineInternal;
 
 public class ArrowPool : ObjectPool
 {
     [SerializeField] Transform arrowHolder;
     public static ArrowPool ins {  get; private set; }
-
+    public int fireIce = -1;
 
     private void Awake()
     {
@@ -35,13 +36,25 @@ public class ArrowPool : ObjectPool
         {
             GameObject obj = poolObjects.Dequeue();
             obj.SetActive(true);
-            obj.transform.localRotation= Quaternion.identity;
+            obj.transform.localRotation = Quaternion.identity;
             obj.transform.localScale = Vector3.one;
+            Arrow arrow = obj.GetComponent<Arrow>();
+            if (fireIce == 1)
+                arrow.FlipFireIce(true);
+            else if (fireIce == 0)
+                arrow.FlipFireIce(false);
             return obj;
         }
         //if queue is empty, instantiate new object
         else
-            return Instantiate(prefab, arrowHolder);
+        {   GameObject temp= Instantiate(prefab, arrowHolder);
+            Arrow newArrow = temp.GetComponent<Arrow>();
+            if (fireIce == 1)
+                newArrow.FlipFireIce(true);
+            else if (fireIce == 0)
+                newArrow.FlipFireIce(false);
+            return temp;
+        }
 
     }
     public override void ReturnObject(GameObject obj)

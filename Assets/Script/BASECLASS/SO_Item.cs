@@ -35,10 +35,12 @@ public class SO_Item : ScriptableObject
     public Color textColor = Color.white;
 
     [Header("Stat")]
+    //special name
+    public string upgradeType;
     //damage
     public float damage = 1f;
     public float maxDamage = 1f;
-    public int arrowCount = 3;
+    public int arrowCount = 3;                                                                                                                          
 
     public float speed = 1f;
     public float tempSpeed = 1f;
@@ -67,7 +69,6 @@ public class SO_Item : ScriptableObject
     Vector3[] terrainPos;
     public void SpawnObject(bool visible,int random,ArcherBlackBoard bb)
     {
-        Debug.Log("Random: " + random);
         if (visible)
         {
             tData=new TerrainData[terrain.Length];

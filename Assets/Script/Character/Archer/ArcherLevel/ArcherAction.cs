@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
@@ -16,15 +17,15 @@ public class ArcherAction : MonoBehaviour
     public Transform groundCheck;
     public LayerMask groundMask;
 
-    
-
+    [SerializeField] GameObject arrowHolder;
+    public Action arrowFireIce;
     private void Awake()
     {
         bb = new ArcherBlackBoard();
         bb.groundCheck = groundCheck;
         bb.groundMask= groundMask;  
         skillHandler=GetComponent<SkillHandler>();
-        input = new PlayerInput(bb,transform,skillHandler);            
+        input = new PlayerInput(bb,transform,skillHandler,this);            
     }
 
     private void Start()
@@ -34,6 +35,7 @@ public class ArcherAction : MonoBehaviour
         attackStateHandler = new AttackStateHandler(bb, transform, characterController);
         GameManager.ins.CountDownComplete += ChangeSceneState;
         GameManager.ins.MoveToArea += ExitShop;
+        arrowFireIce += FireIceCycle;
     }
     // Update is called once per frame
     void Update()
@@ -41,14 +43,11 @@ public class ArcherAction : MonoBehaviour
         Move();
         Jump();
         ApplyGravity();
-        attackStateHandler.HandleAttackState();
-        
+        attackStateHandler.HandleAttackState();       
     }
     private void LateUpdate()
     {
-        input.HandleInput();
-       
-
+        input.HandleInput();      
     }
     void Move()
     {   
@@ -121,8 +120,22 @@ public class ArcherAction : MonoBehaviour
     void ExitShop()
     {
         bb.storeAction = false;
-        Debug.Log(bb.storeAction);
     }
 
+    //Arrow Fire Ice
+    void FireIceCycle()
+    {
+        Arrow[] arrow=arrowHolder.GetComponentsInChildren<Arrow>();
+        foreach(Arrow a in arrow)
+        {
+                if (!a.Fire && a.Ice)
+                    a.FlipFireIce(true);
+                else if (!a.Ice && a.Fire)
+                    a.FlipFireIce(false);
+                else if (!a.Fire && !a.Ice)
+                    a.FlipFireIce(true);          
+        }
+
+    }
 
 }

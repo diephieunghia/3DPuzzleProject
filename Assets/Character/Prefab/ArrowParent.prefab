@@ -228,6 +228,8 @@ MonoBehaviour:
   rb: {fileID: 8758548156800170008}
   arrowMass: {fileID: 1796064970375315198}
   trail: {fileID: 0}
+  fireVFX: {fileID: 907375676862668530}
+  iceVFX: {fileID: 4936812938018329693}
 --- !u!54 &8758548156800170008
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -431,6 +433,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e55149ba6f4d00741984987e258c3378, type: 3}
+--- !u!1 &907375676862668530 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1725317912486240, guid: e55149ba6f4d00741984987e258c3378, type: 3}
+  m_PrefabInstance: {fileID: 905650633837051794}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &909352956722955518 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4274653050354540, guid: e55149ba6f4d00741984987e258c3378, type: 3}
@@ -625,6 +632,11 @@ PrefabInstance:
       addedObject: {fileID: 7695220759400127962}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd3e4bcbf62e1e7498d5facf475f9ae1, type: 3}
+--- !u!1 &4936812938018329693 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bd3e4bcbf62e1e7498d5facf475f9ae1, type: 3}
+  m_PrefabInstance: {fileID: 5206861438176438540}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5749062187130998503 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bd3e4bcbf62e1e7498d5facf475f9ae1, type: 3}

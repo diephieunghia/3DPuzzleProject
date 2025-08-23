@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}</ProjectGuid>
+    <ProjectGuid>{3FAF6531-BB88-FC26-6A77-D0CD1B96C51B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -74,6 +74,7 @@
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\MovementState\States\Jump.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\MovementState\States\Idle.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\ArcherBase.cs" />
+    <Compile Include="Assets\Script\Menu\Menu.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\AttackState\State_Atk\Shoot.cs" />
     <Compile Include="Assets\Script\Monster\Minion\STATE\MinionChase.cs" />
     <Compile Include="Assets\Script\Monster\Minion\Axe.cs" />
@@ -83,13 +84,12 @@
     <Compile Include="Assets\Script\Character\Archer\CameraMove.cs" />
     <Compile Include="Assets\Script\Monster\Mage\MageBehavior.cs" />
     <Compile Include="Assets\Script\Monster\Mage\STATE\Move\RandomMove.cs" />
+    <Compile Include="Assets\Script\Character\Archer\ArcherLevel\ArcherBlackBoard.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\AttackState\State_Atk\ESkill.cs" />
     <Compile Include="Assets\Script\BASECLASS\SO_Item.cs" />
     <Compile Include="Assets\Script\GameManager\ExitShop.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\HandleAnim.cs" />
     <Compile Include="Assets\Script\Monster\Minion\MinionAnim.cs" />
-    <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\ArcherController.cs" />
-    <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\ArcherBlackBoard.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\SkillHandler\SkillHandler.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\MovementState\States\Move.cs" />
     <Compile Include="Assets\Script\Monster\Mage\MageAnim.cs" />
