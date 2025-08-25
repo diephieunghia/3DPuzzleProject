@@ -36,10 +36,11 @@ public class Axe : MonoBehaviour
     {    
         detectRay.direction = rayEnd.transform.position-rayStart.transform.position;
         Debug.DrawRay(rayStart.transform.position, detectRay.direction*distance, Color.red);
-        if(Physics.Raycast(rayStart.transform.position, detectRay.direction, out RaycastHit hit, distance))
+        if(Physics.Raycast(rayStart.transform.position, detectRay.direction, out RaycastHit hit, distance,layerMask))
         {
             if(hit.collider.gameObject.GetComponent<IDamageable>() != null)
             {
+                hit.collider.gameObject.GetComponent<IDamageable>().TakeDamage(baseMonster.MonsterStat.damage,hit.transform.position,detectRay.direction,gameObject,IDamageable.Body.Body);
                 Debug.Log("Hit " + hit.collider.gameObject.name);
             }           
             

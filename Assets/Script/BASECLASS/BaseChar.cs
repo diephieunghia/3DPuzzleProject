@@ -22,6 +22,13 @@ public class BaseChar : MonoBehaviour,IDamageable
 
     }
 
+    public virtual void FireDamage(float damage, Vector3 hitPoint, Vector3 hitDirection, GameObject attacker, IDamageable.Body type)
+    {
+        throw new System.NotImplementedException();
+    }
 
-
+    public virtual void IceDamage(float damage, Vector3 hitPoint, Vector3 hitDirection, GameObject attacker, IDamageable.Body type)
+    {
+        throw new System.NotImplementedException();
+    }
 }

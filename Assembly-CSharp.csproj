@@ -64,6 +64,7 @@
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\AttackState\State_Atk\Idle.cs" />
     <Compile Include="Assets\Script\BASECLASS\IDamageable.cs" />
     <Compile Include="Assets\Script\Character\Archer\CameraControl.cs" />
+    <Compile Include="Assets\Script\BASECLASS\EffectPool.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\Arrow\ArrowPool.cs" />
     <Compile Include="Assets\Script\Monster\Mage\STATE\Move\KeepDistance.cs" />
     <Compile Include="Assets\Script\GameManager\AssignCard.cs" />
@@ -72,13 +73,13 @@
     <Compile Include="Assets\Script\GameManager\SpawnMonster.cs" />
     <Compile Include="Assets\Script\UI\SkillManager.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\MovementState\States\Jump.cs" />
+    <Compile Include="Assets\Script\UI\LoadingText.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\MovementState\States\Idle.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\ArcherBase.cs" />
     <Compile Include="Assets\Script\Menu\Menu.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\AttackState\State_Atk\Shoot.cs" />
     <Compile Include="Assets\Script\Monster\Minion\STATE\MinionChase.cs" />
     <Compile Include="Assets\Script\Monster\Minion\Axe.cs" />
-    <Compile Include="Assets\Script\Character\Archer\ArcherLevel\HandleShoot.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\Arrow\ArrowDetection.cs" />
     <Compile Include="Assets\Script\BASECLASS\IState.cs" />
     <Compile Include="Assets\Script\Character\Archer\CameraMove.cs" />
@@ -129,15 +130,11 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
-    <None Include="Assets\Package\Asset\Tiny_Treats_House_Plants_1.0_FREE\Tiny_Treats_House_Plants_1.0_FREE\License.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
-    <None Include="Assets\Package\Asset\Tiny_Treats_Bubbly_Bathroom_1.0_FREE\Tiny_Treats_Bubbly_Bathroom_1.0_FREE\License.txt" />
-    <None Include="Assets\Package\Asset\KayKit_City_Builder_Bits_1.0_FREE\KayKit_City_Builder_Bits_1.0_FREE\License.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Shader\Libs\ShadowCasterPass.hlsl" />
     <None Include="Assets\Shader\MobileCrystal.shader" />
-    <None Include="Assets\Package\Asset\Tiny_Treats_Charming_Kitchen_1.0_FREE\Tiny_Treats_Charming_Kitchen_1.0_FREE\License.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
@@ -148,7 +145,6 @@
     <None Include="Assets\Shader\Libs\Input.hlsl" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-    <None Include="Assets\Package\Asset\Tiny_Treats_Pretty_Park_1.0_FREE\Tiny_Treats_Pretty_Park_1.0_FREE\License.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Shader\Libs\ForwardPass.hlsl" />
     <None Include="Assets\Hovl Studio\Procedural fire\Shaders\FireSphere.shader" />
@@ -158,7 +154,6 @@
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
-    <None Include="Assets\Package\Asset\KayKit_Restaurant_Bits_1.0_FREE\KayKit_Restaurant_Bits_1.0_FREE\License.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

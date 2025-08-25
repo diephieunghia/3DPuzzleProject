@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[RequireComponent(typeof(FireBallDetection))]
 public class ProjectileMove : MonoBehaviour
 {
     Vector3 monsterDirection;
@@ -9,12 +9,12 @@ public class ProjectileMove : MonoBehaviour
     public float Speed { get { return speed; } set { speed = value; } }
     public float SpeedTest;
     float damage;
-    public float Damage => damage;
-
+    FireBallDetection fireballDetect;
     Transform[] child;
 
     void Start()
     {
+        fireballDetect = GetComponent<FireBallDetection>();
     }
 
     void Update()
@@ -37,7 +37,8 @@ public class ProjectileMove : MonoBehaviour
             child[i].rotation = lookRotation* Quaternion.Euler(-90, 0, 0);
             
         }   
-        
+        //pass damage to fireball detection
+        fireballDetect.getDamage(damage);
     }
 
 }

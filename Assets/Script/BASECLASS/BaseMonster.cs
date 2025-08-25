@@ -87,4 +87,14 @@ public class BaseMonster : MonoBehaviour,IDamageable
 
         monsterPool.ReturnObject(gameObject);
     }
+
+    public void FireDamage(float damage, Vector3 hitPoint, Vector3 hitDirection, GameObject attacker, IDamageable.Body type)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void IceDamage(float damage, Vector3 hitPoint, Vector3 hitDirection, GameObject attacker, IDamageable.Body type)
+    {
+        throw new NotImplementedException();
+    }
 }

@@ -9,6 +9,7 @@ public class FireBallDetection : MonoBehaviour
     [SerializeField] LayerMask projectile;
     ProjectileMove firebalMove;
     ParticleSystem pSystem;
+    float damage=0;
     void Start()
     {
         firebalMove = GetComponent<ProjectileMove>();
@@ -18,6 +19,10 @@ public class FireBallDetection : MonoBehaviour
     void Update()
     {
         
+    }
+    public void getDamage(float _damage)
+    {
+        damage = _damage;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -32,7 +37,7 @@ public class FireBallDetection : MonoBehaviour
             IDamageable damageable = other.GetComponentInParent<IDamageable>();
             if (damageable != null)
             {
-                damageable.TakeDamage(1, transform.position, transform.forward, gameObject,type);
+                damageable.TakeDamage(damage, transform.position, transform.forward, gameObject,type);
             }
         }
         //stop the fireball and return to pool

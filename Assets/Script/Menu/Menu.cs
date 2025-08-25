@@ -7,8 +7,9 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
     // Start is called before the first frame update
-    public void StartButton()
+    public void StartButton(GameObject loadingScreen)
     {
+        loadingScreen.SetActive(true);
         SceneManager.LoadScene("MainLevel");
     }
     public void Quit()

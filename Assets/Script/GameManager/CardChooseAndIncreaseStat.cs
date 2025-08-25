@@ -42,7 +42,7 @@ public class CardChooseAndIncreaseStat : MonoBehaviour
             item.ReduceCount();
             GameManager.ins.playerPressBuy = false;
             //Disable Card
-            //DisableCard();
+            DisableCard();
         }
     }
     private void OnTriggerEnter(Collider other)

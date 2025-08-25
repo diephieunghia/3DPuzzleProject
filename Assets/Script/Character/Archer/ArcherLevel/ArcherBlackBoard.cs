@@ -9,6 +9,11 @@ public class ArcherBlackBoard
     //level experience
     public int level = 1;
     public float maxEXP=100f;
+    //stat
+    [Header("Stat")]
+    public float health = 100;
+    public float armor = 10;
+
     //move
     [Header("Move")]
     public float horizontal_x;
@@ -78,9 +83,7 @@ public class ArcherBlackBoard
     //Q
     public bool qSkillUnlocked = false;
     public bool qSkill = false;
-    public float qDuration = 3f;
     public float qCoolDown = .25f;
-    public float qanimSpeed = 12f;
 
     public bool storeAction = false;
 
