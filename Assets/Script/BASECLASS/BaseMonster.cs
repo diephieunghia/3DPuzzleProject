@@ -33,12 +33,17 @@ public class BaseMonster : MonoBehaviour,IDamageable
     //Collider to disable
     public Collider head;
     public Collider body;
+    void Awake()
+    {
+        GameManager.ins.monsterStatIncrease += IncreaseStat;
+    }
     private void Start()
     {
         currentHeath = stat.health;
         maxHealth = stat.health;
         coolDown = stat.baseCoolDown;
         GameManager.ins.CountDownComplete += Despawn;
+        
     }
 
     public void TakeDamage(float damage, Vector3 hitPoint, Vector3 hitDirection, GameObject attacker,IDamageable.Body hitPart)
@@ -97,4 +102,13 @@ public class BaseMonster : MonoBehaviour,IDamageable
     {
         throw new NotImplementedException();
     }
+    void IncreaseStat() {
+        stat.health *= 1.2f;
+        stat.damage *= 1.2f;
+        maxHealth = stat.health;
+        currentHeath = maxHealth;
+        stat.expDrop = Mathf.RoundToInt(stat.expDrop * 1.2f);
+        coins *= 1.2f;
+    }
+
 }

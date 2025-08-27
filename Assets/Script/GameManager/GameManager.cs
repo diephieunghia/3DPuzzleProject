@@ -29,9 +29,12 @@ public class GameManager : MonoBehaviour
     public Transform storePosition;
     ArcherAction character;
     public bool playerPressBuy = false;
+    public bool playerPressReset = false;
     public bool playerExitStore = false;
     //last character position
     Vector3 lastPosition;
+    //Monster stat increase per level
+    public Action monsterStatIncrease;
 
     //wait time
     public float WaitTime = .5f;
@@ -100,6 +103,9 @@ public class GameManager : MonoBehaviour
         SpawnMonster.ins.CurrentLevel=statScale.currentLevel;
         SpawnMonster.ins.SpawnRate = statScale.spawnRate[statScale.currentLevel-1];
         SpawnMonster.ins.MonsterQuanity = statScale.spawnQuantity[statScale.currentLevel-1];
+        //find all monster available and increase their stat
+        monsterStatIncrease?.Invoke();
+
         //Debug.Log("Current Level: "+statScale.currentLevel+" max Enemy: "+statScale.maxEnemyPerLevel);
     }
 }

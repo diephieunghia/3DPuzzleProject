@@ -128,6 +128,12 @@ public class PlayerInput
         }
         else
             GameManager.ins.playerPressBuy = false;
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            GameManager.ins.playerPressReset = true;
+        }
+        else
+            GameManager.ins.playerPressReset = false;
     }
     void TabAction()
     {

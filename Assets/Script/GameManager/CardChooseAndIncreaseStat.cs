@@ -20,8 +20,7 @@ public class CardChooseAndIncreaseStat : MonoBehaviour
     public GameObject card;
 
     private void Update()
-    {
-        
+    {     
         if (playerInRange&&GameManager.ins.playerPressBuy)
         {
             int rand = item.RandomInt();
