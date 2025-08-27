@@ -103,6 +103,8 @@ public class SpawnMonster : MonoBehaviour
             {
                 //get monster from object pool               
                 GameObject monster = monstersPool[rarity].GetObject();
+                //assign level scale to monster
+                monster.GetComponent<BaseMonster>()?.IncreaseStatWithLevel(GameManager.ins.CurrentLevel);
                 //assign spawn location
                 monster.transform.position=GetRandomSpawnPoint();
                 //increase count to game manager

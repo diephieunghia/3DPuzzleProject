@@ -67,11 +67,19 @@ public class BaseMonster : MonoBehaviour,IDamageable
         }
         else
         {
-            
+
             if (hitPart == IDamageable.Body.Body)
+            {
+                GameObject effect= EffectSpawn.ins.GetEffect(EffectName.Normal);
+                effect.transform.position = hitPoint;
                 BodyHit.Invoke();
+            }
             else
-                HeadHit.Invoke();
+            {
+                GameObject effect = EffectSpawn.ins.GetEffect(EffectName.Head);
+                effect.transform.position = hitPoint;
+                HeadHit.Invoke(); 
+            }
                     
         }
     }
@@ -107,8 +115,15 @@ public class BaseMonster : MonoBehaviour,IDamageable
         stat.damage *= 1.2f;
         maxHealth = stat.health;
         currentHeath = maxHealth;
-        stat.expDrop = Mathf.RoundToInt(stat.expDrop * 1.2f);
-        coins *= 1.2f;
+        //stat.expDrop = Mathf.RoundToInt(stat.expDrop * 1.2f);
+    }
+    public void IncreaseStatWithLevel(int currentLevel)
+    {
+        stat.health *= Mathf.Pow(1.2f,currentLevel-1);
+        stat.damage *= Mathf.Pow(1.2f, currentLevel-1);
+        maxHealth = stat.health;
+        currentHeath = maxHealth;
+        //stat.expDrop = Mathf.RoundToInt(stat.expDrop * 1.2f);
     }
 
 }

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEngine;
+using UnityEngine.Rendering;
 using static IDamageable;
 [RequireComponent(typeof(ArcherAction))]
 public class ArcherBase : BaseChar
@@ -10,6 +12,10 @@ public class ArcherBase : BaseChar
     ArcherAction archer;
 
     float currentEXP = 0;
+    float currentHealth;
+
+    bool invicible = false;
+    float inviTime = .5f;
     protected override void Awake()
     {
         base.Awake();
@@ -20,14 +26,32 @@ public class ArcherBase : BaseChar
     {
         GameManager.ins.LevelChange += IncreaseLevel;
         bb = GetComponent<ArcherAction>().bb;
-        
+        currentHealth = bb.health;
+        //assign health at the start of the game to the ui
+        UIManager.ins.SetHealth(currentHealth,bb.health);
     }
     //damage 
     public override void TakeDamage(float damage, Vector3 hitPoint, Vector3 hitDirection, GameObject attacker, IDamageable.Body hitPart)
     {
-        // Implement damage logic here
-        // For example, reduce health, play animation, etc.
-        Debug.Log($"Archer took {damage} damage from {attacker.name} at {hitPoint}");
+        float tempDamage = damage;
+        if (invicible)
+        {
+            Debug.Log("In invicible mode");
+            return; 
+        }
+        Debug.Log("Hit");
+        //reduce health
+        currentHealth = Mathf.Clamp(currentHealth - tempDamage *(1-bb.armor/100), 0, bb.health);
+        //update to UI
+        UIManager.ins.SetHealth(currentHealth,bb.health);
+        //invicible for x seconds, negate damage, start coroutine here
+        StartCoroutine(GodMode());
+        
+    }
+    IEnumerator GodMode()
+    { 
+        yield return new WaitForSeconds(inviTime);
+        invicible = false;
     }
     //Level Up
     protected override void IncreaseLevel(float value,float coins)

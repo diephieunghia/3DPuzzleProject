@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.WebSockets;
 using UnityEngine;
 [RequireComponent(typeof(Arrow))]
 public class ArrowDetection : MonoBehaviour
@@ -40,6 +41,8 @@ public class ArrowDetection : MonoBehaviour
         }
         //Debug.Log("Arrow hit: " + other.name);
         IDamageable damageable = other.GetComponentInParent<IDamageable>();
+        //get contact point
+        Vector3 closetPoint=other.ClosestPointOnBounds(other.transform.position);
         if (damageable != null)
         {
             IDamageable.Body type=IDamageable.Body.Body;
@@ -50,7 +53,7 @@ public class ArrowDetection : MonoBehaviour
                 type = IDamageable.Body.Head;
             }
             if(!arrow.Fire&&!arrow.Ice) 
-                damageable.TakeDamage(arrow.Damage * multiplier, transform.position, transform.forward, gameObject,type);
+                damageable.TakeDamage(arrow.Damage * multiplier, closetPoint, transform.forward, gameObject,type);
         }
         if(!coroutineFinished)
             StopCoroutine(ReturnToPool());

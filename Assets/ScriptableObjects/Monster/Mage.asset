@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cd8f2e636d446745b376599ec43e076, type: 3}
   m_Name: Mage
   m_EditorClassIdentifier: 
-  health: 120
-  damage: 20
+  health: 200
+  damage: 10
   speed: 3.5
   baseCoolDown: 3
   attackRate: 3
   velocity: 0
-  expDrop: 75
+  expDrop: 250

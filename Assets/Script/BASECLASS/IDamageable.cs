@@ -9,9 +9,6 @@ public interface IDamageable
         Head,
         Body,
     }
-    void TakeDamage(float damage, Vector3 hitPoint, Vector3 hitDirection, GameObject attacker,Body type);
+    void TakeDamage(float damage, Vector3 hitPoint, Vector3 hitDirection, GameObject attacker, Body type);
 
-    void FireDamage(float damage, Vector3 hitPoint, Vector3 hitDirection, GameObject attacker, Body type);
-
-    void IceDamage(float damage, Vector3 hitPoint, Vector3 hitDirection, GameObject attacker, Body type);
 }

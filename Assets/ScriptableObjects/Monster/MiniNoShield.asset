@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MiniNoShield
   m_EditorClassIdentifier: 
   health: 100
-  damage: 5
+  damage: 10
   speed: 2
   baseCoolDown: 5
   attackRate: 0

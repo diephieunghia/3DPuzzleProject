@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}</ProjectGuid>
+    <ProjectGuid>{3FAF6531-BB88-FC26-6A77-D0CD1B96C51B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -64,7 +64,6 @@
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\AttackState\State_Atk\Idle.cs" />
     <Compile Include="Assets\Script\BASECLASS\IDamageable.cs" />
     <Compile Include="Assets\Script\Character\Archer\CameraControl.cs" />
-    <Compile Include="Assets\Script\BASECLASS\EffectPool.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\Arrow\ArrowPool.cs" />
     <Compile Include="Assets\Script\Monster\Mage\STATE\Move\KeepDistance.cs" />
     <Compile Include="Assets\Script\GameManager\AssignCard.cs" />
@@ -116,6 +115,7 @@
     <Compile Include="Assets\Script\Items\Meteor.cs" />
     <Compile Include="Assets\Script\BASECLASS\SO_Char.cs" />
     <Compile Include="Assets\Script\BASECLASS\SO_Level.cs" />
+    <Compile Include="Assets\Script\GameManager\EffectSpawn.cs" />
     <Compile Include="Assets\Script\Monster\Mage\MageAttack.cs" />
     <Compile Include="Assets\Script\Monster\Mage\MageMoveHandler.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\ArcherAction.cs" />
@@ -136,6 +136,7 @@
     <None Include="Assets\Shader\Libs\ShadowCasterPass.hlsl" />
     <None Include="Assets\Shader\MobileCrystal.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\Hit Impact Effects\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />

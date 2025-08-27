@@ -18,12 +18,17 @@ public class UIManager : MonoBehaviour
     public GameObject crossHair;
 
     //level ui
-    [Header("Level")]
+    [Header("Level Character Show")]
     public Image levelUI;
     public TextMeshProUGUI levelText;
     public float rate = 10f;
     float lastValue = 0;
     int runCount = 0;
+
+    //Character Health
+    [Header("Character Health")]
+    public Image health;
+    public TextMeshProUGUI healthNumber;
 
     //CountDown
     [Header("CountDown")]
@@ -139,4 +144,11 @@ public class UIManager : MonoBehaviour
         yield return null;
     }
 
+    //health set
+    public void SetHealth(float currentHealth,float maxHealth)
+    {
+        health.fillAmount = currentHealth / maxHealth;
+        int temphealth = (int)currentHealth;
+        healthNumber.text=temphealth.ToString();
+    }
 }
