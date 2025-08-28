@@ -18,4 +18,5 @@ public class SO_Mons : ScriptableObject
     public float velocity;
 
     public float expDrop;
+    public float coins;
 }

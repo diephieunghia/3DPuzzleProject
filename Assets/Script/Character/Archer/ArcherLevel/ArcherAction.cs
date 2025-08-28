@@ -108,7 +108,8 @@ public class ArcherAction : MonoBehaviour
     {
         bb.storeAction = !bb.storeAction;
         if (attackStateHandler.CurrentState == attackStateHandler.shoot)       
-            bb.aiming = ArcherBlackBoard.Aim.Cancel;       
+            bb.aiming = ArcherBlackBoard.Aim.Shoot;       
+        //Character anim change back to idle
         else if (attackStateHandler.CurrentState == attackStateHandler.eSkill)
         {
             bb.skill = false;

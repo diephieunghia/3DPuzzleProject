@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cd8f2e636d446745b376599ec43e076, type: 3}
   m_Name: Minion
   m_EditorClassIdentifier: 
-  health: 200
+  health: 250
   damage: 10
   speed: 7
   baseCoolDown: 4
   attackRate: 0
   velocity: 0
   expDrop: 200
+  coins: 4

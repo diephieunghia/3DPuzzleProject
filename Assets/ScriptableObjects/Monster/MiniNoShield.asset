@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cd8f2e636d446745b376599ec43e076, type: 3}
   m_Name: MiniNoShield
   m_EditorClassIdentifier: 
-  health: 100
-  damage: 10
+  health: 125
+  damage: 5
   speed: 2
   baseCoolDown: 5
   attackRate: 0
   velocity: 0
   expDrop: 30
+  coins: 2

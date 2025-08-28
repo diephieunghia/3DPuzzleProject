@@ -56,7 +56,6 @@ public class SpawnMonster : MonoBehaviour
             if (tempSpawnRate <= 0)
             {
                 spawnRarity = GetSpawnRarity();
-                Debug.Log("Spawn Monster");
                 SpawnMonsterMethod(spawnRarity);
                 tempSpawnRate = spawnRate;
             }
@@ -104,17 +103,22 @@ public class SpawnMonster : MonoBehaviour
                 //get monster from object pool               
                 GameObject monster = monstersPool[rarity].GetObject();
                 //assign level scale to monster
-                monster.GetComponent<BaseMonster>()?.IncreaseStatWithLevel(GameManager.ins.CurrentLevel);
-                //assign spawn location
-                monster.transform.position=GetRandomSpawnPoint();
-                //increase count to game manager
-                GameManager.ins.monsterOnFieldCount++;
+                if (monster != null)
+                {
+                    monster.GetComponent<BaseMonster>()?.IncreaseStatWithLevel(GameManager.ins.CurrentLevel);
+                    monster.GetComponent<BaseMonster>()?.EnableValue();
+                    //assign spawn location
+                    monster.transform.position = GetRandomSpawnPoint();
+                    //increase count to game manager
+                    GameManager.ins.monsterOnFieldCount++;
+                }
             }
         }
     }
     void StopSpawnAndDespawnMonster()
-    {
+    {       
         spawn = false;
+        tempSpawnRate = spawnRate;
     }
     int GetSpawnRarity()
     {

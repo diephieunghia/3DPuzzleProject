@@ -51,9 +51,8 @@ public class ArrowDetection : MonoBehaviour
             { 
                 multiplier = 2f;
                 type = IDamageable.Body.Head;
-            }
-            if(!arrow.Fire&&!arrow.Ice) 
-                damageable.TakeDamage(arrow.Damage * multiplier, closetPoint, transform.forward, gameObject,type);
+            }       
+            damageable.TakeDamage(arrow.Damage * multiplier, closetPoint, transform.forward, gameObject,type);
         }
         if(!coroutineFinished)
             StopCoroutine(ReturnToPool());

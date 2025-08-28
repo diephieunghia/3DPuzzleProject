@@ -8,9 +8,11 @@ public class BaseMonster : MonoBehaviour,IDamageable
 {
     [SerializeField] SO_Mons stat;
     public SO_Mons MonsterStat => stat;
-
-    float currentHeath;
+    //temp stat
     float maxHealth;
+    float damage;
+    float expDrop;
+    float currentHeath;
     public bool Attack;
     public int attackType = 1;
     bool death = false;
@@ -20,15 +22,13 @@ public class BaseMonster : MonoBehaviour,IDamageable
     public LayerMask arrow;
 
     //Minion
+    [Header("Minion")]
     public bool axeEnable=false;
     public Action DeathTrigger;
     public Action HeadHit;
     public Action BodyHit;
     public Transform center;
     public Vector3 size;
-
-    //coins
-    public float coins = 10f;
 
     //Collider to disable
     public Collider head;
@@ -41,11 +41,20 @@ public class BaseMonster : MonoBehaviour,IDamageable
     {
         currentHeath = stat.health;
         maxHealth = stat.health;
+        damage = stat.damage;
         coolDown = stat.baseCoolDown;
+        expDrop = stat.expDrop;
         GameManager.ins.CountDownComplete += Despawn;
         
     }
-
+    public void EnableValue() {         
+        currentHeath = maxHealth;
+        death = false;
+        Attack = true;
+        coolDown = stat.baseCoolDown;
+        head.enabled = true;
+        body.enabled = true;
+    }
     public void TakeDamage(float damage, Vector3 hitPoint, Vector3 hitDirection, GameObject attacker,IDamageable.Body hitPart)
     {
         currentHeath -= damage;
@@ -57,7 +66,7 @@ public class BaseMonster : MonoBehaviour,IDamageable
             death = true;
             stat.velocity = 0;
             //send coins
-            GameManager.ins.LevelChange?.Invoke(stat.expDrop,coins);
+            GameManager.ins.LevelChange?.Invoke(stat.expDrop,stat.coins);
             //trigger Death animation
             DeathTrigger.Invoke();
             //disable collider
@@ -97,7 +106,6 @@ public class BaseMonster : MonoBehaviour,IDamageable
         }
         head.enabled = true;
         body.enabled = true;
-
         monsterPool.ReturnObject(gameObject);
     }
 
@@ -111,19 +119,17 @@ public class BaseMonster : MonoBehaviour,IDamageable
         throw new NotImplementedException();
     }
     void IncreaseStat() {
-        stat.health *= 1.2f;
-        stat.damage *= 1.2f;
-        maxHealth = stat.health;
+        maxHealth *= 1.2f;
+        damage += 1.2f;
         currentHeath = maxHealth;
         //stat.expDrop = Mathf.RoundToInt(stat.expDrop * 1.2f);
     }
     public void IncreaseStatWithLevel(int currentLevel)
     {
-        stat.health *= Mathf.Pow(1.2f,currentLevel-1);
-        stat.damage *= Mathf.Pow(1.2f, currentLevel-1);
-        maxHealth = stat.health;
+        maxHealth *= Mathf.Pow(1.2f,currentLevel-1);
+        damage += 1.2f*( currentLevel-1);       
         currentHeath = maxHealth;
-        //stat.expDrop = Mathf.RoundToInt(stat.expDrop * 1.2f);
+        //expDrop = Mathf.RoundToInt(stat.expDrop * Mathf.Pow(1.2f, currentLevel-1));
     }
 
 }

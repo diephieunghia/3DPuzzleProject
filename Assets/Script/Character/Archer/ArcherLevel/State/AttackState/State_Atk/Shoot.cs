@@ -24,6 +24,9 @@ public class Shoot : IState
 
     public void Execute()
     {
+        Debug.Log("Shoot");
+        //at store action change back to idle
+
         atkbb.shootRate += Time.deltaTime;
         if (atkbb.aiming == ArcherBlackBoard.Aim.Cancel)
         {
@@ -54,7 +57,7 @@ public class Shoot : IState
             atkbb.allowShoot = false;
            
         }
-               
+        
     }
 
     public void Exit() {

@@ -125,6 +125,7 @@ public class PlayerInput
         if (Input.GetKeyDown(KeyCode.E))
         {
             GameManager.ins.playerPressBuy = true;
+            GameManager.ins.BuyItem?.Invoke();
         }
         else
             GameManager.ins.playerPressBuy = false;

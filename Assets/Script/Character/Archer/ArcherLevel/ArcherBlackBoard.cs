@@ -8,7 +8,7 @@ public class ArcherBlackBoard
 {
     //level experience
     public int level = 1;
-    public float maxEXP=100f;
+    public float maxEXP=50f;
     //stat
     [Header("Stat")]
     public float health = 100;

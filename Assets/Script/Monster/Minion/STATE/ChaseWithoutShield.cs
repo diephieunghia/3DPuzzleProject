@@ -19,8 +19,9 @@ public class ChaseWithoutShield : IState
     }
     public void Enter()
     {
-
         if (monsterStat.Death) agent.isStopped = true;
+        else
+            agent.isStopped = false;
     }
     public void Execute()
     {

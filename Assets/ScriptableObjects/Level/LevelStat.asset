@@ -16,8 +16,8 @@ MonoBehaviour:
   maxLevel: 10
   monsterPowerScale: 1.2
   levelTime:
-  - 20
-  - 20
+  - 3
+  - 600
   - 20
   - 20
   - 20
@@ -28,7 +28,7 @@ MonoBehaviour:
   - 20
   maxEnemyPerLevel: 6300000023000000250000001e0000001e0000001e0000001e000000140000001400000014000000
   spawnRate:
-  - 3
+  - 3.1
   - 2
   - 1.5
   - 1.5

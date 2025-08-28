@@ -25,6 +25,7 @@ public class ArcherBase : BaseChar
     private void Start()
     {
         GameManager.ins.LevelChange += IncreaseLevel;
+        GameManager.ins.UpdateCoinsAmount += UpdateCoinsHeld;
         bb = GetComponent<ArcherAction>().bb;
         currentHealth = bb.health;
         //assign health at the start of the game to the ui
@@ -68,10 +69,8 @@ public class ArcherBase : BaseChar
             //send message to increase stat
         }
         UIManager.ins.LevelChange(currentEXP, bb.maxEXP, bb.level);
-        //get coins earned
-        bb.coinsHeld+=coins* bb.coinsMultiplier;
-        //update coins UI
-        UIManager.ins.CoinsChange(coins*bb.coinsMultiplier,bb.coinsHeld);
+        //coins earn and update to ui and manager
+        UpdateCoinsHeld(coins * bb.coinsMultiplier);
     }
     //StatUp
     public void StatUP(SO_Item item)
@@ -130,5 +129,13 @@ public class ArcherBase : BaseChar
     public void ItemGetStatOnceAtSpawn(SO_Item item)
     {
         
+    }
+    void UpdateCoinsHeld(float value)
+    {        
+        bb.coinsHeld += value;
+        //let Game manager get coins held value
+        GameManager.ins.coinsHeld = bb.coinsHeld;
+        //update coins UI
+        UIManager.ins.CoinsChange(value, bb.coinsHeld);
     }
 }

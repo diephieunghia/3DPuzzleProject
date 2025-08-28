@@ -8,7 +8,6 @@ public class ATKIdle : IState
     Transform ownerTransform;
     ArcherBlackBoard atkbb;   
     CharacterController controller;
-
     public ATKIdle(ArcherBlackBoard bb, Transform transform, CharacterController controller,AttackStateHandler atkHandler)
     {
         atkbb = bb;
@@ -17,9 +16,9 @@ public class ATKIdle : IState
         handler = atkHandler;
     }
     public void Enter() {
-        
         float z = 0;
         for (int i = 0; i < atkbb.arrowCount; i++) {
+            Debug.Log("Arrow create ");
             atkbb.currentArrow[i] = ArrowPool.ins.GetObject();
             if (i == 1) z = -15;
             else if (i == 2) z = 15;
@@ -28,7 +27,9 @@ public class ATKIdle : IState
     }
 
     public void Execute() {
-        if(HandleAnim.ins.ReloadESkill(.8f))
+        Debug.Log("Idle");
+        
+        if (HandleAnim.ins.ReloadESkill(.8f))
         {
             HandleAnim.ins.DisableEShoot();    
         }

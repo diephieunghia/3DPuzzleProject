@@ -6,11 +6,11 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     ChangeDate changeDate;
-
     public static GameManager ins { get; private set; }
     [SerializeField] SO_Level statScale;
-    
-    public int CurrentLevel=>statScale.currentLevel;
+
+    int tempCurrentLevel = 1;
+    public int CurrentLevel=>tempCurrentLevel;
     public int MaxLevel => statScale.maxLevel;
     public int[] MaxEnemy => statScale.maxEnemyPerLevel;
     public float MonsterScale => statScale.monsterPowerScale;
@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public float[] SpawnRate => statScale.spawnRate;
     public int[] SpawnQuantity=>statScale.spawnQuantity;
 
+    //Monster management
     public int monsterOnFieldCount=0;
     //level
     public Action<float,float> LevelChange;
@@ -28,9 +29,15 @@ public class GameManager : MonoBehaviour
     //Move to store
     public Transform storePosition;
     ArcherAction character;
+
+    [Header("Shop event")]
     public bool playerPressBuy = false;
     public bool playerPressReset = false;
     public bool playerExitStore = false;
+    public float coinsHeld = 0;
+    public Action<float> UpdateCoinsAmount;
+    public Action BuyItem;
+    //---------------------------------------------------
     //last character position
     Vector3 lastPosition;
     //Monster stat increase per level
@@ -57,16 +64,13 @@ public class GameManager : MonoBehaviour
         character=GameObject.FindAnyObjectByType<ArcherAction>();
         Application.targetFrameRate = 60;
     }
-    public void StatLevelUp(ArcherBlackBoard stat)
-    {
-
-    }
 
     //Move to store
     private void MoveToStore()
     {
         StartCoroutine(WaitAndMove());
     }
+    //transport to store after wave finish
     IEnumerator WaitAndMove()
     {
         yield return new WaitForSeconds(0.75f);
@@ -82,6 +86,7 @@ public class GameManager : MonoBehaviour
             changeDate.ChangeSkyBox(CurrentLevel/2);
         }
     }
+    //move back to area where the character last was
     public void MoveBackToArea()
     {
         StartCoroutine(MoveBack());
@@ -95,14 +100,15 @@ public class GameManager : MonoBehaviour
         character.transform.position = lastPosition;
         character.characterController.enabled = true;
     }
+    //Increase current level after countdown wave complete
     public void IncreaseCurrentLevel()
     {
-        if (statScale.currentLevel <= statScale.maxLevel)
-            statScale.currentLevel += 1;
-        SpawnMonster.ins.MaxEnemy = statScale.maxEnemyPerLevel[statScale.currentLevel-1];
-        SpawnMonster.ins.CurrentLevel=statScale.currentLevel;
-        SpawnMonster.ins.SpawnRate = statScale.spawnRate[statScale.currentLevel-1];
-        SpawnMonster.ins.MonsterQuanity = statScale.spawnQuantity[statScale.currentLevel-1];
+        if (tempCurrentLevel <= statScale.maxLevel)
+            tempCurrentLevel += 1;
+        SpawnMonster.ins.MaxEnemy = statScale.maxEnemyPerLevel[tempCurrentLevel - 1];
+        SpawnMonster.ins.CurrentLevel= tempCurrentLevel;
+        SpawnMonster.ins.SpawnRate = statScale.spawnRate[tempCurrentLevel - 1];
+        SpawnMonster.ins.MonsterQuanity = statScale.spawnQuantity[tempCurrentLevel - 1];
         //find all monster available and increase their stat
         monsterStatIncrease?.Invoke();
 
