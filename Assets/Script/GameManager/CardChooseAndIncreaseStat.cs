@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,6 +20,8 @@ public class CardChooseAndIncreaseStat : MonoBehaviour
     [SerializeField] BoxCollider ownCollider;
     public GameObject card;
 
+    //coins text
+    public TextMeshProUGUI coinsDisplay;
     private void OnTriggerEnter(Collider other)
     {
         image.color= highlight;
@@ -55,6 +58,8 @@ public class CardChooseAndIncreaseStat : MonoBehaviour
         {
             if (GameManager.ins.coinsHeld < item.cost)
             {
+                //uimanager play text anim
+
                 Debug.Log("Not enough coins");
                 return;
             }

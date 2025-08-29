@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     ChangeDate changeDate;
     public static GameManager ins { get; private set; }
+    //Level Stat
     [SerializeField] SO_Level statScale;
 
     int tempCurrentLevel = 1;
@@ -37,7 +38,10 @@ public class GameManager : MonoBehaviour
     public float coinsHeld = 0;
     public Action<float> UpdateCoinsAmount;
     public Action BuyItem;
-    //---------------------------------------------------
+    public Action Reset;
+    //reset cost
+    int cardDisableCount = 3;
+    float resetCost = 3;
     //last character position
     Vector3 lastPosition;
     //Monster stat increase per level
@@ -58,19 +62,20 @@ public class GameManager : MonoBehaviour
         CountDownComplete += MoveToStore;
         CountDownComplete += IncreaseCurrentLevel;
         MoveToArea += MoveBackToArea;
+        Reset += ResetCard;
     }
     private void Start()
     {
         character=GameObject.FindAnyObjectByType<ArcherAction>();
         Application.targetFrameRate = 60;
     }
-
-    //Move to store
+    //-------------------------------------------------
+    //----------------Count Down Complete--------------
+    //Move to store    //transport to store after wave finish
     private void MoveToStore()
     {
         StartCoroutine(WaitAndMove());
     }
-    //transport to store after wave finish
     IEnumerator WaitAndMove()
     {
         yield return new WaitForSeconds(0.75f);
@@ -86,6 +91,7 @@ public class GameManager : MonoBehaviour
             changeDate.ChangeSkyBox(CurrentLevel/2);
         }
     }
+
     //move back to area where the character last was
     public void MoveBackToArea()
     {
@@ -100,6 +106,7 @@ public class GameManager : MonoBehaviour
         character.transform.position = lastPosition;
         character.characterController.enabled = true;
     }
+
     //Increase current level after countdown wave complete
     public void IncreaseCurrentLevel()
     {
@@ -113,5 +120,22 @@ public class GameManager : MonoBehaviour
         monsterStatIncrease?.Invoke();
 
         //Debug.Log("Current Level: "+statScale.currentLevel+" max Enemy: "+statScale.maxEnemyPerLevel);
+    }
+
+    //-------------------------------------------------
+    //-------------------shopManager-------------------
+    void ResetCard()
+    {
+        if (coinsHeld < resetCost)
+        {
+            Debug.Log("Not enough coins to reset");
+            return;
+        }
+        //randomize item
+        if (cardDisableCount == 0)
+            return;
+
+             
+
     }
 }

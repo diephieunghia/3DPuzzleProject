@@ -15,7 +15,7 @@ MonoBehaviour:
   text: Arrow has effect
   icon: {fileID: 0}
   cost: 40
-  quantity: 0
+  quantity: 1
   type: 2
   rarity: 0
   textColor: {r: 1, g: 1, b: 1, a: 1}

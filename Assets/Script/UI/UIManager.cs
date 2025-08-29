@@ -44,7 +44,12 @@ public class UIManager : MonoBehaviour
     //Coins show
     public TextMeshProUGUI coinsAmountTotal;
     public TextMeshProUGUI coinsEarned;
+    [Header("Reset")]
+    public TextMeshProUGUI reset;
 
+    [Header("FlashColor")]
+    public Color flashColor;
+    public Color originColor;
     private void Awake()
     {
         if (ins != null && ins != this)
@@ -150,5 +155,11 @@ public class UIManager : MonoBehaviour
         health.fillAmount = currentHealth / maxHealth;
         int temphealth = (int)currentHealth;
         healthNumber.text=temphealth.ToString();
+    }
+
+    //item coins flash red for can not be able to purchase
+    public void TextFlash(TextMeshProUGUI text)
+    {
+
     }
 }

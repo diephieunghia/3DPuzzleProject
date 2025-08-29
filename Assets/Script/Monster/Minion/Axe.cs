@@ -22,15 +22,7 @@ public class Axe : MonoBehaviour
         baseMonster=GetComponentInParent<BaseMonster>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {       
-        if(baseMonster.axeEnable)
-        {
-            DrawRay();
-        }
-              
-    }
+
 
     void DrawRay()
     {    

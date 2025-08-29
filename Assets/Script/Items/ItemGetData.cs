@@ -12,11 +12,6 @@ public class ItemGetData : MonoBehaviour
         GameManager.ins.GetCharStat += ApplyCharStat;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     protected virtual void ApplyCharStat(ArcherBlackBoard bb)
     {
         initialCD *= initialCD * bb.passiveCD;

@@ -6,17 +6,17 @@ public class ChangeDate : MonoBehaviour
 {
     public Material[] skyBox;
     public GameObject[] lightning;
-    GameObject light;
+    GameObject lightSet;
     public Color[] fog;
     public void ChangeSkyBox(int index)
     {       
         RenderSettings.skybox = skyBox[index];
         RenderSettings.fogColor = fog[index];
-        if (light!=null)
+        if (lightSet!=null)
         {
-            Destroy(light);
+            Destroy(lightSet);
         }
-        light = Instantiate(lightning[index], Vector3.zero, Quaternion.identity);
+        lightSet = Instantiate(lightning[index], Vector3.zero, Quaternion.identity);
 
     }
 }
