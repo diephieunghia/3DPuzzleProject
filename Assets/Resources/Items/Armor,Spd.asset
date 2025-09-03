@@ -10,29 +10,34 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6516bec3aaa4d74428aa212f5cbe73a9, type: 3}
-  m_Name: Spd,Atk
+  m_Name: Armor,Spd
   m_EditorClassIdentifier: 
-  text: Increase speed by 5%
-  icon: {fileID: 21300000, guid: 98b1a63ee469a944785c2de402539c82, type: 3}
-  cost: 25
+  text: Armor +3, speed -1
+  icon: {fileID: 21300000, guid: 0d7937d442031a340b12c0d286b67ebe, type: 3}
+  cost: 20
   quantity: -1
   type: 0
   rarity: 0
   textColor: {r: 1, g: 1, b: 1, a: 1}
-  damage: 1
-  maxDamage: 1
-  arrowCount: 1
-  speed: 1.05
-  tempSpeed: 1.05
-  eDuration: 1
-  eCoolDown: 1
-  animSpeed: 1
-  qDuration: 1
-  qCoolDown: 1
-  qanimSpeed: 1
+  health: 0
+  armor: 3
+  skillCD: 0
+  dashCoolDown: 0
+  upgradeType: 
+  damage: 0
+  maxDamage: 0
+  arrowCount: 0
+  speed: -1
+  tempSpeed: 0
+  eDuration: 0
+  eCoolDown: 0
+  animSpeed: 0
+  qDuration: 0
+  qCoolDown: 0
+  qanimSpeed: 0
   terrain: []
   summon: {fileID: 0}
   isVisible: 0
-  passiveCD: 1
-  passiveDMG: 1
-  passiveArea: 1
+  passiveCD: 0
+  passiveDMG: 0
+  passiveArea: 0

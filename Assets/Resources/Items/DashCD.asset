@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6516bec3aaa4d74428aa212f5cbe73a9, type: 3}
-  m_Name: FireIce
+  m_Name: DashCD
   m_EditorClassIdentifier: 
-  text: Arrow has effect
-  icon: {fileID: 21300000, guid: 650e2b89b491981428275c5e24018b9b, type: 3}
-  cost: 40
-  quantity: 1
-  type: 2
+  text: Dash cooldown by 10%
+  icon: {fileID: 21300000, guid: 4bcdb29ae912cc7438e58f5f7e41c991, type: 3}
+  cost: 35
+  quantity: -1
+  type: 0
   rarity: 0
   textColor: {r: 1, g: 1, b: 1, a: 1}
   health: 0
   armor: 0
   skillCD: 0
-  dashCoolDown: 0
-  upgradeType: FireIce
+  dashCoolDown: -0.1
+  upgradeType: 
   damage: 0
   maxDamage: 0
   arrowCount: 0
@@ -39,5 +39,5 @@ MonoBehaviour:
   summon: {fileID: 0}
   isVisible: 0
   passiveCD: 0
-  passiveDMG: 1
-  passiveArea: 1
+  passiveDMG: 0
+  passiveArea: 0

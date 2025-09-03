@@ -26,6 +26,7 @@ public class MinionChase : IState
     {
         boxCoolDown = 2f;
         enableBoxCastTime = 3f;
+        agent.speed = monsterStat.MonsterStat.speed;
         if (monsterStat.Death) agent.isStopped = true;
     }
 

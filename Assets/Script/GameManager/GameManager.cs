@@ -74,6 +74,8 @@ public class GameManager : MonoBehaviour
     //Move to store    //transport to store after wave finish
     private void MoveToStore()
     {
+        //get reset amount to UI
+        UIManager.ins.UpdateResetCost((int)resetCost);
         StartCoroutine(WaitAndMove());
     }
     IEnumerator WaitAndMove()
@@ -134,8 +136,12 @@ public class GameManager : MonoBehaviour
         //randomize item
         if (cardDisableCount == 0)
             return;
+        //update reset cost
+        //......increase cost.....
+        resetCost += resetCost + tempCurrentLevel;
+        UIManager.ins.UpdateResetCost((int)Mathf.Round(resetCost));
 
-             
+
 
     }
 }

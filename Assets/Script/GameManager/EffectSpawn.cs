@@ -15,7 +15,6 @@ public class EffectSpawn : MonoBehaviour
 {
     public static EffectSpawn ins;
     public ObjectPool[] vfx;
-    
     private void Awake()
     {
         if (ins != null && ins != this)
@@ -31,6 +30,11 @@ public class EffectSpawn : MonoBehaviour
     {
         int index = (int)name;
         return vfx[index].GetObject();
+    }
+    public void ReturnEffect(GameObject Vfx, EffectName name)
+    {
+        int index = (int)name;
+        vfx[index].ReturnObject(Vfx);
     }
     
 

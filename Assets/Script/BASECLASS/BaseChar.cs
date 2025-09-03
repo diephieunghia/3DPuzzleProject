@@ -10,24 +10,14 @@ public class BaseChar : MonoBehaviour,IDamageable
     }
     //take damage
     public virtual void TakeDamage(float damage, Vector3 hitPoint, Vector3 hitDirection, GameObject attacker, IDamageable.Body hitPart)
-    {
-
-    }
-    //STAT MANAGEMENT HERE
-
-    //increase stat
+    { }
 
     //level
     protected virtual void IncreaseLevel(float value,float coins) {
 
     }
 
-    public virtual void FireDamage(float damage, Vector3 hitPoint, Vector3 hitDirection, GameObject attacker, IDamageable.Body type)
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public virtual void IceDamage(float damage, Vector3 hitPoint, Vector3 hitDirection, GameObject attacker, IDamageable.Body type)
+    public void DamgeType(bool fire, bool ice, float damage)
     {
         throw new System.NotImplementedException();
     }

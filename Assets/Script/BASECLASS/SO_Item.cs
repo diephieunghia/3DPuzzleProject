@@ -35,24 +35,29 @@ public class SO_Item : ScriptableObject
     public Color textColor = Color.white;
 
     [Header("Stat")]
+    public float health;
+    public float armor;
+    public float skillCD;
+    public float dashCoolDown;
+
     //special name
     public string upgradeType;
     //damage
-    public float damage = 1f;
-    public float maxDamage = 1f;
-    public int arrowCount = 3;                                                                                                                          
+    public float damage;
+    public float maxDamage;
+    public int arrowCount;
 
-    public float speed = 1f;
-    public float tempSpeed = 1f;
+    public float speed;
+    public float tempSpeed;
     //e
-    public float eDuration = 1f;
-    public float eCoolDown = 1f;
-    public float animSpeed = 1f;
+    public float eDuration;
+    public float eCoolDown;
+    public float animSpeed;
 
     //q
-    public float qDuration = 1f;
-    public float qCoolDown = 1f;
-    public float qanimSpeed = 1f;
+    public float qDuration;
+    public float qCoolDown;
+    public float qanimSpeed;
 
     [Header("Object Spawn")]
     //Object to Spawn
@@ -61,9 +66,9 @@ public class SO_Item : ScriptableObject
     public bool isVisible = false;
 
     //Spawnable Item multiplier
-    public float passiveCD = 1f;
-    public float passiveDMG = 1f;
-    public float passiveArea = 1f;
+    public float passiveCD;
+    public float passiveDMG;
+    public float passiveArea;
 
     TerrainData[] tData;
     Vector3[] terrainPos;

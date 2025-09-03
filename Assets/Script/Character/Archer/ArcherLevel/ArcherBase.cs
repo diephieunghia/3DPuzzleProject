@@ -62,7 +62,7 @@ public class ArcherBase : BaseChar
             currentEXP -= bb.maxEXP;
             bb.level += 1;
             //increase coins earn multiplier
-            bb.coinsMultiplier += 0.1f;
+            bb.coinsMultiplier += 0.01f;
             UIManager.ins.LevelChange(bb.maxEXP, bb.maxEXP, bb.level);           
             //max exp will increase here         
             bb.maxEXP += 10f;
@@ -75,11 +75,17 @@ public class ArcherBase : BaseChar
     //StatUp
     public void StatUP(SO_Item item)
     {
-        bb.damage*=item.damage;
-        bb.maxDamage*=item.maxDamage;
+        bb.dashCoolDown += bb.dashCoolDown * item.dashCoolDown;
+        bb.dashCoolDown = Mathf.Max(0.1f, bb.dashCoolDown);
+        bb.health += item.health;
+        bb.health=Mathf.Max(1, bb.health);
+        bb.armor += bb.armor * item.armor;
+        bb.damage+=bb.damage * item.damage;
+        bb.maxDamage+=item.maxDamage;
         bb.arrowCount=Mathf.Max(bb.arrowCount,item.arrowCount);
-        bb.speed*=item.speed;
-        bb.tempSpeed*=item.tempSpeed;
+        bb.speed+=bb.speed*item.speed;
+        bb.tempSpeed+=bb.tempSpeed*item.tempSpeed;
+
     }
     public void Special(SO_Item item)
     {
@@ -88,6 +94,7 @@ public class ArcherBase : BaseChar
     public void Skill(SO_Item item)
     {
         int fireIcetemp=-1;
+        //update arrow from 1 to 3
         if (item.upgradeType == "ArrowCount")
         {
             bb.arrowCount = item.arrowCount;
@@ -113,6 +120,7 @@ public class ArcherBase : BaseChar
                         bb.currentArrow[i].GetComponent<Arrow>().FlipFireIce(false);
             }
         }
+        //update arrow to have fire ice effect
         else if (item.upgradeType == "FireIce")
         {
             bb.qSkill = false ;
@@ -120,6 +128,7 @@ public class ArcherBase : BaseChar
             //set fire to future spawn arrow
             ArrowPool.ins.fireIce = 1;
         }
+
     }
 
     public void getCharStat()

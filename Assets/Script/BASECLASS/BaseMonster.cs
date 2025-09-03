@@ -8,6 +8,7 @@ public class BaseMonster : MonoBehaviour,IDamageable
 {
     [SerializeField] SO_Mons stat;
     public SO_Mons MonsterStat => stat;
+    NavMeshAgent navMesh;
     //temp stat
     float maxHealth;
     float damage;
@@ -33,9 +34,17 @@ public class BaseMonster : MonoBehaviour,IDamageable
     //Collider to disable
     public Collider head;
     public Collider body;
+    //----vfx----
+    GameObject vfx;
+    //------------test-------------
+    float burnTime = 1f;
+    bool burning = false;
+    bool iceSlow = false;
+
     void Awake()
     {
         GameManager.ins.monsterStatIncrease += IncreaseStat;
+        navMesh=GetComponent<NavMeshAgent>();
     }
     private void Start()
     {
@@ -54,6 +63,7 @@ public class BaseMonster : MonoBehaviour,IDamageable
         coolDown = stat.baseCoolDown;
         head.enabled = true;
         body.enabled = true;
+        navMesh.isStopped = false;
     }
     public void TakeDamage(float damage, Vector3 hitPoint, Vector3 hitDirection, GameObject attacker,IDamageable.Body hitPart)
     {
@@ -92,10 +102,24 @@ public class BaseMonster : MonoBehaviour,IDamageable
                     
         }
     }
-    private void OnDrawGizmos()
-    {
-        
-        Gizmos.DrawWireCube(center.position, size);
+    void DamageOverTime(float damage) {
+        currentHeath -= damage;
+        currentHeath = Mathf.Clamp(currentHeath, 0, maxHealth);
+        UIManager.ins.ChangeIconDamage();
+        if (currentHeath <= 0)
+        {
+            Attack = false;
+            death = true;
+            stat.velocity = 0;
+            //send coins
+            GameManager.ins.LevelChange?.Invoke(stat.expDrop, stat.coins);
+            //trigger Death animation
+            DeathTrigger.Invoke();
+            //disable collider
+            head.enabled = false;
+            body.enabled = false;
+            GameManager.ins.monsterOnFieldCount--;
+        }
     }
     void Despawn()
     {
@@ -108,28 +132,58 @@ public class BaseMonster : MonoBehaviour,IDamageable
         body.enabled = true;
         monsterPool.ReturnObject(gameObject);
     }
-
-    public void FireDamage(float damage, Vector3 hitPoint, Vector3 hitDirection, GameObject attacker, IDamageable.Body type)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void IceDamage(float damage, Vector3 hitPoint, Vector3 hitDirection, GameObject attacker, IDamageable.Body type)
-    {
-        throw new NotImplementedException();
-    }
     void IncreaseStat() {
-        maxHealth *= 1.2f;
+        maxHealth += 1.2f;
         damage += 1.2f;
         currentHeath = maxHealth;
         //stat.expDrop = Mathf.RoundToInt(stat.expDrop * 1.2f);
     }
     public void IncreaseStatWithLevel(int currentLevel)
     {
-        maxHealth *= Mathf.Pow(1.2f,currentLevel-1);
+        maxHealth += 1.2f * (currentLevel - 1);
         damage += 1.2f*( currentLevel-1);       
         currentHeath = maxHealth;
         //expDrop = Mathf.RoundToInt(stat.expDrop * Mathf.Pow(1.2f, currentLevel-1));
     }
 
+    //----------------------Elemental damage--------------------------
+
+    public void DamgeType(bool fire, bool ice,float damage)
+    {
+        if (fire)
+        {
+            //spawn fire vfx
+            vfx= EffectSpawn.ins.GetEffect(EffectName.Fire);
+            //take damage overtime
+            if (!burning)
+            {
+                burning = true;
+                StartCoroutine(FireDamgeOverTime(damage, burnTime)); 
+            }
+        }
+        else if (ice)
+        {
+            navMesh.speed -= navMesh.speed * damage / 100;
+            navMesh.speed=Mathf.Max(1,navMesh.speed);
+
+        }
+    }
+    IEnumerator FireDamgeOverTime(float damage,float burnTime)
+    {
+        if (burnTime <= 0)
+        {
+            burning = false;
+            Debug.Log("Burnt done");
+            EffectSpawn.ins.ReturnEffect(vfx, EffectName.Fire);
+            yield return null; 
+        }
+        DamageOverTime(damage);
+        burnTime -= Time.deltaTime;
+        yield return new WaitForSeconds(0.1f);
+    }
+    //ice damage problem
+    IEnumerator IceReturnSpeed()
+    {
+        yield return new WaitForSeconds(1f);
+    }
 }

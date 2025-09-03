@@ -19,22 +19,25 @@ MonoBehaviour:
   type: 2
   rarity: 0
   textColor: {r: 1, g: 1, b: 1, a: 1}
+  health: 0
+  armor: 0
+  skillCD: 0
+  dashCoolDown: 0
   upgradeType: ArrowCount
-  damage: 1
-  maxDamage: 1
+  damage: 0
+  maxDamage: 0
   arrowCount: 3
-  fireIce: 0
-  speed: 1
-  tempSpeed: 1
-  eDuration: 1
-  eCoolDown: 1
-  animSpeed: 1
-  qDuration: 1
-  qCoolDown: 1
+  speed: 0
+  tempSpeed: 0
+  eDuration: 0
+  eCoolDown: 0
+  animSpeed: 0
+  qDuration: 0
+  qCoolDown: 0
   qanimSpeed: 1
   terrain: []
   summon: {fileID: 0}
   isVisible: 0
-  passiveCD: 1
-  passiveDMG: 1
-  passiveArea: 1
+  passiveCD: 0
+  passiveDMG: 0
+  passiveArea: 0

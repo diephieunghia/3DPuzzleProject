@@ -19,19 +19,22 @@ MonoBehaviour:
   type: 3
   rarity: 0
   textColor: {r: 1, g: 1, b: 1, a: 1}
+  health: 0
+  armor: 0
+  skillCD: 0
+  dashCoolDown: 0
   upgradeType: 
-  damage: 1
-  maxDamage: 1
-  arrowCount: 1
-  fireIce: 0
-  speed: 1
-  tempSpeed: 1
-  eDuration: 1
-  eCoolDown: 1
-  animSpeed: 1
-  qDuration: 1
-  qCoolDown: 1
-  qanimSpeed: 1
+  damage: 0
+  maxDamage: 0
+  arrowCount: 0
+  speed: 0
+  tempSpeed: 0
+  eDuration: 0
+  eCoolDown: 0
+  animSpeed: 0
+  qDuration: 0
+  qCoolDown: 0
+  qanimSpeed: 0
   terrain:
   - {fileID: 6693900148525591959, guid: 572e5107e739ffc4587579c13a083fd7, type: 3}
   - {fileID: 4430803956910037161, guid: 6f8238ce1d4021947a3ac0e94a832e9c, type: 3}

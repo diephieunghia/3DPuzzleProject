@@ -162,4 +162,9 @@ public class UIManager : MonoBehaviour
     {
 
     }
+
+    public void UpdateResetCost(int cost)
+    {
+        reset.text = string.Format("{0}", cost);
+    }
 }
