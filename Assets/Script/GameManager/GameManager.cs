@@ -2,10 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[RequireComponent(typeof(ChangeDate))]
+[RequireComponent(typeof(ChangeDate),typeof(AssignCard))]
 public class GameManager : MonoBehaviour
 {
     ChangeDate changeDate;
+    AssignCard assignCard;
+    public AssignCard AssignCard => assignCard;
     public static GameManager ins { get; private set; }
     //Level Stat
     [SerializeField] SO_Level statScale;
@@ -57,6 +59,7 @@ public class GameManager : MonoBehaviour
         else
             ins = this;
         changeDate = GetComponent<ChangeDate>();
+        assignCard=GetComponent<AssignCard>();
         changeDate.ChangeSkyBox(0);
 
         CountDownComplete += MoveToStore;

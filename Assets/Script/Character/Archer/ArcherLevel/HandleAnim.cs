@@ -6,7 +6,6 @@ public class HandleAnim : MonoBehaviour
 {
     ArcherAction archerAction;
     [SerializeField] Animator anim;
-
     public static HandleAnim ins;
     private void Awake()
     {
@@ -102,6 +101,7 @@ public class HandleAnim : MonoBehaviour
         }
         return false;
     }
+    //manual return if stuck in eskill
     public void ManualReturnIdle()
     {
         if (!archerAction.bb.skill)
@@ -110,7 +110,14 @@ public class HandleAnim : MonoBehaviour
                 anim.SetBool("ESkill", false);
             }
         
-
+    }
+    //manual return if stuck in draw in store
+    public void ManualReturnIdleInStore()
+    {
+        archerAction.bb.speed = archerAction.bb.speed * 2;
+        if (archerAction.bb.storeAction)
+            anim.SetBool("Draw",false);
+        
     }
 
 }

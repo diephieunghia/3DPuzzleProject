@@ -15,7 +15,7 @@ MonoBehaviour:
   health: 200
   damage: 20
   speed: 3.5
-  baseCoolDown: 3
+  baseCoolDown: 5
   attackRate: 3
   velocity: 0
   expDrop: 250

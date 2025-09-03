@@ -8,7 +8,7 @@ public class MageAttack : MonoBehaviour
     MageBehavior m_Behavior;
     MageAnim anim;
     BaseMonster m_Monster;
-    float countDown = 3f;
+    float countDown = 5f;
     [SerializeField] GameObject fireBallHolder;
 
     void Start()

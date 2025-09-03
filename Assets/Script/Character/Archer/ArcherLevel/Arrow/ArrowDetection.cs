@@ -39,7 +39,7 @@ public class ArrowDetection : MonoBehaviour
             // If the arrow is still parented to the archer, ignore the hit
             return;
         }
-        Debug.Log("Arrow hit: " + other.name);
+
         IDamageable damageable = other.GetComponentInParent<IDamageable>();
         //get contact point
         Vector3 closetPoint=other.ClosestPointOnBounds(other.transform.position);
@@ -48,10 +48,11 @@ public class ArrowDetection : MonoBehaviour
             IDamageable.Body type=IDamageable.Body.Body;
             float multiplier = 1f;
             if (other.CompareTag("Head"))
-            { 
+            {
+                Debug.Log("Arrow hit: " + other.name);
                 multiplier = 2f;
                 type = IDamageable.Body.Head;
-            }       
+            }
             damageable.TakeDamage(arrow.Damage * multiplier, closetPoint, transform.forward, gameObject,type);
             damageable.DamgeType(arrow.Fire, arrow.Ice,2);
         }

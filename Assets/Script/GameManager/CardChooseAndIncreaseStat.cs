@@ -42,6 +42,7 @@ public class CardChooseAndIncreaseStat : MonoBehaviour
     public void AssignItem(SO_Item _item)
     {
         item = _item;
+        item.hideFlags = HideFlags.DontSave;
     }
 
     void DisableCard()
@@ -81,6 +82,7 @@ public class CardChooseAndIncreaseStat : MonoBehaviour
             GameManager.ins.UpdateCoinsAmount?.Invoke(-item.cost);
             //reduce count for item if item has 0 then substract from total item
             item.ReduceCount();
+            GameManager.ins.AssignCard.CheckItemAmountRemoveFromList(item);
             GameManager.ins.playerPressBuy = false;
             //remove from event after buy successfully
             GameManager.ins.BuyItem -= BuyItem;

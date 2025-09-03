@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Net;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class Axe : MonoBehaviour
@@ -24,23 +25,17 @@ public class Axe : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Triggered with " + other.gameObject.name);
-    }
-
-    void DrawRay()
-    {    
-        detectRay.direction = rayEnd.transform.position-rayStart.transform.position;
-        Debug.DrawRay(rayStart.transform.position, detectRay.direction*distance, Color.red);
-        if(Physics.Raycast(rayStart.transform.position, detectRay.direction, out RaycastHit hit, distance,layerMask))
+        if (baseMonster.Attack)
         {
-            if(hit.collider.gameObject.GetComponent<IDamageable>() != null)
+            Debug.Log("Triggered with " + other.gameObject.name);
+            IDamageable playerTakeDamage = other.GetComponent<IDamageable>();
+            if (playerTakeDamage != null)
             {
-                hit.collider.gameObject.GetComponent<IDamageable>().TakeDamage(baseMonster.MonsterStat.damage,hit.transform.position,detectRay.direction,gameObject,IDamageable.Body.Body);
-                Debug.Log("Hit " + hit.collider.gameObject.name);
-            }           
-            
+                playerTakeDamage.TakeDamage(baseMonster.MonsterStat.damage, transform.position, transform.forward, gameObject, IDamageable.Body.Body);
+            }
         }
-
     }
+
+   
 
 }

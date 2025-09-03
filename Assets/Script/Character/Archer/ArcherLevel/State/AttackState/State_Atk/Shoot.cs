@@ -11,6 +11,7 @@ public class Shoot : IState
 
     float elapsedTime = 0;
     float timeFullCharge = 2.5f;
+    float halfSpeed;
     public Shoot(ArcherBlackBoard bb, Transform transform, CharacterController controller,AttackStateHandler atkHandler)
     {
         atkbb = bb;
@@ -20,6 +21,7 @@ public class Shoot : IState
     }
     public void Enter() {
         HandleAnim.ins.SetAttackAnim();
+        halfSpeed = atkbb.speed / 2;
     }
 
     public void Execute()
@@ -44,7 +46,7 @@ public class Shoot : IState
             elapsedTime += Time.deltaTime;
             float completion = elapsedTime / timeFullCharge;
 
-            atkbb.speed = Mathf.Lerp(atkbb.speed, atkbb.speed/2, completion);            
+            atkbb.speed = Mathf.Lerp(atkbb.speed, halfSpeed, completion);            
             atkbb.force=Mathf.Lerp(8,atkbb.maxForce, completion);
             atkbb.damage = Mathf.Lerp(20, atkbb.maxDamage, completion);
             return;

@@ -1240,6 +1240,7 @@ MonoBehaviour:
     m_Bits: 128
   axeEnable: 0
   center: {fileID: 8870216366760003195}
+  headEffectPosition: {x: 0, y: 1.747, z: 0.402}
   size: {x: 3.03, y: 2.99, z: 8.85}
   head: {fileID: 7851678330401076143}
   body: {fileID: 3100126208573240047}

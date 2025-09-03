@@ -15,7 +15,7 @@ public class ArcherBase : BaseChar
     float currentHealth;
 
     bool invicible = false;
-    float inviTime = .5f;
+    float inviTime = 1.25f;
     protected override void Awake()
     {
         base.Awake();
@@ -37,7 +37,6 @@ public class ArcherBase : BaseChar
         float tempDamage = damage;
         if (invicible)
         {
-            Debug.Log("In invicible mode");
             return; 
         }
         Debug.Log("Hit");
@@ -50,7 +49,9 @@ public class ArcherBase : BaseChar
         
     }
     IEnumerator GodMode()
-    { 
+    {
+        if (invicible) yield break;
+        invicible = true;
         yield return new WaitForSeconds(inviTime);
         invicible = false;
     }

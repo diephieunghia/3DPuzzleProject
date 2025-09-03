@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -15,7 +15,7 @@ MonoBehaviour:
   text: Arrow has effect
   icon: {fileID: 21300000, guid: 650e2b89b491981428275c5e24018b9b, type: 3}
   cost: 1
-  quantity: 0
+  quantity: 1
   type: 2
   rarity: 0
   textColor: {r: 1, g: 1, b: 1, a: 1}

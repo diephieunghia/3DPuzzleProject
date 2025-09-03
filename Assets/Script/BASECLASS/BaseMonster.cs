@@ -29,6 +29,7 @@ public class BaseMonster : MonoBehaviour,IDamageable
     public Action HeadHit;
     public Action BodyHit;
     public Transform center;
+    public Vector3 headEffectPosition;
     public Vector3 size;
 
     //Collider to disable
@@ -68,9 +69,25 @@ public class BaseMonster : MonoBehaviour,IDamageable
     }
     public void TakeDamage(float damage, Vector3 hitPoint, Vector3 hitDirection, GameObject attacker,IDamageable.Body hitPart)
     {
+        //play effect first
+        if (hitPart == IDamageable.Body.Body)
+        {
+            GameObject effect = EffectSpawn.ins.GetEffect(EffectName.Normal);
+            effect.transform.position = hitPoint;
+            BodyHit.Invoke();
+        }
+        else
+        {
+            GameObject effect = EffectSpawn.ins.GetEffect(EffectName.Head);
+            effect.transform.position = transform.TransformPoint(headEffectPosition);
+            HeadHit.Invoke();
+        }
+        //calculate damage
         currentHeath -= damage;
         currentHeath = Mathf.Clamp(currentHeath, 0, maxHealth);
         UIManager.ins.ChangeIconDamage();
+
+
         if (currentHeath <= 0)
         {
             Attack = false;
@@ -84,24 +101,8 @@ public class BaseMonster : MonoBehaviour,IDamageable
             head.enabled = false;
             body.enabled = false;
             GameManager.ins.monsterOnFieldCount--;
-        }
-        else
-        {
-
-            if (hitPart == IDamageable.Body.Body)
-            {
-                GameObject effect= EffectSpawn.ins.GetEffect(EffectName.Normal);
-                effect.transform.position = hitPoint;
-                BodyHit.Invoke();
-            }
-            else
-            {
-                GameObject effect = EffectSpawn.ins.GetEffect(EffectName.Head);
-                effect.transform.position = hitPoint;
-                HeadHit.Invoke(); 
-            }
-                    
-        }
+        }           
+                                    
     }
     void DamageOverTime(float damage) {
         currentHeath -= damage;
