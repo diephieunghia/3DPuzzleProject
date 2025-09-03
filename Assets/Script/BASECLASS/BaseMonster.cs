@@ -39,7 +39,8 @@ public class BaseMonster : MonoBehaviour,IDamageable
     //------------test-------------
     float burnTime = 1f;
     bool burning = false;
-    bool iceSlow = false;
+    Coroutine IceSpeed;
+
 
     void Awake()
     {
@@ -153,7 +154,9 @@ public class BaseMonster : MonoBehaviour,IDamageable
         if (fire)
         {
             //spawn fire vfx
-            vfx= EffectSpawn.ins.GetEffect(EffectName.Fire);
+            vfx = EffectSpawn.ins.GetEffect(EffectName.Fire);
+            vfx.transform.position = transform.position;
+            vfx.transform.parent = transform;
             //take damage overtime
             if (!burning)
             {
@@ -163,6 +166,9 @@ public class BaseMonster : MonoBehaviour,IDamageable
         }
         else if (ice)
         {
+            if (IceSpeed != null)
+                StopCoroutine(IceSpeed);    
+            IceSpeed = StartCoroutine(IceReturnSpeed());
             navMesh.speed -= navMesh.speed * damage / 100;
             navMesh.speed=Mathf.Max(1,navMesh.speed);
 
@@ -184,6 +190,9 @@ public class BaseMonster : MonoBehaviour,IDamageable
     //ice damage problem
     IEnumerator IceReturnSpeed()
     {
+
         yield return new WaitForSeconds(1f);
+        //wait for 1 sec if take no ice damage then return speed to normal
+        navMesh.speed = stat.speed;
     }
 }

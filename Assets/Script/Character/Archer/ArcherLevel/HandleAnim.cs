@@ -102,5 +102,15 @@ public class HandleAnim : MonoBehaviour
         }
         return false;
     }
+    public void ManualReturnIdle()
+    {
+        if (!archerAction.bb.skill)
+            if (archerAction.bb.eSkill) { 
+                archerAction.bb.eSkill = false; 
+                anim.SetBool("ESkill", false);
+            }
+        
+
+    }
 
 }

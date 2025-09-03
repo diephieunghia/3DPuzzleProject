@@ -39,7 +39,7 @@ public class ArrowDetection : MonoBehaviour
             // If the arrow is still parented to the archer, ignore the hit
             return;
         }
-        //Debug.Log("Arrow hit: " + other.name);
+        Debug.Log("Arrow hit: " + other.name);
         IDamageable damageable = other.GetComponentInParent<IDamageable>();
         //get contact point
         Vector3 closetPoint=other.ClosestPointOnBounds(other.transform.position);

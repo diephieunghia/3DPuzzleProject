@@ -53,11 +53,11 @@ public class CardChooseAndIncreaseStat : MonoBehaviour
 
     void BuyItem()
     {
-        Debug.Log("In Buy Item");
         if (playerInRange && GameManager.ins.playerPressBuy)
         {
             if (GameManager.ins.coinsHeld < item.cost)
             {
+                Debug.Log(GameManager.ins.coinsHeld);
                 //uimanager play text anim
 
                 Debug.Log("Not enough coins");

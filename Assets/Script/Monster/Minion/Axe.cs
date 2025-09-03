@@ -22,7 +22,10 @@ public class Axe : MonoBehaviour
         baseMonster=GetComponentInParent<BaseMonster>();
     }
 
-
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Triggered with " + other.gameObject.name);
+    }
 
     void DrawRay()
     {    

@@ -422,7 +422,7 @@ GameObject:
   - component: {fileID: 2561653488522311361}
   m_Layer: 7
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -465,12 +465,12 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 3
   m_Height: 1.503021
-  m_Radius: 0.2888746
+  m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.005
-  m_Center: {x: -0.009590149, y: 0.751, z: 0.051754}
+  m_Center: {x: 0.14, y: 0.751, z: 0}
 --- !u!95 &2030619301248481084
 Animator:
   serializedVersion: 5
@@ -617,6 +617,7 @@ MonoBehaviour:
   count: 5
   prefab: {fileID: 9033727000160474238, guid: 9220dfe6e6e3fe44aa146192ee80a6ec, type: 3}
   arrowHolder: {fileID: 5816470940474035835}
+  fireIce: -1
 --- !u!114 &7680058384964773076
 MonoBehaviour:
   m_ObjectHideFlags: 0

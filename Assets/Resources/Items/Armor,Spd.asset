@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6516bec3aaa4d74428aa212f5cbe73a9, type: 3}
   m_Name: Armor,Spd
   m_EditorClassIdentifier: 
-  text: Armor +3, speed -1
+  text: Armor +3, speed -2
   icon: {fileID: 21300000, guid: 0d7937d442031a340b12c0d286b67ebe, type: 3}
-  cost: 20
+  cost: 1
   quantity: -1
   type: 0
   rarity: 0
@@ -27,8 +27,8 @@ MonoBehaviour:
   damage: 0
   maxDamage: 0
   arrowCount: 0
-  speed: -1
-  tempSpeed: 0
+  speed: -2
+  tempSpeed: -2
   eDuration: 0
   eCoolDown: 0
   animSpeed: 0

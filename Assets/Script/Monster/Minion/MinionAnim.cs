@@ -48,11 +48,7 @@ public class MinionAnim : MonoBehaviour
     public void DisableAttack()
     {
         monster.Attack = false;
-        monster.axeEnable = true;
-    }
-    public void DisableAxe()
-    {
-        monster.axeEnable = false;
+        
     }
 
 }

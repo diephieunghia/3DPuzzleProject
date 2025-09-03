@@ -122,10 +122,15 @@ public class UIManager : MonoBehaviour
         if (active)
         {
             tabTable.SetActive(true);
-            character.text = string.Format("Max EXP:{0}\r\n" +
-                "Speed:{1}\r\n" +
-                "Arrow Count:{2}\r\n" +
-                "Max Damage:{3}", bb.maxEXP, bb.speed, bb.arrowCount, bb.maxDamage);
+            character.text = string.Format(
+                "Max EXP:{0}\r\n" +
+                "Health:{1}\r\n" +
+                "Armor:{2}\r\n" +
+                "Speed:{3}\r\n" +
+                "Arrow Count:{4}\r\n" +
+                "Max Damage:{5}\r\n"+
+                "DashCoolDown:{6}\r\n"+
+                "ECoolDown:{7}", bb.maxEXP,bb.health,bb.armor, bb.speed, bb.arrowCount, bb.maxDamage,bb.dashCoolDown,bb.eCoolDown);
             //get statscale from game manager
             level.text = string.Format("Level Scale:{0}", GameManager.ins.MonsterScale);
         }
@@ -135,14 +140,17 @@ public class UIManager : MonoBehaviour
     //change coins text UI
     public void CoinsChange(float current,float total)
     {
-        int currencyRound=Mathf.RoundToInt(current);
+        int currencyRound=Mathf.FloorToInt(current);
         coinsEarned.enabled = true;
-        coinsEarned.text = string.Format("+{0}", currencyRound);
+        if(currencyRound>=0)
+            coinsEarned.text = string.Format("+{0}", currencyRound);
+        else
+            coinsEarned.text = string.Format("{0}", currencyRound);
         StartCoroutine(CountCoinTotal(currencyRound,total));
     }
     IEnumerator CountCoinTotal(int current,float total)
     {
-        int totalInt=Mathf.RoundToInt(total);
+        int totalInt=Mathf.FloorToInt(total);
         yield return new WaitForSeconds(0.75f);
         coinsEarned.enabled = false;
         coinsAmountTotal.text = string.Format("Coins: {0}",totalInt);

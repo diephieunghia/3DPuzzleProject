@@ -21,6 +21,7 @@ public class AssignCard : MonoBehaviour
     void Start()
     {
         GameManager.ins.CountDownComplete += AssignCardUI;
+        items = new List<SO_Item>();
     }
 
     

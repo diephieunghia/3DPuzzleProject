@@ -24,13 +24,18 @@ public class Shoot : IState
 
     public void Execute()
     {
-        Debug.Log("Shoot");
         //at store action change back to idle
 
         atkbb.shootRate += Time.deltaTime;
         if (atkbb.aiming == ArcherBlackBoard.Aim.Cancel)
         {
             atkbb.allowShoot = false;
+            for (int i = 0; i < atkbb.arrowCount; i++)
+            {
+                if(atkbb.currentArrow[i]!=null)
+                    ArrowPool.ins.ReturnObject(atkbb.currentArrow[i]);
+                atkbb.currentArrow[i] = null;
+            }
             handler.MoveChangeState(handler.idle);
             atkbb.shootRate = 0f;
         }
@@ -39,7 +44,7 @@ public class Shoot : IState
             elapsedTime += Time.deltaTime;
             float completion = elapsedTime / timeFullCharge;
 
-            atkbb.speed = Mathf.Lerp(atkbb.speed, 2, completion);            
+            atkbb.speed = Mathf.Lerp(atkbb.speed, atkbb.speed/2, completion);            
             atkbb.force=Mathf.Lerp(8,atkbb.maxForce, completion);
             atkbb.damage = Mathf.Lerp(20, atkbb.maxDamage, completion);
             return;
@@ -66,8 +71,7 @@ public class Shoot : IState
         atkbb.force = 8f;
         atkbb.shootRate = 0f;
         elapsedTime = 0;
-        for (int i = 0; i < atkbb.arrowCount; i++)               
-            atkbb.currentArrow[i] = null;       
+
     }
 
 

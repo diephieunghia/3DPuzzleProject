@@ -29,7 +29,7 @@ public class ESkill : IState
     {
         Debug.Log("Eskill");
         tempDuration -= Time.deltaTime;
-        if (tempDuration < 0&&(HandleAnim.ins.ReloadESkill(0.3f)||HandleAnim.ins.AnimOverDrawEnd(.4f))) {
+        if (tempDuration < 0&&(HandleAnim.ins.ReloadESkill(0.3f)||HandleAnim.ins.AnimOverDrawEnd(.3f))) {
 
             atkbb.skill = false;
             //atkbb.eSkill = false;

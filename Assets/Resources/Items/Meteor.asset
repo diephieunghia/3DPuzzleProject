@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: Meteor
   icon: {fileID: 21300000, guid: 16a719c16c57b484b8a4d30e5887ca48, type: 3}
-  cost: 20
+  cost: 1
   quantity: 1
   type: 3
   rarity: 2
