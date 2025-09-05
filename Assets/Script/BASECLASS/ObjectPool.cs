@@ -36,11 +36,7 @@ public class ObjectPool : MonoBehaviour
 
     public virtual void ReturnObject(GameObject obj)
     {
-        if (poolObjects.Count >= 20)
-        {
-            Destroy(obj);
-            return;
-        }     
+    
         obj.SetActive(false);
         poolObjects.Enqueue(obj);
     }

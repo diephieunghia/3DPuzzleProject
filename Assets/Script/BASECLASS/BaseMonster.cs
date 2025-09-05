@@ -37,11 +37,11 @@ public class BaseMonster : MonoBehaviour,IDamageable
     public Collider body;
     //----vfx----
     GameObject vfx;
+    GameObject iceVfx;
     //------------test-------------
     float burnTime = 1f;
     bool burning = false;
     Coroutine IceSpeed;
-
 
     void Awake()
     {
@@ -101,6 +101,7 @@ public class BaseMonster : MonoBehaviour,IDamageable
             head.enabled = false;
             body.enabled = false;
             GameManager.ins.monsterOnFieldCount--;
+
         }           
                                     
     }
@@ -132,7 +133,20 @@ public class BaseMonster : MonoBehaviour,IDamageable
         }
         head.enabled = true;
         body.enabled = true;
+        //stop ice fire vfx
+        if(vfx != null)
+        {
+            burning = false;
+            vfx.transform.parent = null;
+            vfx.GetComponent<VfxReturn>()?.Manualreturn();
+        }
+        if(iceVfx != null)
+        {
+            iceVfx.transform.parent = null;
+            iceVfx.GetComponent<VfxReturn>()?.Manualreturn();
+        }
         monsterPool.ReturnObject(gameObject);
+        
     }
     void IncreaseStat() {
         maxHealth += 1.2f;
@@ -155,9 +169,12 @@ public class BaseMonster : MonoBehaviour,IDamageable
         if (fire)
         {
             //spawn fire vfx
-            vfx = EffectSpawn.ins.GetEffect(EffectName.Fire);
-            vfx.transform.position = transform.position;
-            vfx.transform.parent = transform;
+            if (vfx == null)
+            {
+                vfx = EffectSpawn.ins.GetEffect(EffectName.Fire);
+                vfx.transform.position = transform.position;
+                vfx.transform.parent = transform;
+            }
             //take damage overtime
             if (!burning)
             {
@@ -167,6 +184,12 @@ public class BaseMonster : MonoBehaviour,IDamageable
         }
         else if (ice)
         {
+            if (iceVfx==null)
+            {
+                iceVfx = EffectSpawn.ins.GetEffect(EffectName.Ice);
+                iceVfx.transform.position = transform.position;
+                iceVfx.transform.parent = transform;
+            }
             if (IceSpeed != null)
                 StopCoroutine(IceSpeed);    
             IceSpeed = StartCoroutine(IceReturnSpeed());

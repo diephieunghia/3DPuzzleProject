@@ -27,7 +27,6 @@ public class Axe : MonoBehaviour
     {
         if (baseMonster.Attack)
         {
-            Debug.Log("Triggered with " + other.gameObject.name);
             IDamageable playerTakeDamage = other.GetComponent<IDamageable>();
             if (playerTakeDamage != null)
             {

@@ -3,31 +3,39 @@
   "WorkspaceRootPath": "O:\\Green Unity\\3DPuzzleProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|O:\\Green Unity\\3DPuzzleProject\\assets\\script\\character\\archer\\archerlevel\\arrow\\arrowdetection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\character\\archer\\archerlevel\\arrow\\arrowdetection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|o:\\green unity\\3dpuzzleproject\\assets\\script\\monster\\minion\\minionanim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\minion\\minionanim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|o:\\green unity\\3dpuzzleproject\\assets\\script\\monster\\minion\\axe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\minion\\axe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|o:\\green unity\\3dpuzzleproject\\assets\\script\\vfxasset\\vfxreturn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\vfxasset\\vfxreturn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|o:\\green unity\\3dpuzzleproject\\assets\\script\\character\\archer\\archerlevel\\archerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\character\\archer\\archerlevel\\archerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|o:\\green unity\\3dpuzzleproject\\assets\\script\\character\\archer\\archerlevel\\state\\attackstate\\state_atk\\eskill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\character\\archer\\archerlevel\\state\\attackstate\\state_atk\\eskill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|o:\\green unity\\3dpuzzleproject\\assets\\script\\baseclass\\objectpool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\baseclass\\objectpool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|o:\\green unity\\3dpuzzleproject\\assets\\script\\baseclass\\basemonster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\baseclass\\basemonster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|o:\\green unity\\3dpuzzleproject\\assets\\script\\ui\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\ui\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|o:\\green unity\\3dpuzzleproject\\assets\\script\\gamemanager\\effectspawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\gamemanager\\effectspawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|o:\\green unity\\3dpuzzleproject\\assets\\script\\gamemanager\\cardchooseandincreasestat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|o:\\green unity\\3dpuzzleproject\\assets\\script\\gamemanager\\assigncard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\gamemanager\\assigncard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|O:\\Green Unity\\3DPuzzleProject\\assets\\script\\monster\\minion\\axe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\minion\\axe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|o:\\green unity\\3dpuzzleproject\\assets\\script\\character\\archer\\archerlevel\\arrow\\arrowdetection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\character\\archer\\archerlevel\\arrow\\arrowdetection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|O:\\Green Unity\\3DPuzzleProject\\assets\\script\\gamemanager\\cardchooseandincreasestat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\gamemanager\\cardchooseandincreasestat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -38,82 +46,95 @@
       "DocumentGroups": [
         {
           "DockedWidth": 283,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "BaseMonster.cs",
-              "DocumentMoniker": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\BASECLASS\\BaseMonster.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\BASECLASS\\BaseMonster.cs",
-              "ToolTip": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\BASECLASS\\BaseMonster.cs",
-              "RelativeToolTip": "Assets\\Script\\BASECLASS\\BaseMonster.cs",
-              "ViewState": "AgIAAIgAAAAAAAAAAIAxwJwAAAA9AAAAAAAAAA==",
+              "Title": "EffectSpawn.cs",
+              "DocumentMoniker": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\GameManager\\EffectSpawn.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\GameManager\\EffectSpawn.cs",
+              "ToolTip": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\GameManager\\EffectSpawn.cs",
+              "RelativeToolTip": "Assets\\Script\\GameManager\\EffectSpawn.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-03T08:17:07.214Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UIManager.cs",
-              "DocumentMoniker": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\UI\\UIManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\UI\\UIManager.cs",
-              "ToolTip": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\UI\\UIManager.cs",
-              "RelativeToolTip": "Assets\\Script\\UI\\UIManager.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAIAzwIQAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-03T07:46:28.757Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ESkill.cs",
-              "DocumentMoniker": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\Character\\Archer\\ArcherLevel\\State\\AttackState\\State_Atk\\ESkill.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Character\\Archer\\ArcherLevel\\State\\AttackState\\State_Atk\\ESkill.cs",
-              "ToolTip": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\Character\\Archer\\ArcherLevel\\State\\AttackState\\State_Atk\\ESkill.cs",
-              "RelativeToolTip": "Assets\\Script\\Character\\Archer\\ArcherLevel\\State\\AttackState\\State_Atk\\ESkill.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAcwB8AAABjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T09:09:34.703Z",
+              "WhenOpened": "2025-09-05T07:41:22.798Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ArcherBase.cs",
-              "DocumentMoniker": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\Character\\Archer\\ArcherLevel\\ArcherBase.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Character\\Archer\\ArcherLevel\\ArcherBase.cs",
-              "ToolTip": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\Character\\Archer\\ArcherLevel\\ArcherBase.cs",
-              "RelativeToolTip": "Assets\\Script\\Character\\Archer\\ArcherLevel\\ArcherBase.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAUwDUAAAAyAAAAAAAAAA==",
+              "Title": "ObjectPool.cs",
+              "DocumentMoniker": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\BASECLASS\\ObjectPool.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\BASECLASS\\ObjectPool.cs",
+              "ToolTip": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\BASECLASS\\ObjectPool.cs",
+              "RelativeToolTip": "Assets\\Script\\BASECLASS\\ObjectPool.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-03T08:00:00.229Z",
+              "WhenOpened": "2025-09-05T07:40:54.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BaseMonster.cs",
+              "DocumentMoniker": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\BASECLASS\\BaseMonster.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\BASECLASS\\BaseMonster.cs",
+              "ToolTip": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\BASECLASS\\BaseMonster.cs",
+              "RelativeToolTip": "Assets\\Script\\BASECLASS\\BaseMonster.cs",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAIwJAAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-05T06:30:44.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AssignCard.cs",
+              "DocumentMoniker": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\GameManager\\AssignCard.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\GameManager\\AssignCard.cs",
+              "ToolTip": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\GameManager\\AssignCard.cs",
+              "RelativeToolTip": "Assets\\Script\\GameManager\\AssignCard.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA8wDMAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-05T06:24:10.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VfxReturn.cs",
+              "DocumentMoniker": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\VFXAsset\\VfxReturn.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\VFXAsset\\VfxReturn.cs",
+              "ToolTip": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\VFXAsset\\VfxReturn.cs",
+              "RelativeToolTip": "Assets\\Script\\VFXAsset\\VfxReturn.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-05T06:10:27.862Z",
               "EditorCaption": ""
             }
           ]
         },
         {
           "DockedWidth": 303,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "Axe.cs",
               "DocumentMoniker": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\Monster\\Minion\\Axe.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Monster\\Minion\\Axe.cs",
               "ToolTip": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\Monster\\Minion\\Axe.cs",
               "RelativeToolTip": "Assets\\Script\\Monster\\Minion\\Axe.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAA0wBcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAqwB4AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-03T08:54:55.612Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "CardChooseAndIncreaseStat.cs",
               "DocumentMoniker": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\GameManager\\CardChooseAndIncreaseStat.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\GameManager\\CardChooseAndIncreaseStat.cs",
@@ -126,15 +147,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "ArrowDetection.cs",
               "DocumentMoniker": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\Character\\Archer\\ArcherLevel\\Arrow\\ArrowDetection.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Character\\Archer\\ArcherLevel\\Arrow\\ArrowDetection.cs",
               "ToolTip": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\Character\\Archer\\ArcherLevel\\Arrow\\ArrowDetection.cs",
               "RelativeToolTip": "Assets\\Script\\Character\\Archer\\ArcherLevel\\Arrow\\ArrowDetection.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAA7wCkAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAcwDoAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-28T09:03:14.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MinionAnim.cs",
+              "DocumentMoniker": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\Monster\\Minion\\MinionAnim.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Monster\\Minion\\MinionAnim.cs",
+              "ToolTip": "O:\\Green Unity\\3DPuzzleProject\\Assets\\Script\\Monster\\Minion\\MinionAnim.cs",
+              "RelativeToolTip": "Assets\\Script\\Monster\\Minion\\MinionAnim.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAswDAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-05T07:18:13.164Z",
               "EditorCaption": ""
             }
           ]

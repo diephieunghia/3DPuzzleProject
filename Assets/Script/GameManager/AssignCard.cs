@@ -50,11 +50,6 @@ public class AssignCard : MonoBehaviour
         if (item.quantity == 0)
         { 
             items.Remove(item);
-            Debug.Log("remove " + item.name);
-            for(int i = 0; i < items.Count; i++)
-            {
-                Debug.Log(items[i].name);
-            }
             return true;
         }
         return false;
