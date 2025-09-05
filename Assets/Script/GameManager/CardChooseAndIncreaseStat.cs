@@ -72,7 +72,7 @@ public class CardChooseAndIncreaseStat : MonoBehaviour
                 archer.Special(item);
             else if (item.type == ItemType.Passive)
             {
-                item.SpawnObject(true, rand, archer.BB);
+                item.SpawnObject(item.isVisible, rand, archer.BB);
             }
             else if (item.type == ItemType.Skill)
             {

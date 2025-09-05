@@ -2,11 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[RequireComponent(typeof(ChangeDate),typeof(AssignCard))]
+[RequireComponent(typeof(ChangeDate),typeof(AssignCard),typeof(GameCompleteOrDie))]
 public class GameManager : MonoBehaviour
 {
     ChangeDate changeDate;
     AssignCard assignCard;
+    GameCompleteOrDie completeorDie;
     public AssignCard AssignCard => assignCard;
     public static GameManager ins { get; private set; }
     //Level Stat
@@ -60,6 +61,7 @@ public class GameManager : MonoBehaviour
             ins = this;
         changeDate = GetComponent<ChangeDate>();
         assignCard=GetComponent<AssignCard>();
+        completeorDie = GetComponent<GameCompleteOrDie>();
         changeDate.ChangeSkyBox(0);
 
         CountDownComplete += MoveToStore;
@@ -143,8 +145,5 @@ public class GameManager : MonoBehaviour
         //......increase cost.....
         resetCost += resetCost + tempCurrentLevel;
         UIManager.ins.UpdateResetCost((int)Mathf.Round(resetCost));
-
-
-
     }
 }

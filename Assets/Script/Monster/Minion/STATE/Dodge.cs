@@ -33,8 +33,8 @@ public class Dodge : IState
         if (NavMesh.SamplePosition(randomPoint, out hit, .5f, NavMesh.AllAreas))
         {
             agent.stoppingDistance = 2;
-            agent.speed = 50;
-            agent.acceleration = 30f;
+            agent.speed = monsterStat.MonsterStat.speed * 10f;
+            agent.acceleration = monsterStat.MonsterStat.speed*6f;
             agent.SetDestination(hit.position);
             agent.updateRotation = false;
             agent.transform.rotation = Quaternion.LookRotation(deltaDistance);

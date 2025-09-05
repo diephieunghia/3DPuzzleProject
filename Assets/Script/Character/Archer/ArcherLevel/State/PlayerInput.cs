@@ -119,7 +119,8 @@ public class PlayerInput
             ArrowPool.ins.fireIce = (ArrowPool.ins.fireIce==1) ? 0 : 1;
         }
     }
-    // E open Store
+    // E open Store 
+    // R reset Item
     void ActionAtStore()
     {
         if (Input.GetKeyDown(KeyCode.E))

@@ -50,6 +50,9 @@ public class UIManager : MonoBehaviour
     [Header("FlashColor")]
     public Color flashColor;
     public Color originColor;
+
+    [Header("DamageBlood")]
+    public Image bloodDamage;
     private void Awake()
     {
         if (ins != null && ins != this)
@@ -57,9 +60,6 @@ public class UIManager : MonoBehaviour
         else
             ins = this;
                 
-    }
-    private void Start()
-    {
     }
 
     //change to cross when hit
