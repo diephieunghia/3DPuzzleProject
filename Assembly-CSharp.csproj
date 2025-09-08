@@ -90,6 +90,7 @@
     <Compile Include="Assets\Script\BASECLASS\SO_Item.cs" />
     <Compile Include="Assets\Script\GameManager\ExitShop.cs" />
     <Compile Include="Assets\Script\GameManager\GameCompleteOrDie.cs" />
+    <Compile Include="Assets\Script\Monster\Boss1\BossBehavior.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\HandleAnim.cs" />
     <Compile Include="Assets\Script\Monster\Minion\MinionAnim.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\SkillHandler\SkillHandler.cs" />
@@ -125,6 +126,7 @@
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\PlayerInput.cs" />
     <Compile Include="Assets\Script\GameManager\GameManager.cs" />
     <Compile Include="Assets\Script\Items\ItemGetData.cs" />
+    <Compile Include="Assets\Script\Monster\Boss1\BossMoveHandler.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\Arrow\Arrow.cs" />
     <Compile Include="Assets\Script\Monster\Minion\Minion\MinionMoveHandler.cs" />
     <Compile Include="Assets\Script\GameManager\CardChooseAndIncreaseStat.cs" />

@@ -49,7 +49,6 @@ public class ArrowDetection : MonoBehaviour
             float multiplier = 1f;
             if (other.CompareTag("Head"))
             {
-                Debug.Log("Arrow hit: " + other.name);
                 multiplier = 2f;
                 type = IDamageable.Body.Head;
             }

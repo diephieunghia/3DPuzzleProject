@@ -15,7 +15,7 @@ public class ArcherBase : BaseChar
     float currentHealth;
 
     bool invicible = false;
-    float inviTime = 1.25f;
+    public float inviTime = 1.25f;
     protected override void Awake()
     {
         base.Awake();

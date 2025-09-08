@@ -45,7 +45,7 @@ public class BaseMonster : MonoBehaviour,IDamageable
 
     void Awake()
     {
-        GameManager.ins.monsterStatIncrease += IncreaseStat;
+        
         navMesh=GetComponent<NavMeshAgent>();
     }
     private void Start()
@@ -56,7 +56,8 @@ public class BaseMonster : MonoBehaviour,IDamageable
         coolDown = stat.baseCoolDown;
         expDrop = stat.expDrop;
         GameManager.ins.CountDownComplete += Despawn;
-        
+        GameManager.ins.monsterStatIncrease += IncreaseStat;
+
     }
     public void EnableValue() {         
         currentHeath = maxHealth;
@@ -74,13 +75,14 @@ public class BaseMonster : MonoBehaviour,IDamageable
         {
             GameObject effect = EffectSpawn.ins.GetEffect(EffectName.Normal);
             effect.transform.position = hitPoint;
-            BodyHit.Invoke();
+            BodyHit?.Invoke();
+            
         }
         else
         {
             GameObject effect = EffectSpawn.ins.GetEffect(EffectName.Head);
             effect.transform.position = transform.TransformPoint(headEffectPosition);
-            HeadHit.Invoke();
+            HeadHit?.Invoke();
         }
         //calculate damage
         currentHeath -= damage;
@@ -96,14 +98,12 @@ public class BaseMonster : MonoBehaviour,IDamageable
             //send coins
             GameManager.ins.LevelChange?.Invoke(stat.expDrop,stat.coins);
             //trigger Death animation
-            DeathTrigger.Invoke();
+            DeathTrigger?.Invoke();
             //disable collider
             head.enabled = false;
             body.enabled = false;
             GameManager.ins.monsterOnFieldCount--;
-
-        }           
-                                    
+        }
     }
     void DamageOverTime(float damage) {
         currentHeath -= damage;
