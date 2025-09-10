@@ -10,6 +10,7 @@ public class FireBallDetection : MonoBehaviour
     ProjectileMove firebalMove;
     ParticleSystem pSystem;
     float damage=0;
+    public float Damage { set { damage = value; } }
     void Start()
     {
         firebalMove = GetComponent<ProjectileMove>();

@@ -16,7 +16,7 @@ MonoBehaviour:
   damage: 20
   speed: 8
   baseCoolDown: 1
-  attackRate: 0
+  attackRate: 2
   velocity: 0
   expDrop: 400
   coins: 50

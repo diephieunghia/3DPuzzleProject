@@ -23,10 +23,9 @@ public class ProjectileMove : MonoBehaviour
         transform.Translate(monsterDirection*Time.deltaTime*speed);
     }
 
-    public void GetDirection(Vector3 direction, Quaternion rotation, float damage)
+    public void GetDirection(Vector3 direction, Quaternion rotation)
     {
         monsterDirection = direction;
-        this.damage=damage;
         speed = SpeedTest;
 
         child = gameObject.GetComponentsInChildren<Transform>();
@@ -36,9 +35,8 @@ public class ProjectileMove : MonoBehaviour
             Quaternion lookRotation = Quaternion.LookRotation(direction);
             child[i].rotation = lookRotation* Quaternion.Euler(-90, 0, 0);
             
-        }   
-        //pass damage to fireball detection
-        fireballDetect.getDamage(damage);
+        }
+
     }
 
 }

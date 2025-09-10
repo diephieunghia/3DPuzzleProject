@@ -36,7 +36,9 @@ public class MageAttack : MonoBehaviour
     {
         GameObject fireOrb = MageProjectilePool.ins.GetObject();
         fireOrb.transform.position=fireBallHolder.transform.position;
-        fireOrb.GetComponent<ProjectileMove>().GetDirection(transform.forward,transform.rotation,m_Monster.MonsterStat.damage);
+        Debug.Log("fireOrb " + fireOrb);
+        fireOrb.GetComponent<ProjectileMove>().GetDirection(transform.forward,transform.rotation);
+        fireOrb.GetComponent<FireBallDetection>().Damage = m_Monster.MonsterStat.damage;
     }
     void AttackType2()
     {

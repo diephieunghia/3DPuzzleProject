@@ -22,9 +22,8 @@ public class BossChase :IState
 
     public void Execute() { 
        float deltaDistance = agent.remainingDistance - agent.stoppingDistance;
-        Debug.Log("deltaDistance: "+deltaDistance);
-        Debug.Log("remainingDistance: "+agent.remainingDistance);
-       
+        if (deltaDistance >= -12.5f)
+            currentHandler.MoveChangeState(currentHandler.bossKeepDistance);
         agent.SetDestination(currentChar.gameObject.transform.position);
     }
 
