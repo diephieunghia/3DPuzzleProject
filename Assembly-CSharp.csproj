@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{3FAF6531-BB88-FC26-6A77-D0CD1B96C51B}</ProjectGuid>
+    <ProjectGuid>{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -115,6 +115,7 @@
     <Compile Include="Assets\Script\BASECLASS\SO_Mons.cs" />
     <Compile Include="Assets\Script\GameManager\StoreEnter.cs" />
     <Compile Include="Assets\Script\BASECLASS\ObjectPool.cs" />
+    <Compile Include="Assets\Script\Monster\Boss1\State\BossChase.cs" />
     <Compile Include="Assets\Script\Monster\MoveHandler.cs" />
     <Compile Include="Assets\Script\Items\Meteor.cs" />
     <Compile Include="Assets\Script\BASECLASS\SO_Char.cs" />

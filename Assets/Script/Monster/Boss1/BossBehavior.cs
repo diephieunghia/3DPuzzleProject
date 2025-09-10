@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class BossBehavior : MonsterBehavior
 {
-    // Start is called before the first frame update
+    BossMoveHandler bossMoveHandler;
+
     protected override void Start()
     {
         base.Start();
+        agent.speed = monsterstat.MonsterStat.speed;
+        bossMoveHandler = new BossMoveHandler(agent,player,monsterstat);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (!monsterstat.Death)
+            bossMoveHandler.HandleMoveState();
     }
+
+
 }

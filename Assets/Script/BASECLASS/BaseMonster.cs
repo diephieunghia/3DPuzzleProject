@@ -55,7 +55,8 @@ public class BaseMonster : MonoBehaviour,IDamageable
         damage = stat.damage;
         coolDown = stat.baseCoolDown;
         expDrop = stat.expDrop;
-        GameManager.ins.CountDownComplete += Despawn;
+        if(gameObject.tag!="Boss")
+            GameManager.ins.CountDownComplete += Despawn;
         GameManager.ins.monsterStatIncrease += IncreaseStat;
 
     }
