@@ -1,18 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[RequireComponent(typeof(BaseMonster))]
 public class BossAnim : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    BaseMonster baseMonster;
+    private void Awake()
     {
-        
+        baseMonster=GetComponent<BaseMonster>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

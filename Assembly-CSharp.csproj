@@ -114,12 +114,14 @@
     <Compile Include="Assets\Script\Monster\Mage\Projectile\FireBallDetection.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\Arrow\AimToTarget.cs" />
     <Compile Include="Assets\Script\BASECLASS\SO_Mons.cs" />
+    <Compile Include="Assets\Script\Monster\Boss1\State\BossRandMove.cs" />
     <Compile Include="Assets\Script\GameManager\StoreEnter.cs" />
     <Compile Include="Assets\Script\BASECLASS\ObjectPool.cs" />
     <Compile Include="Assets\Script\Monster\Boss1\State\BossChase.cs" />
     <Compile Include="Assets\Script\Monster\MoveHandler.cs" />
     <Compile Include="Assets\Script\Monster\Boss1\BossAnim.cs" />
     <Compile Include="Assets\Script\Items\Meteor.cs" />
+    <Compile Include="Assets\Script\Monster\Boss1\State\BossAttack.cs" />
     <Compile Include="Assets\Script\BASECLASS\SO_Char.cs" />
     <Compile Include="Assets\Script\BASECLASS\SO_Level.cs" />
     <Compile Include="Assets\Script\GameManager\EffectSpawn.cs" />

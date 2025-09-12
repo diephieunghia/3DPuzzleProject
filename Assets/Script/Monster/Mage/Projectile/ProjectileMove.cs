@@ -15,6 +15,7 @@ public class ProjectileMove : MonoBehaviour
     void Start()
     {
         fireballDetect = GetComponent<FireBallDetection>();
+
     }
 
     void Update()

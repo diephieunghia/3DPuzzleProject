@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Boss1
   m_EditorClassIdentifier: 
   health: 1000
-  damage: 20
+  damage: 25
   speed: 8
   baseCoolDown: 1
-  attackRate: 2
+  attackRate: 2.5
   velocity: 0
   expDrop: 400
-  coins: 50
+  coins: 200
+  randomRadius1: 3
+  randomRadius2: 8

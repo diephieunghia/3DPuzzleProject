@@ -17,13 +17,16 @@ public class BossChase :IState
         thisMonster = monster;
     }
 
-    public void Enter() {
+    public void Enter() {    
+        
     }
 
     public void Execute() { 
        float deltaDistance = agent.remainingDistance - agent.stoppingDistance;
         if (deltaDistance >= -12.5f)
             currentHandler.MoveChangeState(currentHandler.bossKeepDistance);
+        else 
+            currentHandler.MoveChangeState(currentHandler.bossRandMove);
         agent.SetDestination(currentChar.gameObject.transform.position);
     }
 

@@ -7,7 +7,7 @@ public class BossMoveHandler : MoveHandler
 {
     public BossChase bossChase;
     public BossKeepDistance bossKeepDistance;
-
+    public BossRandMove bossRandMove;
     public BossMoveHandler(NavMeshAgent _agent, BaseChar character,BaseMonster monster)
     {
         agent = _agent;
@@ -15,6 +15,7 @@ public class BossMoveHandler : MoveHandler
         this.monster = monster;
         bossChase = new BossChase(_agent, character, this,monster);
         bossKeepDistance=new BossKeepDistance(_agent,character,this,monster);
+        bossRandMove=new BossRandMove(_agent,character,this,monster);
         CurrentState = bossChase;
 
     }

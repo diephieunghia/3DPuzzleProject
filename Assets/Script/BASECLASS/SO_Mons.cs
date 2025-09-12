@@ -19,4 +19,7 @@ public class SO_Mons : ScriptableObject
 
     public float expDrop;
     public float coins;
+
+    public float randomRadius1;
+    public float randomRadius2;
 }
