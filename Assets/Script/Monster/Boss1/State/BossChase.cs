@@ -17,19 +17,21 @@ public class BossChase :IState
         thisMonster = monster;
     }
 
-    public void Enter() {    
+    public void Enter() {
+        Debug.Log("Boss Chase");
+    }
+
+    public void Execute() {
+        agent.SetDestination(currentChar.gameObject.transform.position);
+        thisMonster.transform.LookAt(currentChar.transform.position);
+        if (agent.remainingDistance <=agent.stoppingDistance/2)
+            currentHandler.MoveChangeState(currentHandler.bossKeepDistance);
+        else if(agent.stoppingDistance/2<agent.remainingDistance&&agent.remainingDistance<=agent.stoppingDistance)
+            currentHandler.MoveChangeState(currentHandler.bossRandMove);
         
     }
 
-    public void Execute() { 
-       float deltaDistance = agent.remainingDistance - agent.stoppingDistance;
-        if (deltaDistance >= -12.5f)
-            currentHandler.MoveChangeState(currentHandler.bossKeepDistance);
-        else 
-            currentHandler.MoveChangeState(currentHandler.bossRandMove);
-        agent.SetDestination(currentChar.gameObject.transform.position);
-    }
-
-    public void Exit() { 
+    public void Exit() {
+        
     }
 }

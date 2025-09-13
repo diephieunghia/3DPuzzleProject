@@ -8,7 +8,6 @@ public class BossAttack : MonoBehaviour
     float attackDuration;
 
     public float attackRange;
-    public float scanTimeInterval;
     public Transform range;
 
     Coroutine current;
@@ -57,5 +56,9 @@ public class BossAttack : MonoBehaviour
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, attackRange);
+    }
+    public void SpawnProjectile()
+    {
+
     }
 }
