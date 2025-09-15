@@ -15,6 +15,8 @@ public class BossAttack : MonoBehaviour
     float checkTemp;
     public LayerMask player;
     Collider[] playerdetect;
+    //projectile holder
+    public Transform projectileHolder;
     private void Awake()
     {
         baseMonster = GetComponent<BaseMonster>();
@@ -57,8 +59,13 @@ public class BossAttack : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, attackRange);
     }
+    //using in shooting Anim
     public void SpawnProjectile()
     {
-        GameObject projectile= MageProjectilePool.ins.GetObject();    
+        GameObject projectile= MageProjectilePool.ins.GetObject(); 
+        projectile.transform.position=projectileHolder.transform.position;
+        projectile.GetComponent<ProjectileMove>().GetDirection(transform.forward, transform.rotation);
+        projectile.GetComponent<FireBallDetection>().Damage = baseMonster.MonsterStat.damage;
+        
     }
 }
