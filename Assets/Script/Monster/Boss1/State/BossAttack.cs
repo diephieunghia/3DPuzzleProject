@@ -59,6 +59,6 @@ public class BossAttack : MonoBehaviour
     }
     public void SpawnProjectile()
     {
-
+        GameObject projectile= MageProjectilePool.ins.GetObject();    
     }
 }
