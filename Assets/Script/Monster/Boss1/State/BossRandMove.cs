@@ -26,7 +26,6 @@ public class BossRandMove : IState
     public void Enter()
     {
         tempStopping=agent.stoppingDistance;
-        Debug.Log("BossRandMove");
         agent.updateRotation = false;
     }
     public void Execute()

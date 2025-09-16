@@ -7,7 +7,13 @@ public class GameManager : MonoBehaviour
 {
     ChangeDate changeDate;
     AssignCard assignCard;
-    GameCompleteOrDie completeorDie;
+
+    /// <summary>
+    /// ----------------Game Complete or Die-----------------
+    /// </summary>
+    public GameCompleteOrDie completeorDie;
+    
+
     public AssignCard AssignCard => assignCard;
     public static GameManager ins { get; private set; }
     //Level Stat
@@ -62,10 +68,12 @@ public class GameManager : MonoBehaviour
         changeDate = GetComponent<ChangeDate>();
         assignCard=GetComponent<AssignCard>();
         completeorDie = GetComponent<GameCompleteOrDie>();
+        completeorDie=GetComponent<GameCompleteOrDie>();
+
         changeDate.ChangeSkyBox(0);
 
-        CountDownComplete += MoveToStore;
         CountDownComplete += IncreaseCurrentLevel;
+        CountDownComplete += MoveToStore;        
         MoveToArea += MoveBackToArea;
         Reset += ResetCard;
     }
@@ -117,14 +125,20 @@ public class GameManager : MonoBehaviour
     //Increase current level after countdown wave complete
     public void IncreaseCurrentLevel()
     {
+        tempCurrentLevel = tempCurrentLevel + 1;
         if (tempCurrentLevel <= statScale.maxLevel)
-            tempCurrentLevel += 1;
-        SpawnMonster.ins.MaxEnemy = statScale.maxEnemyPerLevel[tempCurrentLevel - 1];
-        SpawnMonster.ins.CurrentLevel= tempCurrentLevel;
-        SpawnMonster.ins.SpawnRate = statScale.spawnRate[tempCurrentLevel - 1];
-        SpawnMonster.ins.MonsterQuanity = statScale.spawnQuantity[tempCurrentLevel - 1];
-        //find all monster available and increase their stat
-        monsterStatIncrease?.Invoke();
+        {
+            SpawnMonster.ins.MaxEnemy = statScale.maxEnemyPerLevel[tempCurrentLevel - 1];
+            SpawnMonster.ins.CurrentLevel = tempCurrentLevel;
+            SpawnMonster.ins.SpawnRate = statScale.spawnRate[tempCurrentLevel - 1];
+            SpawnMonster.ins.MonsterQuanity = statScale.spawnQuantity[tempCurrentLevel - 1];
+            //find all monster available and increase their stat
+            monsterStatIncrease?.Invoke();
+        }
+        else
+            //when level >=10, mark as game complete
+            completeorDie.GameCompleteAction?.Invoke();
+        
 
         //Debug.Log("Current Level: "+statScale.currentLevel+" max Enemy: "+statScale.maxEnemyPerLevel);
     }

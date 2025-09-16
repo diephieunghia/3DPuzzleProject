@@ -57,6 +57,8 @@ public class BaseMonster : MonoBehaviour,IDamageable
         expDrop = stat.expDrop;
         if(gameObject.tag!="Boss")
             GameManager.ins.CountDownComplete += Despawn;
+        else if (gameObject.tag == "Boss")
+            GameManager.ins.CountDownComplete += Destroy;
         GameManager.ins.monsterStatIncrease += IncreaseStat;
 
     }
@@ -125,6 +127,7 @@ public class BaseMonster : MonoBehaviour,IDamageable
             GameManager.ins.monsterOnFieldCount--;
         }
     }
+    //despawn return pool for mobs
     void Despawn()
     {
         ObjectPool monsterPool=gameObject.GetComponentInParent<MonsterPool>();
@@ -148,6 +151,13 @@ public class BaseMonster : MonoBehaviour,IDamageable
         }
         monsterPool.ReturnObject(gameObject);
         
+    }
+    //destroy for boss
+    void Destroy()
+    {
+        GameManager.ins.CountDownComplete -= Destroy;
+        Destroy(gameObject);
+
     }
     void IncreaseStat() {
         maxHealth += 1.2f;

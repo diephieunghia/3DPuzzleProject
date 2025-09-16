@@ -10,6 +10,7 @@ public class ChangeDate : MonoBehaviour
     public Color[] fog;
     public void ChangeSkyBox(int index)
     {       
+        index= Mathf.Clamp(index, 0, skyBox.Length - 1);
         RenderSettings.skybox = skyBox[index];
         RenderSettings.fogColor = fog[index];
         if (lightSet!=null)

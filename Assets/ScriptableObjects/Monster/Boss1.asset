@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cd8f2e636d446745b376599ec43e076, type: 3}
   m_Name: Boss1
   m_EditorClassIdentifier: 
-  health: 1000
+  health: 200
   damage: 25
   speed: 8
   baseCoolDown: 1

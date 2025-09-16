@@ -15,6 +15,8 @@ public class GameSettings: MonoBehaviour
     //Pause Menu
     public GameObject pauseMenu;
 
+    public bool gameComplete = false;
+
     private void Awake()
     {
         if (ins != null && ins != this)
@@ -28,11 +30,14 @@ public class GameSettings: MonoBehaviour
     }
     void SetGamePause()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape)&&!gameComplete)
         {
             isGamePaused = !isGamePaused;
             Time.timeScale = isGamePaused ? 0f : 1f;
             pauseMenu.SetActive(isGamePaused);
         }
     }
+
+    
+
 }

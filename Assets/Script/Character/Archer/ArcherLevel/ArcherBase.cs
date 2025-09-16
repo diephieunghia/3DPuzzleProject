@@ -15,7 +15,7 @@ public class ArcherBase : BaseChar
     float currentHealth;
 
     bool invicible = false;
-    public float inviTime = 1.25f;
+    public float inviTime = .5f;
     protected override void Awake()
     {
         base.Awake();
@@ -38,10 +38,13 @@ public class ArcherBase : BaseChar
         if (invicible)
         {
             return; 
-        }
-        Debug.Log("Hit");
+        }        
         //reduce health
         currentHealth = Mathf.Clamp(currentHealth - tempDamage *(1-bb.armor/100), 0, bb.health);
+        if (currentHealth <= 0) { 
+            //Gameover, invoke to game manager
+            GameManager.ins.completeorDie.GameCompleteAction?.Invoke();
+        }
         //update to UI
         UIManager.ins.SetHealth(currentHealth,bb.health);
         //invicible for x seconds, negate damage, start coroutine here

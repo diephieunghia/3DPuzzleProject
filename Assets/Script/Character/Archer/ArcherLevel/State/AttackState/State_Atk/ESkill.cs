@@ -27,7 +27,6 @@ public class ESkill : IState
 
     public void Execute()
     {
-        Debug.Log("Eskill");
         tempDuration -= Time.deltaTime;
         if (tempDuration < 0&&(HandleAnim.ins.ReloadESkill(0.3f)||HandleAnim.ins.AnimOverDrawEnd(.3f))) {
 

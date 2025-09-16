@@ -26,7 +26,6 @@ public class ATKIdle : IState
     }
 
     public void Execute() {
-        Debug.Log("Idle");
         
         if (HandleAnim.ins.ReloadESkill(.8f))
         {

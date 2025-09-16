@@ -26,7 +26,6 @@ public class BossKeepDistance : IState
     }
     public void Enter()
     {
-        Debug.Log("Boss Keep Distance");
         if (thisMonster.Death)
             agent.isStopped = true;
         randomPoint = RandomPointInArcBehindMonster();
