@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.Rendering.PostProcessing;
 public class SliderSettings : MonoBehaviour
 {
     public GameObject soundBrightSen;
@@ -13,6 +13,10 @@ public class SliderSettings : MonoBehaviour
     public Slider BrightSlider;
     public Slider SenSlider;
 
+    public PostProcessProfile profile;
+
+    AutoExposure exposure;
+    public float value;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +24,7 @@ public class SliderSettings : MonoBehaviour
         SoundSlider.onValueChanged.AddListener(delegate { OnSoundChange(); });
         BrightSlider.onValueChanged.AddListener(delegate { OnBrightChange(); });
         SenSlider.onValueChanged.AddListener(delegate { OnMouseSenChange(); });
+        profile.TryGetSettings(out exposure);
     }
 
     // Update is called once per frame
@@ -34,8 +39,10 @@ public class SliderSettings : MonoBehaviour
     }
     void OnBrightChange()
     {
-        component.bright = BrightSlider.value;
-        Debug.Log("Sound: " + component.bright);
+        if (BrightSlider.value < 0.04)
+            exposure.keyValue.value =value * component.bright;
+        else
+            exposure.keyValue.value = BrightSlider.value * component.bright;
     }
     void OnMouseSenChange()
     {

@@ -5,11 +5,12 @@ using UnityEngine;
 public class GameSettings: MonoBehaviour
 {
     public static GameSettings ins;
+    SoundBrightSen settings;
     //Game Pause
     public bool isGamePaused = false;
 
-
-    public float mouseSensivity = 100f;
+    public float mouseSenMultiply = 10;
+    public float mouseSensivity = 1f;
     public float brightness = 1f;
     public float soundVolume = 1f;
 
@@ -24,6 +25,14 @@ public class GameSettings: MonoBehaviour
             Destroy(this);
         else
             ins = this;
+    }
+    private void Start()
+    {
+        settings=FindObjectOfType<SoundBrightSen>();
+        Debug.Log(settings.name);
+        mouseSensivity = settings.sen*mouseSenMultiply;
+        Debug.Log(mouseSensivity);
+        
     }
     void Update()
     {
