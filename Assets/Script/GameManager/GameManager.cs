@@ -137,7 +137,7 @@ public class GameManager : MonoBehaviour
         }
         else
             //when level >=10, mark as game complete
-            completeorDie.GameCompleteAction?.Invoke();
+            completeorDie.GameCompleteAction?.Invoke(true);
         
 
         //Debug.Log("Current Level: "+statScale.currentLevel+" max Enemy: "+statScale.maxEnemyPerLevel);

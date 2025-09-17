@@ -43,7 +43,7 @@ public class ArcherBase : BaseChar
         currentHealth = Mathf.Clamp(currentHealth - tempDamage *(1-bb.armor/100), 0, bb.health);
         if (currentHealth <= 0) { 
             //Gameover, invoke to game manager
-            GameManager.ins.completeorDie.GameCompleteAction?.Invoke();
+            GameManager.ins.completeorDie.GameCompleteAction?.Invoke(false);
         }
         //update to UI
         UIManager.ins.SetHealth(currentHealth,bb.health);

@@ -65,6 +65,7 @@
     <Compile Include="Assets\Script\Monster\Boss1\State\BossKeepDistance.cs" />
     <Compile Include="Assets\Script\BASECLASS\IDamageable.cs" />
     <Compile Include="Assets\Script\Character\Archer\CameraControl.cs" />
+    <Compile Include="Assets\Script\Menu\SliderSettings.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\Arrow\ArrowPool.cs" />
     <Compile Include="Assets\Script\Monster\Mage\STATE\Move\KeepDistance.cs" />
     <Compile Include="Assets\Script\GameManager\AssignCard.cs" />
@@ -113,6 +114,7 @@
     <Compile Include="Assets\Script\Monster\MonsterBehavior.cs" />
     <Compile Include="Assets\Script\Monster\Mage\Projectile\FireBallDetection.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\Arrow\AimToTarget.cs" />
+    <Compile Include="Assets\Script\Menu\SoundBrightSen.cs" />
     <Compile Include="Assets\Script\BASECLASS\SO_Mons.cs" />
     <Compile Include="Assets\Script\Monster\Boss1\State\BossRandMove.cs" />
     <Compile Include="Assets\Script\GameManager\StoreEnter.cs" />

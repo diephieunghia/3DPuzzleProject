@@ -11,6 +11,7 @@ public class GameSettings: MonoBehaviour
 
     public float mouseSensivity = 100f;
     public float brightness = 1f;
+    public float soundVolume = 1f;
 
     //Pause Menu
     public GameObject pauseMenu;
@@ -34,8 +35,14 @@ public class GameSettings: MonoBehaviour
         {
             isGamePaused = !isGamePaused;
             Time.timeScale = isGamePaused ? 0f : 1f;
-            pauseMenu.SetActive(isGamePaused);
+            SetActive();
+            Cursor.visible = isGamePaused;
+            Cursor.lockState = CursorLockMode.None;
         }
+    }
+    public void SetActive()
+    {
+        pauseMenu.SetActive(isGamePaused);
     }
 
     
