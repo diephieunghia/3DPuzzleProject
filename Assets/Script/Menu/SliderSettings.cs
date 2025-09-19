@@ -13,25 +13,52 @@ public class SliderSettings : MonoBehaviour
     public Slider BrightSlider;
     public Slider SenSlider;
 
+    public float sound = 1;
+    public float bright = 0.5f;
+    public float sen = 0.1f;
+
     public PostProcessProfile profile;
 
     AutoExposure exposure;
+    //value for brightness only if slider to small
     public float value;
     // Start is called before the first frame update
+    private void Awake()
+    {
+        soundBrightSen = GameObject.FindWithTag("Settings");
+        if (soundBrightSen != null)
+        {
+            component = soundBrightSen.GetComponent<SoundBrightSen>();
+            SoundSlider.value = component.sound;
+            BrightSlider.value = component.brightSaved;
+            SenSlider.value = component.sen;
+        }
+        else
+        {
+
+        }
+
+
+    }
     void Start()
     {
-        component=soundBrightSen.GetComponent<SoundBrightSen>();
-        SoundSlider.onValueChanged.AddListener(delegate { OnSoundChange(); });
-        BrightSlider.onValueChanged.AddListener(delegate { OnBrightChange(); });
-        SenSlider.onValueChanged.AddListener(delegate { OnMouseSenChange(); });
-        profile.TryGetSettings(out exposure);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        if(soundBrightSen!=null)
+        {
+            SoundSlider.onValueChanged.AddListener(delegate { OnSoundChange(); });
+            BrightSlider.onValueChanged.AddListener(delegate { OnBrightChange(); });
+            SenSlider.onValueChanged.AddListener(delegate { OnMouseSenChange(); });
+            profile.TryGetSettings(out exposure);
+        }
+        else
+        {
+            profile.TryGetSettings(out exposure);
+            SoundSlider.onValueChanged.AddListener(delegate { SoundChange2(); });
+            BrightSlider.onValueChanged.AddListener(delegate { BrightChange2(); });
+            SenSlider.onValueChanged.AddListener(delegate { MouseSenChange2(); });
+        }
         
     }
+
     void OnSoundChange()
     {
         component.sound = SoundSlider.value;
@@ -39,6 +66,7 @@ public class SliderSettings : MonoBehaviour
     }
     void OnBrightChange()
     {
+        component.brightSaved = BrightSlider.value;
         if (BrightSlider.value < 0.04)
             exposure.keyValue.value =value * component.bright;
         else
@@ -47,6 +75,24 @@ public class SliderSettings : MonoBehaviour
     void OnMouseSenChange()
     {
         component.sen = SenSlider.value;
-        Debug.Log("Sound: " + component.sen);
+        if (SenSlider.value < 0.001)
+            component.sen = 0.01f;
+        if(GameSettings.ins)
+            GameSettings.ins.mouseSensivity = component.sen * GameSettings.ins.mouseSenMultiply;
+        Debug.Log("Mouse: " + component.sen);
+    }
+    void SoundChange2()
+    {
+        sound= SoundSlider.value;
+    }
+    void BrightChange2()
+    {
+        bright= BrightSlider.value;
+    }
+    void MouseSenChange2()
+    {
+        sen= SenSlider.value;
+        if (GameSettings.ins)
+            GameSettings.ins.mouseSensivity = component.sen * GameSettings.ins.mouseSenMultiply;
     }
 }

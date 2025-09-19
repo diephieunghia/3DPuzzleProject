@@ -27,6 +27,10 @@ public class SpawnMonster : MonoBehaviour
     [SerializeField] GameObject[] spawnPos;
     int spawnRarity;
     float maxNavMeshDistance = 4f;
+
+    //boss GameObject
+    public GameObject boss;
+
     private void Awake()
     {
         if (ins != null && ins != this)
@@ -67,6 +71,7 @@ public class SpawnMonster : MonoBehaviour
         //reset monster onfield count
         GameManager.ins.monsterOnFieldCount = 0;
         StartCoroutine(WaitToSpawn());
+        //check if level 5 or 10 to spawn boss 
     }
     IEnumerator WaitToSpawn()
     {

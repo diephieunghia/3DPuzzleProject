@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4958197769357531222
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5339049000197246549}
+  m_Layer: 8
+  m_Name: SoundPlayHead
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5339049000197246549
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4958197769357531222}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.466, z: 0.455}
+  m_LocalScale: {x: 0.28405, y: 0.28405, z: 0.28405}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1959182051888650130}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1577543180367729150
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -873,6 +904,9 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -5459922382353263709, guid: 16428d56627c90648a1cf6040b0c60f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5339049000197246549}
     - targetCorrespondingSourceObject: {fileID: 2196004506624635508, guid: 16428d56627c90648a1cf6040b0c60f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1328058689241085461}
@@ -928,6 +962,11 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.71
   m_Center: {x: 0, y: 0.48, z: 0}
+--- !u!4 &1959182051888650130 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -5459922382353263709, guid: 16428d56627c90648a1cf6040b0c60f0, type: 3}
+  m_PrefabInstance: {fileID: 3389552693298447409}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2579284845046331744 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 16428d56627c90648a1cf6040b0c60f0, type: 3}
@@ -1024,6 +1063,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef5a32a3950c9084499ef6b52ae30284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!4 &3563431707065546309 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2196004506624635508, guid: 16428d56627c90648a1cf6040b0c60f0, type: 3}

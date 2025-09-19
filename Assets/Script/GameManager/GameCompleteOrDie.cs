@@ -21,11 +21,15 @@ public class GameCompleteOrDie : MonoBehaviour
         GameSettings.ins.gameComplete = true;
         Debug.Log("Game Complete");
         if (complete)
-            Debug.Log("You Win");
+        { 
+            Debug.Log("You Win"); 
+            if(!WinUI.activeSelf)
+                WinUI.SetActive(true);
+        }
         else
         {
             Debug.Log("You Lose");
-            if(!LoseUI.activeSelf)
+            if (!LoseUI.activeSelf)
                 LoseUI.SetActive(true);
         }
         Cursor.visible = true;

@@ -14,7 +14,8 @@ public class Menu : MonoBehaviour
     {
         loadingScreen.SetActive(true);
         SceneManager.LoadScene("MainLevel");
-        DontDestroyOnLoad(settings);
+        if(settings)
+            DontDestroyOnLoad(settings);
     }
     public void Quit()
     {

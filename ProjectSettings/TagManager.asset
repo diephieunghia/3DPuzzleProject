@@ -8,6 +8,7 @@ TagManager:
   - Head
   - Projectile
   - Boss
+  - Settings
   layers:
   - Default
   - TransparentFX

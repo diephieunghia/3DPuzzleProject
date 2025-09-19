@@ -9,7 +9,7 @@ public class GameSettings: MonoBehaviour
     //Game Pause
     public bool isGamePaused = false;
 
-    public float mouseSenMultiply = 10;
+    public float mouseSenMultiply = 1000;
     public float mouseSensivity = 1f;
     public float brightness = 1f;
     public float soundVolume = 1f;
@@ -29,9 +29,17 @@ public class GameSettings: MonoBehaviour
     private void Start()
     {
         settings=FindObjectOfType<SoundBrightSen>();
-        Debug.Log(settings.name);
-        mouseSensivity = settings.sen*mouseSenMultiply;
-        Debug.Log(mouseSensivity);
+        if (!settings)
+        {
+            
+        }
+        else
+        {
+            Debug.Log("mouse sense from menu: "+settings.sen);
+            mouseSensivity = settings.sen * mouseSenMultiply;
+            Debug.Log(mouseSensivity);
+        }
+           
         
     }
     void Update()

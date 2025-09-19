@@ -86,6 +86,59 @@ CapsuleCollider:
   m_Height: 1.342829
   m_Direction: 1
   m_Center: {x: 0.00049030053, y: -0.28744015, z: 1.4153864e-22}
+--- !u!1 &5079715323210225543
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2244585898832875012}
+  - component: {fileID: 4555169433267499001}
+  m_Layer: 8
+  m_Name: SoundPlayHead
+  m_TagString: Head
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2244585898832875012
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5079715323210225543}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.391, z: 0.429}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1883508209276849765}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &4555169433267499001
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5079715323210225543}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 256
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.7
+  m_Center: {x: 0, y: 0.45, z: 0}
 --- !u!1 &5535513650842555885
 GameObject:
   m_ObjectHideFlags: 0
@@ -934,6 +987,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -5459922382353263709, guid: be0f05b7914eaa74baaccdef287d3779, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2494114613611241110}
+    - targetCorrespondingSourceObject: {fileID: -5459922382353263709, guid: be0f05b7914eaa74baaccdef287d3779, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2244585898832875012}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: be0f05b7914eaa74baaccdef287d3779, type: 3}
       insertIndex: -1
@@ -1032,8 +1088,8 @@ MonoBehaviour:
     m_Bits: 0
   axeEnable: 0
   center: {fileID: 3404711293517678344}
+  headEffectPosition: {x: 0, y: 0, z: 0}
   size: {x: 0, y: 0, z: 0}
-  coins: 20
   head: {fileID: 658718264730973361}
   body: {fileID: 147336980289943216}
 --- !u!114 &3617575798036603183

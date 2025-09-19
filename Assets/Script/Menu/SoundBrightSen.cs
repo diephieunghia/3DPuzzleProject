@@ -7,6 +7,7 @@ public class SoundBrightSen : MonoBehaviour
 {
     public float sound;
     public float bright;
+    public float brightSaved;
     public float sen;
 
     
