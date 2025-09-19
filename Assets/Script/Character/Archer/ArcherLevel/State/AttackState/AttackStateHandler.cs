@@ -33,7 +33,8 @@ public class AttackStateHandler
     }
     public void HandleAttackState()
     {
-        CurrentState.Execute();
+        if(!GameSettings.ins.isGamePaused) 
+            CurrentState.Execute();
     }
 
 }

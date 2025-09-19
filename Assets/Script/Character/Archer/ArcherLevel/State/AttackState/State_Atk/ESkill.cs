@@ -47,8 +47,11 @@ public class ESkill : IState
             }
             atkbb.allowShoot = false;
             reloadOnce = true;
-            atkbb.aiming = ArcherBlackBoard.Aim.Idle;
+            atkbb.aiming = ArcherBlackBoard.Aim.Idle;           
             HandleAnim.ins.DisableEShoot();
+            //SOUND MANAGER
+            SoundManager.ins.StopSound();
+            SoundManager.ins.PlaySoundOneShot(SoundType.BowShoot, 1);
         }
         if (HandleAnim.ins.ReloadESkill(.3f)&&reloadOnce)
         {

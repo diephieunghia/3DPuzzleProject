@@ -19,12 +19,15 @@ public class GameSettings: MonoBehaviour
 
     public bool gameComplete = false;
 
+    public bool othersPanel = false;
+
     private void Awake()
     {
         if (ins != null && ins != this)
             Destroy(this);
         else
             ins = this;
+        
     }
     private void Start()
     {
@@ -37,7 +40,9 @@ public class GameSettings: MonoBehaviour
         {
             Debug.Log("mouse sense from menu: "+settings.sen);
             mouseSensivity = settings.sen * mouseSenMultiply;
-            Debug.Log(mouseSensivity);
+            brightness = settings.brightSaved;
+            soundVolume = settings.sound;
+            
         }
            
         
@@ -48,7 +53,7 @@ public class GameSettings: MonoBehaviour
     }
     void SetGamePause()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)&&!gameComplete)
+        if (Input.GetKeyDown(KeyCode.Escape)&&!gameComplete&&!othersPanel)
         {
             isGamePaused = !isGamePaused;
             Time.timeScale = isGamePaused ? 0f : 1f;

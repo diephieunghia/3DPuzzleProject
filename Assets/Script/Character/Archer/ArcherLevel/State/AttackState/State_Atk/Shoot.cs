@@ -22,6 +22,8 @@ public class Shoot : IState
     public void Enter() {
         HandleAnim.ins.SetAttackAnim();
         halfSpeed = atkbb.speed / 2;
+        //SOUND MANAGER
+        SoundManager.ins.PlaySoundOneShot(SoundType.BowDraw, 1);
     }
 
     public void Execute()
@@ -49,6 +51,7 @@ public class Shoot : IState
             atkbb.speed = Mathf.Lerp(atkbb.speed, halfSpeed, completion);            
             atkbb.force=Mathf.Lerp(8,atkbb.maxForce, completion);
             atkbb.damage = Mathf.Lerp(20, atkbb.maxDamage, completion);
+            
             return;
         }
         else
@@ -73,6 +76,9 @@ public class Shoot : IState
         atkbb.force = 8f;
         atkbb.shootRate = 0f;
         elapsedTime = 0;
+        //SOUND MANAGER
+        SoundManager.ins.StopSound();
+        SoundManager.ins.PlaySoundOneShot(SoundType.BowShoot, 1);
 
     }
 

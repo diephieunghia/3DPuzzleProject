@@ -72,6 +72,13 @@ public class SpawnMonster : MonoBehaviour
         GameManager.ins.monsterOnFieldCount = 0;
         StartCoroutine(WaitToSpawn());
         //check if level 5 or 10 to spawn boss 
+        if (GameManager.ins.CurrentLevel == GameManager.ins.MaxLevel / 2 || GameManager.ins.CurrentLevel == GameManager.ins.MaxLevel)
+        { 
+            Vector3 bossSpawnPoint = GetBossSpawmPoint();
+            GameObject tempBoss = GameObject.Instantiate(boss,bossSpawnPoint, Quaternion.identity);
+            Debug.Log("Boss Spawned");
+        }
+
     }
     IEnumerator WaitToSpawn()
     {
@@ -96,6 +103,21 @@ public class SpawnMonster : MonoBehaviour
         }
         return randomLocation;
 
+    }
+    Vector3 GetBossSpawmPoint()
+    {
+        int index = spawnPos.Length - 1;
+        Vector3 size = spawnPos[index].GetComponent<BoxCollider>().size;
+        Vector3 halfSize = size * .5f;
+        float x = Random.Range(-halfSize.x, halfSize.y);
+        float z = Random.Range(-halfSize.z, halfSize.z);
+        //convert to world position
+        Vector3 randomLocation = new Vector3(x, halfSize.y, z) + spawnPos[index].transform.position;
+        if (NavMesh.SamplePosition(randomLocation, out NavMeshHit hit, maxNavMeshDistance, NavMesh.AllAreas))
+        {
+            return hit.position;
+        }
+        return randomLocation;
     }
     void SpawnMonsterMethod(int rarity)
     {

@@ -25,6 +25,12 @@ public class SliderSettings : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
+        
+
+
+    }
+    void Start()
+    {
         soundBrightSen = GameObject.FindWithTag("Settings");
         if (soundBrightSen != null)
         {
@@ -37,12 +43,7 @@ public class SliderSettings : MonoBehaviour
         {
 
         }
-
-
-    }
-    void Start()
-    {
-        if(soundBrightSen!=null)
+        if (soundBrightSen!=null)
         {
             SoundSlider.onValueChanged.AddListener(delegate { OnSoundChange(); });
             BrightSlider.onValueChanged.AddListener(delegate { OnBrightChange(); });
@@ -62,11 +63,20 @@ public class SliderSettings : MonoBehaviour
     void OnSoundChange()
     {
         component.sound = SoundSlider.value;
-        Debug.Log("Sound: " + component.sound);
+        sound = SoundSlider.value;
+        if (GameSettings.ins)
+        {
+            GameSettings.ins.soundVolume = sound;
+        }
     }
     void OnBrightChange()
     {
         component.brightSaved = BrightSlider.value;
+        bright = BrightSlider.value;
+        if (GameSettings.ins)
+        {
+            GameSettings.ins.brightness = bright;
+        }
         if (BrightSlider.value < 0.04)
             exposure.keyValue.value =value * component.bright;
         else
@@ -75,24 +85,36 @@ public class SliderSettings : MonoBehaviour
     void OnMouseSenChange()
     {
         component.sen = SenSlider.value;
+        sen= SenSlider.value;
+        if(GameSettings.ins)
+        {
+            GameSettings.ins.mouseSensivity = sen;
+        }
         if (SenSlider.value < 0.001)
             component.sen = 0.01f;
         if(GameSettings.ins)
             GameSettings.ins.mouseSensivity = component.sen * GameSettings.ins.mouseSenMultiply;
-        Debug.Log("Mouse: " + component.sen);
     }
     void SoundChange2()
     {
         sound= SoundSlider.value;
+        if (GameSettings.ins)
+        {
+            GameSettings.ins.soundVolume= sound;
+        }
     }
     void BrightChange2()
     {
         bright= BrightSlider.value;
+        if (GameSettings.ins)
+        {
+            GameSettings.ins.brightness = bright;
+        }
     }
     void MouseSenChange2()
     {
         sen= SenSlider.value;
         if (GameSettings.ins)
-            GameSettings.ins.mouseSensivity = component.sen * GameSettings.ins.mouseSenMultiply;
+            GameSettings.ins.mouseSensivity = sen * GameSettings.ins.mouseSenMultiply;
     }
 }
