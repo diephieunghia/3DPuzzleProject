@@ -53,6 +53,8 @@ public class UIManager : MonoBehaviour
 
     [Header("DamageBlood")]
     public Image bloodDamage;
+    public float beginFLoat = 140;
+
     private void Awake()
     {
         if (ins != null && ins != this)
@@ -174,5 +176,34 @@ public class UIManager : MonoBehaviour
     public void UpdateResetCost(int cost)
     {
         reset.text = string.Format("{0}", cost);
+    }
+
+    //Blood, take damage
+    public void TakeDamageBloodUI(float fadeTime)
+    {        
+        StartCoroutine(FadeAlpha(bloodDamage, beginFLoat / 255f, 0f, fadeTime));
+    }
+    private IEnumerator FadeAlpha(Image img, float startAlpha, float endAlpha, float duration)
+    {
+        float elapsed = 0f;
+        Color c = img.color;
+        c.a = startAlpha;
+        img.color = c;
+
+        while (elapsed <= duration)
+        {
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / duration);
+            float newAlpha = Mathf.Lerp(startAlpha, endAlpha, t);
+
+            c.a = newAlpha;
+            img.color = c;
+
+            yield return null;
+        }
+
+        // Ensure it's fully set at the end
+        c.a = endAlpha;
+        img.color = c;
     }
 }

@@ -15,7 +15,7 @@ public class ArcherBase : BaseChar
     float currentHealth;
 
     bool invicible = false;
-    public float inviTime = .5f;
+    public float inviTime = .75f;
     protected override void Awake()
     {
         base.Awake();
@@ -38,7 +38,8 @@ public class ArcherBase : BaseChar
         if (invicible)
         {
             return; 
-        }        
+        }
+        UIManager.ins.TakeDamageBloodUI(inviTime);
         //reduce health
         currentHealth = Mathf.Clamp(currentHealth - tempDamage *(1-bb.armor/100), 0, bb.health);
         if (currentHealth <= 0) { 

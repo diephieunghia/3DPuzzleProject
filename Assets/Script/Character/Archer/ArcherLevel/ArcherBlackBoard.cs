@@ -11,7 +11,7 @@ public class ArcherBlackBoard
     public float maxEXP=50f;
     //stat
     [Header("Stat")]
-    public float health = 20;
+    public float health = 60;
     public float armor = 10;
 
     //move

@@ -59,7 +59,10 @@ public class GameSettings: MonoBehaviour
             Time.timeScale = isGamePaused ? 0f : 1f;
             SetActive();
             Cursor.visible = isGamePaused;
-            Cursor.lockState = CursorLockMode.None;
+            if(isGamePaused)
+                Cursor.lockState = CursorLockMode.None;
+            else
+                Cursor.lockState = CursorLockMode.Locked;
         }
     }
     public void SetActive()

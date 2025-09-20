@@ -30,6 +30,7 @@ public class Axe : MonoBehaviour
             IDamageable playerTakeDamage = other.GetComponent<IDamageable>();
             if (playerTakeDamage != null)
             {
+                SoundManager.ins.PlaySoundOneShot(SoundType.AxeHit, 1);
                 playerTakeDamage.TakeDamage(baseMonster.MonsterStat.damage, transform.position, transform.forward, gameObject, IDamageable.Body.Body);
             }
         }

@@ -31,6 +31,7 @@ public class BaseMonster : MonoBehaviour,IDamageable
     public Transform center;
     public Vector3 headEffectPosition;
     public Vector3 size;
+    public AudioSource axeSwing;
 
     //Collider to disable
     public Collider head;
@@ -76,6 +77,7 @@ public class BaseMonster : MonoBehaviour,IDamageable
         //play effect first
         if (hitPart == IDamageable.Body.Body)
         {
+            SoundManager.ins.PlaySoundAtLocation(SoundType.BodyShot, headEffectPosition);
             GameObject effect = EffectSpawn.ins.GetEffect(EffectName.Normal);
             effect.transform.position = hitPoint;
             BodyHit?.Invoke();
@@ -83,6 +85,7 @@ public class BaseMonster : MonoBehaviour,IDamageable
         }
         else
         {
+            SoundManager.ins.PlaySoundAtLocation(SoundType.HeadShot, headEffectPosition);
             GameObject effect = EffectSpawn.ins.GetEffect(EffectName.Head);
             effect.transform.position = transform.TransformPoint(headEffectPosition);
             HeadHit?.Invoke();
@@ -114,6 +117,7 @@ public class BaseMonster : MonoBehaviour,IDamageable
         UIManager.ins.ChangeIconDamage();
         if (currentHeath <= 0)
         {
+            SoundManager.ins.PlaySoundOneShot(SoundType.MonsterDead, 1);
             Attack = false;
             death = true;
             stat.velocity = 0;
@@ -229,5 +233,10 @@ public class BaseMonster : MonoBehaviour,IDamageable
         yield return new WaitForSeconds(1f);
         //wait for 1 sec if take no ice damage then return speed to normal
         navMesh.speed = stat.speed;
+    }
+
+    public void EnableAxeSwingSound()
+    {
+        axeSwing.Play();
     }
 }

@@ -19,6 +19,9 @@ public class ArcherAction : MonoBehaviour
 
     [SerializeField] GameObject arrowHolder;
     public Action arrowFireIce;
+
+    public AudioSource Walk;
+    bool walkSoundPlaying = false;
     private void Awake()
     {
         bb = new ArcherBlackBoard();
@@ -58,6 +61,22 @@ public class ArcherAction : MonoBehaviour
         bb.velocity = move;
         
         characterController.Move(bb.velocity * bb.speed * Time.deltaTime);
+        //play walk sound
+        if (move.magnitude > 0 && !walkSoundPlaying)
+        {
+            walkSoundPlaying = true;
+            Walk.volume = GameSettings.ins.soundVolume;
+            Walk.loop = true;
+            Walk.Play();
+            Debug.Log("Walk sound play");
+
+        }
+        else if (move.magnitude<=0)
+        {
+            Walk.Stop();
+            walkSoundPlaying = false;
+        }
+
     }
     void Jump()
     {
@@ -92,6 +111,7 @@ public class ArcherAction : MonoBehaviour
             dashVec = transform.forward ;
         }
         dashVec = Vector3.ClampMagnitude(dashVec, 1f);
+        SoundManager.ins.PlaySoundOneShot(SoundType.Dash, 1);
         StartCoroutine("HandleDash", dashVec);
     }
     IEnumerator HandleDash(Vector3 dashVec)

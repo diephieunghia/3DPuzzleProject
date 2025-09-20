@@ -11,16 +11,12 @@ public class BossAnim : MonoBehaviour
     {
         baseMonster=GetComponent<BaseMonster>();
         animator=GetComponent<Animator>(); 
-        baseMonster.DeathTrigger += SetDeath;
+        baseMonster.DeathTrigger += Death;
     }
     
     public void SetRunWalk(float index)
     {
         animator.SetFloat("Velocity", index);
-    }
-    public void SetDeath()
-    {
-        animator.SetBool("Death", true);
     }
     public void SetAttack(bool attack)
     {
@@ -32,7 +28,8 @@ public class BossAnim : MonoBehaviour
     }
     public void Death()
     {
-        animator.SetBool("Death", true);
         animator.SetLayerWeight(1, 0);
+        animator.SetBool("Death", true);
+       
     }
 }

@@ -37,6 +37,8 @@ public class Menu : MonoBehaviour
         GameSettings.ins.isGamePaused=!GameSettings.ins.isGamePaused;
         Time.timeScale = GameSettings.ins.isGamePaused ? 0f : 1f;
         GameSettings.ins.SetActive();
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
     public void MainMenu()
     {
