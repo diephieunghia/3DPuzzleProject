@@ -149,20 +149,19 @@ public class SpawnMonster : MonoBehaviour
     }
     int GetSpawnRarity()
     {
-        if (currentLevel <= 2)
-            return 0;
-        else if (3 <= currentLevel && currentLevel <= 5)
+
+        if (currentLevel <= 1)
         {
             float r = Random.Range(0f, 1f);
             if (r < 0.4f)
                 return 0;
             else return 1;
         }
-        else if(3<=currentLevel&& currentLevel<=7)
+        else if(2<=currentLevel&& currentLevel<=7)
         {
             float r = Random.Range(0f, 1f);
             if (r <= 0.1) return 0;
-            else if (0.1 < r && r <= 0.7) return 1;
+            else if (0.1 < r && r <= 0.5) return 1;
             else return 2;
         }
         else

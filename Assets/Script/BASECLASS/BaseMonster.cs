@@ -44,6 +44,8 @@ public class BaseMonster : MonoBehaviour,IDamageable
     bool burning = false;
     Coroutine IceSpeed;
 
+    //damage type
+    public Dictionary<int,string> DamageTypeText;
     void Awake()
     {
         

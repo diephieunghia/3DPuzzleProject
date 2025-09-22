@@ -21,19 +21,18 @@ public class Axe : MonoBehaviour
     void Start()
     {
         baseMonster=GetComponentInParent<BaseMonster>();
+        baseMonster.Attack = false;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (baseMonster.Attack)
-        {
             IDamageable playerTakeDamage = other.GetComponent<IDamageable>();
             if (playerTakeDamage != null)
             {
                 SoundManager.ins.PlaySoundOneShot(SoundType.AxeHit, 1);
                 playerTakeDamage.TakeDamage(baseMonster.MonsterStat.damage, transform.position, transform.forward, gameObject, IDamageable.Body.Body);
             }
-        }
+        
     }
 
    

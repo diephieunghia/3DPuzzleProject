@@ -49,7 +49,6 @@ public class GameManager : MonoBehaviour
     public Action BuyItem;
     public Action Reset;
     //reset cost
-    int cardDisableCount = 3;
     float resetCost = 3;
     //last character position
     Vector3 lastPosition;
@@ -152,9 +151,12 @@ public class GameManager : MonoBehaviour
             Debug.Log("Not enough coins to reset");
             return;
         }
+        //reduce coins and update to UI
+        coinsHeld-= resetCost;
+        UIManager.ins.CoinsChange(-resetCost,coinsHeld);
         //randomize item
-        if (cardDisableCount == 0)
-            return;
+
+
         //update reset cost
         //......increase cost.....
         resetCost += resetCost + tempCurrentLevel;

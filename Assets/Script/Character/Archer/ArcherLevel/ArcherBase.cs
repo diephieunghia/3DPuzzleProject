@@ -83,12 +83,17 @@ public class ArcherBase : BaseChar
         bb.dashCoolDown += bb.dashCoolDown * item.dashCoolDown;
         bb.dashCoolDown = Mathf.Max(0.1f, bb.dashCoolDown);
         bb.health += item.health;
-        bb.health=Mathf.Max(1, bb.health);
-        bb.armor += bb.armor * item.armor/10;
-        bb.damage+=bb.damage * item.damage;
-        bb.maxDamage+=item.maxDamage;
+        bb.health = Mathf.Max(1, bb.health);
+        bb.armor += bb.armor * item.armor / 10;
+        bb.damage += bb.damage * item.damage;
+        bb.maxDamage += item.maxDamage;
         bb.speed += item.speed;
-        bb.tempSpeed+=item.tempSpeed;
+        bb.tempSpeed += item.tempSpeed;
+        if (bb.eDuration <= bb.eCoolDown) 
+        { 
+            bb.eDuration += item.eDuration;
+            bb.eCoolDown += item.eCoolDown;
+        }
 
     }
     public void Special(SO_Item item)

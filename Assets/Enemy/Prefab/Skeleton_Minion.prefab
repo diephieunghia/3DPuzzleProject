@@ -507,7 +507,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1.150909, y: 0.82498497, z: 0.28187057}
   m_Center: {x: 0.01352743, y: 0.68868786, z: -0.000012454116}
@@ -1419,7 +1419,7 @@ MonoBehaviour:
   center: {fileID: 7063502936250693230}
   headEffectPosition: {x: 0, y: 1.747, z: 0}
   size: {x: 3.03, y: 2.99, z: 3.83}
-  axeSwing: {fileID: 0}
+  axeSwing: {fileID: 6736787772203832726}
   head: {fileID: 3750620754442544330}
   body: {fileID: 8713259892807238911}
 --- !u!114 &7638230562584238587
@@ -1446,6 +1446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f593ae89093357a4a92edb6cb0ca9249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  axeCollider: {fileID: 7753444180816483403}
 --- !u!4 &7963404347093032295 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: df697da2c051490498964025fe9d2c73, type: 3}

@@ -6,7 +6,7 @@ public class MinionAnim : MonoBehaviour
 {
     Animator anim;
     BaseMonster monster;
-
+    public Collider axeCollider; 
 
     // Start is called before the first frame update
     void Start()
@@ -48,7 +48,12 @@ public class MinionAnim : MonoBehaviour
     public void DisableAttack()
     {
         monster.Attack = false;
+        axeCollider.enabled = false;
         
+    }
+    public void EnableAxeCollider()
+    {
+        axeCollider.enabled = true;
     }
 
 }
