@@ -5058,6 +5058,7 @@ MonoBehaviour:
   flashColor: {r: 1, g: 0.17610055, b: 0.17610055, a: 0}
   originColor: {r: 0.9607844, g: 0.854902, b: 0.42352945, a: 0}
   bloodDamage: {fileID: 523788523900503538}
+  beginFLoat: 140
 --- !u!114 &6275720712845972909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7948,8 +7949,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6769837058725564173}
   - {fileID: 3520920396195084929}
+  - {fileID: 6769837058725564173}
   - {fileID: 5678511546103043988}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

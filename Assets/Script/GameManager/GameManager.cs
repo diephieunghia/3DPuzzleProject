@@ -155,11 +155,11 @@ public class GameManager : MonoBehaviour
         coinsHeld-= resetCost;
         UIManager.ins.CoinsChange(-resetCost,coinsHeld);
         //randomize item
-
+        assignCard.ReAssign();
 
         //update reset cost
         //......increase cost.....
-        resetCost += resetCost + tempCurrentLevel;
+        resetCost += tempCurrentLevel;
         UIManager.ins.UpdateResetCost((int)Mathf.Round(resetCost));
     }
 }

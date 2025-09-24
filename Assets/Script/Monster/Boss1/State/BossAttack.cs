@@ -40,13 +40,14 @@ public class BossAttack : MonoBehaviour
             if (_numcollider == 0||baseMonster.Death) StopAllCoroutines();
             else
             {
-                foreach (Collider collider in playerdetect) { 
-                    if(collider.CompareTag("Player"))
+                foreach (Collider collider in playerdetect) {
+                    if (collider.CompareTag("Player"))
                     {
                         if (current == null)
                             current = StartCoroutine(AttackDurationEnd());
                         break;
                     }
+                    else break;
                 }
             }               
         }

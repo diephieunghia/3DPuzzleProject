@@ -133,6 +133,7 @@ public class PlayerInput
         if (Input.GetKeyDown(KeyCode.R))
         {
             GameManager.ins.playerPressReset = true;
+            GameManager.ins.Reset?.Invoke();
         }
         else
             GameManager.ins.playerPressReset = false;
