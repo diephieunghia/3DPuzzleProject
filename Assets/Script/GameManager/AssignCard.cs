@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
-using UnityEditor.Search;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
@@ -25,41 +25,46 @@ public class AssignCard : MonoBehaviour
     {
         GameManager.ins.CountDownComplete += AssignCardUI;
         items = new List<SO_Item>();
+        SO_Item[] temp;
+        temp = Resources.LoadAll<SO_Item>("Assets/Data/Items");
+        Debug.Log("temp items " + temp.Length);
+        //assign items to list
+        foreach (SO_Item item in temp)
+        {
+            SO_Item instant = ScriptableObject.Instantiate(item);
+            instant.name = item.name;
+            items.Add(instant);
+
+        }
     }
 
     void AssignCardUI()
     {
-        SO_Item[] temp;
-        temp = Resources.LoadAll<SO_Item>("Items");
-        //assign items to list
-        foreach (SO_Item item in temp)
-        {
-            items.Add(item);
-        }
-        SetToCard(temp);
+        
+        SetToCard(items);
     }
     public void ReAssign()
     {
-        SO_Item[] temp = RandomizeItem();
+        List<SO_Item> temp = RandomizeItem();
         //card enable
         for (int i = 0; i < itemHolder.Length; i++)
         {
-            itemHolder[i].SetActive(true);
+            itemHolder[i].GetComponent<BoxCollider>().enabled = true;
             card[i].SetActive(true);
             
         }
         SetToCard(temp);
     }
-    void SetToCard(SO_Item[] items)
+    void SetToCard(List<SO_Item> _items)
     {
-        int max = Mathf.Min(3, items.Length);
+        int max = Mathf.Min(3, _items.Count);
         for (int i = 0; i < max; i++)
         {
-            sprites[i].sprite = items[i].icon;
-            itemNames[i].text = items[i].name;
-            descriptions[i].text = items[i].text;
-            itemHolder[i].GetComponent<CardChooseAndIncreaseStat>()?.AssignItem(items[i]);
-            value[i].text = items[i].cost.ToString();
+            sprites[i].sprite = _items[i].icon;
+            itemNames[i].text = _items[i].name;
+            descriptions[i].text = _items[i].text;
+            itemHolder[i].GetComponent<CardChooseAndIncreaseStat>()?.AssignItem(_items[i]);
+            value[i].text = _items[i].cost.ToString();
         }
     }
     public bool CheckItemAmountRemoveFromList(SO_Item item)
@@ -72,13 +77,13 @@ public class AssignCard : MonoBehaviour
         }
         return false;
     }
-    SO_Item[] RandomizeItem()
+    List<SO_Item> RandomizeItem()
     {
-        SO_Item[] temp = new SO_Item[3];
+        List<SO_Item> temp = new List<SO_Item> ();
         for (int i = 0; i < 3; i++)
         {
             int rand = Random.Range(0, items.Count);
-            temp[i] = items[rand];
+            temp.Add(items[rand]);
         }
         return temp;
     }

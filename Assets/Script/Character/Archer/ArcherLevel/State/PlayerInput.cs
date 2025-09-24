@@ -26,24 +26,28 @@ public class PlayerInput
     //handle called in update method
     public void HandleInput()
     {
-        GetInput();
-        Jump();
-        DoubleJump();
-        Dash();
-        TabAction();
-        SkillQ();
-        //attack state
-        if (!bbInput.storeAction)
+        if (!GameSettings.ins.isGamePaused)
         {
-            HoldDraw();
-            SkillE();
-            
+            GetInput();
+            Jump();
+            DoubleJump();
+            Dash();
+            TabAction();
+            SkillQ();
+            //attack state
+            if (!bbInput.storeAction)
+            {
+                HoldDraw();
+                SkillE();
+
+            }
+            else
+            {
+                ActionAtStore();
+                ExitStore();
+            }
         }
-        else
-        {
-            ActionAtStore();
-            ExitStore();
-        }
+        
     }
 
     void GetInput()

@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.AI;
 public class BaseMonster : MonoBehaviour,IDamageable
@@ -239,6 +238,7 @@ public class BaseMonster : MonoBehaviour,IDamageable
 
     public void EnableAxeSwingSound()
     {
+        axeSwing.volume=GameSettings.ins.soundVolume;
         axeSwing.Play();
     }
 }

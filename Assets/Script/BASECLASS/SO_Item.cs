@@ -114,25 +114,25 @@ public class SO_Item : ScriptableObject
     }
 
 
-#if UNITY_EDITOR
-    private void OnValidate()
-    {
-        switch (rarity)
-        {
-            case Rarity.Common:
-                textColor = Color.white;
-                break;        
-            case Rarity.Rare:
-                textColor = Color.blue;
-                break;
-            case Rarity.Epic:
-                textColor = new Color(0.64f, 0.21f, 0.93f); // purple
-                break;
-            case Rarity.Legend:
-                textColor = new Color(1f, 0.5f, 0f); // orange
-                break;
-        }
-    }
-#endif
+//#if UNITY_EDITOR
+//    private void OnValidate()
+//    {
+//        switch (rarity)
+//        {
+//            case Rarity.Common:
+//                textColor = Color.white;
+//                break;        
+//            case Rarity.Rare:
+//                textColor = Color.blue;
+//                break;
+//            case Rarity.Epic:
+//                textColor = new Color(0.64f, 0.21f, 0.93f); // purple
+//                break;
+//            case Rarity.Legend:
+//                textColor = new Color(1f, 0.5f, 0f); // orange
+//                break;
+//        }
+//    }
+//#endif
 
 }

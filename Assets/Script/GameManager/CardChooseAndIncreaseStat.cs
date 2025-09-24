@@ -41,8 +41,7 @@ public class CardChooseAndIncreaseStat : MonoBehaviour
     }
     public void AssignItem(SO_Item _item)
     {
-        item = _item;
-        item.hideFlags = HideFlags.DontSave;
+        item = _item;        
     }
 
     void DisableCard()
@@ -86,6 +85,7 @@ public class CardChooseAndIncreaseStat : MonoBehaviour
             GameManager.ins.playerPressBuy = false;
             //remove from event after buy successfully
             GameManager.ins.BuyItem -= BuyItem;
+            image.color = normal;
             //Disable Card
             DisableCard();
         }

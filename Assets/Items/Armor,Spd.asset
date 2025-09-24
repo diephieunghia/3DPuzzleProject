@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -10,27 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6516bec3aaa4d74428aa212f5cbe73a9, type: 3}
-  m_Name: ECoolDown
+  m_Name: Armor,Spd
   m_EditorClassIdentifier: 
-  text: Reduce E CoolDown time
-  icon: {fileID: 0}
-  cost: 0
+  text: Armor +3, speed -2
+  icon: {fileID: 21300000, guid: c0d397af8a040bf44891492cecd4a3df, type: 3}
+  cost: 1
   quantity: -1
   type: 0
   rarity: 0
   textColor: {r: 1, g: 1, b: 1, a: 1}
   health: 0
-  armor: 0
+  armor: 3
   skillCD: 0
   dashCoolDown: 0
   upgradeType: 
   damage: 0
   maxDamage: 0
   arrowCount: 0
-  speed: 0
-  tempSpeed: 0
-  eDuration: 0.05
-  eCoolDown: -0.1
+  speed: -2
+  tempSpeed: -2
+  eDuration: 0
+  eCoolDown: 0
   animSpeed: 0
   qDuration: 0
   qCoolDown: 0

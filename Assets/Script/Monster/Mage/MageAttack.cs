@@ -11,6 +11,8 @@ public class MageAttack : MonoBehaviour
     float countDown = 5f;
     [SerializeField] GameObject fireBallHolder;
 
+    [SerializeField] AudioSource castSound;
+
     void Start()
     {
         m_Monster = GetComponent<BaseMonster>();
@@ -38,6 +40,9 @@ public class MageAttack : MonoBehaviour
         fireOrb.transform.position=fireBallHolder.transform.position;
         fireOrb.GetComponent<ProjectileMove>().GetDirection(transform.forward,transform.rotation);
         fireOrb.GetComponent<FireBallDetection>().Damage = m_Monster.MonsterStat.damage;
+        //play sound
+        castSound.volume = GameSettings.ins.soundVolume;
+        castSound.Play();
     }
     void AttackType2()
     {
