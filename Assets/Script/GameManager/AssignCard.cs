@@ -19,23 +19,21 @@ public class AssignCard : MonoBehaviour
     public GameObject[] card;
     //test using public
     List<SO_Item> items;
+    [SerializeField] List<SO_Item> startingItems;
     public List<SO_Item> Items => items;
     // Start is called before the first frame update
     void Start()
     {
         GameManager.ins.CountDownComplete += AssignCardUI;
         items = new List<SO_Item>();
-        SO_Item[] temp;
-        temp = Resources.LoadAll<SO_Item>("Assets/Data/Items");
-        Debug.Log("temp items " + temp.Length);
-        //assign items to list
-        foreach (SO_Item item in temp)
+
+        foreach (SO_Item item in startingItems)
         {
             SO_Item instant = ScriptableObject.Instantiate(item);
             instant.name = item.name;
             items.Add(instant);
-
         }
+        
     }
 
     void AssignCardUI()
