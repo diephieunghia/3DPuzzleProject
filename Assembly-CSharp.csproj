@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{4D83A8D4-3C82-103A-1D44-7EBE8929AE99}</ProjectGuid>
+    <ProjectGuid>{3FAF6531-BB88-FC26-6A77-D0CD1B96C51B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -58,83 +58,83 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.7f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Script\GameManager\ChangeDate.cs" />
+    <Compile Include="Assets\Script\BASECLASS\BaseChar.cs" />
     <Compile Include="Assets\Script\BASECLASS\BaseMonster.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\AttackState\State_Atk\Idle.cs" />
     <Compile Include="Assets\Script\Monster\Boss1\State\BossKeepDistance.cs" />
+    <Compile Include="Assets\Script\BASECLASS\IDamageable.cs" />
+    <Compile Include="Assets\Script\Character\Archer\CameraControl.cs" />
     <Compile Include="Assets\Script\Menu\SliderSettings.cs" />
+    <Compile Include="Assets\Script\Character\Archer\ArcherLevel\Arrow\ArrowPool.cs" />
+    <Compile Include="Assets\Script\Monster\Mage\STATE\Move\KeepDistance.cs" />
     <Compile Include="Assets\Script\GameManager\AssignCard.cs" />
+    <Compile Include="Assets\Script\Monster\Mage\STATE\Move\Chase.cs" />
     <Compile Include="Assets\Script\GameManager\SpawnMonster.cs" />
+    <Compile Include="Assets\Script\UI\SkillManager.cs" />
     <Compile Include="Assets\Script\UI\LoadingText.cs" />
+    <Compile Include="Assets\Script\Character\Archer\ArcherLevel\ArcherBase.cs" />
+    <Compile Include="Assets\Script\Menu\Menu.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\AttackState\State_Atk\Shoot.cs" />
+    <Compile Include="Assets\Script\Monster\Minion\STATE\MinionChase.cs" />
     <Compile Include="Assets\Script\Monster\Minion\Axe.cs" />
+    <Compile Include="Assets\Script\Character\Archer\ArcherLevel\Arrow\ArrowDetection.cs" />
+    <Compile Include="Assets\Script\BASECLASS\IState.cs" />
+    <Compile Include="Assets\Script\Character\Archer\CameraMove.cs" />
     <Compile Include="Assets\Script\Monster\Mage\MageBehavior.cs" />
     <Compile Include="Assets\Script\Monster\Mage\STATE\Move\RandomMove.cs" />
     <Compile Include="Assets\Script\UI\ResetFollowPlayerView.cs" />
+    <Compile Include="Assets\Script\Character\Archer\ArcherLevel\ArcherBlackBoard.cs" />
+    <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\AttackState\State_Atk\ESkill.cs" />
     <Compile Include="Assets\Script\BASECLASS\SO_Item.cs" />
     <Compile Include="Assets\Script\GameManager\ExitShop.cs" />
     <Compile Include="Assets\Script\GameManager\GameCompleteOrDie.cs" />
+    <Compile Include="Assets\Script\Monster\Boss1\BossBehavior.cs" />
+    <Compile Include="Assets\Script\Character\Archer\ArcherLevel\HandleAnim.cs" />
+    <Compile Include="Assets\Script\Monster\Minion\MinionAnim.cs" />
+    <Compile Include="Assets\Script\Character\Archer\ArcherLevel\SkillHandler\SkillHandler.cs" />
     <Compile Include="Assets\Script\Monster\Mage\MageAnim.cs" />
     <Compile Include="Assets\Script\Monster\Minion\WithoutShield\WithoutShieldBehavior.cs" />
     <Compile Include="Assets\Script\Monster\Minion\STATE\Dodge.cs" />
     <Compile Include="Assets\Script\BASECLASS\MonsterPool.cs" />
+    <Compile Include="Assets\Script\Monster\Minion\STATE\ChaseWithoutShield.cs" />
     <Compile Include="Assets\Script\GameManager\CardManager.cs" />
+    <Compile Include="Assets\Script\Monster\Minion\Minion\MinionBehavior.cs" />
     <Compile Include="Assets\Script\VFXAsset\VfxReturn.cs" />
     <Compile Include="Assets\Script\Monster\Mage\Projectile\MageProjectilePool.cs" />
+    <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\AttackState\AttackStateHandler.cs" />
+    <Compile Include="Assets\Script\UI\UICountDown.cs" />
+    <Compile Include="Assets\Script\UI\UIManager.cs" />
+    <Compile Include="Assets\Script\GameManager\GameSettings.cs" />
     <Compile Include="Assets\Script\Monster\Mage\Projectile\ProjectileMove.cs" />
     <Compile Include="Assets\Script\Monster\Minion\WithoutShield\WithoutShieldMoveHandler.cs" />
+    <Compile Include="Assets\Script\Monster\MonsterBehavior.cs" />
     <Compile Include="Assets\Script\Monster\Mage\Projectile\FireBallDetection.cs" />
+    <Compile Include="Assets\Script\Character\Archer\ArcherLevel\Arrow\AimToTarget.cs" />
     <Compile Include="Assets\Script\Menu\SoundBrightSen.cs" />
     <Compile Include="Assets\Script\BASECLASS\SO_Mons.cs" />
     <Compile Include="Assets\Script\Monster\Boss1\State\BossRandMove.cs" />
     <Compile Include="Assets\Script\GameManager\StoreEnter.cs" />
     <Compile Include="Assets\Script\BASECLASS\ObjectPool.cs" />
-    <Compile Include="Assets\Script\Monster\MoveHandler.cs" />
-    <Compile Include="Assets\Script\Items\Meteor.cs" />
-    <Compile Include="Assets\Script\BASECLASS\SO_Level.cs" />
-    <Compile Include="Assets\Script\GameManager\EffectSpawn.cs" />
-    <Compile Include="Assets\Script\GameManager\GameManager.cs" />
-    <Compile Include="Assets\Script\Items\ItemGetData.cs" />
-    <Compile Include="Assets\Script\GameManager\CardChooseAndIncreaseStat.cs" />
-    <Compile Include="Assets\Script\GameManager\ChangeDate.cs" />
-    <Compile Include="Assets\Script\BASECLASS\BaseChar.cs" />
-    <Compile Include="Assets\Script\BASECLASS\IDamageable.cs" />
-    <Compile Include="Assets\Script\Character\Archer\CameraControl.cs" />
-    <Compile Include="Assets\Script\Character\Archer\ArcherLevel\Arrow\ArrowPool.cs" />
-    <Compile Include="Assets\Script\Monster\Mage\STATE\Move\KeepDistance.cs" />
-    <Compile Include="Assets\Script\Monster\Mage\STATE\Move\Chase.cs" />
-    <Compile Include="Assets\Script\UI\SkillManager.cs" />
-    <Compile Include="Assets\Script\Character\Archer\ArcherLevel\ArcherBase.cs" />
-    <Compile Include="Assets\Script\Menu\Menu.cs" />
-    <Compile Include="Assets\Script\Monster\Minion\STATE\MinionChase.cs" />
-    <Compile Include="Assets\Script\Character\Archer\ArcherLevel\Arrow\ArrowDetection.cs" />
-    <Compile Include="Assets\Script\BASECLASS\IState.cs" />
-    <Compile Include="Assets\Script\Character\Archer\CameraMove.cs" />
-    <Compile Include="Assets\Script\Character\Archer\ArcherLevel\ArcherBlackBoard.cs" />
-    <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\AttackState\State_Atk\ESkill.cs" />
-    <Compile Include="Assets\Script\Monster\Boss1\BossBehavior.cs" />
-    <Compile Include="Assets\Script\Character\Archer\ArcherLevel\HandleAnim.cs" />
-    <Compile Include="Assets\Script\Monster\Minion\MinionAnim.cs" />
-    <Compile Include="Assets\Script\Character\Archer\ArcherLevel\SkillHandler\SkillHandler.cs" />
-    <Compile Include="Assets\Script\Monster\Minion\STATE\ChaseWithoutShield.cs" />
-    <Compile Include="Assets\Script\Monster\Minion\Minion\MinionBehavior.cs" />
-    <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\AttackState\AttackStateHandler.cs" />
-    <Compile Include="Assets\Script\UI\UICountDown.cs" />
-    <Compile Include="Assets\Script\UI\UIManager.cs" />
-    <Compile Include="Assets\Script\GameManager\GameSettings.cs" />
-    <Compile Include="Assets\Script\Monster\MonsterBehavior.cs" />
-    <Compile Include="Assets\Script\Character\Archer\ArcherLevel\Arrow\AimToTarget.cs" />
     <Compile Include="Assets\Script\Monster\Boss1\State\BossChase.cs" />
+    <Compile Include="Assets\Script\Monster\MoveHandler.cs" />
     <Compile Include="Assets\Script\Monster\Boss1\BossAnim.cs" />
+    <Compile Include="Assets\Script\Items\Meteor.cs" />
     <Compile Include="Assets\Script\Monster\Boss1\State\BossAttack.cs" />
     <Compile Include="Assets\Script\BASECLASS\SO_Char.cs" />
+    <Compile Include="Assets\Script\BASECLASS\SO_Level.cs" />
+    <Compile Include="Assets\Script\GameManager\EffectSpawn.cs" />
     <Compile Include="Assets\Script\Monster\Mage\MageAttack.cs" />
     <Compile Include="Assets\Script\Monster\Mage\MageMoveHandler.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\ArcherAction.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\State\PlayerInput.cs" />
+    <Compile Include="Assets\Script\GameManager\GameManager.cs" />
+    <Compile Include="Assets\Script\Items\ItemGetData.cs" />
     <Compile Include="Assets\Script\GameManager\SoundManager.cs" />
     <Compile Include="Assets\Script\Monster\Boss1\BossMoveHandler.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\Arrow\Arrow.cs" />
     <Compile Include="Assets\Script\Monster\Minion\Minion\MinionMoveHandler.cs" />
+    <Compile Include="Assets\Script\GameManager\CardChooseAndIncreaseStat.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -788,11 +788,23 @@
     <Reference Include="System.Xml.Serialization">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.7f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Animation.Rigging">
+      <HintPath>Library\ScriptAssemblies\Unity.Animation.Rigging.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.EditorCoroutines.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.cinemachine.editor">
       <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
@@ -800,68 +812,14 @@
     <Reference Include="Unity.Burst.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Burst">
+      <HintPath>Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.AI.Navigation">
       <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Animation.Rigging.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Animation.Rigging.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Rider.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Flow">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Mathematics.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
-      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TestTools.CodeCoverage.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.PlasticSCM.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="PPv2URPConverters">
-      <HintPath>Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Animation.Rigging">
-      <HintPath>Library\ScriptAssemblies\Unity.Animation.Rigging.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
-      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.EditorCoroutines.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst">
-      <HintPath>Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
@@ -884,11 +842,23 @@
     <Reference Include="Unity.VisualScripting.Core.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Rider.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Flow">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.Flow.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
@@ -896,8 +866,20 @@
     <Reference Include="Unity.Timeline">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
+      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TestTools.CodeCoverage.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
       <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
@@ -905,17 +887,23 @@
     <Reference Include="Unity.AI.Navigation.Updater">
       <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Updater.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.PlasticSCM.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.State.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="PPv2URPConverters">
+      <HintPath>Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Mathematics">
       <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Shaders">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
@@ -923,14 +911,26 @@
     <Reference Include="Unity.Searcher.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Shaders">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.AI.Navigation.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
+      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
+    </Reference>
     <Reference Include="Cinemachine">
       <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VSCode.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

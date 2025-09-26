@@ -19,26 +19,26 @@ public class AssignCard : MonoBehaviour
     public GameObject[] card;
     //test using public
     List<SO_Item> items;
-    [SerializeField] List<SO_Item> startingItems;
+    public SO_Item[] startingItems;
     public List<SO_Item> Items => items;
     // Start is called before the first frame update
     void Start()
     {
         GameManager.ins.CountDownComplete += AssignCardUI;
         items = new List<SO_Item>();
-
-        foreach (SO_Item item in startingItems)
+        for(int i=0;i<startingItems.Length;i++)
         {
-            SO_Item instant = ScriptableObject.Instantiate(item);
-            instant.name = item.name;
-            items.Add(instant);
+            Debug.Log("item loaded: " + startingItems[i].name);
+            Debug.Log("item loaded " + startingItems[i].icon);
+            Debug.Log("item loaded: " + startingItems[i].text);
+            items.Add(startingItems[i]);
+            
         }
         
     }
 
     void AssignCardUI()
-    {
-        
+    {       
         SetToCard(items);
     }
     public void ReAssign()
@@ -55,9 +55,11 @@ public class AssignCard : MonoBehaviour
     }
     void SetToCard(List<SO_Item> _items)
     {
+        Debug.Log("Set to card method: "+_items.Count);
         int max = Mathf.Min(3, _items.Count);
         for (int i = 0; i < max; i++)
         {
+            Debug.Log("set to card icon name: "+items[i].icon.name);
             sprites[i].sprite = _items[i].icon;
             itemNames[i].text = _items[i].name;
             descriptions[i].text = _items[i].text;

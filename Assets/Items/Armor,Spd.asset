@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Armor,Spd
   m_EditorClassIdentifier: 
   text: Armor +3, speed -2
-  icon: {fileID: 21300000, guid: c0d397af8a040bf44891492cecd4a3df, type: 3}
+  icon: {fileID: 21300000, guid: 16ca89df88d918841aa7d73fb8651d0c, type: 3}
   cost: 1
   quantity: -1
   type: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ArrowCount
   m_EditorClassIdentifier: 
   text: Increase arrow count by 3
-  icon: {fileID: 21300000, guid: 2ffb6f4e44eba4b41a02c010701e0ce0, type: 3}
+  icon: {fileID: 21300000, guid: 19f4785cde794074395db8435ad0fa06, type: 3}
   cost: 1
   quantity: 1
   type: 2
