@@ -66,6 +66,7 @@
     <Compile Include="Assets\Script\BASECLASS\IDamageable.cs" />
     <Compile Include="Assets\Script\Character\Archer\CameraControl.cs" />
     <Compile Include="Assets\Script\Menu\SliderSettings.cs" />
+    <Compile Include="Assets\Script\Items\ItemsHolder.cs" />
     <Compile Include="Assets\Script\Character\Archer\ArcherLevel\Arrow\ArrowPool.cs" />
     <Compile Include="Assets\Script\Monster\Mage\STATE\Move\KeepDistance.cs" />
     <Compile Include="Assets\Script\GameManager\AssignCard.cs" />

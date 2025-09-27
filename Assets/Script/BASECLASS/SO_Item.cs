@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 public enum Rarity
 {
     Common,
@@ -72,12 +71,12 @@ public class SO_Item : ScriptableObject
 
     TerrainData[] tData;
     Vector3[] terrainPos;
-    public void SpawnObject(bool visible,int random,ArcherBlackBoard bb)
+    public void SpawnObject(bool visible, int random, ArcherBlackBoard bb)
     {
         if (visible)
         {
-            tData=new TerrainData[terrain.Length];
-            terrainPos=new Vector3[terrain.Length];
+            tData = new TerrainData[terrain.Length];
+            terrainPos = new Vector3[terrain.Length];
             for (int i = 0; i < terrain.Length; i++)
             {
                 tData[i] = terrain[i].terrainData;
@@ -93,7 +92,7 @@ public class SO_Item : ScriptableObject
             //Convert local coords to world coords
             Vector3 spawnPos = new Vector3(
                 x + terrainPos[random].x,
-                y + terrainPos[random].y ,
+                y + terrainPos[random].y,
                 z + terrainPos[random].z);
             Debug.Log("Spawn " + summon.name + " at " + spawnPos);
             Instantiate(summon, spawnPos, Quaternion.identity);

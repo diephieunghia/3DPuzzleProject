@@ -21,6 +21,12 @@ public class AssignCard : MonoBehaviour
     List<SO_Item> items;
     public SO_Item[] startingItems;
     public List<SO_Item> Items => items;
+    //test
+    [SerializeField] GameObject holder;
+    private void Awake()
+    {
+        
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -28,11 +34,7 @@ public class AssignCard : MonoBehaviour
         items = new List<SO_Item>();
         for(int i=0;i<startingItems.Length;i++)
         {
-            Debug.Log("item loaded: " + startingItems[i].name);
-            Debug.Log("item loaded " + startingItems[i].icon);
-            Debug.Log("item loaded: " + startingItems[i].text);
             items.Add(startingItems[i]);
-            
         }
         
     }
@@ -59,7 +61,7 @@ public class AssignCard : MonoBehaviour
         int max = Mathf.Min(3, _items.Count);
         for (int i = 0; i < max; i++)
         {
-            Debug.Log("set to card icon name: "+items[i].icon.name);
+            
             sprites[i].sprite = _items[i].icon;
             itemNames[i].text = _items[i].name;
             descriptions[i].text = _items[i].text;

@@ -63,7 +63,7 @@ public class CardChooseAndIncreaseStat : MonoBehaviour
                 Debug.Log("Not enough coins");
                 return;
             }
-            int rand = item.RandomInt();
+            //int rand = item.RandomInt();
             if (item.type == ItemType.Stat)
                 archer.StatUP(item);
             //special to upgrade arrow, fireice
@@ -71,7 +71,7 @@ public class CardChooseAndIncreaseStat : MonoBehaviour
                 archer.Special(item);
             else if (item.type == ItemType.Passive)
             {
-                item.SpawnObject(item.isVisible, rand, archer.BB);
+                //item.SpawnObject(item.isVisible, rand, archer.BB);
             }
             else if (item.type == ItemType.Skill)
             {

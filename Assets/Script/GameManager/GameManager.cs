@@ -125,6 +125,7 @@ public class GameManager : MonoBehaviour
     public void IncreaseCurrentLevel()
     {
         tempCurrentLevel = tempCurrentLevel + 1;
+        Debug.Log("Temp current level: " + tempCurrentLevel);
         if (tempCurrentLevel <= statScale.maxLevel)
         {
             SpawnMonster.ins.MaxEnemy = statScale.maxEnemyPerLevel[tempCurrentLevel - 1];

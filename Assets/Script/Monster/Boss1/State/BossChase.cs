@@ -18,7 +18,7 @@ public class BossChase :IState
     }
 
     public void Enter() {
-        Debug.Log("Boss Chase");
+        
     }
 
     public void Execute() {
